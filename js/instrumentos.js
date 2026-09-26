@@ -227,6 +227,25 @@ function evaluarDigitacion(trastes, afinacion, info, esenciales, minSonando, spa
 const TRASTES_VISIBLES = 12;
 const MARCAS_MASTIL = [3, 5, 7, 9];
 
+/* Si el mismo traste (que no sea al aire) aparece en tres cuerdas o más,
+   es cejilla — un dedo cruzado, no varios dedos sueltos. Devuelve el
+   traste y qué cuerdas cruza, o null si esta digitación no tiene. */
+function detectarCejilla(trastes) {
+  const porTraste = new Map();
+  trastes.forEach((f, c) => {
+    if (f === null || f === 0) return;
+    if (!porTraste.has(f)) porTraste.set(f, []);
+    porTraste.get(f).push(c);
+  });
+  let mejor = null;
+  porTraste.forEach((cuerdas, traste) => {
+    if (cuerdas.length >= 3 && (!mejor || cuerdas.length > mejor.cuerdas.length)) {
+      mejor = { traste, cuerdas };
+    }
+  });
+  return mejor;
+}
+
 function svgMastil(digitacion, afinacion, info, opts) {
   const cuerdas = afinacion.length;
   const x0 = 52, yTop = 20;
@@ -297,8 +316,22 @@ function svgMastil(digitacion, afinacion, info, opts) {
     }
   }
 
-  // la digitación elegida, encima de todo
+  // la digitación elegida, encima de todo. Si el mismo traste se repite
+  // en tres cuerdas o más es cejilla: un dedo cruzado, no tres dedos
+  // separados — así que se dibuja como una sola cápsula en vez de un
+  // punto por cuerda, que es lo que hacía difícil identificarla de un
+  // vistazo.
   if (digitacion) {
+    const cejilla = detectarCejilla(digitacion.trastes);
+    if (cejilla) {
+      const ys = cejilla.cuerdas.map(yDeCuerda);
+      const yMin = Math.min(...ys), yMax = Math.max(...ys);
+      const x = xDeTraste(cejilla.traste);
+      const tieneRaiz = cejilla.cuerdas.some((c) => (afinacion[c] + cejilla.traste) % 12 === info.raiz);
+      partes.push(
+        `<rect x="${x - 9.5}" y="${yMin - 9.5}" width="19" height="${yMax - yMin + 19}" rx="9.5" class="mast-cejilla${tieneRaiz ? " es-raiz" : ""}"/>`
+      );
+    }
     digitacion.trastes.forEach((f, c) => {
       const y = yDeCuerda(c);
       if (f === null) {
@@ -308,8 +341,11 @@ function svgMastil(digitacion, afinacion, info, opts) {
       const clase = (afinacion[c] + f) % 12;
       const esRaiz = clase === info.raiz;
       const dentro = opts.mostrar === "grados" ? gradoDe(clase) : nombreDe(clase);
-      partes.push(`<circle cx="${xDeTraste(f)}" cy="${y}" r="9.5" class="mast-dedo${esRaiz ? " es-raiz" : ""}"/>`);
-      partes.push(`<text x="${xDeTraste(f)}" y="${y + 3.2}" class="mast-dedo-texto">${dentro}</text>`);
+      const enCejilla = cejilla && cejilla.traste === f && cejilla.cuerdas.includes(c);
+      if (!enCejilla) {
+        partes.push(`<circle cx="${xDeTraste(f)}" cy="${y}" r="9.5" class="mast-dedo${esRaiz ? " es-raiz" : ""}"/>`);
+      }
+      partes.push(`<text x="${xDeTraste(f)}" y="${y + 3.2}" class="mast-dedo-texto${enCejilla ? " en-cejilla" : ""}">${dentro}</text>`);
     });
   }
 

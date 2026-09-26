@@ -785,6 +785,9 @@ body::before {
 
 .mast-dedo { fill: var(--violeta); }
 .mast-dedo.es-raiz { fill: var(--acento); }
+.mast-cejilla { fill: var(--violeta); opacity: 0.92; }
+.mast-cejilla.es-raiz { fill: var(--acento); }
+.mast-dedo-texto.en-cejilla { fill: #0b0a12; }
 .mast-dedo-texto {
   fill: #0b0a12; font-size: 8.5px; font-weight: 700;
   text-anchor: middle; font-family: "Space Grotesk", sans-serif;
