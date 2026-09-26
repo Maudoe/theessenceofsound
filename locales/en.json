@@ -2890,7 +2890,9 @@
       "tambien": "It could also be:",
       "paraSeguir": "Where to go next",
       "pistaSeguir": "Not just the tonic: these are other chords with a real relationship to the one you played.",
-      "sinSugerencias": "I couldn't find a known relationship from this chord."
+      "sinSugerencias": "I couldn't find a known relationship from this chord.",
+      "espectro": "Spectrum",
+      "pistaEspectro": "The same movement, on the circle of fifths."
     }
   },
   "categoriasAcordes": {

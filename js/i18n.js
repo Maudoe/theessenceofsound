@@ -125,14 +125,14 @@ function tEntradaAcorde(categoria, sufijo, campo, original) {
 /* "1" → t("ruta.0.titulo") no alcanza para arrays; ruta[] y puentes[] se
    acceden por índice numérico directo. */
 function tRuta(i, campo) {
-  const propio = _porRuta(_idiomaActivo(), "ruta." + i + "." + campo);
+  const propio = _porRuta(_idiomaActivo() && _idiomaActivo().ui, "ruta." + i + "." + campo);
   if (propio !== undefined) return propio;
-  return _porRuta(_idiomaBase(), "ruta." + i + "." + campo);
+  return _porRuta(_idiomaBase() && _idiomaBase().ui, "ruta." + i + "." + campo);
 }
 function tPuente(i, campo) {
-  const propio = _porRuta(_idiomaActivo(), "puentes." + i + "." + campo);
+  const propio = _porRuta(_idiomaActivo() && _idiomaActivo().ui, "puentes." + i + "." + campo);
   if (propio !== undefined) return propio;
-  return _porRuta(_idiomaBase(), "puentes." + i + "." + campo);
+  return _porRuta(_idiomaBase() && _idiomaBase().ui, "puentes." + i + "." + campo);
 }
 
 /* Recorre el DOM y aplica t() a todo lo que tenga data-i18n. Se llama una

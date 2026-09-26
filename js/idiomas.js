@@ -238,7 +238,9 @@ const IDIOMAS = {
         "tambien": "También podría ser:",
         "paraSeguir": "Para dónde seguir",
         "pistaSeguir": "No sólo la tónica: estos son otros acordes que tienen una relación real con el que tocaste.",
-        "sinSugerencias": "No encontré una relación conocida desde este acorde."
+        "sinSugerencias": "No encontré una relación conocida desde este acorde.",
+        "espectro": "Espectro",
+        "pistaEspectro": "El mismo movimiento, en el círculo de quintas."
       },
       "idioma": {
         "es": "Español",
@@ -5891,7 +5893,9 @@ const IDIOMAS = {
         "tambien": "It could also be:",
         "paraSeguir": "Where to go next",
         "pistaSeguir": "Not just the tonic: these are other chords with a real relationship to the one you played.",
-        "sinSugerencias": "I couldn't find a known relationship from this chord."
+        "sinSugerencias": "I couldn't find a known relationship from this chord.",
+        "espectro": "Spectrum",
+        "pistaEspectro": "The same movement, on the circle of fifths."
       }
     },
     "categoriasAcordes": {
@@ -8888,7 +8892,9 @@ const IDIOMAS = {
         "tambien": "อาจเป็นไปได้ว่า:",
         "paraSeguir": "จะไปทางไหนต่อ",
         "pistaSeguir": "ไม่ใช่แค่คอร์ดโทนิก: นี่คือคอร์ดอื่น ๆ ที่มีความสัมพันธ์จริงกับคอร์ดที่คุณเล่น",
-        "sinSugerencias": "ฉันไม่พบความสัมพันธ์ที่รู้จักจากคอร์ดนี้"
+        "sinSugerencias": "ฉันไม่พบความสัมพันธ์ที่รู้จักจากคอร์ดนี้",
+        "espectro": "สเปกตรัม",
+        "pistaEspectro": "การเคลื่อนไหวแบบเดียวกัน แสดงบนวงกลมคู่ห้า"
       }
     },
     "categoriasAcordes": {

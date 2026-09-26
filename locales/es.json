@@ -234,7 +234,9 @@
       "tambien": "También podría ser:",
       "paraSeguir": "Para dónde seguir",
       "pistaSeguir": "No sólo la tónica: estos son otros acordes que tienen una relación real con el que tocaste.",
-      "sinSugerencias": "No encontré una relación conocida desde este acorde."
+      "sinSugerencias": "No encontré una relación conocida desde este acorde.",
+      "espectro": "Espectro",
+      "pistaEspectro": "El mismo movimiento, en el círculo de quintas."
     },
     "idioma": {
       "es": "Español",

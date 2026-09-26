@@ -220,13 +220,67 @@ function pintarResultadoIdentificar() {
       <p class="dic-detalle-notas"><b>${t("diccionario.notas")}:</b> ${notas}</p>
       ${otros.length ? `<p class="id-tambien">${t("identificar.tambien")} ${otros.map((o) => o.cifrado).join(" · ")}</p>` : ""}
     </div>
-    <div class="esc-acordes-bloque">
-      <div class="bloque-titulo">${t("identificar.paraSeguir")}</div>
-      <p class="bloque-pista">${t("identificar.pistaSeguir")}</p>
-      <div class="dic-tarjetas">${chipsSugerencias}</div>
+    <div class="id-espectro-grid">
+      <div class="esc-acordes-bloque">
+        <div class="bloque-titulo">${t("identificar.paraSeguir")}</div>
+        <p class="bloque-pista">${t("identificar.pistaSeguir")}</p>
+        <div class="dic-tarjetas">${chipsSugerencias}</div>
+      </div>
+      <div class="id-rueda-bloque">
+        <div class="bloque-titulo">${t("identificar.espectro")}</div>
+        <p class="bloque-pista">${t("identificar.pistaEspectro")}</p>
+        <svg id="id-rueda-svg" class="sh-svg id-rueda-svg"></svg>
+      </div>
     </div>`;
 
   $$(".tarjeta-acorde-chica, .id-principal-cifrado", cont).forEach((el) => {
     el.addEventListener("click", () => mostrarComoTocar(el.dataset.cifrado));
   });
+
+  pintarRuedaIdentificar(principal, sugerencias);
+}
+
+/* Colores por palabra clave: como las etiquetas de sugerirSiguientes()
+   ya dicen "dominante", "relativo", "paralelo", etc — las mismas
+   palabras que devuelve relacionEntre() en todo el sitio — alcanza con
+   un esquema de colores por esas palabras para que elegirColorNodo()
+   (colors.js) los reparta solo, sin tener que decidir acá cuál es cuál. */
+const ESQUEMA_ESPECTRO = {
+  dominante: "#ffd873",
+  relativo: "#b98bff",
+  paralelo: "#ff6fae",
+  mediante: "#7de8d6",
+  tritono: "#ff5c5c",
+  cromático: "#9ff3e8",
+  quinta: "#ffa53d",
+  tono: "#6fb8ff",
+  secundaria: "#c9a2ff",
+  tonica: "#5be8d8",
+};
+
+/* Arma un "mapa" de mentira con el acorde identificado como tónica y
+   las sugerencias como sus flechas — lo suficiente para que
+   renderRuedaCompleta() (rueda.js) lo dibuje igual que dibujaría
+   cualquier mapa de verdad. No hace falta que pertenezca a la
+   biblioteca de mapas para que el círculo de quintas lo entienda. */
+function pintarRuedaIdentificar(principal, sugerencias) {
+  const svg = $("#id-rueda-svg");
+  if (!svg || typeof renderRuedaCompleta !== "function") return;
+
+  const mapaSintetico = {
+    nombre: t("identificar.espectro"),
+    nodos_principales: [principal.cifrado, ...sugerencias.map((s) => s.cifrado)],
+    conexiones_flechas: sugerencias.map((s) => ({
+      origen: principal.cifrado, destino: s.cifrado, tipo: s.etiqueta,
+    })),
+    esquema_colores: ESQUEMA_ESPECTRO,
+  };
+
+  try {
+    renderRuedaCompleta(mapaSintetico, svg);
+  } catch (e) {
+    // si algo de esto cambia de forma en el futuro, que falte la rueda
+    // no se lleve puesto el resto de la página
+    svg.innerHTML = "";
+  }
 }
