@@ -8,6 +8,7 @@
       "estilos": "Estilos",
       "mapas": "Mapas armónicos",
       "aprender": "Aprender",
+      "diccionario": "Diccionario de acordes",
       "acerca": "Cómo leer esto"
     },
     "intro": {
@@ -197,6 +198,14 @@
       "soul": "Soul, funk & R&B",
       "ambient": "Ambient & electrónica",
       "otros": "Otros"
+    },
+    "diccionario": {
+      "intro": "Elegí una tónica y una calidad — mayor, m7, maj9, lo que sea — y te muestra las notas, la fórmula de grados, y todas las digitaciones que encuentra a lo largo de todo el mástil, no una sola posición.",
+      "tonica": "Tónica",
+      "formula": "Fórmula",
+      "notas": "Notas",
+      "pistaMastil": "Cada diagrama es una posición distinta del mismo acorde — de los trastes abiertos hasta arriba del mástil.",
+      "sinPosiciones": "No encontré una digitación cómoda para este acorde en este instrumento."
     },
     "idioma": {
       "es": "Español",
@@ -2853,6 +2862,107 @@
       "dropD": "Drop D",
       "dropC": "Drop C",
       "bGrave": "5 cuerdas (B)"
+    }
+  },
+  "categoriasAcordes": {
+    "triadas": "Tríadas",
+    "septimas": "Con séptima",
+    "sextas": "Sextas y color",
+    "extendidas": "Extendidas (9ª, 11ª, 13ª)",
+    "agregadas": "Con nota agregada"
+  },
+  "diccionarioAcordes": {
+    "triadas:": {
+      "nombre": "Mayor",
+      "descripcion": "La base de todo: fundamental, tercera mayor y quinta justa. Suena resuelto, sin tensión — el punto de descanso de casi cualquier progresión."
+    },
+    "triadas:m": {
+      "nombre": "Menor",
+      "descripcion": "La tercera baja un semitono y cambia todo el color: de resuelto a melancólico. Misma quinta que el mayor, la diferencia entera está en esa tercera."
+    },
+    "triadas:dim": {
+      "nombre": "Disminuido",
+      "descripcion": "Tercera menor y quinta también bajada: dos intervalos de tercera menor apilados. Inestable por definición — no es un acorde para quedarse, es de paso."
+    },
+    "triadas:aug": {
+      "nombre": "Aumentado",
+      "descripcion": "La quinta sube en vez de bajar. Dos terceras mayores apiladas, simétrico como el disminuido pero con otro sabor: flotante, sin quinta justa que ancle el acorde."
+    },
+    "triadas:5": {
+      "nombre": "Power chord (quinta)",
+      "descripcion": "Fundamental y quinta, sin tercera. Al no decir si es mayor o menor, funciona con cualquier escala encima — por eso es la base del riff de rock y metal."
+    },
+    "triadas:sus2": {
+      "nombre": "Suspendido en 2ª",
+      "descripcion": "La tercera se reemplaza por la segunda. Queda un acorde abierto, sin definir mayor/menor, con un aire más aéreo que el sus4."
+    },
+    "triadas:sus4": {
+      "nombre": "Suspendido en 4ª",
+      "descripcion": "La tercera se reemplaza por la cuarta, que casi siempre resuelve bajando a la tercera. Es el 'suspenso' real: pide resolución."
+    },
+    "septimas:7": {
+      "nombre": "Dominante (7)",
+      "descripcion": "Tríada mayor + séptima menor. El acorde de la tensión que quiere resolver a la tónica — es el V7 de cualquier tonalidad, y la base del blues."
+    },
+    "septimas:maj7": {
+      "nombre": "Mayor con 7ª mayor",
+      "descripcion": "Tríada mayor + séptima mayor (un semitono debajo de la octava). Suena a reposo elegante, jazzero — no tira hacia ningún lado como el dominante."
+    },
+    "septimas:m7": {
+      "nombre": "Menor con 7ª menor",
+      "descripcion": "El menor de todos los días: aparece en el ii de cualquier ii-V-I, y en las progresiones de soul y funk como acorde de reposo."
+    },
+    "septimas:m7b5": {
+      "nombre": "Semidisminuido (m7b5)",
+      "descripcion": "Un m7 con la quinta bajada. Es el vii de una tonalidad mayor y el ii de una menor — casi siempre de paso hacia un V7, nunca acorde de reposo."
+    },
+    "septimas:dim7": {
+      "nombre": "Disminuido con 7ª disminuida",
+      "descripcion": "Simétrico: todo el acorde son terceras menores apiladas (esa 'bb7' sa oído es la misma tecla que una 6ta, pero se escribe distinto porque cumple otra función). Funciona como comodín para pasar de una tonalidad a otra."
+    },
+    "septimas:mmaj7": {
+      "nombre": "Menor con 7ª mayor",
+      "descripcion": "Tercera menor pero séptima mayor: la mezcla rara que usa el cine de suspenso y el jazz modal. Tenso y oscuro sin sonar a dominante."
+    },
+    "sextas:6": {
+      "nombre": "Mayor con 6ª",
+      "descripcion": "Como un maj7 pero sin el peso jazzero: la 6ta en vez de la 7ma mayor lo deja más cálido y menos 'acorde de piano de bar'. Típico del country y el swing."
+    },
+    "sextas:m6": {
+      "nombre": "Menor con 6ª",
+      "descripcion": "El menor con la misma 6ta agregada. Suena a menor de película antigua — es el color que usa el western oscuro cuando no quiere ir directo al m7."
+    },
+    "sextas:6/9": {
+      "nombre": "Sexta con 9ª",
+      "descripcion": "El 6 de arriba con una 9na sumada: queda un acorde ancho y sin tensión, muy usado como acorde final de un tema — resuelve pero no aburre."
+    },
+    "extendidas:9": {
+      "nombre": "Dominante con 9ª",
+      "descripcion": "Un 7 con una 9na arriba. Sigue siendo un dominante (quiere resolver) pero con más color — funk y soul lo usan constantemente."
+    },
+    "extendidas:m9": {
+      "nombre": "Menor con 9ª",
+      "descripcion": "Un m7 con la 9na sumada: es EL acorde 'sensual' de este sitio — ancho, sin aristas, sin nada que choque."
+    },
+    "extendidas:maj9": {
+      "nombre": "Mayor con 9ª",
+      "descripcion": "El maj7 de siempre con la 9na arriba. Es el sonido 'cielo abierto' de un acorde de reposo mayor bien vestido."
+    },
+    "extendidas:11": {
+      "nombre": "Dominante con 11ª",
+      "descripcion": "Un 9 con la 11na sumada. En la práctica la 11na choca contra la tercera mayor, así que casi siempre se toca sin la 3ra o se deja que la 11na haga de color de paso."
+    },
+    "extendidas:m11": {
+      "nombre": "Menor con 11ª",
+      "descripcion": "La versión menor del 11: acá la 11na no choca con nada (no hay tercera mayor que la contradiga), así que suena mucho más natural que el dominante 11."
+    },
+    "extendidas:13": {
+      "nombre": "Dominante con 13ª",
+      "descripcion": "El dominante más vestido: 7 + 9 + 13 (la 11na se omite casi siempre, por la misma fricción que en el 11 simple). Sonido grande de big band y jazz-funk."
+    },
+    "agregadas:add9": {
+      "nombre": "Mayor con 9ª agregada (sin 7ª)",
+      "descripcion": "Una tríada mayor con la 9na sumada directo, SIN pasar por la séptima. Distinto del acorde de 9na de verdad: acá no hay ningún dominante escondido, sólo color agregado a un mayor en reposo."
     }
   }
 }

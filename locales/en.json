@@ -2577,7 +2577,8 @@
       "estilos": "Styles",
       "mapas": "Harmonic maps",
       "aprender": "Learn",
-      "acerca": "How to read this"
+      "acerca": "How to read this",
+      "diccionario": "Chord Dictionary"
     },
     "intro": {
       "lema": "The Essence of Sound — by Mau",
@@ -2853,6 +2854,115 @@
         "comparten": "The phrygian mode and unresolved tension.",
         "cambia": "Western swaps distortion for tremolo and reverb, and uses the harmonic minor to get a leading tone. It's the same fear, wearing different clothes."
       }
-    ]
+    ],
+    "diccionario": {
+      "intro": "Pick a root and a quality — major, m7, maj9, whatever — and it shows you the notes, the scale-degree formula, and every fingering it finds up and down the whole neck, not just one position.",
+      "tonica": "Root",
+      "formula": "Formula",
+      "notas": "Notes",
+      "pistaMastil": "Each diagram is a different position of the same chord — from open frets all the way up the neck.",
+      "sinPosiciones": "Couldn't find a comfortable fingering for this chord on this instrument."
+    }
+  },
+  "categoriasAcordes": {
+    "triadas": "Triads",
+    "septimas": "Seventh chords",
+    "sextas": "Sixths and color",
+    "extendidas": "Extended (9th, 11th, 13th)",
+    "agregadas": "Added-note chords"
+  },
+  "diccionarioAcordes": {
+    "triadas:": {
+      "nombre": "Major",
+      "descripcion": "The foundation of it all: root, major third, and perfect fifth. Sounds resolved, no tension — the resting point of almost any progression."
+    },
+    "triadas:m": {
+      "nombre": "Minor",
+      "descripcion": "The third drops a half step and it changes the whole color: from resolved to melancholic. Same fifth as the major, the entire difference is in that third."
+    },
+    "triadas:dim": {
+      "nombre": "Diminished",
+      "descripcion": "Minor third and a lowered fifth too: two minor thirds stacked on top of each other. Unstable by nature — not a chord to sit on, it's a passing chord."
+    },
+    "triadas:aug": {
+      "nombre": "Augmented",
+      "descripcion": "The fifth goes up instead of down. Two major thirds stacked, symmetrical like the diminished but with a different flavor: floating, with no perfect fifth to anchor the chord."
+    },
+    "triadas:5": {
+      "nombre": "Power chord (fifth)",
+      "descripcion": "Root and fifth, no third. Since it doesn't say whether it's major or minor, it works under any scale on top — that's why it's the backbone of the rock and metal riff."
+    },
+    "triadas:sus2": {
+      "nombre": "Suspended 2nd",
+      "descripcion": "The third gets swapped for the second. Leaves an open chord, neither major nor minor, with an airier feel than the sus4."
+    },
+    "triadas:sus4": {
+      "nombre": "Suspended 4th",
+      "descripcion": "The third gets swapped for the fourth, which almost always resolves down to the third. This is the real 'suspense' chord: it asks for resolution."
+    },
+    "septimas:7": {
+      "nombre": "Dominant (7)",
+      "descripcion": "Major triad + minor seventh. The chord of tension that wants to resolve to the tonic — it's the V7 of any key, and the backbone of the blues."
+    },
+    "septimas:maj7": {
+      "nombre": "Major with major 7th",
+      "descripcion": "Major triad + major seventh (a half step below the octave). Sounds like elegant, jazzy rest — it doesn't pull anywhere the way the dominant does."
+    },
+    "septimas:m7": {
+      "nombre": "Minor with minor 7th",
+      "descripcion": "The everyday minor: it shows up as the ii in any ii-V-I, and as the resting chord in soul and funk progressions."
+    },
+    "septimas:m7b5": {
+      "nombre": "Half-diminished (m7b5)",
+      "descripcion": "An m7 with a lowered fifth. It's the vii of a major key and the ii of a minor one — almost always passing toward a V7, never a resting chord."
+    },
+    "septimas:dim7": {
+      "nombre": "Diminished with diminished 7th",
+      "descripcion": "Symmetrical: the whole chord is minor thirds stacked on top of each other (that 'bb7' sounds like the same key as a 6th, but it's written differently because it plays a different role). Works as a wildcard for moving from one key to another."
+    },
+    "septimas:mmaj7": {
+      "nombre": "Minor with major 7th",
+      "descripcion": "Minor third but major seventh: the odd combo used in suspense-film scores and modal jazz. Tense and dark without sounding like a dominant."
+    },
+    "sextas:6": {
+      "nombre": "Major with 6th",
+      "descripcion": "Like a maj7 but without the jazzy weight: the 6th instead of the major 7th makes it warmer and less 'piano-bar chord.' Common in country and swing."
+    },
+    "sextas:m6": {
+      "nombre": "Minor with 6th",
+      "descripcion": "The minor with that same 6th added. Sounds like old-movie minor — it's the color a dark western reaches for when it doesn't want to go straight to the m7."
+    },
+    "sextas:6/9": {
+      "nombre": "Sixth with 9th",
+      "descripcion": "The 6 above with a 9th added on: leaves a wide, tension-free chord, often used to end a song — it resolves without being boring."
+    },
+    "extendidas:9": {
+      "nombre": "Dominant with 9th",
+      "descripcion": "A 7 with a 9th on top. Still a dominant (it wants to resolve) but with more color — funk and soul use it constantly."
+    },
+    "extendidas:m9": {
+      "nombre": "Minor with 9th",
+      "descripcion": "An m7 with the 9th added: THE 'sultry' chord of this whole dictionary — wide, no rough edges, nothing that clashes."
+    },
+    "extendidas:maj9": {
+      "nombre": "Major with 9th",
+      "descripcion": "The everyday maj7 with a 9th on top. It's the 'open sky' sound of a well-dressed major resting chord."
+    },
+    "extendidas:11": {
+      "nombre": "Dominant with 11th",
+      "descripcion": "A 9 with the 11th added. In practice the 11th clashes with the major third, so it's almost always played without the 3rd, or the 11th is left to work as a passing color."
+    },
+    "extendidas:m11": {
+      "nombre": "Minor with 11th",
+      "descripcion": "The minor version of the 11: here the 11th doesn't clash with anything (there's no major third to fight it), so it sounds much more natural than the dominant 11."
+    },
+    "extendidas:13": {
+      "nombre": "Dominant with 13th",
+      "descripcion": "The most dressed-up dominant: 7 + 9 + 13 (the 11th is almost always left out, for the same friction reason as in the plain 11). Big, big-band and jazz-funk sound."
+    },
+    "agregadas:add9": {
+      "nombre": "Major with added 9th (no 7th)",
+      "descripcion": "A major triad with the 9th added straight in, WITHOUT going through the seventh. Different from a true 9th chord: there's no hidden dominant here, just extra color on a resting major."
+    }
   }
 }

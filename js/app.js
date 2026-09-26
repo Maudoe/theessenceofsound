@@ -866,6 +866,7 @@ function alCambiarIdioma() {
   pintarGrilla();
   pintarGrillaEstilos();
   pintarAprender();
+  if (typeof pintarDiccionario === "function") pintarDiccionario();
   if (estado.mapaActivo) abrirMapa(estado.mapaActivo);
   if (estado.estiloActivo) abrirEstilo(estado.estiloActivo);
 }
@@ -880,6 +881,7 @@ function iniciar() {
   pintarGrilla();
   pintarGrillaEstilos();
   pintarAprender();
+  if (typeof pintarDiccionario === "function") pintarDiccionario();
   if (typeof setExploradorDeRueda === "function") setExploradorDeRueda(mostrarMovimientos);
   if (typeof setFijadorDeRueda === "function") setFijadorDeRueda(mostrarComoTocar);
 

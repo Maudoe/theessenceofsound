@@ -104,6 +104,24 @@ function tafin(instrumento, id, original) {
   return de(_idiomaActivo()) || de(_idiomaBase()) || original || id;
 }
 
+function tCatAcorde(id, original) {
+  const de = (idi) => idi && idi.categoriasAcordes && idi.categoriasAcordes[id];
+  return de(_idiomaActivo()) || de(_idiomaBase()) || original || id;
+}
+
+function tEntradaAcorde(categoria, sufijo, campo, original) {
+  const clave = categoria + ":" + sufijo;
+  const de = (idi) => {
+    const e = idi && idi.diccionarioAcordes && idi.diccionarioAcordes[clave];
+    return e ? e[campo] : undefined;
+  };
+  const propio = de(_idiomaActivo());
+  if (propio !== undefined && propio !== "") return propio;
+  const base = de(_idiomaBase());
+  if (base !== undefined && base !== "") return base;
+  return original !== undefined ? original : "";
+}
+
 /* "1" → t("ruta.0.titulo") no alcanza para arrays; ruta[] y puentes[] se
    acceden por índice numérico directo. */
 function tRuta(i, campo) {

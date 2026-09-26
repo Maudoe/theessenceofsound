@@ -12,6 +12,7 @@ const IDIOMAS = {
         "estilos": "Estilos",
         "mapas": "Mapas armónicos",
         "aprender": "Aprender",
+        "diccionario": "Diccionario de acordes",
         "acerca": "Cómo leer esto"
       },
       "intro": {
@@ -201,6 +202,14 @@ const IDIOMAS = {
         "soul": "Soul, funk & R&B",
         "ambient": "Ambient & electrónica",
         "otros": "Otros"
+      },
+      "diccionario": {
+        "intro": "Elegí una tónica y una calidad — mayor, m7, maj9, lo que sea — y te muestra las notas, la fórmula de grados, y todas las digitaciones que encuentra a lo largo de todo el mástil, no una sola posición.",
+        "tonica": "Tónica",
+        "formula": "Fórmula",
+        "notas": "Notas",
+        "pistaMastil": "Cada diagrama es una posición distinta del mismo acorde — de los trastes abiertos hasta arriba del mástil.",
+        "sinPosiciones": "No encontré una digitación cómoda para este acorde en este instrumento."
       },
       "idioma": {
         "es": "Español",
@@ -2858,6 +2867,107 @@ const IDIOMAS = {
         "dropC": "Drop C",
         "bGrave": "5 cuerdas (B)"
       }
+    },
+    "categoriasAcordes": {
+      "triadas": "Tríadas",
+      "septimas": "Con séptima",
+      "sextas": "Sextas y color",
+      "extendidas": "Extendidas (9ª, 11ª, 13ª)",
+      "agregadas": "Con nota agregada"
+    },
+    "diccionarioAcordes": {
+      "triadas:": {
+        "nombre": "Mayor",
+        "descripcion": "La base de todo: fundamental, tercera mayor y quinta justa. Suena resuelto, sin tensión — el punto de descanso de casi cualquier progresión."
+      },
+      "triadas:m": {
+        "nombre": "Menor",
+        "descripcion": "La tercera baja un semitono y cambia todo el color: de resuelto a melancólico. Misma quinta que el mayor, la diferencia entera está en esa tercera."
+      },
+      "triadas:dim": {
+        "nombre": "Disminuido",
+        "descripcion": "Tercera menor y quinta también bajada: dos intervalos de tercera menor apilados. Inestable por definición — no es un acorde para quedarse, es de paso."
+      },
+      "triadas:aug": {
+        "nombre": "Aumentado",
+        "descripcion": "La quinta sube en vez de bajar. Dos terceras mayores apiladas, simétrico como el disminuido pero con otro sabor: flotante, sin quinta justa que ancle el acorde."
+      },
+      "triadas:5": {
+        "nombre": "Power chord (quinta)",
+        "descripcion": "Fundamental y quinta, sin tercera. Al no decir si es mayor o menor, funciona con cualquier escala encima — por eso es la base del riff de rock y metal."
+      },
+      "triadas:sus2": {
+        "nombre": "Suspendido en 2ª",
+        "descripcion": "La tercera se reemplaza por la segunda. Queda un acorde abierto, sin definir mayor/menor, con un aire más aéreo que el sus4."
+      },
+      "triadas:sus4": {
+        "nombre": "Suspendido en 4ª",
+        "descripcion": "La tercera se reemplaza por la cuarta, que casi siempre resuelve bajando a la tercera. Es el 'suspenso' real: pide resolución."
+      },
+      "septimas:7": {
+        "nombre": "Dominante (7)",
+        "descripcion": "Tríada mayor + séptima menor. El acorde de la tensión que quiere resolver a la tónica — es el V7 de cualquier tonalidad, y la base del blues."
+      },
+      "septimas:maj7": {
+        "nombre": "Mayor con 7ª mayor",
+        "descripcion": "Tríada mayor + séptima mayor (un semitono debajo de la octava). Suena a reposo elegante, jazzero — no tira hacia ningún lado como el dominante."
+      },
+      "septimas:m7": {
+        "nombre": "Menor con 7ª menor",
+        "descripcion": "El menor de todos los días: aparece en el ii de cualquier ii-V-I, y en las progresiones de soul y funk como acorde de reposo."
+      },
+      "septimas:m7b5": {
+        "nombre": "Semidisminuido (m7b5)",
+        "descripcion": "Un m7 con la quinta bajada. Es el vii de una tonalidad mayor y el ii de una menor — casi siempre de paso hacia un V7, nunca acorde de reposo."
+      },
+      "septimas:dim7": {
+        "nombre": "Disminuido con 7ª disminuida",
+        "descripcion": "Simétrico: todo el acorde son terceras menores apiladas (esa 'bb7' sa oído es la misma tecla que una 6ta, pero se escribe distinto porque cumple otra función). Funciona como comodín para pasar de una tonalidad a otra."
+      },
+      "septimas:mmaj7": {
+        "nombre": "Menor con 7ª mayor",
+        "descripcion": "Tercera menor pero séptima mayor: la mezcla rara que usa el cine de suspenso y el jazz modal. Tenso y oscuro sin sonar a dominante."
+      },
+      "sextas:6": {
+        "nombre": "Mayor con 6ª",
+        "descripcion": "Como un maj7 pero sin el peso jazzero: la 6ta en vez de la 7ma mayor lo deja más cálido y menos 'acorde de piano de bar'. Típico del country y el swing."
+      },
+      "sextas:m6": {
+        "nombre": "Menor con 6ª",
+        "descripcion": "El menor con la misma 6ta agregada. Suena a menor de película antigua — es el color que usa el western oscuro cuando no quiere ir directo al m7."
+      },
+      "sextas:6/9": {
+        "nombre": "Sexta con 9ª",
+        "descripcion": "El 6 de arriba con una 9na sumada: queda un acorde ancho y sin tensión, muy usado como acorde final de un tema — resuelve pero no aburre."
+      },
+      "extendidas:9": {
+        "nombre": "Dominante con 9ª",
+        "descripcion": "Un 7 con una 9na arriba. Sigue siendo un dominante (quiere resolver) pero con más color — funk y soul lo usan constantemente."
+      },
+      "extendidas:m9": {
+        "nombre": "Menor con 9ª",
+        "descripcion": "Un m7 con la 9na sumada: es EL acorde 'sensual' de este sitio — ancho, sin aristas, sin nada que choque."
+      },
+      "extendidas:maj9": {
+        "nombre": "Mayor con 9ª",
+        "descripcion": "El maj7 de siempre con la 9na arriba. Es el sonido 'cielo abierto' de un acorde de reposo mayor bien vestido."
+      },
+      "extendidas:11": {
+        "nombre": "Dominante con 11ª",
+        "descripcion": "Un 9 con la 11na sumada. En la práctica la 11na choca contra la tercera mayor, así que casi siempre se toca sin la 3ra o se deja que la 11na haga de color de paso."
+      },
+      "extendidas:m11": {
+        "nombre": "Menor con 11ª",
+        "descripcion": "La versión menor del 11: acá la 11na no choca con nada (no hay tercera mayor que la contradiga), así que suena mucho más natural que el dominante 11."
+      },
+      "extendidas:13": {
+        "nombre": "Dominante con 13ª",
+        "descripcion": "El dominante más vestido: 7 + 9 + 13 (la 11na se omite casi siempre, por la misma fricción que en el 11 simple). Sonido grande de big band y jazz-funk."
+      },
+      "agregadas:add9": {
+        "nombre": "Mayor con 9ª agregada (sin 7ª)",
+        "descripcion": "Una tríada mayor con la 9na sumada directo, SIN pasar por la séptima. Distinto del acorde de 9na de verdad: acá no hay ningún dominante escondido, sólo color agregado a un mayor en reposo."
+      }
     }
   },
   "en": {
@@ -5439,7 +5549,8 @@ const IDIOMAS = {
         "estilos": "Styles",
         "mapas": "Harmonic maps",
         "aprender": "Learn",
-        "acerca": "How to read this"
+        "acerca": "How to read this",
+        "diccionario": "Chord Dictionary"
       },
       "intro": {
         "lema": "The Essence of Sound — by Mau",
@@ -5715,7 +5826,116 @@ const IDIOMAS = {
           "comparten": "The phrygian mode and unresolved tension.",
           "cambia": "Western swaps distortion for tremolo and reverb, and uses the harmonic minor to get a leading tone. It's the same fear, wearing different clothes."
         }
-      ]
+      ],
+      "diccionario": {
+        "intro": "Pick a root and a quality — major, m7, maj9, whatever — and it shows you the notes, the scale-degree formula, and every fingering it finds up and down the whole neck, not just one position.",
+        "tonica": "Root",
+        "formula": "Formula",
+        "notas": "Notes",
+        "pistaMastil": "Each diagram is a different position of the same chord — from open frets all the way up the neck.",
+        "sinPosiciones": "Couldn't find a comfortable fingering for this chord on this instrument."
+      }
+    },
+    "categoriasAcordes": {
+      "triadas": "Triads",
+      "septimas": "Seventh chords",
+      "sextas": "Sixths and color",
+      "extendidas": "Extended (9th, 11th, 13th)",
+      "agregadas": "Added-note chords"
+    },
+    "diccionarioAcordes": {
+      "triadas:": {
+        "nombre": "Major",
+        "descripcion": "The foundation of it all: root, major third, and perfect fifth. Sounds resolved, no tension — the resting point of almost any progression."
+      },
+      "triadas:m": {
+        "nombre": "Minor",
+        "descripcion": "The third drops a half step and it changes the whole color: from resolved to melancholic. Same fifth as the major, the entire difference is in that third."
+      },
+      "triadas:dim": {
+        "nombre": "Diminished",
+        "descripcion": "Minor third and a lowered fifth too: two minor thirds stacked on top of each other. Unstable by nature — not a chord to sit on, it's a passing chord."
+      },
+      "triadas:aug": {
+        "nombre": "Augmented",
+        "descripcion": "The fifth goes up instead of down. Two major thirds stacked, symmetrical like the diminished but with a different flavor: floating, with no perfect fifth to anchor the chord."
+      },
+      "triadas:5": {
+        "nombre": "Power chord (fifth)",
+        "descripcion": "Root and fifth, no third. Since it doesn't say whether it's major or minor, it works under any scale on top — that's why it's the backbone of the rock and metal riff."
+      },
+      "triadas:sus2": {
+        "nombre": "Suspended 2nd",
+        "descripcion": "The third gets swapped for the second. Leaves an open chord, neither major nor minor, with an airier feel than the sus4."
+      },
+      "triadas:sus4": {
+        "nombre": "Suspended 4th",
+        "descripcion": "The third gets swapped for the fourth, which almost always resolves down to the third. This is the real 'suspense' chord: it asks for resolution."
+      },
+      "septimas:7": {
+        "nombre": "Dominant (7)",
+        "descripcion": "Major triad + minor seventh. The chord of tension that wants to resolve to the tonic — it's the V7 of any key, and the backbone of the blues."
+      },
+      "septimas:maj7": {
+        "nombre": "Major with major 7th",
+        "descripcion": "Major triad + major seventh (a half step below the octave). Sounds like elegant, jazzy rest — it doesn't pull anywhere the way the dominant does."
+      },
+      "septimas:m7": {
+        "nombre": "Minor with minor 7th",
+        "descripcion": "The everyday minor: it shows up as the ii in any ii-V-I, and as the resting chord in soul and funk progressions."
+      },
+      "septimas:m7b5": {
+        "nombre": "Half-diminished (m7b5)",
+        "descripcion": "An m7 with a lowered fifth. It's the vii of a major key and the ii of a minor one — almost always passing toward a V7, never a resting chord."
+      },
+      "septimas:dim7": {
+        "nombre": "Diminished with diminished 7th",
+        "descripcion": "Symmetrical: the whole chord is minor thirds stacked on top of each other (that 'bb7' sounds like the same key as a 6th, but it's written differently because it plays a different role). Works as a wildcard for moving from one key to another."
+      },
+      "septimas:mmaj7": {
+        "nombre": "Minor with major 7th",
+        "descripcion": "Minor third but major seventh: the odd combo used in suspense-film scores and modal jazz. Tense and dark without sounding like a dominant."
+      },
+      "sextas:6": {
+        "nombre": "Major with 6th",
+        "descripcion": "Like a maj7 but without the jazzy weight: the 6th instead of the major 7th makes it warmer and less 'piano-bar chord.' Common in country and swing."
+      },
+      "sextas:m6": {
+        "nombre": "Minor with 6th",
+        "descripcion": "The minor with that same 6th added. Sounds like old-movie minor — it's the color a dark western reaches for when it doesn't want to go straight to the m7."
+      },
+      "sextas:6/9": {
+        "nombre": "Sixth with 9th",
+        "descripcion": "The 6 above with a 9th added on: leaves a wide, tension-free chord, often used to end a song — it resolves without being boring."
+      },
+      "extendidas:9": {
+        "nombre": "Dominant with 9th",
+        "descripcion": "A 7 with a 9th on top. Still a dominant (it wants to resolve) but with more color — funk and soul use it constantly."
+      },
+      "extendidas:m9": {
+        "nombre": "Minor with 9th",
+        "descripcion": "An m7 with the 9th added: THE 'sultry' chord of this whole dictionary — wide, no rough edges, nothing that clashes."
+      },
+      "extendidas:maj9": {
+        "nombre": "Major with 9th",
+        "descripcion": "The everyday maj7 with a 9th on top. It's the 'open sky' sound of a well-dressed major resting chord."
+      },
+      "extendidas:11": {
+        "nombre": "Dominant with 11th",
+        "descripcion": "A 9 with the 11th added. In practice the 11th clashes with the major third, so it's almost always played without the 3rd, or the 11th is left to work as a passing color."
+      },
+      "extendidas:m11": {
+        "nombre": "Minor with 11th",
+        "descripcion": "The minor version of the 11: here the 11th doesn't clash with anything (there's no major third to fight it), so it sounds much more natural than the dominant 11."
+      },
+      "extendidas:13": {
+        "nombre": "Dominant with 13th",
+        "descripcion": "The most dressed-up dominant: 7 + 9 + 13 (the 11th is almost always left out, for the same friction reason as in the plain 11). Big, big-band and jazz-funk sound."
+      },
+      "agregadas:add9": {
+        "nombre": "Major with added 9th (no 7th)",
+        "descripcion": "A major triad with the 9th added straight in, WITHOUT going through the seventh. Different from a true 9th chord: there's no hidden dominant here, just extra color on a resting major."
+      }
     }
   },
   "th": {
@@ -8297,7 +8517,8 @@ const IDIOMAS = {
         "estilos": "สไตล์",
         "mapas": "แผนที่ฮาร์โมนิก",
         "aprender": "เรียนรู้",
-        "acerca": "วิธีอ่านเว็บนี้"
+        "acerca": "วิธีอ่านเว็บนี้",
+        "diccionario": "พจนานุกรมคอร์ด"
       },
       "intro": {
         "lema": "The Essence of Sound — by Mau",
@@ -8573,7 +8794,116 @@ const IDIOMAS = {
           "comparten": "โมดฟรีเจียนและความตึงที่ไม่คลี่คลาย",
           "cambia": "เวสเทิร์นเปลี่ยนดิสทอร์ชันเป็นเทรโมโลและรีเวิร์บ และใช้ไมเนอร์ฮาร์โมนิกเพื่อให้มีเสียงนำ มันคือความกลัวเดิม แค่ใส่เสื้อผ้าต่างกัน"
         }
-      ]
+      ],
+      "diccionario": {
+        "intro": "เลือกโน้ตหลักและคุณภาพของคอร์ด — เมเจอร์, m7, maj9, หรืออะไรก็ตาม — แล้วระบบจะแสดงโน้ตที่ประกอบกันขึ้นมา สูตรของดีกรี และตำแหน่งจับคอร์ดทั้งหมดที่หาได้ตลอดคอฟิงเกอร์บอร์ด ไม่ใช่แค่ตำแหน่งเดียว",
+        "tonica": "โน้ตหลัก (Tonic)",
+        "formula": "สูตรคอร์ด",
+        "notas": "โน้ต",
+        "pistaMastil": "แต่ละไดอะแกรมคือตำแหน่งที่ต่างกันของคอร์ดเดียวกัน — ตั้งแต่เฟรตเปิดไปจนถึงปลายคอกีตาร์",
+        "sinPosiciones": "ไม่พบตำแหน่งจับคอร์ดที่ถนัดสำหรับคอร์ดนี้บนเครื่องดนตรีนี้"
+      }
+    },
+    "categoriasAcordes": {
+      "triadas": "ไตรแอด (Triads)",
+      "septimas": "คอร์ดเซเว่นธ์ (Seventh)",
+      "sextas": "ซิกซ์ธ์และคอร์ดสีสัน",
+      "extendidas": "คอร์ดขยาย (9th, 11th, 13th)",
+      "agregadas": "คอร์ดเพิ่มโน้ต (Added note)"
+    },
+    "diccionarioAcordes": {
+      "triadas:": {
+        "nombre": "เมเจอร์ (Major)",
+        "descripcion": "พื้นฐานของทุกสิ่ง คือ รูท เมเจอร์เทิร์ด และเพอร์เฟกต์ฟิฟธ์ ให้เสียงที่จบสมบูรณ์ ไม่มีความตึง — จุดพักของแทบทุกโปรเกรสชัน"
+      },
+      "triadas:m": {
+        "nombre": "ไมเนอร์ (Minor)",
+        "descripcion": "เทิร์ดลดลงครึ่งเสียงและเปลี่ยนสีของคอร์ดทั้งหมด จากเสียงจบสมบูรณ์ไปเป็นเสียงเศร้า ฟิฟธ์เหมือนเมเจอร์ ความต่างทั้งหมดอยู่ที่เทิร์ดตัวนั้น"
+      },
+      "triadas:dim": {
+        "nombre": "ดิมินิช (Diminished)",
+        "descripcion": "ไมเนอร์เทิร์ดและฟิฟธ์ที่ลดลงด้วย เป็นการซ้อนไมเนอร์เทิร์ดสองช่วง ไม่มั่นคงโดยธรรมชาติ — ไม่ใช่คอร์ดที่จะอยู่นาน แต่เป็นคอร์ดผ่าน"
+      },
+      "triadas:aug": {
+        "nombre": "ออกเมนเต็ด (Augmented)",
+        "descripcion": "ฟิฟธ์ยกขึ้นแทนที่จะลด เป็นการซ้อนเมเจอร์เทิร์ดสองช่วง มีความสมมาตรเหมือนดิมินิชแต่ให้กลิ่นอายต่างออกไป คือลอยๆ เพราะไม่มีเพอร์เฟกต์ฟิฟธ์มายึดคอร์ดไว้"
+      },
+      "triadas:5": {
+        "nombre": "Power chord (ฟิฟธ์)",
+        "descripcion": "รูทและฟิฟธ์ ไม่มีเทิร์ด เพราะไม่บอกว่าเป็นเมเจอร์หรือไมเนอร์ จึงเข้ากับสเกลอะไรก็ได้ที่เล่นทับ นี่คือเหตุผลที่มันเป็นพื้นฐานของริฟฟ์ร็อกและเมทัล"
+      },
+      "triadas:sus2": {
+        "nombre": "ซัสเพนเดดที่ 2nd (Sus2)",
+        "descripcion": "เทิร์ดถูกแทนที่ด้วยเซคันด์ ทำให้ได้คอร์ดที่เปิดกว้าง ไม่บอกว่าเป็นเมเจอร์หรือไมเนอร์ ให้ความรู้สึกโปร่งกว่า sus4"
+      },
+      "triadas:sus4": {
+        "nombre": "ซัสเพนเดดที่ 4th (Sus4)",
+        "descripcion": "เทิร์ดถูกแทนที่ด้วยโฟร์ธ ซึ่งมักจะคลี่คลาย (resolve) ลงมาที่เทิร์ดเสมอ นี่คือ 'ความค้าง' ที่แท้จริง — เรียกร้องให้คลี่คลาย"
+      },
+      "septimas:7": {
+        "nombre": "ดอมิแนนต์เซเว่นธ์ (7)",
+        "descripcion": "ไตรแอดเมเจอร์ + ไมเนอร์เซเว่นธ์ คือคอร์ดแห่งความตึงที่ต้องการคลี่คลายไปยังโทนิก — คือ V7 ของทุกคีย์ และเป็นพื้นฐานของบลูส์"
+      },
+      "septimas:maj7": {
+        "nombre": "เมเจอร์เซเว่นธ์ (Maj7)",
+        "descripcion": "ไตรแอดเมเจอร์ + เมเจอร์เซเว่นธ์ (ต่ำกว่าคู่แปดครึ่งเสียง) ให้เสียงพักที่หรูหรา แนวแจ๊ส — ไม่ดึงไปทางไหนเหมือนดอมิแนนต์"
+      },
+      "septimas:m7": {
+        "nombre": "ไมเนอร์เซเว่นธ์ (m7)",
+        "descripcion": "ไมเนอร์ที่ใช้กันทุกวัน ปรากฏเป็น ii ในทุก ii-V-I และในโปรเกรสชันโซล/ฟังก์ในฐานะคอร์ดพัก"
+      },
+      "septimas:m7b5": {
+        "nombre": "ฮาล์ฟดิมินิช (m7b5)",
+        "descripcion": "คือ m7 ที่ฟิฟธ์ถูกลดลง เป็น vii ของคีย์เมเจอร์และ ii ของคีย์ไมเนอร์ — มักเป็นคอร์ดผ่านไปสู่ V7 เกือบตลอด ไม่ใช่คอร์ดพัก"
+      },
+      "septimas:dim7": {
+        "nombre": "ดิมินิชเซเว่นธ์ (Dim7)",
+        "descripcion": "สมมาตรอย่างสมบูรณ์ ทั้งคอร์ดเป็นการซ้อนไมเนอร์เทิร์ดต่อกัน (โน้ต 'bb7' ที่ได้ยินคือคีย์เดียวกับ 6th แต่เขียนต่างกันเพราะทำหน้าที่ต่างกัน) ใช้เป็นตัวเชื่อมสำหรับเปลี่ยนคีย์"
+      },
+      "septimas:mmaj7": {
+        "nombre": "ไมเนอร์-เมเจอร์เซเว่นธ์ (mMaj7)",
+        "descripcion": "ไมเนอร์เทิร์ดแต่เมเจอร์เซเว่นธ์ เป็นการผสมที่แปลกและใช้ในเพลงประกอบภาพยนตร์แนวระทึกขวัญและแจ๊สโมดัล ตึงและมืดโดยไม่ฟังดูเป็นดอมิแนนต์"
+      },
+      "sextas:6": {
+        "nombre": "เมเจอร์ซิกซ์ (6)",
+        "descripcion": "คล้าย maj7 แต่ไม่มีความหนักแบบแจ๊ส 6th แทนที่เมเจอร์เซเว่นธ์ทำให้เสียงอบอุ่นขึ้นและไม่เหมือน 'คอร์ดเปียโนบาร์' เป็นสีสันประจำของคันทรีและสวิง"
+      },
+      "sextas:m6": {
+        "nombre": "ไมเนอร์ซิกซ์ (m6)",
+        "descripcion": "ไมเนอร์ที่เพิ่ม 6th แบบเดียวกัน ให้เสียงไมเนอร์แบบหนังเก่า — เป็นสีสันที่หนังเวสเทิร์นแนวมืดใช้เมื่อไม่ต้องการไปที่ m7 ตรงๆ"
+      },
+      "sextas:6/9": {
+        "nombre": "ซิกซ์-ไนน์ (6/9)",
+        "descripcion": "คอร์ด 6 ข้างบนบวกกับ 9th ทำให้ได้คอร์ดที่กว้างและไม่มีความตึง นิยมใช้เป็นคอร์ดจบเพลง — คลี่คลายแต่ไม่น่าเบื่อ"
+      },
+      "extendidas:9": {
+        "nombre": "ดอมิแนนต์ไนน์ (9)",
+        "descripcion": "คือ 7 บวกกับ 9th ข้างบน ยังคงเป็นดอมิแนนต์ (ต้องการคลี่คลาย) แต่มีสีสันมากขึ้น ฟังก์และโซลใช้กันตลอด"
+      },
+      "extendidas:m9": {
+        "nombre": "ไมเนอร์ไนน์ (m9)",
+        "descripcion": "คือ m7 ที่เพิ่ม 9th เข้าไป เป็นคอร์ด 'เย้ายวน' ของที่นี่เลย — กว้าง ไม่มีมุมคม ไม่มีอะไรขัดกัน"
+      },
+      "extendidas:maj9": {
+        "nombre": "เมเจอร์ไนน์ (Maj9)",
+        "descripcion": "maj7 ที่คุ้นเคยพร้อม 9th ข้างบน คือเสียง 'ฟ้าเปิด' ของคอร์ดพักแบบเมเจอร์ที่แต่งตัวสวยงาม"
+      },
+      "extendidas:11": {
+        "nombre": "ดอมิแนนต์อีเลฟเว่น (11)",
+        "descripcion": "คือ 9 ที่เพิ่ม 11th เข้าไป ในทางปฏิบัติ 11th จะขัดกับเมเจอร์เทิร์ด จึงมักเล่นโดยไม่มีเทิร์ด หรือปล่อยให้ 11th ทำหน้าที่เป็นสีสันแบบคอร์ดผ่าน"
+      },
+      "extendidas:m11": {
+        "nombre": "ไมเนอร์อีเลฟเว่น (m11)",
+        "descripcion": "เวอร์ชันไมเนอร์ของ 11 ในกรณีนี้ 11th ไม่ขัดกับอะไรเลย (ไม่มีเมเจอร์เทิร์ดมาขัดแย้ง) จึงฟังดูเป็นธรรมชาติกว่าดอมิแนนต์ 11 มาก"
+      },
+      "extendidas:13": {
+        "nombre": "ดอมิแนนต์เธอร์ทีน (13)",
+        "descripcion": "ดอมิแนนต์ที่แต่งตัวเต็มที่สุด: 7 + 9 + 13 (มักตัด 11th ออกเพราะแรงเสียดทานแบบเดียวกับใน 11 เดี่ยว) เสียงยิ่งใหญ่แบบบิ๊กแบนด์และแจ๊ส-ฟังก์"
+      },
+      "agregadas:add9": {
+        "nombre": "เมเจอร์เพิ่ม 9th (ไม่มี 7th) (Add9)",
+        "descripcion": "ไตรแอดเมเจอร์ที่เพิ่ม 9th เข้าไปตรงๆ โดยไม่ผ่านเซเว่นธ์ ต่างจากคอร์ด 9th ตัวจริง เพราะที่นี่ไม่มีดอมิแนนต์แอบซ่อนอยู่ มีแค่สีสันที่เพิ่มให้กับเมเจอร์ที่พักสงบ"
+      }
     }
   }
 };

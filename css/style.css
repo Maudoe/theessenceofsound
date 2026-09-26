@@ -1538,3 +1538,88 @@ body.con-antorcha .cursor-antorcha { opacity: 1; }
   }
 }
 body.loader-activo { overflow: hidden; height: 100vh; }
+
+/* ---------------- diccionario de acordes ---------------- */
+.diccionario-cuerpo { max-width: 980px; margin: 0 auto; }
+.dic-raiz {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 22px;
+}
+.dic-raiz label {
+  font-size: 0.72rem; letter-spacing: 1.4px; text-transform: uppercase;
+  color: var(--tenue); font-weight: 700;
+}
+.dic-raiz select {
+  background: var(--carta-alta);
+  border: 1px solid rgba(var(--acento-rgb), 0.45);
+  border-radius: 40px;
+  color: var(--blanco);
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  padding: 6px 16px;
+  cursor: pointer;
+}
+.dic-categoria { margin-bottom: 26px; }
+.dic-tarjetas { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 10px; }
+.tarjeta-acorde {
+  display: flex; flex-direction: column; gap: 2px;
+  padding: 9px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  cursor: pointer;
+  text-align: left;
+  transition: all var(--transicion);
+  min-width: 108px;
+}
+.tarjeta-acorde:hover { border-color: var(--acento); background: rgba(var(--acento-rgb), 0.1); }
+.tarjeta-acorde.activo {
+  border-color: var(--acento);
+  background: color-mix(in srgb, var(--acento) 18%, transparent);
+  box-shadow: 0 0 0 1px rgba(var(--acento-rgb), 0.4);
+}
+.tarjeta-acorde-cifrado {
+  font-family: "Cinzel", "Space Grotesk", sans-serif;
+  font-weight: 700; font-size: 1.05rem; color: var(--blanco);
+}
+.tarjeta-acorde-nombre { font-size: 0.72rem; color: var(--tenue); line-height: 1.3; }
+
+.dic-detalle {
+  margin-top: 10px;
+  padding-top: 24px;
+  border-top: 1px solid var(--borde);
+}
+.dic-detalle:empty { display: none; }
+.dic-detalle-cabeza { margin-bottom: 18px; }
+.dic-detalle-cabeza h3 {
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  color: var(--acento);
+}
+.dic-detalle-nombre { color: var(--blanco); font-size: 0.65em; font-weight: 400; }
+.dic-detalle-formula, .dic-detalle-notas {
+  font-size: 0.86rem; color: var(--tenue); margin-top: 6px;
+}
+.dic-detalle-formula b, .dic-detalle-notas b { color: var(--blanco); }
+.dic-detalle-descripcion {
+  margin-top: 12px; font-size: 0.92rem; line-height: 1.6; color: var(--claro);
+  max-width: 680px;
+}
+.dic-instrumento-tabs { display: flex; gap: 8px; margin: 18px 0 8px; }
+.dic-pista { font-size: 0.78rem; color: var(--tenue); opacity: 0.85; margin-bottom: 14px; }
+.dic-posiciones {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 18px;
+}
+.dic-posicion {
+  background: var(--carta);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 10px;
+}
+.dic-posicion-piano { grid-column: 1 / -1; max-width: 520px; }
+.dic-posicion-svg svg { width: 100%; height: auto; display: block; }
+.dic-vacio { color: var(--tenue); font-size: 0.85rem; grid-column: 1 / -1; }
+@media (max-width: 640px) {
+  .dic-posiciones { grid-template-columns: 1fr; }
+}
