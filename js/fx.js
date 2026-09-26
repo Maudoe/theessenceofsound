@@ -151,11 +151,14 @@ function agregarRayoEnergia(path, capa, idBase, indice) {
     renderMapaPropio(mapa, svgMapa);
 
     // cada nota, viva desde el arranque, cada una con su propio pulso —
-    // reusa la misma animación que ya usa el sitio cuando le hacés hover.
+    // acá el círculo tiene que agrandarse y achicarse de verdad (no un
+    // roce del 4%), y ninguno igual al de al lado: duración Y amplitud
+    // random por nodo, para que se note que respiran distinto.
     svgMapa.querySelectorAll(".sh-nodo").forEach((g) => {
       g.classList.add("sh-vivo");
-      g.style.setProperty("--sh-pulso-dur", (2.1 + Math.random() * 1.3).toFixed(2) + "s");
-      g.style.setProperty("--sh-pulso-delay", (-Math.random() * 2.4).toFixed(2) + "s");
+      g.style.setProperty("--sh-pulso-dur", (2.2 + Math.random() * 1.8).toFixed(2) + "s");
+      g.style.setProperty("--sh-pulso-delay", (-Math.random() * 3).toFixed(2) + "s");
+      g.style.setProperty("--sh-pulso-amp", (1.14 + Math.random() * 0.16).toFixed(3));
     });
 
     // rayos de energía: un cometa que recorre cada flecha real, con su

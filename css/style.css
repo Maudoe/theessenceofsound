@@ -1524,7 +1524,7 @@ body.con-antorcha .cursor-antorcha { opacity: 1; }
 /* ---------------- pulso orgánico al hacer hover en una nota ---------------- */
 @keyframes sh-pulso-vivo {
   0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.045); }
+  50% { transform: scale(var(--sh-pulso-amp, 1.045)); }
 }
 .sh-nodo-circulo, .acorde-chip, .prog-acorde, .carta-mapa .carta-simbolo, .escala-color, .acorde-color {
   transform-origin: center;
