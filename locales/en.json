@@ -1,0 +1,2858 @@
+{
+  "mapas": {
+    "armonia-1": {
+      "nombre": "Modal Interchange Network (Drama & Film)",
+      "geometria": "Matrix / 7x4 Grid",
+      "proposito": "Mix chords from the Major mode and its Parallel Minor (for example, C Major and C Minor) to achieve emotional, cinematic transitions.",
+      "sensacion_emocional": "Nostalgia, heroic melancholy, unexpected turns."
+    },
+    "armonia-2": {
+      "nombre": "Secondary Dominants Star (Jazz & Advanced Pop)",
+      "geometria": "Central Star with Radial Orbits",
+      "proposito": "Map the 'bridge chords' (dominant seventh chords) that take you temporarily to any other scale degree.",
+      "sensacion_emocional": "Sophistication, immediate-resolution tension, continuous motion."
+    },
+    "armonia-3": {
+      "nombre": "Tritone Substitution and Altered Cadence Map (Jazz / Fusion)",
+      "geometria": "X Diagram (Intersecting Diamond)",
+      "proposito": "Replace the traditional dominant chord with one a tritone away for extreme tension.",
+      "sensacion_emocional": "Floating tension, urban mystery, technical elegance."
+    },
+    "armonia-4": {
+      "nombre": "Wheel of Greek Modes and Modal Color (Fantasy & Adventure)",
+      "geometria": "Concentric Rings",
+      "proposito": "Navigate between the center (Ionian/Aeolian mode) and its brightness/darkness modulations (Lydian, Dorian, Phrygian).",
+      "sensacion_emocional": "Epic, mysticism, fantasy worlds, adventure."
+    },
+    "armonia-5": {
+      "nombre": "Diminished Chord Network and Axes of Symmetry (Suspense / Horror)",
+      "geometria": "Octagon of Symmetric Links",
+      "proposito": "Use diminished chords ($7^\\circ$) as 'wildcards' to connect distant keys without going through the classic circle.",
+      "sensacion_emocional": "Uncertainty, danger, suspense, psychological horror."
+    },
+    "armonia-6": {
+      "nombre": "Blues Cadence Circle and Continuous Dominants (Blues / Rock)",
+      "geometria": "Continuous Triangular Loop",
+      "proposito": "Map the 12-bar structure with dominant chords that break the classic major-tonic rule.",
+      "sensacion_emocional": "Energy, rhythm, earthy tension, groove."
+    },
+    "armonia-7": {
+      "nombre": "Circle of Major Thirds (Coltrane Changes)",
+      "geometria": "Rotating Equilateral Triangle",
+      "proposito": "Modulate quickly by dividing the octave into three equal parts, avoiding the traditional progression by fifths.",
+      "sensacion_emocional": "Vertigo, mathematical brilliance, cascading sound, avant-garde jazz."
+    },
+    "armonia-8": {
+      "nombre": "Quartal Harmony Network",
+      "geometria": "Ladder of Parallel Pillars",
+      "proposito": "Build chords by stacking fourths instead of thirds to create suspended harmonies without an aggressive tonal center.",
+      "sensacion_emocional": "Open space, zero gravity, meditation, modal jazz."
+    },
+    "armonia-9": {
+      "nombre": "Deceptive Cadence Matrix",
+      "geometria": "Forks (Decision Tree)",
+      "proposito": "Prepare the listener for a resolution to the tonic, but divert the harmony toward unexpected chords to extend the phrase.",
+      "sensacion_emocional": "Surprise, revelation, narrative continuation, epic pop."
+    },
+    "armonia-10": {
+      "nombre": "The Axis System (Bartók Theory)",
+      "geometria": "Circle Divided into Orthogonal Axes (Cross)",
+      "proposito": "Group the 12 tones into three functional axes (Tonic, Subdominant, Dominant) separated by minor thirds, allowing chords within the same axis to be interchanged.",
+      "sensacion_emocional": "Geometric tension, structured dissonance, contemporary music/thriller film."
+    },
+    "armonia-11": {
+      "nombre": "Augmented Sixth and Neapolitan Chords",
+      "geometria": "Converging Funnel",
+      "proposito": "Create extreme chromatic tension that converges from above and below toward the dominant chord.",
+      "sensacion_emocional": "Operatic drama, classic tragedy, imminent fate."
+    },
+    "armonia-12": {
+      "nombre": "Parallel Harmony Network (Planing)",
+      "geometria": "Synchronized Diagonal Lines",
+      "proposito": "Move the exact same chord structure (e.g. Maj7 or m9) up or down the fretboard/keyboard without regard for the diatonic scale.",
+      "sensacion_emocional": "Buoyancy, lucid dream, impressionism (Debussy style), ethereal mystery."
+    },
+    "armonia-13": {
+      "nombre": "Andalusian Cadence Cycle",
+      "geometria": "4-Step Descending Cascade",
+      "proposito": "A minor progression that descends by conjunct scale degrees, creating a continuous cycle of tension that never fully resolves into peace.",
+      "sensacion_emocional": "Earthy passion, controlled fury, desert, Spanish folklore and neoclassical rock."
+    },
+    "armonia-14": {
+      "nombre": "Whole Tone Scale Mesh",
+      "geometria": "Floating Hexagon",
+      "proposito": "Use augmented chords derived from the whole tone scale, eliminating any sense of tonic or leading semitone.",
+      "sensacion_emocional": "Total disorientation, magic, alien atmosphere, transition into a dream or flashback."
+    },
+    "armonia-15": {
+      "nombre": "Chromatic Passing Chord Diagram (Bebop)",
+      "geometria": "Zig-Zag Path",
+      "proposito": "Insert diminished chords or dominant sevenths between the main diatonic chords to create continuous walking bass lines.",
+      "sensacion_emocional": "Constant motion, urban sophistication, fluid swing."
+    },
+    "armonia-16": {
+      "nombre": "Ostinato Harmonic Vamp (Pedal Point)",
+      "geometria": "Fixed Circular Loop Over an Anchor",
+      "proposito": "Hold a constant bass note (pedal note) while the upper-voice chords change, generating accumulating tension.",
+      "sensacion_emocional": "Hypnosis, monstrous anticipation, trance, epic film crescendo."
+    },
+    "armonia-17": {
+      "nombre": "Extended Plagal Cadence (Gospel & Soul)",
+      "geometria": "Floating Return Arc",
+      "proposito": "Extend the arrival at the tonic through the use of the minor subdominant and its color variations without going through the classic dominant.",
+      "sensacion_emocional": "Redemption, spiritual warmth, comforting nostalgia."
+    },
+    "armonia-18": {
+      "nombre": "Contrapuntal Chromaticism Circle (Line Cliché)",
+      "geometria": "Descending Inner Spiral",
+      "proposito": "Keep the tonic or base chord fixed while a single inner or bass voice descends semitone by semitone.",
+      "sensacion_emocional": "Detective mystery, elegant melancholy, spy/noir tension."
+    },
+    "armonia-19": {
+      "nombre": "Royal Cadence / J-Pop Network (IV - V - iii - vi)",
+      "geometria": "Z-Loop",
+      "proposito": "Create a sense of continuous, uninterrupted melodic motion, very popular in anime music and modern pop.",
+      "sensacion_emocional": "Heroic nostalgia, euphoria, youthful march, constant drive."
+    },
+    "armonia-20": {
+      "nombre": "Suspended Chord Matrix (Sus2 / Sus4)",
+      "geometria": "Centerless Network of Floating Nodes",
+      "proposito": "Remove the third from the chord to create ambiguous harmonies that are neither major nor minor, ideal for ambient textures.",
+      "sensacion_emocional": "Etherealness, air, meditative calm, weightlessness."
+    },
+    "armonia-21": {
+      "nombre": "Epic 4-Chord Pop/Rock Progression",
+      "geometria": "Continuous Rotating Quadrilateral",
+      "proposito": "Structure the most commonly used progressions in commercial music (I - V - vi - IV and vi - IV - I - V).",
+      "sensacion_emocional": "Triumph, familiarity, motivation, universal emotion."
+    },
+    "armonia-22": {
+      "nombre": "Pivot Chord Modulation Map",
+      "geometria": "Interdimensional Bridge Between Two Circles",
+      "proposito": "Connect two distant keys using a chord common to both scales.",
+      "sensacion_emocional": "Organic transition, change of scenery, story evolution."
+    },
+    "armonia-23": {
+      "nombre": "R&B / Neo-Soul Extensions Mesh (9ths, 11ths and 13ths)",
+      "geometria": "Polygonal Matrix of Overlapping Layers",
+      "proposito": "Enrich simple progressions by adding upper layers of notes for a sophisticated, silky sound.",
+      "sensacion_emocional": "Warm, urban, sensual, relaxing, modern-production."
+    },
+    "armonia-24": {
+      "nombre": "Circle of Inversions and Singable Bass Lines",
+      "geometria": "Sine Wave Around a Central Axis",
+      "proposito": "Connect chords not by their roots but by creating a continuous melody in the low notes using notes played on the third or fifth.",
+      "sensacion_emocional": "Baroque fluidity, elegance, organic continuity, depth."
+    },
+    "armonia-25": {
+      "nombre": "Polytonal Network / Triad Superposition (Upper Structures)",
+      "geometria": "Overlapping Double Pyramids",
+      "proposito": "Play a major triad over a different dominant chord to generate complex jazz dissonances.",
+      "sensacion_emocional": "Cerebral complexity, avant-garde, electric tension, virtuosity."
+    },
+    "armonia-26": {
+      "nombre": "Harmonized Pentatonic Matrix (Synths and EDM)",
+      "geometria": "Connected Pentagonal Network",
+      "proposito": "Build chords using only the notes of the major or minor pentatonic scale to avoid harmonic clashes.",
+      "sensacion_emocional": "Futuristic brightness, electronic energy, clean euphoria."
+    },
+    "armonia-27": {
+      "nombre": "Negative Harmony Map (Inverted Symmetry)",
+      "geometria": "Horizontal Bi-Planar Mirror",
+      "proposito": "Invert the polarity of harmonic relationships around a fixed axis (the C-G axis) to turn major progressions into their dark minor mirror versions.",
+      "sensacion_emocional": "Upside-down world, familiar strangeness, psychological shadow."
+    },
+    "armonia-28": {
+      "nombre": "Block / Slap Chord Diagram (Funk and Disco)",
+      "geometria": "Rectangular Impact Blocks",
+      "proposito": "Move small 3- or 4-note chord blocks in syncopated rhythms with sharp, dry pauses.",
+      "sensacion_emocional": "Groove, dancing, attitude, irresistible danceable rhythm."
+    },
+    "armonia-29": {
+      "nombre": "Cluster and Microtonal Sonority Map (Horror / Thriller Film)",
+      "geometria": "Dense Cloud of Points",
+      "proposito": "Group notes a semitone or microtone apart to create walls of sound full of dissonant dissonance.",
+      "sensacion_emocional": "Claustrophobia, panic, madness, imminent danger."
+    },
+    "armonia-30": {
+      "nombre": "Open Voicing System (Drop 2 and Drop 3 for Strings)",
+      "geometria": "Vertical Expansion Diagram",
+      "proposito": "Space out the notes of a chord, leaving room in the middle so it sounds wider and clearer in orchestral arrangements.",
+      "sensacion_emocional": "Majesty, symphonic clarity, concert-hall breadth."
+    },
+    "armonia-31": {
+      "nombre": "Complete Parallel Modal Interchange Network (The 7 Modes in C)",
+      "geometria": "Multiple 7-Layer Octagonal Star",
+      "proposito": "Have direct access to the main chords of the 7 Greek modes starting from the same tonic note (C Ionian, C Dorian, C Phrygian, etc.).",
+      "sensacion_emocional": "The full spectrum of human harmonic color, from divine light to absolute darkness."
+    },
+    "armonia-32": {
+      "nombre": "Chromatic Mediants Mesh (Epic and Fantasy Film)",
+      "geometria": "Hexagon of Third-Leaps",
+      "proposito": "Connect chords of the same type (major or minor) separated by a major or minor third that don't belong to the same key, creating drastic cinematic turns.",
+      "sensacion_emocional": "Awe, heroic revelation, magic, monumental scale (Hans Zimmer style)."
+    },
+    "armonia-33": {
+      "nombre": "Neo-Riemannian Network (Tonnetz Diagram)",
+      "geometria": "Infinite Triangular Mesh Network",
+      "proposito": "Connect chords by changing only one note per step through P (Parallel), L (Leading-tone/Third), and R (Relative) transformations, with no need for dominants.",
+      "sensacion_emocional": "Geometric fluidity, zero gravity, mathematical beauty, science-fiction film."
+    },
+    "armonia-34": {
+      "nombre": "Backdoor Cadence (Bb7 -> C)",
+      "geometria": "Reverse Diagonal Route",
+      "proposito": "Resolve to the major tonic using the subV7 borrowed from the minor mode (bVII7) instead of the classic dominant (V7).",
+      "sensacion_emocional": "Soft triumph, unexpected but comforting resolution, 80s pop and soul."
+    },
+    "armonia-35": {
+      "nombre": "Circle of the Three Minor Shadows (Natural, Harmonic and Melodic)",
+      "geometria": "Triple Concentric Spiral",
+      "proposito": "Alternate between the variations of the minor scale to get melodic tension (Harmonic) or jazz fluidity (Melodic) within a single piece.",
+      "sensacion_emocional": "Classic mystery, dramatic tension, technical virtuosity."
+    },
+    "armonia-36": {
+      "nombre": "Hybrid Chord and Slash Chord Network (Pop Ballad / Elton John Style)",
+      "geometria": "Walkway of Parallel Steps",
+      "proposito": "Keep a fixed note or a walking bass while the upper triad changes, generating chords like F/G, Eb/F, or G/C.",
+      "sensacion_emocional": "Pop sophistication, piano emotion, warmth, TV-era nostalgia."
+    },
+    "armonia-37": {
+      "nombre": "Mu Chord Map / 'Mu Major' (Steely Dan / Jazz Rock Style)",
+      "geometria": "Triangle with Embedded Core",
+      "proposito": "Add the second note (add2/add9) immediately next to the major third within the chord to create a subtle but bright dissonance.",
+      "sensacion_emocional": "Irony, complex elegance, studio polish, 70s jazz-rock."
+    },
+    "armonia-38": {
+      "nombre": "Major Subdominant Circuit in Minor Mode (Dorian Effect)",
+      "geometria": "Loop Within a Hidden Loop",
+      "proposito": "Introduce the major IV degree (such as D7 or D major) within a song in a minor key (like Am), raising the sixth degree of the scale.",
+      "sensacion_emocional": "Psychedelic mystery, spatial flight, British rock (Pink Floyd / Santana style)."
+    },
+    "armonia-39": {
+      "nombre": "Chained Dominants Network (Circle of Dominants)",
+      "geometria": "Circle of Consecutive Gears",
+      "proposito": "Chain multiple dominant seventh chords where each one is the V7 of the next, traveling long distances before resolving.",
+      "sensacion_emocional": "Acceleration, relentless drive, ragtime, classic swing, comedy."
+    },
+    "armonia-40": {
+      "nombre": "Neoclassical Matrix 'La Folia de España'",
+      "geometria": "Symmetric Baroque Zig-Zag",
+      "proposito": "Renaissance and Baroque harmonic structure based on the constant alternation between the minor tonic and its relative major through the dominant.",
+      "sensacion_emocional": "Ancient drama, aristocratic dance, solemn tension, neoclassical guitar."
+    },
+    "armonia-41": {
+      "nombre": "Suspension and Inversion Diagram (4-3 and 9-8 Resolutions)",
+      "geometria": "Cascade of Falling Modules",
+      "proposito": "Delay the expected harmonic note by holding a note from the previous chord so it resolves one step later.",
+      "sensacion_emocional": "Relief, devotion, sacred music, Baroque chorale, restrained emotion."
+    },
+    "armonia-42": {
+      "nombre": "Exotic Pentatonic Harmonization Map (Hirajoshi / Insen)",
+      "geometria": "Asymmetric 5-Pointed Star",
+      "proposito": "Create chords from traditional Japanese or Middle Eastern pentatonic scales to avoid standard Western sonorities.",
+      "sensacion_emocional": "Eastern mystery, distant folklore, ancestral nature, dark meditation."
+    },
+    "armonia-43": {
+      "nombre": "Contrary Motion Harmonization Network (Block Counterpoint)",
+      "geometria": "Crossed X Lines",
+      "proposito": "Design progressions where the upper melody rises while the bass descends in strictly symmetric fashion.",
+      "sensacion_emocional": "Perfect balance, classical voice leading, choral solidity."
+    },
+    "armonia-44": {
+      "nombre": "Urban Minor Blues Circuit (12-Bar Minor)",
+      "geometria": "12-Block Rectangular Matrix",
+      "proposito": "Structure the blues progression using minor seventh chords with a turnaround featuring an augmented fifth or altered ninth.",
+      "sensacion_emocional": "Urban melancholy, lament, rain, night jazz club."
+    },
+    "armonia-45": {
+      "nombre": "Augmented Chords as Wormhole Nodes (Caug / Eaug / Abaug)",
+      "geometria": "Symmetric Triangle of Portals",
+      "proposito": "Use the symmetry of the augmented chord (dividing the octave into 3 equal parts) to jump instantly to completely unconnected keys.",
+      "sensacion_emocional": "Sonic teleportation, surprise, surrealism, time travel."
+    },
+    "armonia-46": {
+      "nombre": "Drone and Open Fifths Network (Nordic Folk / Post-Rock)",
+      "geometria": "Central Anchor with Long Radial Lines",
+      "proposito": "Hold chords without a third (power chords / 5) over a rumbling low note to achieve primitive or epic sonorities without defining major/minor.",
+      "sensacion_emocional": "Cold, Viking landscape, immensity, hypnotic weight, post-rock atmosphere."
+    },
+    "armonia-47": {
+      "nombre": "Neighboring Chord Substitution Matrix",
+      "geometria": "Protective Shield Orbit",
+      "proposito": "Replace a main chord with its immediate scale neighbor (e.g. changing C for Dm/C or Em/C) to smooth out transitions.",
+      "sensacion_emocional": "Extreme softness, contemplative elegance, ambient texture."
+    },
+    "country-1": {
+      "nombre": "The 'Bakersfield Sound' Circle (I - IV - V7 with Twang)",
+      "geometria": "Sharp-Attack Triangle",
+      "proposito": "Basic harmony of modern and classic country. Uses bright dominant chords to give a direct, danceable push.",
+      "sensacion_emocional": "Brightness, Honky-Tonk energy, direct dancing, walking rhythm.",
+      "tecnica_o_ejecucion": "Bridge-pickup use (Telecaster), pick attack with hard metal/plastic pick near the bridge."
+    },
+    "country-2": {
+      "nombre": "Pedal Steel Bend Lick (Double-String Bends / Double Stops)",
+      "geometria": "Parallel Vectors with a Pressure Curve",
+      "proposito": "Imitate the sound of the pedal steel guitar by bending one string while keeping another fixed on its note.",
+      "sensacion_emocional": "Cowboy lament, nostalgia, country sweetness, smooth transition between chords.",
+      "tecnica_o_ejecucion": "Ring/middle finger bends the B string upward while the pinky holds the E string on a fixed fret."
+    },
+    "country-3": {
+      "nombre": "Pentatonic Blend Matrix (Major Pentatonic + Minor Blue Note)",
+      "geometria": "Interlaced 5x6 Fret Grid",
+      "proposito": "Combine the major pentatonic scale (sweet country sound) with the minor 3rd / chromatic b5 to give the 'spicy' sound of a country solo.",
+      "sensacion_emocional": "Country flavor, mischief, fluidity, agile virtuosity.",
+      "tecnica_o_ejecucion": "Fast hammer-ons moving from the minor 3rd to the major 3rd immediately."
+    },
+    "country-4": {
+      "nombre": "Chicken Pickin' Mesh (Rhythm and Percussive Solos)",
+      "geometria": "Tightly Fired Zig-Zag Points",
+      "proposito": "Create 'ghost' notes by muting the strings with the right/left hand to achieve a percussive rhythmic snap.",
+      "sensacion_emocional": "Acceleration, frenetic rhythm, 'chicken-pickin'' style, rhythmic dexterity.",
+      "tecnica_o_ejecucion": "Hybrid picking (pick strikes down, middle/ring finger plucks the string outward so it snaps against the frets)."
+    },
+    "country-5": {
+      "nombre": "Open-String Cascades / Banjo Rolls on Guitar",
+      "geometria": "Continuous Descending Arpeggiated Wave",
+      "proposito": "Use open strings as passing notes while the left hand moves along the fretboard, creating a harp- or banjo-like effect.",
+      "sensacion_emocional": "Dazzling speed, crystalline fluidity, Bluegrass atmosphere.",
+      "tecnica_o_ejecucion": "Continuous arpeggiated patterns (pick - middle - ring) keeping open strings tuned within the scale."
+    },
+    "country-6": {
+      "nombre": "Chromatic Approach to the 3rd (The Ultimate Twang Lick)",
+      "geometria": "Three-Part Chromatic Step",
+      "proposito": "Reach the chord's key note (the major 3rd) by sliding two chromatic notes up from below.",
+      "sensacion_emocional": "Classic country soloist signature, satisfying resolution.",
+      "tecnica_o_ejecucion": "Ultra-fast slide with the index or middle finger toward the tonic or 3rd."
+    },
+    "country-7": {
+      "nombre": "Western Swing Harmonic Network (Jazz-Country Substitutions)",
+      "geometria": "Circle with Rearranged Sixth and Ninth Chords",
+      "proposito": "Blend country rhythm with swing sophistication through 6th, 9th, and passing diminished chords.",
+      "sensacion_emocional": "Danceable elegance, Texas swing, retro sophistication."
+    },
+    "country-8": {
+      "nombre": "Walk-up and Walk-down Bass Lines (Bluegrass Tradition)",
+      "geometria": "Descending/Ascending Staircase of Low Strings",
+      "proposito": "Connect one chord to the next through individual notes on the 5th and 6th strings before strumming.",
+      "sensacion_emocional": "Rhythmic walk, clear drive, traditional folk flavor.",
+      "tecnica_o_ejecucion": "Picking supported on the low strings followed by a 'boom-chick' strum."
+    },
+    "country-9": {
+      "nombre": "Twin-Guitar Harmonization in Sixths (6ths Double Stops)",
+      "geometria": "Double Diagonals on Separated Strings",
+      "proposito": "Play two notes a 6th apart to create a harmonized melody typical of a guitar duo.",
+      "sensacion_emocional": "Two-voice singing, Tex-Mex sound, melodic sweetness.",
+      "tecnica_o_ejecucion": "Pick on the low string + middle finger plucking the B string (or muting the middle G string)."
+    },
+    "country-10": {
+      "nombre": "Country / Americana Ballad Map (I - IVadd9 - V - vi)",
+      "geometria": "Ring of Open Chords with Suspended Notes",
+      "proposito": "Emotional progression for acoustic ballads with notes left ringing freely (open strings).",
+      "sensacion_emocional": "Intimacy, open road, nostalgia, storytelling."
+    },
+    "western-1": {
+      "nombre": "The 'Gothic Desert' Loop (Harmonic Minor Scale / Morricone)",
+      "geometria": "Dark Circle with an Inner Spiral",
+      "proposito": "Base harmony for duel sequences, suspense, or walks under the sun. Uses the major V7 in a minor key to give that 'classic', dangerous flavor.",
+      "sensacion_emocional": "Imminent danger, judgment day, stifling heat, duel suspense."
+    },
+    "western-2": {
+      "nombre": "Low-String Baritone Riff (Palm Muting + Spring Reverb)",
+      "geometria": "Low Horizontal Line with a Watchful Pulse",
+      "proposito": "Low, menacing melodic lines played on a baritone guitar or on the 5th and 6th strings in a dropped tuning (Drop D / Drop C).",
+      "sensacion_emocional": "An outlaw's footsteps, latent threat, weight, funeral march.",
+      "tecnica_o_ejecucion": "Dense palm muting + hard pick near the bridge + spring reverb at maximum with a touch of slow tremolo."
+    },
+    "western-3": {
+      "nombre": "The Killer's Phrygian Cadence (i - bII - bIII - bII)",
+      "geometria": "Asymmetric Swinging Pendulum",
+      "proposito": "Generate a very dark 'Spanish/Arabic' tension typical of ambushes, moving between the root chord and its semitone above.",
+      "sensacion_emocional": "Attack, desperation, lawless desert, revenge."
+    },
+    "western-4": {
+      "nombre": "Gothic Slide Guitar in Open Dm (Open Dm Tuning: D-A-D-F-A-D)",
+      "geometria": "Concave Glissando Line",
+      "proposito": "Play floating, desolate melodic lines using a glass or metal slide over a minor open tuning.",
+      "sensacion_emocional": "Wind through a ghost town, absolute solitude, distant lament.",
+      "tecnica_o_ejecucion": "Slide with the left hand + wide vibrato at the end of each note + tape delay echo."
+    },
+    "western-5": {
+      "nombre": "Shadow Arpeggio with Added Second (Dmadd9 / Amadd9)",
+      "geometria": "Triangle of Sharp Points",
+      "proposito": "Create acoustic-guitar or slow-pulse box harmonies where the open strings generate cold dissonances.",
+      "sensacion_emocional": "Icy melancholy, past trauma, tragic tale around the campfire.",
+      "tecnica_o_ejecucion": "Slow fingerpicked arpeggio, letting the E note (the added second) ring directly against the minor third."
+    },
+    "western-6": {
+      "nombre": "'Grit & Pluck' Tremolo Picking (High-Tension Lick in the Upper Register)",
+      "geometria": "Parallel Lightning Discharge",
+      "proposito": "Play ultra-fast tremolo with the pick on the first string while varying the note within the melodic minor scale.",
+      "sensacion_emocional": "Hysteria, climax of a horseback chase, madness.",
+      "tecnica_o_ejecucion": "Alternate picking at maximum speed on a single string combined with a fast square-wave tremolo pedal."
+    },
+    "western-7": {
+      "nombre": "Macabre Sixths in a Minor Key (Gothic Double Stops)",
+      "geometria": "Shifted Parallel Tracks",
+      "proposito": "Play descending sixth-interval harmonies on the 1st and 3rd strings in a minor key.",
+      "sensacion_emocional": "Tragic romance, funeral on the frontier, macabre beauty.",
+      "tecnica_o_ejecucion": "Pluck both strings simultaneously, keeping the 2nd string muted with the edge of the finger."
+    },
+    "western-8": {
+      "nombre": "'Hunter's Tritone' Chromaticism (Using the b5 as an Anchor)",
+      "geometria": "Discontinuous Cross",
+      "proposito": "Use the diminished fifth not only as a fast passing note but as a stopping chord (power chord with b5).",
+      "sensacion_emocional": "Curse, desert witchcraft, demonic or supernatural presence."
+    },
+    "western-9": {
+      "nombre": "'Pedal Point' Funeral March (Fixed Bass + Floating Chords)",
+      "geometria": "Horizontal Base Wall with Falling Blocks",
+      "proposito": "Keep the low D note playing rhythmically without stopping while the right hand changes small major and minor mini-triads on the upper strings.",
+      "sensacion_emocional": "Inexorability, march to the gallows, relentless fatal destiny.",
+      "tecnica_o_ejecucion": "Constant bass pulse in octaves while strumming or picking two-note chords on top."
+    },
+    "western-10": {
+      "nombre": "'Whammy Dip' Lick (Pitch Drop with a Vibrato Bar)",
+      "geometria": "Descending Arc of Pressure",
+      "proposito": "Play a minor chord or a fifth chord with soft saturation and push the vibrato bar down to intentionally detune the note.",
+      "sensacion_emocional": "Mental instability, heat-induced dizziness, hallucination, hopelessness.",
+      "tecnica_o_ejecucion": "Dry attack on the chord + immediate physical pressure on the Bigsby or Fender Stratocaster bar to lower the whole tuning by 1/2 or 1 step."
+    },
+    "blues-101": {
+      "nombre": "Chicago Blues (Shuffle in A)",
+      "geometria": "Continuous Triangular Loop",
+      "proposito": "Set the three-chord skeleton of the 12-bar blues in A, played with a shuffle subdivision. Lets the student hear the I-IV-V cycle bare, before adding substitutions.",
+      "sensacion_emocional": "Earthy groove, sweat, drive."
+    },
+    "blues-102": {
+      "nombre": "12-Bar Blues with Quick Change (Blues in C)",
+      "geometria": "12-Block Rectangular Matrix",
+      "proposito": "Show the variant where the IV shows up already in bar 2 and the I only returns afterward. Trains the ear to anticipate the early move to the IV.",
+      "sensacion_emocional": "Clarity, motion, broad breathing."
+    },
+    "blues-103": {
+      "nombre": "Minor Blues (Blues in C minor)",
+      "geometria": "Descending Cascade",
+      "proposito": "Work with minor blues: i and iv with a minor seventh and an altered V7 that tightens the turnaround. Useful for soloing with the natural minor and Phrygian dominant over the V.",
+      "sensacion_emocional": "Dark, resigned, tense."
+    },
+    "blues-104": {
+      "nombre": "Jazz Blues with ii-V (Blues in F)",
+      "geometria": "Circle of Consecutive Gears",
+      "proposito": "Fill the 12-bar blues with ii-V chains so each dominant arrives prepared. Base for improvising with voice leading instead of the pentatonic scale alone.",
+      "sensacion_emocional": "Elegant, conversational, sophisticated."
+    },
+    "blues-105": {
+      "nombre": "Turnaround Catalog (Blues in G)",
+      "geometria": "Zig-Zag Path",
+      "proposito": "Compare three different exits for bars 11 and 12: the I-VI-II-V, the I-IV-I-V, and the chromatic descent to the V. Choose the turnaround based on how much tension you want to leave open.",
+      "sensacion_emocional": "Curiosity, suspense, decision."
+    },
+    "blues-106": {
+      "nombre": "8-Bar Blues (Blues in E)",
+      "geometria": "Low Horizontal Line",
+      "proposito": "Practice the short 8-bar form, where the V shows up very early and the turnaround arrives before the ear expects it. Ideal for two-bar phrases.",
+      "sensacion_emocional": "Concise, country-flavored, direct."
+    },
+    "blues-107": {
+      "nombre": "16-Bar Blues (Extended Blues in G)",
+      "geometria": "Ladder of Parallel Pillars",
+      "proposito": "Stretch the form with four extra bars over the IV before the V, so you can develop a long melodic idea without the cycle cutting you off.",
+      "sensacion_emocional": "Patience, storytelling, a long breath."
+    },
+    "blues-108": {
+      "nombre": "Ninth-Chord Blues with Walking Bass (Blues in E)",
+      "geometria": "Sine Wave",
+      "proposito": "Work on slow, undulating blues with ninth chords instead of plain sevenths. The ninth softens the color and leaves room for the walking bass.",
+      "sensacion_emocional": "Hypnotic, lazy, swaying."
+    },
+    "blues-109": {
+      "nombre": "Stop-Time Blues (Stop-time in A)",
+      "geometria": "X Diagram (Intersecting Diamond)",
+      "proposito": "Organize band cuts: the first bars stay silent except for the hits, and the groove returns in full upon reaching the IV. Useful for rehearsing ensemble dynamics.",
+      "sensacion_emocional": "Suspense, hit, anticipation."
+    },
+    "blues-110": {
+      "nombre": "Gospel Blues with a Minor iv (Blues in F)",
+      "geometria": "Concentric Rings",
+      "proposito": "Bring a church color into the blues: major chords instead of dominant sevenths, the minor iv as an emotional hinge, and a VI7 that drives the turnaround.",
+      "sensacion_emocional": "Uplift, comfort, warmth."
+    },
+    "blues-111": {
+      "nombre": "Blues with Tritone Substitution (Blues in Bb)",
+      "geometria": "Descending Spiral",
+      "proposito": "Replace dominants with their tritone substitute to get basses that descend by a half step. Forces you to think of the V7 and its substitute as the same function.",
+      "sensacion_emocional": "Slippery, modern, restless."
+    },
+    "blues-112": {
+      "nombre": "Blues in Harmonic Minor (Blues in A minor)",
+      "geometria": "Connected Pentagon",
+      "proposito": "Use the harmonic minor so the V7 has a real major third and leading tone. The contrast between the minor iv and that dominant is the heart of the map.",
+      "sensacion_emocional": "Dramatic, Spanish, sharp."
+    },
+    "blues-113": {
+      "nombre": "Slow Blues with Ninths and Thirteenths (Blues in C)",
+      "geometria": "Converging Funnel",
+      "proposito": "Build a slow 12-bar blues where each dominant is enriched with a ninth or thirteenth, and the V arrives altered to maximize tension before the close.",
+      "sensacion_emocional": "Lament, velvet, weight."
+    },
+    "blues-114": {
+      "nombre": "Jump Blues for a Horn Section (Blues in Bb)",
+      "geometria": "Octagon of Symmetric Links",
+      "proposito": "Fast blues with small big-band harmony: dominant chains and ii-Vs that give the horns something to bite into on every two-bar riff.",
+      "sensacion_emocional": "Party, speed, brightness."
+    },
+    "blues-115": {
+      "nombre": "Blues with Passing Diminished Chords (Blues in C)",
+      "geometria": "Floating Hexagon",
+      "proposito": "Insert chromatic diminished chords between the blues' scale degrees so the bass climbs by half steps instead of leaping. A classic accompaniment device for piano and guitar.",
+      "sensacion_emocional": "Sliding, crafted, mischievous."
+    },
+    "blues-116": {
+      "nombre": "Texas Shuffle (Blues in G)",
+      "geometria": "Continuous Triangular Loop",
+      "proposito": "A three-chord shuffle with a bass riff and a mix of seventh, ninth, and thirteenth over the same degree. Useful for thinking of chord color as an arranging decision.",
+      "sensacion_emocional": "Dusty, wide, insistent."
+    },
+    "blues-117": {
+      "nombre": "One-Chord Funk Blues (Vamp in E)",
+      "geometria": "Central Star with Radial Orbits",
+      "proposito": "Sustain a funk vamp on the I and step out to the IV and the V only as much as needed. The melodic interest comes from the alterations on the central chord, not from the change.",
+      "sensacion_emocional": "Greasy, hip-driven, insistence."
+    },
+    "blues-118": {
+      "nombre": "Bebop Blues with Harmonic Density (Blues in F)",
+      "geometria": "Decision Tree",
+      "proposito": "A 12-bar version with chord changes every two beats: a diminished chord in bar 6, chained ii-Vs, and an optional tritone substitute. It's the map for choosing a path in real time.",
+      "sensacion_emocional": "Dizzying, cerebral, brilliant."
+    },
+    "rock-201": {
+      "nombre": "Mixolydian I-bVII-IV (Modal Rock in D)",
+      "geometria": "Continuous Triangular Loop",
+      "proposito": "Set the most widely used Mixolydian loop in rock: the major tonic with the bVII that avoids the leading tone, and the IV as a breather. Good for riffs without a classic cadence.",
+      "sensacion_emocional": "Open, on the road, confidence."
+    },
+    "rock-202": {
+      "nombre": "Aeolian i-bVII-bVI (Minor Rock in E minor)",
+      "geometria": "Descending Cascade",
+      "proposito": "Work on the Aeolian descent through whole scale degrees and decide whether to return to the i directly or pass through a borrowed V7 for a stronger close.",
+      "sensacion_emocional": "Epic, melancholic, inevitable."
+    },
+    "rock-203": {
+      "nombre": "Power Chords Without a Third (Riff in A)",
+      "geometria": "Low Horizontal Line",
+      "proposito": "Think of the riff with pure fifths, where the absence of a third leaves the key ambiguous and the order of the blocks defines the character. Base for heavy distortion.",
+      "sensacion_emocional": "Raw, massive, ambiguous."
+    },
+    "rock-204": {
+      "nombre": "50s Rock I-vi-IV-V (Progression in C)",
+      "geometria": "Circle of Consecutive Gears",
+      "proposito": "Set the four-chord cycle that carries early rock and roll and doo-wop ballads, and see how it changes if you replace the vi with its dominant.",
+      "sensacion_emocional": "Nostalgic, innocent, bright."
+    },
+    "rock-205": {
+      "nombre": "Hard Rock with a Borrowed bIII (Riff in A)",
+      "geometria": "Overlapping Pyramids",
+      "proposito": "Mix the major blues-rock tonic with the bIII and bVII degrees of the natural minor. The clash between the riff's major third and the chord's bIII is the sound being sought.",
+      "sensacion_emocional": "Heavy, cocky, sharp."
+    },
+    "rock-206": {
+      "nombre": "Progressive Rock in Irregular Meters (Center on D minor)",
+      "geometria": "Cross of Orthogonal Axes",
+      "proposito": "Sustain a minor tonal center while the meter shifts from 7/8 to 5/4. The chords are chosen so every downbeat lands on a common note.",
+      "sensacion_emocional": "Labyrinthine, ambitious, unstable."
+    },
+    "rock-207": {
+      "nombre": "Grunge i-bIII-bVI (Progression in E minor)",
+      "geometria": "Zig-Zag Path",
+      "proposito": "Chain minor scale degrees with third-leaps instead of cadences, and let the bVI hang a bit too long so the resolution arrives late and dirty.",
+      "sensacion_emocional": "Abrasive, resentful, resigned."
+    },
+    "rock-208": {
+      "nombre": "Stoner with a Pedal Note (Riff in D)",
+      "geometria": "Concentric Rings",
+      "proposito": "Keep the bass nailed to the tonic while the fifths above move chromatically. The pedal generates friction without abandoning the center.",
+      "sensacion_emocional": "Dense, hypnotic, mineral."
+    },
+    "rock-209": {
+      "nombre": "Punk I-IV-V at Full Speed (Progression in G)",
+      "geometria": "Connected Pentagon",
+      "proposito": "Reduce the harmony to three or four repeated blocks at a fast tempo, with the vi as the only shadow. Useful for working on rhythmic precision before harmonic color.",
+      "sensacion_emocional": "Urgent, raw, euphoric."
+    },
+    "rock-210": {
+      "nombre": "Southern Rock with Twin Guitars (Jam in G)",
+      "geometria": "Descending Spiral",
+      "proposito": "Alternate the Mixolydian color of the long jam with a minor ii seventh chord for the third harmonies. Designed for extended solos over few chords.",
+      "sensacion_emocional": "Sunny, brotherly, extended."
+    },
+    "rock-211": {
+      "nombre": "Arena Rock with Suspensions (Chorus in D)",
+      "geometria": "Central Star with Radial Orbits",
+      "proposito": "Delay the tonic's resolution with sus4 and add9 chords so the chorus sounds huge on open strings. The sus always falls to the plain chord.",
+      "sensacion_emocional": "Huge, bright, triumphant."
+    },
+    "rock-212": {
+      "nombre": "Modal Psychedelic in Dorian (Vamp in E)",
+      "geometria": "Sine Wave",
+      "proposito": "Turn over a Dorian vamp where the major IV and the bIII with a major seventh call the tonal center into question. Ideal for drones, sitar, and unresolved solos.",
+      "sensacion_emocional": "Floating, kaleidoscopic, suspended."
+    },
+    "pop-301": {
+      "nombre": "The Four Chords and Their Rotations (I-V-vi-IV)",
+      "geometria": "Circle of Consecutive Gears",
+      "proposito": "Show the most-used four-chord loop in pop and how its character changes depending on where you start. Useful for understanding that vi-IV-I-V, IV-I-V-vi, and I-V-vi-IV are the same circle with a different entry point.",
+      "sensacion_emocional": "Simple optimism, collective sing-along drive"
+    },
+    "pop-302": {
+      "nombre": "50s Doo-Wop (I-vi-IV-V)",
+      "geometria": "Rotating Quadrilateral",
+      "proposito": "Set the doo-wop loop, engine of 50s ballads and half a century of pop afterward. Useful for practicing the I-vi descent and the V's final tension that pushes toward repeating.",
+      "sensacion_emocional": "Retro innocence, slow dance"
+    },
+    "pop-303": {
+      "nombre": "Royal Cadence (IV-V-iii-vi)",
+      "geometria": "Zig-Zag Path",
+      "proposito": "Work on the four-chord turn typical of Japanese pop and anime, which starts already in motion on the IV and lands on the vi. Useful for writing epic choruses without touching the tonic.",
+      "sensacion_emocional": "Heroic nostalgia, youthful euphoria"
+    },
+    "pop-304": {
+      "nombre": "Open Suspensions (sus4 and sus2)",
+      "geometria": "Sine Wave",
+      "proposito": "Practice delaying the third: every chord arrives suspended and only afterward defines itself. Useful for bright pop verses where you want to avoid it feeling major or minor too fast.",
+      "sensacion_emocional": "Breadth, air, gentle anticipation"
+    },
+    "pop-305": {
+      "nombre": "Semitone Jump into the Chorus",
+      "geometria": "Ladder of Parallel Pillars",
+      "proposito": "Modulate up a half step right as the chorus enters, with no transitional chord. Useful for suddenly lifting the energy once the verse has exhausted its range.",
+      "sensacion_emocional": "Vertigo, drive, a rush"
+    },
+    "pop-306": {
+      "nombre": "Modal Borrowing (bVI and bVII)",
+      "geometria": "X Diagram (Intersecting Diamond)",
+      "proposito": "Bring in chords borrowed from the parallel minor mode within a major pop song. Useful for darkening a chorus without changing key and for endings that sound broad and cinematic.",
+      "sensacion_emocional": "Gray epic, contained strength"
+    },
+    "pop-307": {
+      "nombre": "Descending Bass Ballad",
+      "geometria": "Descending Cascade",
+      "proposito": "Harmonize a bass line that descends by conjunct steps using inversions. Useful for piano ballads where the left hand walks and the harmony seems to move on its own.",
+      "sensacion_emocional": "Serene melancholy, farewell"
+    },
+    "pop-308": {
+      "nombre": "Power-Chord Pop Punk",
+      "geometria": "Rectangular Matrix",
+      "proposito": "Play the classic pop loop with fifth chords and distortion, where drive matters more than color. Useful for fast choruses where the guitar barely changes shape.",
+      "sensacion_emocional": "Urgency, adolescent rebellion"
+    },
+    "pop-309": {
+      "nombre": "Synthpop with the vi as the Center",
+      "geometria": "Central Star with Radial Orbits",
+      "proposito": "Treat the relative minor chord as the real tonic and spin everything around it. Useful for synth tracks where you want a melancholic center that still dances.",
+      "sensacion_emocional": "Cold neon, danceable sadness"
+    },
+    "pop-310": {
+      "nombre": "Pre-Chorus That Tightens",
+      "geometria": "Overlapping Pyramids",
+      "proposito": "Build the four-bar bridge that accumulates tension before the chorus, climbing by scale degrees and braking on a suspension. Useful so the chorus's entrance feels earned.",
+      "sensacion_emocional": "Acceleration, pleasant anxiety"
+    },
+    "pop-311": {
+      "nombre": "Pivot Chord for Changing Key",
+      "geometria": "Decision Tree",
+      "proposito": "Use a chord that belongs to both keys as a hinge: Am is vi in C and ii in G. Useful for modulating without the seam being heard.",
+      "sensacion_emocional": "Unexpected twist, new clarity"
+    },
+    "pop-312": {
+      "nombre": "Two-Chord Hook",
+      "geometria": "Horizontal Line",
+      "proposito": "Carry an entire song on a back-and-forth between two chords and save a third one just for the end of the section. Useful when the interest has to come from the melody, the rhythm, and the production.",
+      "sensacion_emocional": "Gentle hypnosis, repetition"
+    },
+    "pop-313": {
+      "nombre": "Chromatic Mediant (I-III)",
+      "geometria": "Connected Pentagon",
+      "proposito": "Jump to a major chord built on the third degree, which doesn't belong to the key and shares only one note with the tonic. Useful for opening a door of color and then returning through the vi.",
+      "sensacion_emocional": "Dazzle, sweet strangeness"
+    },
+    "soul-401": {
+      "nombre": "ii-V-I with Neo-Soul Ninths",
+      "geometria": "Continuous Triangular Loop",
+      "proposito": "Play the basic jazz cadence with the extensions neo-soul uses: ninths on the minor, a thirteenth on the dominant, a major ninth on the tonic. Useful for making a ii-V-I sound modern instead of like an exercise.",
+      "sensacion_emocional": "Velvet, sensual calm"
+    },
+    "soul-402": {
+      "nombre": "Two-Chord Funk Vamp",
+      "geometria": "Sine Wave",
+      "proposito": "Sustain an indefinite groove alternating a minor ninth chord with its dominant a fourth away. Useful for jams, long intros, and anything built on the rhythm rather than on harmonic motion.",
+      "sensacion_emocional": "Hip-driven, insistence, sweat"
+    },
+    "soul-403": {
+      "nombre": "Gospel Plagal Cadence (IV-iv-I)",
+      "geometria": "Converging Funnel",
+      "proposito": "Darken the subdominant before returning to the tonic: first major, then minor, and only then rest. Useful for hymn endings and any close that calls for gravity.",
+      "sensacion_emocional": "Reverence, comfort, uplift"
+    },
+    "soul-404": {
+      "nombre": "Secondary Dominant Chain",
+      "geometria": "Descending Spiral",
+      "proposito": "Chain dominants that resolve into one another by fourths until reaching the tonic. Useful for gospel and soul bridges where each chord pushes relentlessly toward the next.",
+      "sensacion_emocional": "Pull, fervor, vertigo"
+    },
+    "soul-405": {
+      "nombre": "R&B with Eleventh Chords",
+      "geometria": "Rectangular Matrix",
+      "proposito": "Work with eleventh chords, where the fourth replaces the third and everything stays floating. Useful for mid-tempo R&B where the harmony has to sound blurry rather than goal-directed.",
+      "sensacion_emocional": "Haze, intimacy, suspension"
+    },
+    "soul-406": {
+      "nombre": "Slow Jam with Maj9",
+      "geometria": "Descending Cascade",
+      "proposito": "Descend through major and minor ninth chords, without strong dominants, to sustain a slow tempo. Useful for soul ballads where every chord has to last two bars without getting boring.",
+      "sensacion_emocional": "Sheets, slowness, desire"
+    },
+    "soul-407": {
+      "nombre": "Static Dominant Ninths of Funk",
+      "geometria": "Rotating Quadrilateral",
+      "proposito": "Use dominant ninth chords as fixed colors, with no resolving function: each one is a place to stay. Useful for horn riffs and sixteenth-note guitar strumming.",
+      "sensacion_emocional": "Metallic shine, spark, street"
+    },
+    "soul-408": {
+      "nombre": "Four-Bar Gospel Turnaround",
+      "geometria": "Circle of Consecutive Gears",
+      "proposito": "Fill the last bars of a section to send it back to the beginning, altering the vi so it pushes harder. Useful for accompanying choir returns and organ solos.",
+      "sensacion_emocional": "Hot return, exhortation, joy"
+    },
+    "soul-409": {
+      "nombre": "Extended Amen",
+      "geometria": "Concentric Rings",
+      "proposito": "Stretch the two-chord plagal close into a sequence of increasingly darker subdominants before the final rest. Useful for ending a piece with four or eight bars of pure cadence.",
+      "sensacion_emocional": "Solemnity, gratitude, closure"
+    },
+    "soul-410": {
+      "nombre": "Motown Turnaround (I-vi-ii-V)",
+      "geometria": "Zig-Zag Path",
+      "proposito": "Roll the classic soul four-chord loop, with the ii in place of the IV so the bass walks by fourths. Useful for mid-tempo songs with a prominent bass.",
+      "sensacion_emocional": "Vintage joy, light swing"
+    },
+    "soul-411": {
+      "nombre": "Disco Parallel Minor Sevenths",
+      "geometria": "Ladder of Parallel Pillars",
+      "proposito": "Move the same minor seventh structure across scale degrees without changing shape on the guitar or keyboard. Useful for disco and house tracks where the harmony rises and falls as a block.",
+      "sensacion_emocional": "Lights, spin, nighttime euphoria"
+    },
+    "soul-412": {
+      "nombre": "Quiet Storm with Extensions",
+      "geometria": "Floating Hexagon",
+      "proposito": "Build a slow-tempo progression where no chord is a plain triad and the dominants always arrive with a thirteenth. Useful for late-night radio soul, with saxophone and clean guitar.",
+      "sensacion_emocional": "Night, silk, confidence"
+    },
+    "soul-413": {
+      "nombre": "Groove Over a Bass Pedal",
+      "geometria": "Central Star with Radial Orbits",
+      "proposito": "Keep the bass nailed on one note while the chords above change, written as inversions over that pedal. Useful for building tension in intros and bridges without moving the groove.",
+      "sensacion_emocional": "Trance, low pressure, lurking"
+    },
+    "soul-414": {
+      "nombre": "Soul with Minor Subdominant",
+      "geometria": "Cross of Orthogonal Axes",
+      "proposito": "Compare the three versions of the subdominant in the same key: major, dominant, and minor, to choose how much you want the chord to ache before the tonic. Useful for soul choruses with a bittersweet twist.",
+      "sensacion_emocional": "Wounded sweetness, depth"
+    },
+    "country-501": {
+      "nombre": "Bluegrass Walk-up (I-IV with Walking Bass)",
+      "geometria": "Ladder of Parallel Pillars",
+      "proposito": "Practice the move from I to IV by filling the gap with passing bass notes, as the rhythm guitar does in bluegrass. Useful so the chord change sounds driven rather than cut off.",
+      "sensacion_emocional": "Brightness, open road, direct dancing."
+    },
+    "country-502": {
+      "nombre": "Honky-tonk I-V-IV (Inverted Turnaround)",
+      "geometria": "Continuous Triangular Loop",
+      "proposito": "Set the typical honky-tonk turn where the IV arrives after the V rather than before, generating that bar-room sway. Ideal for playing over a two-beat shuffle.",
+      "sensacion_emocional": "Beer, wood, crooked swing."
+    },
+    "country-503": {
+      "nombre": "Western Swing with Sixths and a Passing Diminished",
+      "geometria": "Circle of Consecutive Gears",
+      "proposito": "Train the western swing vocabulary: a tonic with a sixth, a chromatic diminished as a hinge, and a ii-V turnaround. Useful for harmonizing melodies with a dance-orchestra flavor.",
+      "sensacion_emocional": "Elegant, dusty, danceable."
+    },
+    "country-504": {
+      "nombre": "Country Ballad I-vi-IV-V",
+      "geometria": "Rectangular Matrix",
+      "proposito": "Sustain a slow ballad with the most classic turn in country songwriting: tonic, relative minor, subdominant, and dominant. Useful for long verses and narrative lyrics.",
+      "sensacion_emocional": "Warm nostalgia, night drive."
+    },
+    "country-505": {
+      "nombre": "Bluegrass with Chained Dominants",
+      "geometria": "Descending Spiral",
+      "proposito": "Chain dominants by fifths to build the bridge of a fast bluegrass tune. Useful for understanding how each chord prepares the next without odd scales.",
+      "sensacion_emocional": "Speed, spark, competition."
+    },
+    "country-506": {
+      "nombre": "Mixolydian Country (bVII Without Tension)",
+      "geometria": "Zig-Zag Path",
+      "proposito": "Work on the Mixolydian color of country-rock, where the bVII replaces the dominant and the tension drops. Useful for verse riffs that don't want to resolve all the time.",
+      "sensacion_emocional": "Earthy, relaxed, open country."
+    },
+    "country-507": {
+      "nombre": "Pedal-Steel-Style Cadence with sus4",
+      "geometria": "Sine Wave",
+      "proposito": "Imitate the pedal steel effect: delay the third with a sus4 and let it fall. Useful for intros and endings where you want the chord to breathe before settling.",
+      "sensacion_emocional": "Metallic sigh, slow dawn."
+    },
+    "country-508": {
+      "nombre": "Train Beat Over I-IV",
+      "geometria": "Low Horizontal Line",
+      "proposito": "Keep the engine of a train beat running with a minimal sway between I and IV, using the I7 as a bluesy pivot. Useful for practicing constant strumming without losing the pulse.",
+      "sensacion_emocional": "Clattering, forward motion, miles."
+    },
+    "country-509": {
+      "nombre": "Open-Chord Folk with a D Pedal",
+      "geometria": "Central Star with Radial Orbits",
+      "proposito": "Exploit the low D string as a fixed pedal while the chords above change. Useful for folk fingerpicking and open tunings where the bass never moves.",
+      "sensacion_emocional": "Wood, calm, breadth."
+    },
+    "country-510": {
+      "nombre": "Outlaw Country in Minor",
+      "geometria": "Descending Cascade",
+      "proposito": "Build the harsh mood of country in minor mode with a natural descent and a borrowed major dominant that tightens the ending. Useful for hard lyrics and mid tempos.",
+      "sensacion_emocional": "Dust, grudge, a road with no return."
+    },
+    "ambient-601": {
+      "nombre": "Pedal Point with Floating Chords",
+      "geometria": "Concentric Rings",
+      "proposito": "Fix an immobile bass on C and spin harmonies above it to achieve stillness with internal motion. Useful for synth beds and long transitions.",
+      "sensacion_emocional": "Suspension, fog, wide stillness."
+    },
+    "ambient-602": {
+      "nombre": "Chain of sus2 and sus4 Without a Third",
+      "geometria": "Floating Hexagon",
+      "proposito": "Work with ambiguous harmony by removing the third from every chord, so nothing sounds clearly major or minor. Useful for pads that don't commit the melody's color.",
+      "sensacion_emocional": "Glass, ambiguity, cold air."
+    },
+    "ambient-603": {
+      "nombre": "Planing of Parallel Maj7 Chords",
+      "geometria": "Zig-Zag Path",
+      "proposito": "Move the same maj7 structure by semitones and whole tones with no tonal function, letting color override grammar. Useful for scenes with no defined center.",
+      "sensacion_emocional": "Luminous drift, weightlessness."
+    },
+    "ambient-604": {
+      "nombre": "Floating Lydian for Film",
+      "geometria": "Dense Cloud of Points",
+      "proposito": "Sustain the Lydian brightness using the major II as a permanent color over an F tonic. Useful for aerial shots, wonder, and discovery.",
+      "sensacion_emocional": "Awe, height, clean light."
+    },
+    "ambient-605": {
+      "nombre": "Cinematic Chromatic Mediants",
+      "geometria": "X Diagram (Intersecting Diamond)",
+      "proposito": "Connect major chords a third apart with a single shared note, the most direct device for a scene to change scale without formally modulating.",
+      "sensacion_emocional": "Epic, strange, enormous scale."
+    },
+    "ambient-606": {
+      "nombre": "Hypnotic Two-Chord Loop (with a Variant)",
+      "geometria": "Continuous Triangular Loop",
+      "proposito": "Sustain a back-and-forth between two chords for minutes and use a third chord only as an occasional detour. Useful for state-based music, not narrative music.",
+      "sensacion_emocional": "Trance, repetition, slow breathing."
+    },
+    "ambient-607": {
+      "nombre": "Ambient Quartal Harmony",
+      "geometria": "Overlapping Pyramids",
+      "proposito": "Stack fourths instead of thirds to get chords with no hierarchy, written as sus4 chords. Useful for synth textures that sound modern and neutral.",
+      "sensacion_emocional": "Crystalline, neutral, floating."
+    },
+    "ambient-608": {
+      "nombre": "Whole Tones for a Dreamlike Transition",
+      "geometria": "Octagon of Symmetric Links",
+      "proposito": "Use augmented and major chords a whole tone apart to erase the tonal center in a dream or fainting passage. Useful for crossing from one scene to another without a cadence.",
+      "sensacion_emocional": "Dream, dizziness, unreality."
+    },
+    "ambient-609": {
+      "nombre": "Descending Parallel Minors",
+      "geometria": "Descending Cascade",
+      "proposito": "Lower the same minor triad by conjunct scale degrees to produce a continuous emotional fall with no resolution. Useful for scenes of loss or wearing down.",
+      "sensacion_emocional": "Grief, sinking, gray."
+    },
+    "ambient-610": {
+      "nombre": "Drone with Overlapping Triads on D",
+      "geometria": "Central Star with Radial Orbits",
+      "proposito": "Hold an empty fifth as a drone and layer triads above it so the color changes without the background moving. Useful for long intros and sound design.",
+      "sensacion_emocional": "Vast, ritual, motionless."
+    },
+    "metal-701": {
+      "nombre": "Phrygian i-bII (the Semitone Clash)",
+      "geometria": "Zig-Zag Path",
+      "proposito": "Install the Phrygian sound with the bII a semitone from the tonic, the most economical device for something to sound dark. Useful for verse riffs and tremolo picking.",
+      "sensacion_emocional": "Threat, dry tension, confinement."
+    },
+    "metal-702": {
+      "nombre": "Power Chords with a Tritone",
+      "geometria": "X Diagram (Intersecting Diamond)",
+      "proposito": "Use the tritone leap between parallel fifths as the axis of the riff, with no thirds to soften it. Useful for drop-tuning riffs where distance matters, not function.",
+      "sensacion_emocional": "Violence, imbalance, edge."
+    },
+    "metal-703": {
+      "nombre": "Aeolian i-bVI-bVII",
+      "geometria": "Continuous Triangular Loop",
+      "proposito": "Set melodic metal's most-used natural minor loop, where the bVII replaces the dominant and everything stays within the mode. Useful for epic choruses.",
+      "sensacion_emocional": "Epic, melancholic, march."
+    },
+    "metal-704": {
+      "nombre": "Phrygian Dominant (Major Tonic with bII)",
+      "geometria": "Connected Pentagon",
+      "proposito": "Work with the Phrygian dominant mode: major tonic, flat second, and minor seventh, for riffs with an Eastern flavor and constant tension. Useful for exotic solos over a pedal.",
+      "sensacion_emocional": "Exotic, fiery, unsettling."
+    },
+    "metal-705": {
+      "nombre": "Symmetric Diminished Chords (Minor-Third Cycle)",
+      "geometria": "Octagon of Symmetric Links",
+      "proposito": "Rotate the same diminished chord through minor thirds to generate directionless tension, ideal for bridges and sweep passages. Useful for understanding symmetry on the fretboard.",
+      "sensacion_emocional": "Vertigo, ordered chaos, panic."
+    },
+    "metal-706": {
+      "nombre": "Slow Doom with Bare Fifths",
+      "geometria": "Low Horizontal Line",
+      "proposito": "Sustain fifth chords for whole bars, moving them as little as possible, letting the tempo and distortion carry the weight. Useful for doom and sludge riffs.",
+      "sensacion_emocional": "Heaviness, slowness, lead."
+    },
+    "metal-707": {
+      "nombre": "Descending Chromatic Progression in Fifths",
+      "geometria": "Descending Spiral",
+      "proposito": "Lower power chords by semitone steps to create a mechanical, inevitable fall. Useful for pre-choruses and breakdowns where the harmony only has to push downward.",
+      "sensacion_emocional": "Collapse, pressure, inevitability."
+    },
+    "metal-708": {
+      "nombre": "Harmonic Minor with V7",
+      "geometria": "Decision Tree",
+      "proposito": "Bring in the major dominant seventh within a minor context for a harder, more classical resolution than a modal one. Useful for neoclassical metal and chorus endings.",
+      "sensacion_emocional": "Dramatic, baroque, sharp."
+    },
+    "metal-709": {
+      "nombre": "Thrash with a Pedal on the Low String",
+      "geometria": "Central Star with Radial Orbits",
+      "proposito": "Alternate the fixed low note with fifths that fire off to other degrees, the rhythmic engine of thrash. Useful for galloping riffs and constant palm muting.",
+      "sensacion_emocional": "Gallop, fury, precision."
+    },
+    "metal-710": {
+      "nombre": "Djent with Suspensions and Added Dissonances",
+      "geometria": "Converging Funnel",
+      "proposito": "Combine low-octave fifths with suspended chords and clashing added notes, for rhythmic riffs in irregular meters. Useful for working with dissonant color without losing groove.",
+      "sensacion_emocional": "Angular, mechanical, bright and harsh."
+    },
+    "western-801": {
+      "nombre": "Ride at Dawn (Am)",
+      "geometria": "descending cascading staircase",
+      "proposito": "Used to build the long trot of a ride: four steps that descend on their own and never stop pushing forward. Used by repeating the cycle with a constant galloping bass and keeping the melody above in dotted quarter notes. On reaching the last step, the ride can be reined in or started over without cutting the pulse.",
+      "sensacion_emocional": "Sandy, stubborn, and sweaty, with a dry urgency that doesn't rush but doesn't forgive either."
+    },
+    "western-802": {
+      "nombre": "Three-Way Duel (E Phrygian Dominant)",
+      "geometria": "equilateral triangle with facing vertices",
+      "proposito": "The map of the face-off: three chords staring each other down without lowering their guard, one for each gunslinger. Used by alternating the vertices over long silences, never fully resolving, to stretch the tension before the shot. The Neapolitan second degree is what raises the cold sweat.",
+      "sensacion_emocional": "Still, sharp, and sweaty, like three shadows nailed to the noon sun waiting for the first blink."
+    },
+    "western-803": {
+      "nombre": "The Undertaker's Chromatic Bass (Dm)",
+      "geometria": "diagonally descending horizontal line",
+      "proposito": "A chromatic bass-line map under a chord that barely moves: the bass walks down a semitone per bar while a tremolo sits on top. Used to accompany slow walks, burials, and arrivals at the town. Each chromatic step changes the color without changing the key.",
+      "sensacion_emocional": "Funereal, slippery, and heavy, like a coffin dragged down the main street."
+    },
+    "western-804": {
+      "nombre": "Augmented Triads at High Noon (C / Am)",
+      "geometria": "spiral of major thirds",
+      "proposito": "Uses augmented triads to spin with no center: each one repeats the last, shifted a major third, so the spiral never lands. Used in shots of heat, hallucination, and thirst, with tremolo guitar and whistling on top. The two natural chords at the end are the only way out to solid ground.",
+      "sensacion_emocional": "Dazzling, dizzy, and reverberant, like staring at the horizon until it shimmers."
+    },
+    "western-805": {
+      "nombre": "Tonic Pedal in the Ghost Town (Am)",
+      "geometria": "core with a radial orbit around the pedal",
+      "proposito": "The bass is nailed to the tonic and the whole harmony spins above it: the core is Am and the satellites change one voice at a time. Used to sustain scenes of an empty town, banging shutters, and long shots with no action. Always returning to the core before moving to the next satellite keeps the emptiness intact.",
+      "sensacion_emocional": "Hollow, suspended, and dusty, with a stillness that scrapes like sun-dried wood."
+    },
+    "western-806": {
+      "nombre": "Harmonic Minor in the Canyon (Gm)",
+      "geometria": "closed hexagon of harmonic minor",
+      "proposito": "Runs through the six most useful degrees of the harmonic minor in Gm, with the raised seventh as a permanent edge. Used when threat is needed without a quick resolution: each side of the hexagon is a legal step, and any diagonal works as an abrupt cut. The dominant with the flat ninth is the way out.",
+      "sensacion_emocional": "Narrow, threatening, and metallic, like a stone echo throwing the gunshot back before it's fired."
+    },
+    "western-807": {
+      "nombre": "The Gravedigger's Minor Sixths (Em)",
+      "geometria": "four-cornered rhombus",
+      "proposito": "A map of minor sixth chords, that half-diminished color that sounds like a wooden cross. Used at a slow tempo, arpeggiated, letting the sixth ring longer than feels comfortable. The rhombus's diagonals let you jump straight from rest to the dominant when the scene needs a sharp blow.",
+      "sensacion_emocional": "Solemn, sour, and resigned, with the weight of a shovel that has already dug too much."
+    },
+    "western-808": {
+      "nombre": "Suspensions the Wind Never Resolves (Dm)",
+      "geometria": "cluster cloud, with no fixed center",
+      "proposito": "Every node is a suspension or an added tone that never resolves to a triad: the cloud floats and moves by proximity, not by function. Used in passages of waiting, blowing sand, and decisions never made. The rule is that no chord may fall to its obvious resolution while the map is active.",
+      "sensacion_emocional": "Floating, incomplete, and parched, like a question left hanging in the hot air."
+    },
+    "western-809": {
+      "nombre": "Ambush in the Canyon Pass (Bm)",
+      "geometria": "funnel converging toward the dominant",
+      "proposito": "Five wide entries that narrow down until they all fall into the same dominant: the map of a closing trap. Used by accelerating the harmonic rhythm as it moves through the funnel, from four bars down to one. Nothing escapes the funnel except through the final mouth.",
+      "sensacion_emocional": "Oppressive, accelerating, and inescapable, with the pulse tightening against the stone wall."
+    },
+    "western-810": {
+      "nombre": "Crossed Zig-Zag Gallop (Cm)",
+      "geometria": "zig-zag between two opposing axes",
+      "proposito": "Alternates in a zig-zag between the minor axis and chords borrowed from the major, never staying twice on the same side. Used for chases where the terrain changes: each bounce of the zig-zag is a cut in the shot. The dominant always appears on the upper bounce so the hit lands off the beat.",
+      "sensacion_emocional": "Pounding, jolting, and ragged, with the energy of hooves changing direction over loose gravel."
+    }
+  },
+  "estilos": {
+    "pop": {
+      "nombre": "Pop",
+      "resumen": "Four chords you already know, with all the work put into making the melody land on the first try.",
+      "progresiones": [
+        {
+          "nota": "The most used progression in popular music. It works because it never quite leaves home: the vi makes you think it turned sad and the IV brings you back."
+        },
+        {
+          "nota": "The same wheel starting on the minor. It sounds more melancholic without changing a single note."
+        },
+        {
+          "nota": "The one from the 50s. More innocent, rounder."
+        },
+        {
+          "nota": "Starting on the IV takes the weight off the first bar: the tonic only arrives in the second bar, so the chorus sounds like it's already in motion."
+        },
+        {
+          "nota": "Descending bass by thirds with two minor chords in the middle. Works for bridges because it lowers the energy without changing key."
+        },
+        {
+          "nota": "The bVII is a borrowing from mixolydian: it brings the minor seventh and removes the half step of the classic cadence, which is why it sounds flatter and more rock than a V–I."
+        },
+        {
+          "nota": "The same four-chord loop read in minor. They're all natural degrees of aeolian, so there's no dominant and the progression spins without resolving."
+        },
+        {
+          "nota": "The iv borrowed from the minor lowers the third of the IV by a half step, and that motion against the tonic is what produces the typical bittersweet effect at the end of the chorus."
+        },
+        {
+          "nota": "A descending bridge by step that stalls on the V and stays there. Since it never touches the tonic, when the chorus returns on I the relief is obvious."
+        },
+        {
+          "nota": "The II7 is the dominant of the dominant: it brings in a note foreign to the key that pushes hard toward the V. It's the shortest path to modulate to the key of the V in the final chorus."
+        },
+        {
+          "nota": "The root descends by fifths from D to G to C, and the F–B tritone of the G7 resolves by half steps to E–C. The move to Am7 keeps three notes in common with Cmaj7, so the cycle starts again without a break."
+        },
+        {
+          "nota": "Em shares E and G with C, so the move is almost a bass change. The step from F to Fm lowers the third A to Ab, a small half step that points straight to G or back to the E of the tonic chord."
+        },
+        {
+          "nota": "The first two chords are minor with a descending fifth and share the note E. Then F rises to C by plagal motion, and the leading tone never appears: the color stays suspended between major and minor."
+        },
+        {
+          "nota": "Starting on IV pushes by step up to vi, which acts as a substitute tonic. Ending on iii leaves the major third of the tonic (G) ringing in the listener's ear, so the return to I doesn't need a dominant."
+        },
+        {
+          "nota": "D7 is a secondary dominant of G: its F# is a borrowed leading tone that resolves to G. It works to tonicize the V one bar before returning to I, without leaving the key."
+        },
+        {
+          "nota": "Ab comes from the parallel minor and makes the bass drop A–Ab, a half step. From there Bb and C rise by whole steps, so the arrival at the tonic is by step, not by fifth."
+        },
+        {
+          "nota": "Four chords with the bass rising by scale degrees: the tension grows only through height, without a strong change of function. It works as a pre-chorus because it leaves the V open, waiting for the I."
+        },
+        {
+          "nota": "Modal interchange swaps A for Ab over the same F bass. That Ab then falls to G, the fifth of the tonic, and there the I arrives resolved even though there was no dominant."
+        },
+        {
+          "nota": "Adding Bb to C turns it into the dominant of F, so the IV arrives tonicized. The Fm that follows lowers A to Ab and sets up a chromatic descent toward G or toward the tonic's E."
+        },
+        {
+          "nota": "Three chained descending fifths, with sevenths resolving down a step at each change. The final C6 avoids full rest because the sixth A still sounds like a common note with Am7."
+        },
+        {
+          "nota": "Starts outside the major key: the Bb brings the minor seventh and makes the whole thing a chain of ascending fifths. Since each chord is the dominant of the next by position, the drive doesn't stop until the V."
+        },
+        {
+          "nota": "The first three chords each share two notes, so the top voice can stay put on E. The jump to V at the end introduces the leading tone B only in the last bar."
+        },
+        {
+          "nota": "Dm and F have the same notes minus one — it's more a color change than a function change. Ending on iii keeps the G common with the tonic and leaves the phrase half-open to repeat the cycle."
+        },
+        {
+          "nota": "Everything in natural minor until the end, where the E7 brings G# from harmonic minor. That G# sits a half step from the A of the tonic and a half step from the bass note F, so it closes by minimal voice leading."
+        },
+        {
+          "nota": "The D7 appears right after the IV, sharing a bass note a descending fifth away (inverted). Its F# contradicts the previous F, and that chromatic clash is what pushes toward the V."
+        }
+      ],
+      "transiciones": [
+        {
+          "como": "Plagal cadence",
+          "porque": "The 'amen' cadence. It resolves without the push of the V, softer and more open — which is why so many choruses end there."
+        },
+        {
+          "como": "Deceptive resolution",
+          "porque": "You promise the tonic and land on the relative minor instead. It's the trick that keeps a chorus from ending and spinning again."
+        },
+        {
+          "como": "With a sus4 in between",
+          "porque": "Slip an Isus4 before the IV: the fourth already hints at the note of the coming chord, and the change feels inevitable."
+        },
+        {
+          "como": "Deceptive cadence",
+          "porque": "The ear expects the tonic and gets the relative minor instead, which shares two notes with it. It's a false close and stretches the chorus one more cycle."
+        },
+        {
+          "como": "Descent by a third",
+          "porque": "They share two notes, so the change feels like a new color rather than a modulation. The bass drops a third and pulls the phrase downward."
+        },
+        {
+          "como": "Passing I7",
+          "porque": "Turning the tonic into a dominant adds the minor seventh, which sits a half step above the third of the IV and resolves there. It pushes toward the IV instead of just arriving."
+        },
+        {
+          "como": "Mixolydian cadence",
+          "porque": "The bass rises a whole step instead of a half step, so there's no dominant tension: it closes by weight, not by resolution. Sounds modern and somewhat modal."
+        },
+        {
+          "como": "Minor plagal",
+          "porque": "The minor sixth of the iv drops a half step to the fifth of the tonic. It's a plagal close with a note borrowed from the minor, which is why it sounds nostalgic."
+        },
+        {
+          "como": "Secondary dominant",
+          "porque": "It treats the vi as a momentary tonic: the III7 is its dominant and brings the half step that confirms it. It gives the relative minor its own identity before returning to I."
+        },
+        {
+          "como": "Modulation via a new dominant",
+          "porque": "Instead of resolving, it uses the dominant of the new key: the final chorus enters a whole step higher and everything sounds brighter, with more room for the voice."
+        },
+        {
+          "como": "Dm7 – Gsus4 – G7",
+          "porque": "The sus4 delays the third B and only lets it fall on the last beat. When the chorus comes in, the leading tone is already active and the I arrives without needing a rhythmic hit."
+        },
+        {
+          "como": "F – E7 – Am",
+          "porque": "F and Am share A and C, so the tonal center shifts without changing the material. The G# of the E7 is the only new note and functions as the leading tone of the new center."
+        },
+        {
+          "como": "G – Bb – F/A – Bb",
+          "porque": "Bb is the bVII of the original key and the IV of the new one — a pivot chord. The bass G–Bb–A–Bb surrounds the new tonic from above and below before confirming it."
+        },
+        {
+          "como": "G – D/F# – Em",
+          "porque": "The bass descends by step G–F#–E and reaches the relative minor by step, not by leap. G and Em share G and B, so only the lowest note of the arrangement changes."
+        },
+        {
+          "como": "F – Fm7 – C/E",
+          "porque": "The Ab of the Fm7 falls to G, and the implied Eb of the minor color pulls toward the bass E. Arriving on I in first inversion keeps the motion going without sounding final."
+        },
+        {
+          "como": "C – Am7 – D7 – G",
+          "porque": "The D7 tonicizes the V and announces a new section without leaving the key. Its notes F# and C form a tritone that resolves to G and B when the solo starts."
+        },
+        {
+          "como": "Am – F6 – G – C",
+          "porque": "F6 brings in the sixth D, which is a common note with the following G and softens the change of function. From there the bass rises by step F–G–C and the major tonic returns without a harsh contrast."
+        },
+        {
+          "como": "C – Cmaj7 – C6 – Cadd9",
+          "porque": "The root stays fixed and only the top voice moves, B–A–D, within the same chord. With no change of function, the section dissolves instead of closing."
+        },
+        {
+          "como": "D – A/C# – Bm7",
+          "porque": "The chromatic bass D–C#–B reaches the relative minor by half step and whole step. A/C# acts as an inverted dominant of Bm, with the C# a half step from the new center."
+        },
+        {
+          "como": "Fmaj7 – Em7 – Dm7 – G7",
+          "porque": "The sevenths descend by step across three chords in a row, so the descent is linear. The final G7 reinstates the tritone and brings back the tension the verse needs to start."
+        }
+      ],
+      "licks": [
+        {
+          "nombre": "Chorus tag in C",
+          "nota": "Descends through the major pentatonic and lands on the tonic. It's the fill between two sung phrases."
+        },
+        {
+          "nombre": "Fill in C major pentatonic",
+          "nota": "A short phrase to slip between two verses: it drops from E to C on the first string and closes with a hammer-on back to the tonic. Being major pentatonic, it clashes with no chord in the key."
+        },
+        {
+          "nombre": "Contour in G, low position",
+          "nota": "Rises D-E-G-A and comes back the same way: a symmetrical curve that works as an answer to a sung phrase. The hammer-on and pull-off make it sound slurred rather than picked."
+        },
+        {
+          "nombre": "Ionian ascent in D toward the tonic",
+          "nota": "Rises by step from F# up to high D: using the full scale brings out the final C#-D half step, which is what confirms the major key."
+        },
+        {
+          "nombre": "Arc in A, fifth position",
+          "nota": "Five notes going up and three coming down within the same box. It works as a bridge between two phrases because it starts and ends on notes of the tonic chord."
+        },
+        {
+          "nombre": "Phrase in F Ionian with the fourth",
+          "nota": "Reaches up to high F passing through Bb, the fourth of the scale: that note brushes against the third of the tonic chord, so you have to release it quickly toward E."
+        },
+        {
+          "nombre": "Wide fill in E",
+          "nota": "Uses three strings to open up the range: rises from the E on the third string to high E and back. Moving by thirds instead of steps makes it sound singable rather than scalar."
+        },
+        {
+          "nombre": "Pre-chorus resolution",
+          "nota": "Rises through the major pentatonic box, leaning on the thirds B and E. With no fourth or seventh, nothing clashes with the IV or the V of the progression."
+        },
+        {
+          "nombre": "Verse line with open strings",
+          "nota": "Alternates fretted notes with open strings, so the pitches overlap and sound arpeggiated. It leans on E and G, the third and fifth of the tonic."
+        },
+        {
+          "nombre": "Dorian bridge vamp",
+          "nota": "The major sixth F# is what separates this color from natural minor and appears as a passing note toward G. The minor seventh G leaves the phrase open, with no leading tone."
+        },
+        {
+          "nombre": "Fill over the dominant",
+          "nota": "The minor seventh C and the major third F# form the interval that defines the dominant chord. The phrase ends on the ninth E so the resolution stays pending."
+        },
+        {
+          "nombre": "Minor intro opener",
+          "nota": "Uses first position so the open low E works as a pedal. The natural G fixes the minor third, and the D avoids any sense of a leading tone."
+        },
+        {
+          "nombre": "Major/minor third rub",
+          "nota": "The pair C–C# puts the minor third right against the major third, and that half step is the whole effect. Always resolving to C# keeps the phrase sounding major."
+        },
+        {
+          "nombre": "Chorus countermelody",
+          "nota": "Stays in the high strings to avoid clashing with the vocal in the middle register. The main notes are G and A, the fifth and sixth, common to both the I and the vi."
+        },
+        {
+          "nombre": "Close with the leading tone",
+          "nota": "The phrase passes through F# and lands on G — a leading tone to tonic by ascending half step. Before that it leans on C and E, the fourth and sixth, the notes of the IV, which fall to the tonic chord."
+        }
+      ]
+    },
+    "rock": {
+      "nombre": "Rock",
+      "resumen": "The bVII borrowed from mixolydian, power chords without a third, and the minor pentatonic over everything.",
+      "progresiones": [
+        {
+          "nota": "The mixolydian progression. That D major doesn't belong to E major: it comes from the mixolydian mode and is exactly what sounds like rock instead of pop."
+        },
+        {
+          "nota": "The epic descent. Works as a chorus when the riff needs to open up."
+        },
+        {
+          "nota": "The old familiar skeleton, played with power chords and distortion."
+        },
+        {
+          "nota": "The quintessential mixolydian progression: the bVII replaces the V and keeps the major key but without the classic cadence. The tonic's minor pentatonic sits well over the top."
+        },
+        {
+          "nota": "The first three descending degrees of aeolian and back. Since it never reaches the V, the loop holds up on its own through the weight of the bass descending by step."
+        },
+        {
+          "nota": "Rock's most common minor loop: every chord is major except the tonic, so it sounds big and open despite being in minor."
+        },
+        {
+          "nota": "The modal version of I-IV-V: the minor v, with no major seventh, avoids the classic cadence and keeps the dark aeolian color from start to finish."
+        },
+        {
+          "nota": "The bIII is a borrowing from the minor pentatonic over a major key: that clash between minor and major third is the foundation of the blues-rock sound."
+        },
+        {
+          "nota": "A riff in fifths where the bass moves by descending fourths. Being power chords, the same fingering can be moved along the neck without worrying about chord quality."
+        },
+        {
+          "nota": "Drops to the v and then rises by step from the bVI. The final ascent builds momentum toward the tonic without using a dominant."
+        },
+        {
+          "nota": "Andalusian descent: the first three are from aeolian and the final major chord comes from harmonic minor. That borrowed G# makes the cycle restart with force."
+        },
+        {
+          "nota": "The sus4 suspends the third and releases it on resolution: it's a riff trick that lets the tonic move without changing chord before dropping to the bVII."
+        },
+        {
+          "nota": "The first three chords are from natural minor with the bass descending by thirds and fourths. The final iv brings back the F, which falls a half step to the E of the tonic chord when the cycle returns."
+        },
+        {
+          "nota": "Each chord is a fourth above the previous one, so it's really a chain of descending fifths in disguise. With no leading tone, the D acts as a temporary rest rather than a dominant."
+        },
+        {
+          "nota": "The G contradicts the G# brought by the E major, and that half step is the pivot point of the progression. Then the D drops a fifth to the I and closes the loop without needing a dominant."
+        },
+        {
+          "nota": "F and Dm share F and A, so the middle move is nearly static. The final E major introduces G# as a leading tone and resolves by half step to A."
+        },
+        {
+          "nota": "The minor ii shows up where a V was expected, leaving the tension open. The C is a bVII borrowed from mixolydian and falls a whole step to the D bass when the loop returns."
+        },
+        {
+          "nota": "The bass rises by whole steps F–G and then falls by thirds to the tonic. Since the v is minor, the arrival at i has no leading tone and sounds like a fifth descending, not an attraction."
+        },
+        {
+          "nota": "Rises by thirds and then by fourths, covering nearly the whole natural minor scale in four steps. The D leaves the minor seventh on top and returns to i by a descending whole step."
+        },
+        {
+          "nota": "The G clashes with the G# of the major tonic triad: that rub between minor third and major third drives the riff. Then D and A drop by fifths and pull the focus back to the I."
+        },
+        {
+          "nota": "The E brings in G# from harmonic minor and forms an augmented second with the F of the iv. The return to i is by descending fourth and keeps the minor color intact."
+        },
+        {
+          "nota": "C#m shares C# and E with the tonic chord, so the change is more about the bass than the harmony. The D rises to A by fourth and keeps everything within the major, with no bVII."
+        },
+        {
+          "nota": "The bass drops E–D and keeps falling down to B, all by scale steps of the minor. The final C rises a half step to the previous inverted B and pushes back toward the i."
+        },
+        {
+          "nota": "Without thirds, the progression is neither major nor minor, and the parallel fifths keep everything open. The C brings the interval of a minor third over the tonic purely as bass motion."
+        },
+        {
+          "nota": "Four descending fifths in a row, so each chord sets up the next by its root. On reaching the bIII the ear takes it as a relative tonic, and the repeat reframes the Bm."
+        },
+        {
+          "nota": "The E major brings in G#, the raised fourth of the key, which gives it that bright color. The following G restores the natural fourth, and the contrast of that half step drives the riff."
+        },
+        {
+          "nota": "A chain of ascending fifths that reaches the tonic from below in the circle of roots. Since every chord is major, the minor seventh of the bIII only resolves at the very end."
+        }
+      ],
+      "transiciones": [
+        {
+          "como": "Double plagal cadence",
+          "porque": "Rises a whole step to the tonic without passing through the V. There's no leading tone, and that lack of urgency is what sounds like rock."
+        },
+        {
+          "como": "Leap to the borrowed relative",
+          "porque": "From E to G: it takes you into minor territory without changing the tonic. A classic for the bridge."
+        },
+        {
+          "como": "Blues drop",
+          "porque": "Goes from the V to the IV instead of resolving. It breaks the classical rule, which is exactly why it pushes forward."
+        },
+        {
+          "como": "Mixolydian cadence",
+          "porque": "The bass rises a whole step instead of a half step: it closes with weight but without tritone tension, which is exactly what separates modal rock from tonal pop."
+        },
+        {
+          "como": "Borrowed dominant",
+          "porque": "In an aeolian progression, the major V brings the major seventh of the key, foreign to the mode. That half step resolving to the tonic makes the riff's restart feel inevitable."
+        },
+        {
+          "como": "Stepwise ascent",
+          "porque": "Two major chords a whole step apart push toward the minor tonic purely by parallel motion. It's the most direct way to build an armonic crescendo."
+        },
+        {
+          "como": "Leap to the relative major",
+          "porque": "They share two notes, so the change opens up the sound without modulating. It makes the chorus sound brighter than the verse."
+        },
+        {
+          "como": "Parallel fifths",
+          "porque": "With power chords the two voices move in parallel with no voice leading: the effect is a block sliding along the neck, characteristic of the rock riff."
+        },
+        {
+          "como": "Transposed riff",
+          "porque": "The same finger shape moved five frets up keeps the riff's identity while changing the harmony. It saves you from having to think out two different figures."
+        },
+        {
+          "como": "Half-step descent",
+          "porque": "The bass drops a half step and the chord shifts from modal to dominant: it's the point where an aeolian progression turns tense and demands the tonic."
+        },
+        {
+          "como": "Minor subdominant",
+          "porque": "Rises a fourth while keeping the mode's minor third. No new notes, so the change darkens things without leaving aeolian."
+        },
+        {
+          "como": "E5 – D5 – A",
+          "porque": "The D is the bVII of the starting key and the IV of the new one — a direct pivot. The bass drops by whole steps E–D and then rises a fourth, so the arrival has punch."
+        },
+        {
+          "como": "Am – A7 – D",
+          "porque": "Changing C to C# turns the minor tonic into a dominant and opens the door to the major third in the solo. The following D confirms the new fourth and leaves the natural C as the seventh."
+        },
+        {
+          "como": "F – G – A5",
+          "porque": "The basses rise by whole steps F–G–A with no dominant chords. The stepwise rise gives the push that a V would give here, with no leading tone appearing at all."
+        },
+        {
+          "como": "D5 – C5 – G5 – D5",
+          "porque": "The thirdless fifths leave the modality undefined until the vocal enters. The bass runs through D–C–G, the roots of mixolydian, and returns to center by a descending fourth."
+        },
+        {
+          "como": "Em – D/F# – G",
+          "porque": "The bass rises chromatically E–F#–G up to the relative major. Em and G share G and B, so only the center of gravity shifts, not the notes."
+        },
+        {
+          "como": "A – Asus4 – A – G",
+          "porque": "The sus4 removes the third and loosens the major color before dropping to the bVII. By the time the G arrives, the section has already lost the leading tone and sounds heavier without changing the reference root."
+        },
+        {
+          "como": "C – D – E5",
+          "porque": "Two major chords rising by whole steps arriving on the fifth of the tonic. The parallel motion avoids functional resolution, which is why the riff re-enters as if it never left."
+        },
+        {
+          "como": "A5 – F5 – Bb",
+          "porque": "The F is the bVI of the old key and the V of the new one, so it works as a pivot. Its third A is both the tonic being left behind and the leading tone of the new center."
+        },
+        {
+          "como": "Bb – C – D – G",
+          "porque": "The roots rise by whole steps up to the D, which only then behaves like a dominant. The leading tone F# appears only in that final chord and resolves by half step to G."
+        },
+        {
+          "como": "Em – Em7 – Em6",
+          "porque": "The root stays fixed while the inner voice drops D–C#, turning the seventh into a sixth. With no change in bass or function, the section holds until the cut."
+        }
+      ],
+      "licks": [
+        {
+          "nombre": "Power-chord riff on E",
+          "nota": "The low notes of the riff: tonic, minor seventh, and fourth. With palm mute and all downstrokes."
+        },
+        {
+          "nombre": "Answer phrase in E pentatonic",
+          "nota": "The box at the 12th position, up and down. The bend at fret 15 goes up a whole step."
+        },
+        {
+          "nombre": "Low riff in E with open string",
+          "nota": "Alternates the open sixth string with notes from the minor pentatonic: the open E works as a rhythmic pedal and the rest is the answer. Alternate picking with light palm mute."
+        },
+        {
+          "nombre": "Mixolydian riff in A",
+          "nota": "Climbs the three low strings up to the G, the minor seventh, and back: that note is what defines the mixolydian color against a major scale."
+        },
+        {
+          "nombre": "Bend solo in A minor pentatonic",
+          "nota": "Climbs the fifth-position box, and the bend on the G takes it up a whole step to the tonic: that gesture resolves the phrase without changing position."
+        },
+        {
+          "nombre": "Aeolian phrase in E, twelfth position",
+          "nota": "Uses the full scale so the C shows up — the minor sixth, the note that distinguishes aeolian from the minor pentatonic. Ends on the tonic an octave up."
+        },
+        {
+          "nombre": "G box with fourth bend",
+          "nota": "The bend on the F rises a whole step to G: it's easy to control on the second string and points the phrase at the tonic before dropping back to the box."
+        },
+        {
+          "nombre": "Middle riff in D mixolydian",
+          "nota": "Works between the fourth and third strings around the C and the G: the minor seventh and the fourth give that flat, unresolved riff sound."
+        },
+        {
+          "nombre": "Minor box with bend",
+          "nota": "The minor seventh G pulls toward the A by a descending whole step, and the bend on the fifth E loads the phrase. With no second or sixth, no note interferes with the bVII or the iv."
+        },
+        {
+          "nombre": "Low blues in first position",
+          "nota": "The Bb is the raised fourth and always appears between A and B as a chromatic passing note. The resolution lands on the open E, which acts as a pedal."
+        },
+        {
+          "nombre": "Mixolydian phrase over a major riff",
+          "nota": "The major third C# and the minor seventh G coexist, which is exactly the sustained-dominant color. The G falls a whole step to F# and from there to E, the fifth of the tonic."
+        },
+        {
+          "nombre": "Aeolian bridge descent",
+          "nota": "The minor sixth Bb falls a half step to A, and that motion is what fixes the natural minor color. The phrase avoids the leading tone, so the bVII sounds like a rest rather than tension."
+        },
+        {
+          "nombre": "Two-chord dorian vamp",
+          "nota": "The major sixth E is what distinguishes this color from natural minor and always lands over the IV chord. The minor seventh F rises a whole step to G and closes the loop."
+        },
+        {
+          "nombre": "Open pentatonic in high register",
+          "nota": "Combines open strings with fretted notes, so the pitches overlap and the phrase sounds continuous. It leans on G and D, the minor third and the minor seventh."
+        },
+        {
+          "nombre": "Major fill between riffs",
+          "nota": "The major third F# and the sixth B give an open color with no seventh, so it works over both I and IV. The phrase ends on E, the ninth, left hanging for the riff to come in."
+        },
+        {
+          "nombre": "Blues with a slide",
+          "nota": "The Db between C and D works as a passing raised fourth, and the slide underlines that half step. The F either falls a whole step to the implied Eb or rises to G, depending on how the phrase closes."
+        }
+      ]
+    },
+    "blues": {
+      "nombre": "Blues",
+      "resumen": "Twelve bars, three dominant chords, and a third that never decides between major and minor.",
+      "progresiones": [
+        {
+          "nota": "The twelve bars. What's strange and great is that the tonic is also a dominant: it never fully resolves."
+        },
+        {
+          "nota": "The full turnaround: the last two bars bring you back to the top."
+        },
+        {
+          "nota": "Minor blues. The same skeleton with minor chords and an altered dominant at the end."
+        },
+        {
+          "nota": "Quick change: the IV7 shows up already in the second bar and then returns to the I7. It breaks the monotony of four identical opening bars."
+        },
+        {
+          "nota": "The last four bars of the classic blues. The V7 going to the IV7 would be strange in tonal harmony, but here it's the style's signature; the final V7 restarts the loop."
+        },
+        {
+          "nota": "Jazz-blues turnaround: instead of staying on the V7, it builds a chain of fourths landing on the dominant. Gives more harmonic movement to improvise over."
+        },
+        {
+          "nota": "Minor blues: the whole cycle stays minor except for the bVI7 and V7, which drop by half step toward the tonic. That descent is what gives it the dramatic character."
+        },
+        {
+          "nota": "Bars 9 through 12 in jazz-blues style: it resolves to the I7 and the final VI7 reopens the cycle toward the ii7, chaining dominants."
+        },
+        {
+          "nota": "The chromatic diminished chord between the IV7 and the I7 takes advantage of sharing three notes: it raises the bass a half step and works as a bridge without changing the color."
+        },
+        {
+          "nota": "Tritone substitution of the V7: the bII7 has the same tritone as the dominant, but the bass falls by half step to the tonic, which sounds smoother and more jazz-like."
+        },
+        {
+          "nota": "Eight-bar blues: the dominant arrives much sooner and the cycle closes in half the time. Very common in mid-tempo sung blues."
+        },
+        {
+          "nota": "Chain of secondary dominants: each chord is the dominant of the next. It's the ragtime device used for intros and bridges within the blues."
+        },
+        {
+          "nota": "Sixteen-bar format: the IV7 reappears in the second phrase before the I7 asserts itself. Each I7–IV7 move shifts the seventh of the I (F) a half step to the third of the IV (E), so the fourth leap sounds chromatically led rather than forced."
+        },
+        {
+          "nota": "The iv7 minorizes the IV, lowering its third (F# to F) a half step, which is the minor seventh of the I. That F becomes a common note with the following A7 and closes the phrase without needing a dominant."
+        },
+        {
+          "nota": "Substitution by major thirds: each dominant resolves down a major third, chaining three centers 4 semitones apart. The dominants' sevenths drop a half step to the third of the following maj7, so the chain holds together through tritone resolution at each link."
+        },
+        {
+          "nota": "The VI7 with b9 works as a secondary dominant of the ii: its b9 (Bb) falls to the fifth A of Dm7 and its third C# rises to the root D. Then the ordinary ii–V returns the tritone to the I."
+        },
+        {
+          "nota": "The last bars of the slow blues descend by whole steps from the I down to the VI7 and then enter the ii–V. The #9 of the D7 is the F that had been sounding as the root of the I, so the function change is heard without moving that voice."
+        },
+        {
+          "nota": "Minor blues with an altered dominant: the b9 (F) of the E7 is a common note with the bVImaj7 and falls to the fifth E of Am7. The bVImaj7 before the V7 provides root motion by descending half step (F to E)."
+        },
+        {
+          "nota": "Jump-blues turnaround: the sixth of the I avoids the seventh and leaves an open sound for the VI7, whose third B rises to the root C of the ii7. The V9 adds the ninth G, a common note with the previous bar's G7."
+        },
+        {
+          "nota": "The bIII7 is a passing dominant between I and IV: its third B is the fifth of the I and its seventh F rises by half step to the root... more precisely, its root G rises a whole step to the root A of the IV. The shared third B links all three chords."
+        },
+        {
+          "nota": "A chromatic descent of dominants toward the V. Each root falls a half step or whole step, and the sevenths trace a parallel descending line, so the tension builds without resolving until the V7."
+        },
+        {
+          "nota": "The bII13 is the tritone substitute of the V: it shares third and seventh with the G7, inverted (F and Cb/B). Its root Db falls a half step to the final C, the most direct possible resolution to the I."
+        },
+        {
+          "nota": "The #ivdim7 appears as a passing chord between IV and I: all four of its voices sit a half step or whole step from those of the I, with the fifth in the bass. The D# rises to E, the fifth of the I."
+        },
+        {
+          "nota": "Gospel-blues version with the I as maj7: the vi7 shares three notes with the I and falls a third to the ii7. The 13th of the V (G) is the third of the I and is already present before the resolution."
+        },
+        {
+          "nota": "A diatonic descent of natural minor with the degrees turned into dominants. The bVI7–V7 step moves the root by half step, and the b9 of the V (Ab) is a common note with the previous chord."
+        },
+        {
+          "nota": "Blues over harmonic minor: the sixth of the i (F#) contrasts with the natural F of the V's b9 and generates the chromatic motion that defines the sound. The G# of the dominant rises a half step to the root of the i every time it returns."
+        },
+        {
+          "nota": "The dim7 over #I walks the bass from I to ii by half steps and works as a rootless dominant of the ii. Its notes E, G, and Bb were already in the C7, so only the bass moves."
+        }
+      ],
+      "transiciones": [
+        {
+          "como": "The change in bar 5",
+          "porque": "It's the moment where the blues 'opens up'. Anticipate it by playing the b7 of the I in the previous bar: that note already belongs to the IV."
+        },
+        {
+          "como": "Turnaround drop",
+          "porque": "Instead of resolving to the I, it drops to the IV. It's what stretches out the last few bars."
+        },
+        {
+          "como": "Chromatic passing chord",
+          "porque": "A diminished chord a half step up connects the I to the ii, or back to the IV, without you noticing the seam."
+        },
+        {
+          "como": "Entry into bar 5",
+          "porque": "The minor seventh of the I7 sits a half step above the third of the IV7 and resolves there. It's the most tonal move in the blues, which is why it marks the section change."
+        },
+        {
+          "como": "Dominant retreat",
+          "porque": "Goes from the dominant to the subdominant, the reverse of what classical harmony calls for. Sounds like a controlled drop and sets up the arrival at the I7."
+        },
+        {
+          "como": "Chromatic bridge",
+          "porque": "The diminished chord shares three notes with the IV7 and raises the bass a half step, so the change feels like rising tension rather than a new chord."
+        },
+        {
+          "como": "Jazz-blues cadence",
+          "porque": "Turns bar 9 into a two-five: it introduces the half-step voice leading that basic blues doesn't have, opening the door to phrases with notes outside the pentatonic."
+        },
+        {
+          "como": "Half-step drop",
+          "porque": "Two dominants a half step apart: the parallel descent is the most direct way to build tension in a minor blues before returning to the tonic."
+        },
+        {
+          "como": "Secondary dominant",
+          "porque": "The VI7 is the dominant of the ii7, so it anticipates the turnaround. It brings in a major third foreign to the key that grabs attention just before the end of the loop."
+        },
+        {
+          "como": "Tritone substitution",
+          "porque": "Shares the tritone with the V7, but the bass falls a half step to the tonic. Same level of tension, smoother motion."
+        },
+        {
+          "como": "Chromatic bass walk-up",
+          "porque": "Rising by half steps from the tonic up to the root of the IV7 fills the bar without changing chord: the tension is produced by the bass, not the harmony."
+        },
+        {
+          "como": "Hold the F of the G7 and drop the B to Bb in the top voice.",
+          "porque": "The F is the seventh of the I and the third of the IV, so it stays put; the B falls a half step to the seventh of the IV, producing the only audible motion."
+        },
+        {
+          "como": "Raise only the bass a half step and leave the three upper voices still.",
+          "porque": "E, G, and Bb belong to both chords; with the bass on C# the group reads as the dominant of the ii, and the motion stays in a single voice."
+        },
+        {
+          "como": "Drop the third C# to C and raise the seventh G to A.",
+          "porque": "The C#–G tritone opens out to C–A, the seventh and fifth of Dm7; the interval resolves outward by half step and whole step."
+        },
+        {
+          "como": "Slide the whole voicing down a half step before resolving to the I.",
+          "porque": "The Db7 is the tritone substitute of the alternate V, and its seventh Cb/B falls to the Bb; the chromatic parallelism preserves the interval structure while only the level changes."
+        },
+        {
+          "como": "Drop the third D to C and the seventh Ab to Gb, as a block.",
+          "porque": "Both voices fall a whole step and keep the tritone intact, so the dominant color is preserved while the root descends a whole step toward the bVI."
+        },
+        {
+          "como": "Raise the fifth E to F and the root A to G#.",
+          "porque": "The F is the dominant's b9 and appears through ascending half-step motion; the G# enters as the third and creates the A–G# chromaticism that announces the return to the i."
+        },
+        {
+          "como": "Drop the seventh Eb to D and let the G ring as a ninth turned sixth.",
+          "porque": "The Eb resolves down a half step to the third of the I, and the G shifts from the ninth of the V to the sixth of the I without moving, which smooths the join between the two chords."
+        },
+        {
+          "como": "Drop all four voices a half step without changing the fingering.",
+          "porque": "All the tensions move in parallel and the tritone descends a half step, so the arrival at the V is heard as chromatic push rather than a change of function."
+        },
+        {
+          "como": "Hold the Eb as the top note and drop the G to F in the bass.",
+          "porque": "The Eb of the i7 is the ninth of the F if you sustain it, and the descending fifth in the bass leaves three notes in common between the two chords."
+        },
+        {
+          "como": "Drop the root and seventh by a half step and sustain the Bb as a ninth.",
+          "porque": "The Db falls to C and the Cb falls to Bb, which becomes the ninth of the final chord; two descending half steps are enough to close the cadence."
+        }
+      ],
+      "licks": [
+        {
+          "nombre": "A box, fifth position",
+          "nota": "The lick everyone learns first. The bend at fret 8 on the first string rises a whole step to the tonic."
+        },
+        {
+          "nombre": "Wail with the b5",
+          "nota": "The blue note is fret 8 on the third string (Eb). Pass through it quickly, don't linger."
+        },
+        {
+          "nombre": "A box with a blue note",
+          "nota": "Rises D-Eb-E on the third string: the Eb is the flat fifth, the blue note, and it's crossed quickly because its job is to brush the fifth, not settle there. Closes on the tonic."
+        },
+        {
+          "nombre": "Call in E, twelfth position",
+          "nota": "Classic box with the D bend going up a whole step to E: it's the call gesture that later gets answered in the low register. Everything stays in the same position."
+        },
+        {
+          "nombre": "Chromatic ascent in C blues",
+          "nota": "F-F#-G on the third string: the flat fifth appears between the fourth and the fifth and builds the chromatic slide that defines the blues scale."
+        },
+        {
+          "nombre": "Descending answer in G",
+          "nota": "Drops from the high Bb down to the tonic across the box: it works as an answer to an ascending phrase because it inverts the contour and ends low."
+        },
+        {
+          "nombre": "Minor/major third in A",
+          "nota": "The C-C# step is the heart of the matter: it brushes the minor third and resolves it to the major, which is what makes it sound like blues over a major chord without leaving the chord."
+        },
+        {
+          "nombre": "Turnaround in D",
+          "nota": "G-G#-A on the third string builds the chromatic climb and then jumps to the high box to close on the tonic: a typical phrase for the last two bars."
+        },
+        {
+          "nombre": "Box one in A",
+          "nota": "The notes cluster on the fourth and the minor seventh, the degrees that define the pentatonic color. The bend on the minor third pulls it toward the major third and creates the typical blues ambiguity."
+        },
+        {
+          "nombre": "Open ascent in E",
+          "nota": "The A–Bb–B run covers the diminished fifth between the fourth and fifth, the note that separates the blues scale from the pentatonic. Resolving from Bb to B by half step releases that tension."
+        },
+        {
+          "nombre": "Mixolydian in G, low zone",
+          "nota": "The line climbs by step and leans on the minor seventh and the fourth, the notes that support the I7. The natural F avoids the major color and keeps the dominant function."
+        },
+        {
+          "nombre": "Dominant bebop in C",
+          "nota": "The Bb–B–C stretch chains the two sevenths and lands on the root on a strong beat. That chromaticism is what lets you run eight straight notes without any of them falling outside the chord on the strong beats."
+        },
+        {
+          "nombre": "Descending dorian in D",
+          "nota": "The descent passes through the major sixth and minor seventh, the pair that defines dorian over a ii7. Each note is a step away from the next, so the line reads as voice leading rather than an arpeggio."
+        },
+        {
+          "nombre": "Major blues in Bb",
+          "nota": "The slur between the minor third and the major third is the axis of the scale: two notes a half step apart working as a grace note. The major sixth closes the phrase over the fifth without touching the seventh."
+        },
+        {
+          "nombre": "Blues in C, middle zone",
+          "nota": "The F–F#–G slur crosses the diminished fifth and leaves it as a passing note between the fourth and the fifth. Ending on the root an octave up closes the line with no ambiguity."
+        },
+        {
+          "nombre": "Descending pentatonic in E",
+          "nota": "The phrase descends two notes per string, and each pair forms a minor third or a whole step. The opening bend on the minor third rises toward the fourth and gives momentum to the whole descent."
+        }
+      ]
+    },
+    "metal": {
+      "nombre": "Metal",
+      "resumen": "Phrygian, tritones, and the low sixth string. The tension doesn't resolve: it holds.",
+      "progresiones": [
+        {
+          "nota": "The phrygian leap. A half step above the tonic: it's the shortest and most uncomfortable distance there is, and it's where the whole genre comes from."
+        },
+        {
+          "nota": "The epic descent. Works as a chorus when the riff needs to open up."
+        },
+        {
+          "nota": "The direct tritone. Unprepared, unresolved."
+        },
+        {
+          "nota": "A closed aeolian cycle: the bVI and bVII are major and rise by step up to the minor tonic. It's the most-used loop in melodic-metal verses."
+        },
+        {
+          "nota": "Andalusian descent with the major V taken from harmonic minor: the borrowed G# adds the half step that restarts the cycle with tension."
+        },
+        {
+          "nota": "Harmonic-minor progression: the bII and the major V share notes and chain two tensions in a row before returning to the tonic."
+        },
+        {
+          "nota": "Pure tritone in power chords: the three-whole-step distance belongs to no stable key, so the passing chord is dissonant by definition. Played with palm mute."
+        },
+        {
+          "nota": "Natural aeolian degrees arranged so the bass moves by fourths and thirds. The final iv darkens it and keeps the loop from sounding resolved."
+        },
+        {
+          "nota": "Combines the aeolian color of the bVI with the phrygian bII: the jump between the two over a tonic pedal keeps the tonal center while the harmony shifts."
+        },
+        {
+          "nota": "The b9 sits a half step from the tonic, and the four upper notes of the chord form a diminished chord: maximum tension with minimum movement."
+        },
+        {
+          "nota": "A chromatic riff in power chords: there's no harmonic function, the logic is displacement by half steps. It works because power chords have no third to define the mode."
+        },
+        {
+          "nota": "Descends through aeolian and ends on the phrygian bII, a half step above the tonic: the cut is abrupt and works as a section-ending."
+        },
+        {
+          "nota": "The bVI shares two notes with the i and its root sits a major third below, so the change happens by moving a single voice. The iv brings back the fourth as the bass and sets up the return via fifth motion."
+        },
+        {
+          "nota": "A riff built on whole tones: every root is a whole step apart and none defines a third, so there's no key. The tritone between the first and last root closes the cycle without resolution."
+        },
+        {
+          "nota": "With the root sounding as a pedal below, the bII5 produces a half step against the pedal and is the point of maximum tension. The bVII5 releases it by dropping a whole step and leaving a seventh interval against the pedal."
+        },
+        {
+          "nota": "The diminished triad over the bVI brings a tritone that doesn't exist in natural minor and pushes toward the bII. From bII to i the root drops a half step, the shortest possible motion to the tonic."
+        },
+        {
+          "nota": "The three degrees come from the minor pentatonic, and the roots move by minor third and whole step. With no thirds in the chords, the weight sits in the interval between roots."
+        },
+        {
+          "nota": "A cycle with no dominant: the bVII and bVI sit a whole step and a step-and-a-half from the i and share notes with it. Ending on bVII leaves the phrase open, since its third doesn't lead to the tonic."
+        },
+        {
+          "nota": "The b9 of the dominant is the same note as the root of the bVI, so moving between those two chords doesn't move the top voice. The seventh of the V falls a half step to the third of the i when the cadence finally resolves."
+        },
+        {
+          "nota": "The roots trace the locrian tetrachord, including its diminished fifth. The absence of a perfect fifth over the tonic is what blocks any sense of rest."
+        },
+        {
+          "nota": "The four roots form a chain of descending fifths except for the first leap, and each chord shares two notes with the next. At a slow tempo, that chain of shared notes sustains the motion with no dominant needed."
+        },
+        {
+          "nota": "The bII and the VII surround the tonic by a half step from above and below. That chromatic pincer is what produces the tension, since neither note belongs to natural minor."
+        },
+        {
+          "nota": "The augmented triad over the bIII appears by raising the seventh of the scale: its G# is the leading tone and rises a half step to the root of the i or to the third of the V7. The two central chords share the C."
+        },
+        {
+          "nota": "The #IV sits a tritone from the tonic, the farthest interval in the cycle, and returning to it sounds like a drop. The final bII leaves the phrase a half step from the tonic and forces the cycle to repeat."
+        },
+        {
+          "nota": "The roots form a diminished arpeggio: every leap is a minor third, and the pattern repeats every three semitones. That symmetry lets you start the riff on any of the four notes without changing the color."
+        },
+        {
+          "nota": "The sus4 delays the third and drops a half step to the minor third on resolution, the gesture that defines the key. Then bVI and bVII rise and fall a whole step while keeping the root of the i as a common note."
+        },
+        {
+          "nota": "The first half moves by thirds and fifths within natural minor; the second introduces the leading tone in the V7 to close. The third D# of the dominant is the only note outside the scale, and it rises a half step to the E."
+        }
+      ],
+      "transiciones": [
+        {
+          "como": "Phrygian half step",
+          "porque": "It's the signature of the style. Play the two power chords with the same shape moved up one fret: the physical motion is the sound."
+        },
+        {
+          "como": "Modal close",
+          "porque": "Returns to the tonic without a leading tone. Heavier than a V-i because it doesn't announce itself."
+        },
+        {
+          "como": "Tritone leap",
+          "porque": "Splits the octave right down the middle. It belongs to no key, which is why it sounds like a threat."
+        },
+        {
+          "como": "Phrygian cadence",
+          "porque": "The bass falls a half step to the tonic. It's the shortest possible motion, which is why it sounds heavy and final, with no dominant needed."
+        },
+        {
+          "como": "Modal ascent",
+          "porque": "Two major chords a whole step apart push toward the minor tonic without using the dominant's half step. It gives momentum without making the progression tonal."
+        },
+        {
+          "como": "Harmonic-minor cadence",
+          "porque": "The mode's major seventh resolves to the tonic, and the b9 falls a half step to the fifth. Two half steps at once: the resolution is immediate."
+        },
+        {
+          "como": "Pedal on the sixth string",
+          "porque": "Holding the tonic open while the harmony moves above generates dissonance on its own: the bVI against the pedal leaves a second that tenses without moving the bass."
+        },
+        {
+          "como": "Chromatic approach",
+          "porque": "Inserting a chord a half step below the target reinforces the arrival by proximity rather than function. It's the logic behind chromatic riffs."
+        },
+        {
+          "como": "Minor subdominant",
+          "porque": "Rises a fourth while keeping the minor mode. No new notes, so it shifts sections without losing the dark color."
+        },
+        {
+          "como": "Opening to the relative major",
+          "porque": "They share two notes, and the tonic's minor third becomes the root. The chorus sounds wider without leaving the key."
+        },
+        {
+          "como": "Hold the G and drop the E to Eb with the bass on C.",
+          "porque": "The G is a common note between the two triads, and the E–Eb half-step drop creates the C–Gb tritone once the bass enters, which generates the tension."
+        },
+        {
+          "como": "Move the power-chord shape a half step up and let the open sixth string ring as a pedal.",
+          "porque": "The root G sits a half step from the F# pedal and its fifth D forms a sixth with it, so the clash concentrates on a single interval."
+        },
+        {
+          "como": "Jump the shape six frets up on the same string.",
+          "porque": "Six semitones is the tritone: the fifth of the first chord ends up a half step from the root of the second, with no note in common between the two."
+        },
+        {
+          "como": "Raise the G to G# and leave A and C where they are.",
+          "porque": "A single ascending half step turns the minor into augmented and produces the leading tone; A and C remain common notes, so the change is felt as coloring rather than a new chord."
+        },
+        {
+          "como": "Keep the F on top and drop the rest to the major-triad voicing.",
+          "porque": "The dominant's b9 is the root of the bVI, so that voice doesn't move; the G# drops to A and the D drops to C, two descending half steps."
+        },
+        {
+          "como": "Drop the B to A without touching the root or the fifth.",
+          "porque": "The fourth resolves a half step down to the minor third, the motion that defines the key; with the other voices staying put, the attention lands on that single note."
+        },
+        {
+          "como": "Keep D and F and drop the bass to Bb.",
+          "porque": "The bVI contains the root and third of the i, so two of three voices stay fixed and the change happens only in the bass, by descending third."
+        },
+        {
+          "como": "Cross to the next string keeping the same relative fret, six semitones up.",
+          "porque": "The diminished fifth between the roots has no implied resolution, which lets the two chords alternate indefinitely with neither functioning as tonic."
+        },
+        {
+          "como": "Hold G and Bb and drop the bass a major third.",
+          "porque": "The two upper voices are the third and fifth of the bVI, so only the root moves; at a slow tempo that keeps the harmonic continuity."
+        },
+        {
+          "como": "Drop the shape a half step at the end of the phrase.",
+          "porque": "The root ends up a half step below the tonic and functions as a leading tone with no third, forcing the return to i by ascending half-step motion."
+        }
+      ],
+      "licks": [
+        {
+          "nombre": "Phrygian riff in E",
+          "nota": "Tonic and b2 on the low string, with palm mute. The same shape moved up one fret."
+        },
+        {
+          "nombre": "Gallop with a tritone",
+          "nota": "Fret 6 on the sixth string is the b5 (Bb). Go in and out fast: it's a hit, not a place to stay."
+        },
+        {
+          "nombre": "Phrygian riff in E with palm mute",
+          "nota": "All on the sixth string: the F at the first fret is the minor second, and alternating it with the open tonic is what produces the phrygian rub. Downstrokes with palm mute."
+        },
+        {
+          "nombre": "Aeolian gallop in E",
+          "nota": "Three hits on the open tonic, the gallop figure, then a G-F# turn and a leap to A-B. The minor seventh and major sixth give it that epic feel."
+        },
+        {
+          "nombre": "Riff in A phrygian, fifth position",
+          "nota": "Alternates the tonic with the Bb, the minor second, then climbs to E-F on the fifth string: the same half step repeated in another octave reinforces the mode's color."
+        },
+        {
+          "nombre": "Harmonic-minor lead in A",
+          "nota": "Climbs the scale up to the G#, the major seventh, which resolves to the tonic a half step up. The F-G# leap is an augmented second, which is what makes it sound neoclassical."
+        },
+        {
+          "nombre": "Tritone riff in E locrian",
+          "nota": "The Bb at the sixth fret is the flat fifth: alternating it with the open tonic leaves the tritone exposed. It ends descending A-G-F to land on the minor second."
+        },
+        {
+          "nombre": "Pedal in D phrygian",
+          "nota": "The open fourth string works as a pedal, and between hits come Eb, F, and G: the fixed note makes everything else sound like tension against the tonic."
+        },
+        {
+          "nombre": "Open phrygian in E",
+          "nota": "The half step between root and minor second appears in the first two notes and marks the mode right from the start. The rest ascends by step up to the octave without touching any altered note."
+        },
+        {
+          "nombre": "Phrygian dominant in E",
+          "nota": "The minor second and major third form a minor third interval between each other, and that leap is what sets this mode apart from phrygian. The major third makes it compatible with a dominant chord over the tonic."
+        },
+        {
+          "nombre": "Harmonic minor in A",
+          "nota": "The final G#–A stretch resolves the leading tone to the tonic by half step. Between the minor sixth and major seventh there's an augmented second, the step-and-a-half leap that characterizes the scale."
+        },
+        {
+          "nombre": "Locrian in B",
+          "nota": "The diminished fifth sits in the middle of the phrase and never resolves upward, so the tonic never gets affirmed. The opening minor second reinforces the instability from the very first interval."
+        },
+        {
+          "nombre": "Whole-tone in C",
+          "nota": "Every interval is a whole step, so there are no half steps to orient the ear toward a tonic. Reaching the octave after six equal steps closes the phrase by symmetry rather than resolution."
+        },
+        {
+          "nombre": "Half-whole diminished in D",
+          "nota": "The pattern alternates half step and whole step, so each pair of notes repeats the same shape a minor third higher. That lets you move the phrase in three-fret blocks without leaving the scale."
+        },
+        {
+          "nombre": "High pentatonic in F#",
+          "nota": "With no seconds or sixths, every interval is a whole step or minor third, and the phrase never brushes a half step. The bend on the fourth pushes it toward the fifth, the only stable support in the scale besides the tonic."
+        },
+        {
+          "nombre": "Aeolian in C, middle zone",
+          "nota": "The minor sixth and minor seventh sit a whole step apart and avoid any leading tone, so the tonic holds by repetition rather than attraction. The phrase rises by step up to the octave."
+        }
+      ]
+    },
+    "country": {
+      "nombre": "Country",
+      "resumen": "Major and bright, with bends that imitate the pedal steel and basses that walk between chords.",
+      "progresiones": [
+        {
+          "nota": "The skeleton. What makes it country isn't the chords but how you get to them: by walking the bass."
+        },
+        {
+          "nota": "With the V before the IV, which gives it that honky-tonk sway."
+        },
+        {
+          "nota": "The ballad. The vi opens up space for the sad lyric."
+        },
+        {
+          "nota": "The three basic chords in the most direct order. In country the interest isn't the harmony but what the bass does between chords."
+        },
+        {
+          "nota": "Returns to the tonic before the dominant, so the verse breathes twice on the I. The final V is left open to repeat."
+        },
+        {
+          "nota": "A cycle of fourths typical of western swing: each chord is a fourth above the last, giving constant motion for improvising over the changes."
+        },
+        {
+          "nota": "Turning the tonic into a dominant before the IV adds the minor seventh, which resolves down a half step to the third of the IV. It's the classic push to the fourth degree."
+        },
+        {
+          "nota": "The II7 is the dominant of the dominant: it brings a major third foreign to the key and chains two dominants in a row, that honky-tonk bar sound."
+        },
+        {
+          "nota": "Swing cadence: the I6 in place of the plain triad adds the sixth, softening the close — the typical voicing of western swing guitars."
+        },
+        {
+          "nota": "The bass walks by step instead of leaping between roots: the slash chord lets the bass move without changing the harmony."
+        },
+        {
+          "nota": "A mixolydian borrowing very common in country rock: the bVII replaces the dominant, leaving the progression without a half-step resolution, more relaxed."
+        },
+        {
+          "nota": "A full chain of secondary dominants: each chord sets up the next. Works as a long turnaround at the end of the verse."
+        },
+        {
+          "nota": "The same three functions with extended voicings: sixths and ninths instead of triads. It's the color of western-swing orchestras, more jazz than folk."
+        },
+        {
+          "nota": "The iii shares its third and fifth with the I, so the bass rises a major third without moving the inner voices. The sus4 delays the third of the V for a beat, and the 4–3 resolution lands right before returning to the I."
+        },
+        {
+          "nota": "The IV and the ii7 share three notes, so the move between them feels more like a bass change than a chord change. The seventh of the ii7 falls a half step to the third of the V7, and the circle closes on its own."
+        },
+        {
+          "nota": "The third of the V is the root of the vi, so the V–vi motion turns a common note into a root. The final IV leaves the sixth of the key in the bass of the previous chord, resolved downward by a third."
+        },
+        {
+          "nota": "Starting on IV puts the tonic on the fifth of the chord, leaving the resolution pending until the third bar. The final vi is the relative minor of the I: a single voice changes and the cycle can repeat without a cadence."
+        },
+        {
+          "nota": "The minor seventh added to the I turns it into the dominant of the IV and falls a half step to the third of that chord. The borrowed iv lowers the major sixth of the key to a minor sixth, and that note pushes by half step toward the fifth of the I when it returns."
+        },
+        {
+          "nota": "The bIII brings the key's minor third as its root and deliberately clashes with the major third of the I. Its fifth is the root of the IV, so the link resolves by common note and the bass rises by a whole step."
+        },
+        {
+          "nota": "The I6 and the vi7 have the same four notes: only which one sits in the bass changes. From there the descending circle of fifths chains sevenths falling by half step, and the thirteenth of the V adds the key's third above the dominant."
+        },
+        {
+          "nota": "The major seventh of the I sustains as the fifth of the vi7, so the top voice stays still across two chords. The 6/9 over the IV avoids the seventh and keeps the sound open until the ninth of the V calls for the return to I."
+        },
+        {
+          "nota": "Each chord is the dominant of the next, and the sevenths fall by half step in a chain down to the third of the following chord. Since they're all major, each root brings in a note foreign to the key, justified by the immediate resolution."
+        },
+        {
+          "nota": "The chromatic diminished chord places its root a half step below the ii7 and pushes the bass upward. Its notes are all minor thirds apart, so it works as a passing dominant with no key of its own."
+        },
+        {
+          "nota": "The bVII lowers the key's seventh by a half step and creates a mixolydian modal turn. Its third is the root of the IV, which is why the bVII–IV–I descent sounds like a chain of falling fifths."
+        },
+        {
+          "nota": "The bVII appears after the V, so the leading tone is heard first and then cancelled by a half step. The bass falls by whole step and by fourth, and the final IV becomes a suspended rest instead of a cadence."
+        },
+        {
+          "nota": "With no thirds, the three chords are just root and fifth, leaving the progression ambiguous between major and minor. The motion is parallel by fourths, so the voice leading is a block shift rather than a true connection."
+        }
+      ],
+      "transiciones": [
+        {
+          "como": "Bass walk-up",
+          "porque": "Instead of leaping, you walk the in-between notes on the low strings. The listener arrives at the chord before you do."
+        },
+        {
+          "como": "With a double stop",
+          "porque": "Resolve by playing two strings at once a third or a sixth apart: it's the sound of two guitars, or of the pedal steel."
+        },
+        {
+          "como": "Third bend",
+          "porque": "Stretch the second up to the major third while holding another string fixed. It imitates the pedal."
+        },
+        {
+          "como": "Chromatic bass walk-up",
+          "porque": "Climbing from the I to the IV through the in-between notes fills the bar and announces the change before it arrives. The chord doesn't change until the walk is complete."
+        },
+        {
+          "como": "Secondary dominant",
+          "porque": "The minor seventh added to the tonic resolves down a half step to the third of the IV. It turns a neutral arrival into a resolution."
+        },
+        {
+          "como": "Close with double stops",
+          "porque": "Playing the third and sixth of the chord together doubles the voice leading: two lines resolving in parallel sound like a two-guitar section."
+        },
+        {
+          "como": "Chain of dominants",
+          "porque": "Each dominant resolves to the next by fourths, so the ear always has somewhere to go. It's what keeps the swing moving."
+        },
+        {
+          "como": "Plagal with a fill",
+          "porque": "The plagal close has no tension of its own, so it gets filled with a double-stop lick: the interest comes from the line, not the harmony."
+        },
+        {
+          "como": "Leap to the relative minor",
+          "porque": "They share two notes, so the bridge shifts mood without modulating. The bass drops a third and the section turns more introspective."
+        },
+        {
+          "como": "Pedal-steel bend",
+          "porque": "Bending the fourth up to the fifth while another fixed note rings imitates the pedal-steel effect: one voice moves while the other stays still."
+        },
+        {
+          "como": "Mixolydian cadence",
+          "porque": "The bass rises a whole step instead of a half step. It closes without the formality of the V7, which is why it sounds more countrified and less like a parlor cadence."
+        },
+        {
+          "como": "On the last beat of the V7, put the third of the chord in the bass and rise a half step to the root of the iii.",
+          "porque": "The third of the V7 is the seventh of the iii, so the change happens through a common note and only the bass moves."
+        },
+        {
+          "como": "Over the IV, add the key's root in the top voice and drop it a half step when the iv comes in.",
+          "porque": "That note is the fifth of the IV and becomes the minor third of the iv, so the passage is defined by a single half step."
+        },
+        {
+          "como": "Replace the final V with the III7 and enter the dominant chain from there.",
+          "porque": "The III7 and the V share the key's fifth, and the new seventh of the III7 falls by half step to the third of the VI7."
+        },
+        {
+          "como": "Hold the sixth of the I6 and raise it a half step to turn it into a major seventh.",
+          "porque": "The two progressions share the vi7, so the only voice that changes is the one that defines the quality of the first chord."
+        },
+        {
+          "como": "Instead of returning to the I after the bVII, raise the bass a minor third from the tonic to the bIII.",
+          "porque": "The bVII and the bIII share two notes, and the minor third that the bIII brings was already present as the seventh of the bVII."
+        },
+        {
+          "como": "Remove the thirds from the three chords and keep only root and fifth.",
+          "porque": "With no third, the chords lose function and the progression reads as parallel fifth motion."
+        },
+        {
+          "como": "Instead of the chromatic diminished chord, drop the root a minor third to the vi7 and add the sixth to the I.",
+          "porque": "The I6 already contains the four notes of the vi7, so the substitution moves no inner voice."
+        },
+        {
+          "como": "From the vi, drop the root a whole step to the V and continue the descent to the bVII.",
+          "porque": "The vi and V share the key's seventh as a common note, and from the V the bVII cancels that same note by a half step."
+        },
+        {
+          "como": "Swap the bIII for the V while keeping the key's fifth, which is in both chords.",
+          "porque": "The bIII uses the minor third and the V the leading tone: substituting one for the other moves a single voice a half step in each direction."
+        },
+        {
+          "como": "Drop the ninth of the V and lower the major seventh of the I to the sixth and then to the fifth.",
+          "porque": "The IV6/9 and the ii7 share the root and fifth of the IV, so reducing to four-note chords doesn't break the bass line."
+        }
+      ],
+      "licks": [
+        {
+          "nombre": "Double stop in G",
+          "nota": "Thirds over the tonic. Play both strings together — it's the sound of two guitars."
+        },
+        {
+          "nombre": "Walk-up from G to C",
+          "nota": "The notes that connect one chord to the next, on the low strings. Ends on the C of the arriving chord."
+        },
+        {
+          "nombre": "Chicken pickin' in G",
+          "nota": "Climbs D-E-G-A-B and comes back down the same way, all in third position. The sound comes from the right hand: note muted with the palm, then plucked with the finger."
+        },
+        {
+          "nombre": "Pedal-steel bend in A",
+          "nota": "The bend from E to F# on the second string, with the neighboring notes held still, imitates the steel's pedal: one voice rises while the others sustain the chord."
+        },
+        {
+          "nombre": "Open walk-up in E",
+          "nota": "An ascending run across four strings starting from the open sixth: it works as an intro because it builds up range as it climbs to the chord."
+        },
+        {
+          "nombre": "Mixolydian walk-up in D",
+          "nota": "Rises by step from the open fourth string up to the D on the second: the natural C, the minor seventh, is what takes the formality out of the run."
+        },
+        {
+          "nombre": "Honky-tonk in C with a bend",
+          "nota": "The bend rises a whole step from G to A, and then the phrase falls into the box at the octave position. The pull-off at the end gives the style's typical irregular attack."
+        },
+        {
+          "nombre": "Swing phrase in G mixolydian",
+          "nota": "Includes the natural F, the minor seventh, which is what makes the phrase sound over a G7 rather than a G major. Ends with a pull-off to slur the finish."
+        },
+        {
+          "nombre": "Pentatonic run on the third string",
+          "nota": "The phrase chains major and minor thirds of the pentatonic without touching the fourth or seventh, so no degree demands resolution. The final leap of a minor sixth between strings leaves the fifth of the chord on top."
+        },
+        {
+          "nombre": "Mixolydian ascent over the dominant",
+          "nota": "The ascent passes through the minor seventh and the major third in the same phrase, the pair of intervals that defines the dominant. The major sixth enters as a stepwise passing note, avoiding a direct tritone leap."
+        },
+        {
+          "nombre": "Ionian scale in octave position",
+          "nota": "The line rises by step and uses the fourth as a grace note that falls to the third. The major seventh appears just before the tonic, so the final half step defines the rest."
+        },
+        {
+          "nombre": "Honky-tonk opener on low strings",
+          "nota": "The chromatic stretch between the major second and the major third passes through the minor third, which works as a passing note rather than a stable degree. Ending on the major sixth leaves the phrase open toward the dominant."
+        },
+        {
+          "nombre": "Dorian in fret pairs",
+          "nota": "Each string contributes two notes a whole step apart, spreading the scale into major seconds and avoiding consecutive half steps. The major sixth is what sets this passage apart from a natural minor."
+        },
+        {
+          "nombre": "Major bebop with a passing minor fifth",
+          "nota": "The minor sixth is inserted between the fifth and the major sixth, making the stretch chromatic while the stable degrees fall on strong beats. The major seventh is saved for the final note and closes the half step to the tonic."
+        },
+        {
+          "nombre": "Open pentatonic with open strings",
+          "nota": "The open strings duplicate scale degrees in another octave, so the line alternates registers without changing position. With no fourth or seventh, any order of the notes still sounds consonant over the tonic chord."
+        },
+        {
+          "nombre": "Mixolydian rise toward the ninth",
+          "nota": "The phrase climbs from the fourth up to the major second of the next octave, passing through the major third and the minor seventh. That pair of notes is the dominant chord's tritone, and it's what gives the push."
+        }
+      ]
+    },
+    "western": {
+      "nombre": "Dark Western",
+      "resumen": "Harmonic minor, tremolo, and spring reverb. The desert before the duel.",
+      "progresiones": [
+        {
+          "nota": "The Morricone loop. That A7 with the leading tone comes from harmonic minor and is what puts the danger in it."
+        },
+        {
+          "nota": "Phrygian pendulum. It doesn't go anywhere: it sways, and that stillness is the tension."
+        },
+        {
+          "nota": "The full tragic cadence."
+        },
+        {
+          "nota": "The bVI and V7 sit a half step apart: that falling bass move is the gesture that defines the sound. The V7 brings the major seventh borrowed from harmonic minor."
+        },
+        {
+          "nota": "A cadence stripped to the bare minimum. Used as a song ending because it concentrates all the tension in the descending half step of the bass."
+        },
+        {
+          "nota": "Full andalusian descent: three aeolian degrees falling and the major V at the end. The G# of the dominant against the previous natural G gives the characteristic contrast."
+        },
+        {
+          "nota": "Two-chord pendulum: it alternates tension and rest without moving forward. With no third chord, the feeling is one of waiting, exactly what's wanted in suspense passages."
+        },
+        {
+          "nota": "Phrygian sway: the bII, a half step from the tonic, goes on and off. There's no progression, just a rub, and that's enough to carry a whole section."
+        },
+        {
+          "nota": "Rises by thirds up to the bVI and falls to the V7. The first half sounds major and the second shuts the door with the dominant: the shift in light is the whole device."
+        },
+        {
+          "nota": "The b9 sits a half step from the tonic and sounds diminished; then the bVI opens up the register. The cycle alternates anguish and breadth."
+        },
+        {
+          "nota": "A descending line over a fixed bass: the top voice falls by half steps while the tonic stays still. Each step changes the color without changing the chord."
+        },
+        {
+          "nota": "The bII between the bVI and the V7 adds a second tension: two foreign chords in a row before the dominant make the final resolution weigh more."
+        },
+        {
+          "nota": "The bVI and the iv share two notes, so the bass drops a major third with minimal voice leading. From the bVI the root falls a half step to that of the V7, and the leading tone closes the half step to the tonic."
+        },
+        {
+          "nota": "Placing the bVI before the iv leaves the minor sixth in the bass and delays the subdominant. The seventh of the V7 falls a half step to the third of the i and the leading tone rises, so the cadence closes with two opposing half steps."
+        },
+        {
+          "nota": "The three chords rise by step and none brings a leading tone, so the arrival at the i is modal rather than cadential. The bVII contains the minor seventh, which rises a whole step to the tonic instead of a half step."
+        },
+        {
+          "nota": "The augmented chord is the minor-third triad with its fifth raised a half step, and that note is the key's leading tone. Being built of stacked major thirds, it defines no root, which is why it can land on either the iv or the V7."
+        },
+        {
+          "nota": "The bass descends by step while the upper voices stay fixed on the notes of the i. Each bass note becomes seventh, fifth, and then root in turn, so the same chord changes function three times."
+        },
+        {
+          "nota": "Two chords, major and minor, a whole step apart, with no leading tone and no cadence: the repetition sustains the pulse instead of resolving. The minor third of the i falls a half step to the seventh of the bVII and rises again."
+        },
+        {
+          "nota": "The iv and the bVI share third and fifth, so the opening is a bass change over the same sonority. The bVI–V7 step drops the root by a half step, the strongest motion in the whole progression."
+        },
+        {
+          "nota": "The major seventh of the bII is the key's leading tone, so that chord already contains the note that pushes toward the i. Its root sits a half step above the tonic and a fourth above that of the V7, allowing both resolutions."
+        },
+        {
+          "nota": "The sixth of the iv is the key's leading tone anticipated inside a minor chord. The augmented ninth of the V7 is enharmonic with the minor third of the i, so the dominant chord already carries the minor color of the resolution."
+        },
+        {
+          "nota": "The bVII and bVI alternate a whole step apart and neither contains a leading tone, so the block can repeat without asking for closure. All three chords come from natural minor and share at least one note in pairs."
+        },
+        {
+          "nota": "The bIII is the relative major and shares two notes with the i, so the progression starts with just one voice moving. Then the bass rises by seconds and thirds up to the V7, whose leading tone is the only note outside natural minor."
+        },
+        {
+          "nota": "The ii of harmonic minor is half-diminished because its fifth is the key's minor sixth. That same note reappears as the b13 of the V7 and falls a half step to the fifth of the i."
+        },
+        {
+          "nota": "The roots fall by whole step, whole step, and half step, and each chord keeps the structure of a dominant seventh. The tritones shift in parallel, so none resolves until the V7 reaches the tonic."
+        },
+        {
+          "nota": "With no thirds, only root and fifth remain, so the sonority is just the bass line and nothing else. The minor-sixth–minor-seventh–tonic profile defines the mode even without a single complete chord."
+        },
+        {
+          "nota": "A descending circle of fifths within natural minor, so each seventh falls by half step to the third of the next chord. The V7 breaks the series by raising the leading tone and cutting off the descent."
+        }
+      ],
+      "transiciones": [
+        {
+          "como": "Descending approach",
+          "porque": "From Bb to A7 drops a half step. It's the fuse: the V7 is already loaded and just needs to fall."
+        },
+        {
+          "como": "Resolution with the leading tone",
+          "porque": "The C# of the A7 pushes toward D. That note isn't in natural minor: that's why harmonic minor is used."
+        },
+        {
+          "como": "Hunter's tritone",
+          "porque": "A direct, unprepared leap, like a gunshot. Works to cut the phrase off cold."
+        },
+        {
+          "como": "Half-step descent",
+          "porque": "The root falls a half step and the chord shifts from rest to maximum tension. It's the style's most recognizable move and works even with no tonic afterward."
+        },
+        {
+          "como": "Harmonic-minor cadence",
+          "porque": "The dominant's major seventh resolves up a half step to the tonic. That note doesn't exist in natural minor, and it's what makes the close sound ancient and final."
+        },
+        {
+          "como": "Opening by thirds",
+          "porque": "They share two notes, so the change doesn't modulate — it just widens the range. Works to move from a tense passage into a landscape one."
+        },
+        {
+          "como": "Unresolved pendulum",
+          "porque": "Repeating tension and rest with no new chords freezes the harmony. It leaves the feeling that something is about to happen and never does."
+        },
+        {
+          "como": "Phrygian cadence",
+          "porque": "The bass falls a half step to the tonic with no dominant. With no tritone, the close sounds harsh rather than resolved."
+        },
+        {
+          "como": "Diminished tension",
+          "porque": "The chord's four upper notes form a diminished chord, and the b9 sits a half step from the tonic: two voices resolve by half step at once."
+        },
+        {
+          "como": "Minor subdominant",
+          "porque": "Rises a fourth while keeping the minor third. No new notes, so it darkens the passage without leaving the key."
+        },
+        {
+          "como": "Turn to the relative major",
+          "porque": "The tonic's minor third becomes the root and the color suddenly brightens. Used for the main themes, before returning to minor."
+        },
+        {
+          "como": "Instead of going to the iv, drop the root a whole step and add a minor seventh to build the bVII7.",
+          "porque": "The iv and the bVII7 share two notes, and the new seventh sets up the pattern of parallel dominants that keeps descending."
+        },
+        {
+          "como": "On reaching the i, return to the bVI while keeping the tonic in the top voice, which is that chord's third.",
+          "porque": "The tonic is a common note between the i and the bVI, so the return doesn't interrupt the top voice and the cycle closes with no cadence."
+        },
+        {
+          "como": "Raise the fifth of the bIII a half step before moving to the iv.",
+          "porque": "That fifth becomes the key's leading tone, and the resulting augmented chord already points to the V7 without changing root."
+        },
+        {
+          "como": "Strip the thirds from the two chords and add the bVI between the i and the bVII.",
+          "porque": "With only root and fifth left, the contrast lives in the bass, and the bVI completes the half-step descent from the minor seventh."
+        },
+        {
+          "como": "Replace the iv with the iim7b5, which is the same chord with its root lowered a minor third.",
+          "porque": "The iim7b5 contains the notes of the iv plus the key's second, and its diminished fifth is the same note that later functions as the b13 of the V7."
+        },
+        {
+          "como": "Instead of dropping the bass by step, skip the iv and follow the circle of fifths up to the bVI.",
+          "porque": "Both versions reach the same bVI before the V7, but one moves the bass by seconds and the other by ascending fourths."
+        },
+        {
+          "como": "Hold the leading tone brought by the iv6 and use it as the major seventh of the bII.",
+          "porque": "That note is common to both chords, so the fourth-root change doesn't move the top voice."
+        },
+        {
+          "como": "Reverse the order of the two middle chords so the bass rises a major third instead of falling.",
+          "porque": "The iv and the bVI share third and fifth, so the swap only changes which note sits in the bass and how it arrives at the V7."
+        },
+        {
+          "como": "Jump from the bVII7 to the bIII by dropping the chord's seventh to the third of the next chord.",
+          "porque": "The bVII7 is the dominant of the bIII, and that half-step resolution cuts the chain of parallel dominants at a stable point."
+        },
+        {
+          "como": "Leave the final bVI as the starting point and rise to the bVII without returning to the i.",
+          "porque": "The ostinato already contains both chords, so the transition is simply stopping the repeat and closing the ascent by step."
+        }
+      ],
+      "licks": [
+        {
+          "nombre": "Harmonic-minor line in D",
+          "nota": "The leap from b6 to 7th (fret 6 to fret 9 on the third string) is the style's signature. Played with tremolo."
+        },
+        {
+          "nombre": "Low answer with a slide",
+          "nota": "Long notes on the low strings, with the spring reverb at maximum."
+        },
+        {
+          "nombre": "Tremolo in A harmonic minor",
+          "nota": "Circles around the tonic and rises to B and C; the G# on the second string is the major seventh that pushes back to A. Played with tremolo picking, one note at a time."
+        },
+        {
+          "nombre": "Low slide in E harmonic minor",
+          "nota": "Climbs the two low strings from the open sixth: the final D# is the major seventh, and the slide up to E turns it into an arrival, not just another note."
+        },
+        {
+          "nombre": "Phrase with the major seventh in D",
+          "nota": "The C# is harmonic minor's major seventh: it appears twice, first as an approach from below and finally hanging a half step from the tonic."
+        },
+        {
+          "nombre": "Phrygian tremolo in E",
+          "nota": "Alternates E and F, the half step that defines the mode, then descends D-C-B to close on the tonic. Played in open position, with steady tremolo and heavy reverb."
+        },
+        {
+          "nombre": "Low line in A phrygian",
+          "nota": "Climbs A-Bb-C on the sixth string and continues on the fifth up to the F: the mode's two half steps appear back to back, and the return closes on the tonic."
+        },
+        {
+          "nombre": "Phrygian dominant in E",
+          "nota": "Has the phrygian bII and the major third at the same time: the F-G# leap is an augmented second and is what sounds like the desert. Closes by descending to the tonic."
+        },
+        {
+          "nombre": "Harmonic minor with an augmented-second leap",
+          "nota": "The step from the minor sixth to the major seventh is an augmented second, the interval that separates this scale from natural minor. The phrase crosses it twice, so the tension doesn't dissolve even though the contour is ascending."
+        },
+        {
+          "nombre": "Phrygian dominant in open position",
+          "nota": "The minor second and major third coexist in the same phrase, and that half step over the tonic is what forces the dominant sound. The leap from the minor second to the major third opens an augmented second in the low register."
+        },
+        {
+          "nombre": "Phrygian ascent over a pedal",
+          "nota": "The scale brings a minor second and minor sixth, so there are two half steps pulling downward even though the line rises. The phrase ends on the minor seventh, leaving the whole-step descent to the tonic pending."
+        },
+        {
+          "nombre": "Aeolian by step",
+          "nota": "Three notes per string in major and minor seconds, with no leading tone, so the octave completes with no pull toward the tonic at all. The half step between the fifth and minor sixth is the only tension point, falling in the middle of the phrase."
+        },
+        {
+          "nombre": "Minor pentatonic with a bend on the seventh",
+          "nota": "The minor pentatonic leaves out the second and sixth, so the contour stays in fourths and minor thirds with no half steps. The bend raises the fifth toward the minor seventh, the interval that carries the phrase."
+        },
+        {
+          "nombre": "Dorian ascent in the middle register",
+          "nota": "The major sixth over a minor third is what sets this passage apart from natural minor and removes the half-step drop. The line rises by step and ends on the fourth, left hanging over the tonic chord."
+        },
+        {
+          "nombre": "Harmonic minor toward the leading tone",
+          "nota": "The phrase rises from the tonic up to the major seventh passing through the minor sixth, so the last stretch is an augmented second followed by a half step. That close leaves the leading tone pointing at the tonic an octave up."
+        },
+        {
+          "nombre": "Phrygian dominant descent",
+          "nota": "Descending the scale puts the minor second right before the tonic, and that descending half step is the mode's strongest resolution. The minor sixth and major third form an augmented second that appears when crossing strings."
+        }
+      ]
+    }
+  },
+  "emociones": {
+    "sensual": {
+      "nombre": "Sensual",
+      "resumen": "Velvet: wide, edgeless chords that stay floating.",
+      "comoUsar": "Add the 9th and let the chord ring. Play little and slow: the sensual quality lives in the space you leave, not the notes you add. Avoid the root in the melody — go for the 9th and the 6th, the notes that give it that air."
+    },
+    "melancolico": {
+      "nombre": "Melancholic",
+      "resumen": "The nostalgia of what never came back: minor sevenths, no drama.",
+      "comoUsar": "The m7 is the starting point. If you want to tighten the knot, pass a bar through mmaj7: that major seventh inside a minor chord is what hurts. Descending phrases and long notes."
+    },
+    "tenso": {
+      "nombre": "Tense / unsettling",
+      "resumen": "Something's about to happen: altered dominants and diminished chords that don't let you breathe.",
+      "comoUsar": "Place the altered chord right BEFORE resolving, never on the rest. Tension works if you release it afterward: one tense bar, then resolve on the next. Hold it too long and it stops being tension and becomes noise."
+    },
+    "luminoso": {
+      "nombre": "Bright / epic",
+      "resumen": "Open sky: major chords with a 9th and that #11 that lifts everything.",
+      "comoUsar": "The key note is the #11 (the raised fourth): it's what turns an ordinary major chord into something cinematic. Let it ring on top, in the highest voice."
+    },
+    "oscuro": {
+      "nombre": "Dark / menacing",
+      "resumen": "Bare, with the flat second: weight, earth, threat.",
+      "comoUsar": "Fewer notes, lower down. Strip the extensions: here the bare chord, or just the fifth alone, weighs more than any color. The b2 is what gives the flavor: use it as the opening note of the phrase."
+    },
+    "nostalgico": {
+      "nombre": "Nostalgic / warm",
+      "resumen": "An old photograph: major sevenths and sixths, everything rounded off.",
+      "comoUsar": "The 6th instead of the 7th takes off the jazzy weight and leaves it warmer and older-sounding. Slow arpeggios, no blocked chords."
+    },
+    "swing": {
+      "nombre": "With swing",
+      "resumen": "Make it walk: dominants with a 13th and bebop chromaticism.",
+      "comoUsar": "Bebop scales have one extra chromatic note precisely so that, running eighth notes down, the strong beats land on chord tones. Play even eighth notes and let the passing note fall on the weak beat: that's where the swing shows up."
+    },
+    "desgarrado": {
+      "nombre": "Anguished / blues",
+      "resumen": "The wail: the third fighting with itself.",
+      "comoUsar": "The blues trick is playing the minor third over a chord with a major third: that friction is the wail. Bend the b3 toward the major 3rd without fully getting there, and stay put."
+    }
+  },
+  "escalas": {
+    "jonico": {
+      "nombre": "Ionian (major)",
+      "sabor": "The good old major. Sounds like home, like resolved."
+    },
+    "lidio": {
+      "nombre": "Lydian",
+      "sabor": "Major but floating: the #11 gives it that film-score air."
+    },
+    "mixolidio": {
+      "nombre": "Mixolydian",
+      "sabor": "Major with a minor 7th. It's the scale of the dominant and of rock."
+    },
+    "lidioDominante": {
+      "nombre": "Lydian dominant",
+      "sabor": "Dominant with a #11. Modern jazz, without the rub of the natural 4th."
+    },
+    "eolico": {
+      "nombre": "Aeolian (natural minor)",
+      "sabor": "The classic minor, with the flat 6th that makes it melancholic."
+    },
+    "dorico": {
+      "nombre": "Dorian",
+      "sabor": "Minor with a major 6th. Brighter: Santana, funk, modal jazz."
+    },
+    "frigio": {
+      "nombre": "Phrygian",
+      "sabor": "Minor with a b2. Spanish, dark flavor, very tense."
+    },
+    "frigioDominante": {
+      "nombre": "Phrygian dominant",
+      "sabor": "The flamenco and oriental-metal scale: b2 and major 3rd."
+    },
+    "locrio": {
+      "nombre": "Locrian",
+      "sabor": "The m7b5 scale. Unstable by definition, no rest at all."
+    },
+    "menorArmonica": {
+      "nombre": "Harmonic minor",
+      "sabor": "Minor with a leading tone. The leap from 6th to 7th is its signature."
+    },
+    "menorMelodica": {
+      "nombre": "Melodic minor",
+      "sabor": "Minor with a major 6th and 7th. Sounds like jazz going up."
+    },
+    "alterada": {
+      "nombre": "Altered (super-locrian)",
+      "sabor": "Every tension altered at once. Maximum pull before resolving."
+    },
+    "bebopDominante": {
+      "nombre": "Bebop dominant (swing)",
+      "sabor": "Mixolydian with a passing major 7th. THE sound of swing over a dominant."
+    },
+    "bebopMayor": {
+      "nombre": "Bebop major (swing)",
+      "sabor": "Major with a passing b6. Swing over major-tonic chords."
+    },
+    "bebopMenor": {
+      "nombre": "Bebop dorian (swing)",
+      "sabor": "Dorian with a passing major 3rd. Swing over the minor chords of a ii-V."
+    },
+    "bluesMayor": {
+      "nombre": "Major blues",
+      "sabor": "Major pentatonic plus the brushing b3. Sounds sweet and dirty at once."
+    },
+    "pentaMayor": {
+      "nombre": "Major pentatonic",
+      "sabor": "Five notes, none of them clash. It's the safety net."
+    },
+    "pentaMenor": {
+      "nombre": "Minor pentatonic",
+      "sabor": "The blues and rock scale. Direct, no awkward notes."
+    },
+    "blues": {
+      "nombre": "Blues",
+      "sabor": "Minor pentatonic plus a passing b5. The wail."
+    },
+    "tonosEnteros": {
+      "nombre": "Whole tone",
+      "sabor": "Everything a whole step apart: no center, it floats."
+    },
+    "disminuida": {
+      "nombre": "Diminished (whole-half)",
+      "sabor": "Symmetrical, for diminished chords. Suspense."
+    },
+    "disminuidaST": {
+      "nombre": "Diminished (half-whole)",
+      "sabor": "The same symmetry starting on the half step: it's the one for dominants with a b9. Gives you b9, #9, #11, and 13 without leaving the scale."
+    }
+  },
+  "afinaciones": {
+    "guitarra": {
+      "estandar": "Standard E (E)",
+      "ebEstandar": "Eb Standard (Eb)",
+      "dEstandar": "Standard D (D)",
+      "dropD": "Drop D",
+      "dropDb": "Drop Db",
+      "dropC": "Drop C",
+      "dropB": "Drop B",
+      "dropA": "Drop A",
+      "dadgad": "DADGAD",
+      "abiertoG": "Open G (DGDGBD)"
+    },
+    "bajo": {
+      "estandar": "Standard E (E)",
+      "ebBajo": "Eb Standard (Eb)",
+      "dropD": "Drop D",
+      "dropC": "Drop C",
+      "bGrave": "5-string (B)"
+    }
+  },
+  "ui": {
+    "meta": {
+      "nombre": "English",
+      "codigo": "en"
+    },
+    "nav": {
+      "estilos": "Styles",
+      "mapas": "Harmonic maps",
+      "aprender": "Learn",
+      "acerca": "How to read this"
+    },
+    "intro": {
+      "lema": "The Essence of Sound — by Mau",
+      "titulo": "Harmonic maps",
+      "texto": "Progressions, substitutions and licks — with the notes written out, arrows showing where each chord goes, and everything split by color."
+    },
+    "filtros": {
+      "todas": "All",
+      "otros": "Other"
+    },
+    "chips": {
+      "armonia": "Harmony & Jazz",
+      "country": "Country & Guitar Licks",
+      "western": "Dark Western"
+    },
+    "paginacion": {
+      "anterior": "Previous",
+      "siguiente": "Next"
+    },
+    "buscador": {
+      "vacio": "Couldn't find a map with that. Try another word."
+    },
+    "volver": {
+      "explorar": "Back to explore",
+      "estilos": "Back to styles"
+    },
+    "detalle": {
+      "tonica": "Tonic",
+      "escritoEn": "written in",
+      "esteMapa": "This map",
+      "circuloQuintas": "Circle of fifths",
+      "desde": "From",
+      "podesIrA": "you can go to",
+      "proposito": "Purpose",
+      "sensacion": "Feel",
+      "tecnica": "Technique / playing",
+      "coloresDelMapa": "Map colors",
+      "recorridoAcordes": "Chord path",
+      "enEsteMapa": "In this map",
+      "otrosCaminos": "Other paths in the system"
+    },
+    "estilosVista": {
+      "intro": "Every style has its own thing: what chords it's built from, what scales go on top, its typical transitions and a few licks in tab.",
+      "progresiones": "Progressions",
+      "progresionesPista": "Play any chord to see it on the fretboard.",
+      "licksTitulo": "Licks in tab",
+      "licksPista": "The number is the fret; the top line is the first string. <b>b</b> = bend, <b>/</b> = slide.",
+      "acordesDelEstilo": "Chords of the style",
+      "escalasYModos": "Scales and modes",
+      "transicionesTitulo": "Transitions that define it",
+      "progresionesCuenta": "progressions",
+      "lick": "lick",
+      "licks": "licks"
+    },
+    "acerca": {
+      "titulo": "How to read the charts",
+      "p1": "Each chart shows <strong>only the chords that map uses</strong>, and\n        in the shape the map itself declares: a star with the tonic\n        at the center, a grid, a converging funnel, a cascade going down\n        in zigzag. If a chord isn't in the drawing, it's because it doesn't belong\n        to that map — which is also why it won't show up as an option to move to.",
+      "p2": "<strong>Hover over a chord</strong> and the rest fades out:\n        only the places you can go from there stay lit up,\n        within this same chart. The list on the right separates what\n        the map proposes (with its own explanation) from the other relationships\n        that exist between those chords, and gives each one its degree — the\n        ii, the V7, the bVI — which is what really orients you.",
+      "p3": "<strong>Click</strong> to lock in a chord and see how to play it:\n        the fingering on guitar and bass, and the keys on piano. The\n        positions are calculated from the chord's notes, aiming to get\n        the root on the bass and keep it within hand reach — the number\n        inside each dot is the degree (1 the root, 3 the third,\n        b7 the minor seventh…).",
+      "p4": "Above the chart you can <strong>change the tonic</strong>: the whole\n        map transposes into that key, chords and notes included, so\n        you're not always practicing in C. And with\n        <strong>Circle of fifths</strong> you switch to the reference view,\n        where you see the whole system of the 12 keys with this\n        progression lit up on top.",
+      "p5": "This doesn't replace playing and listening — it's a map, not the territory.\n        It's there to give you a quick visual reference while you improvise or\n        put together a new progression."
+    },
+    "grafoPista": "Hover over a chord to see where you can go from there ·\n          click to lock it in and see how to play it.",
+    "seccionIntroEstilos": "Every style has its own thing: what chords it's built from, what scales go on top,\n    the transitions that make it sound like that and a few licks in tab.",
+    "modalInstrumento": {
+      "cerrar": "Close (Esc)",
+      "comoTocar": "How to play",
+      "guitarra": "Guitar",
+      "piano": "Piano",
+      "bajo": "Bass",
+      "afinacion": "Tuning",
+      "escalaEncima": "Scale on top",
+      "queSuene": "Make it sound…",
+      "notas": "Notes",
+      "grados": "Degrees",
+      "posicionAnterior": "Previous position",
+      "posicionSiguiente": "Next position",
+      "delAcorde": "of the chord",
+      "puente": "bridge",
+      "tension": "tension",
+      "resuelve": "resolves",
+      "comoEsta": "As is",
+      "soloElAcorde": "Just the chord",
+      "posicionAbierta": "open position",
+      "traste": "fret",
+      "de": "of",
+      "notasLabel": "Notes",
+      "vacio": "Couldn't find a comfortable position for this chord on that instrument.",
+      "tecladoAlt": "Chord keys"
+    },
+    "emocion": {
+      "queSuene": "Make it sound",
+      "tocaAsi": "Play the chord like this",
+      "clickVerlo": "(click to see it on the fretboard)",
+      "yEncimaEstasEscalas": "And on top, these scales",
+      "comoSeToca": "How to play it:",
+      "enEstaProgresion": "In this progression:",
+      "deAcaSalisHacia": "from here you head to",
+      "eseEsElLugar": "That's the spot for the color — put the colored version in the bar of",
+      "yDejaQueElCambio": "and let the move to",
+      "laResuelva": "resolve it."
+    },
+    "aprender": {
+      "titulo": "Learning path",
+      "puentesTitulo": "Bridges between styles",
+      "porDondeEmpezar": "Where to start",
+      "pistaRuta": "Six steps in order. Each one builds on the last, and each one tells you\n        when you've got it — not by time, but by what you can do.",
+      "pasarDeEstilo": "Moving from one style to another",
+      "pistaPuentes": "Almost everything you know from one style carries over to the next one. This is what\n        gets reused and what needs to change.",
+      "que": "What:",
+      "porque": "Why:",
+      "donde": "Where:",
+      "listo": "You've got it when:",
+      "yaSabes": "You already know:",
+      "cambia": "Change:"
+    },
+    "relacion": {
+      "paralelo": "its parallel (same name, other mode)",
+      "sinTension": "the version without tension",
+      "dominantizar": "turn it into a dominant (same chord with a 7th)",
+      "resuelveV7I": "resolves here — V7 → I",
+      "subV7": "tritone substitution — the subV7",
+      "cadenaDominantes": "follows the chain of dominants",
+      "suDominante": "its dominant — the V7 that sets it up",
+      "backdoor": "backdoor resolution (bVII7 → I)",
+      "relativoMenor": "its relative minor — the vi",
+      "relativoMayor": "its relative major",
+      "resolucionRota": "deceptive resolution — V7 → vi",
+      "quintaArriba": "a fifth up — the V",
+      "quintaAbajo": "a fifth down — the IV",
+      "tonoArriba": "a whole step up",
+      "tonoAbajo": "a whole step down",
+      "semitonoArriba": "a half step up (chromatic)",
+      "semitonoAbajo": "a half step down (chromatic)",
+      "mediante": "mediant — third leap",
+      "medianteInferior": "lower mediant — third leap",
+      "tritono": "a tritone away",
+      "movimientoGenerico": "movement in this map"
+    },
+    "leyenda": {
+      "tonica": "tonic",
+      "dominante": "dominant",
+      "subdominante": "subdominant",
+      "sustitucion": "substitution",
+      "tritonal": "tritone",
+      "tension": "tension",
+      "resolucion": "resolution",
+      "armonica": "harmonic",
+      "cromatica": "chromatic",
+      "cromatico": "chromatic",
+      "modulacion": "modulation",
+      "disminuido": "diminished",
+      "mediante": "mediant",
+      "frigio": "phrygian",
+      "modal": "modal",
+      "pedal": "pedal",
+      "septima": "seventh",
+      "novena": "ninth",
+      "quinta": "fifth",
+      "tercera": "third",
+      "menor": "minor",
+      "mayor": "major",
+      "suspension": "suspension",
+      "pivote": "pivot",
+      "prestamo": "borrowed",
+      "secundaria": "secondary",
+      "relativo": "relative",
+      "cadencia": "cadence",
+      "tonico": "tonic",
+      "dominantes": "dominants",
+      "tensiones": "tensions",
+      "color": "color",
+      "puente": "bridge",
+      "paso": "passing"
+    },
+    "estilosMapa": {
+      "jazz": "Jazz",
+      "blues": "Blues",
+      "rock": "Rock",
+      "pop": "Pop",
+      "metal": "Metal & dark",
+      "country": "Country & folk",
+      "western": "Dark Western",
+      "cine": "Film & epic",
+      "clasico": "Classical & baroque",
+      "soul": "Soul, funk & R&B",
+      "ambient": "Ambient & electronic",
+      "otros": "Other"
+    },
+    "idioma": {
+      "es": "Español",
+      "en": "English",
+      "th": "ไทย"
+    },
+    "ruta": [
+      {
+        "paso": "1",
+        "titulo": "The four chords and your ear",
+        "que": "Learn a single progression — I–V–vi–IV — in two different keys.",
+        "porque": "It's not about playing pop: it's so your hand stops thinking and you can actually listen to what you're doing. Until that's automatic, everything else is just noise.",
+        "donde": "Pop style, first progression.",
+        "listo": "You can change chords without looking at your hand while singing over it."
+      },
+      {
+        "paso": "2",
+        "titulo": "One scale, the whole fretboard",
+        "que": "The minor pentatonic in all five positions, in a single key.",
+        "porque": "Five notes with nothing that clashes: you can improvise from day one without sounding bad. It's the net that lets you make mistakes.",
+        "donde": "Blues style, A box lick.",
+        "listo": "You can start a phrase anywhere on the fretboard without searching for it."
+      },
+      {
+        "paso": "3",
+        "titulo": "The twelve bars",
+        "que": "The full blues in A, playing both the comping and the solo.",
+        "porque": "It's the first format where you comp and solo over the same structure. And it forces you to hear the move to the IV, which is the first transition you have to feel, not count.",
+        "donde": "Blues style, twelve-bar progression.",
+        "listo": "You know what bar you're in without counting."
+      },
+      {
+        "paso": "4",
+        "titulo": "The mode that changes the color",
+        "que": "Mixolydian over a dominant, and dorian over a minor.",
+        "porque": "Here you stop playing 'the song's scale' and start playing each chord's scale. It's the biggest jump: one different note changes the whole genre.",
+        "donde": "Rock (mixolydian) and Blues (dorian over the ii) styles.",
+        "listo": "You can hear the difference between mixolydian and ionian without looking."
+      },
+      {
+        "paso": "5",
+        "titulo": "Tension and its resolution",
+        "que": "Identify in each scale which note clashes and where it goes down to.",
+        "porque": "It's what separates playing correct notes from playing music. Tension used well is what gives a phrase direction instead of just going in circles.",
+        "donde": "Any chord: open the fretboard and pick a scale. The crimson one clashes, the gold one resolves.",
+        "listo": "You can put the tense note in on purpose and take it out whenever you want."
+      },
+      {
+        "paso": "6",
+        "titulo": "Substitute and recolor",
+        "que": "Swap a chord for another one that does the same job: tritone sub, relative, borrowed from the parallel.",
+        "porque": "It's how you rewrite a progression without breaking it. And it's what lets you put in whatever color you want — sensual, tense, bright — without changing the song.",
+        "donde": "Harmonic maps: tritone substitution and modal interchange. And the 'Make it sound…' selector on the fretboard.",
+        "listo": "You can take someone else's progression and make it sound like yours."
+      }
+    ],
+    "puentes": [
+      {
+        "de": "Blues",
+        "a": "Rock",
+        "comparten": "The minor pentatonic and the dominants.",
+        "cambia": "Rock hardens the chord (fifths with no third) and adds the bVII from mixolydian. Same solo, different base."
+      },
+      {
+        "de": "Blues",
+        "a": "Country",
+        "comparten": "The three chords and the form.",
+        "cambia": "Country moves to the MAJOR pentatonic and swaps the wail for double-string bends. Same box, three frets up."
+      },
+      {
+        "de": "Rock",
+        "a": "Metal",
+        "comparten": "The fifths and the minor pentatonic.",
+        "cambia": "Metal tunes down and replaces the bVII with the phrygian bII. The half-step jump is the whole change."
+      },
+      {
+        "de": "Blues",
+        "a": "Jazz",
+        "comparten": "The twelve-bar blues, which in jazz is played the same but with more chords.",
+        "cambia": "ii-Vs and bebop scales show up: the same structure with a chromatic passing note."
+      },
+      {
+        "de": "Metal",
+        "a": "Dark Western",
+        "comparten": "The phrygian mode and unresolved tension.",
+        "cambia": "Western swaps distortion for tremolo and reverb, and uses the harmonic minor to get a leading tone. It's the same fear, wearing different clothes."
+      }
+    ]
+  }
+}

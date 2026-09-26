@@ -1,0 +1,2858 @@
+{
+  "ui": {
+    "meta": {
+      "nombre": "Español",
+      "codigo": "es"
+    },
+    "nav": {
+      "estilos": "Estilos",
+      "mapas": "Mapas armónicos",
+      "aprender": "Aprender",
+      "acerca": "Cómo leer esto"
+    },
+    "intro": {
+      "lema": "The Essence of Sound — by Mau",
+      "titulo": "Mapas armónicos",
+      "texto": "Progresiones, sustituciones y licks — con las notas escritas, flechas de a dónde va cada acorde, y todo separado por color."
+    },
+    "filtros": {
+      "todas": "Todas",
+      "otros": "Otros"
+    },
+    "chips": {
+      "armonia": "Armonía & Jazz",
+      "country": "Country & Guitar Licks",
+      "western": "Dark Western"
+    },
+    "paginacion": {
+      "anterior": "Anterior",
+      "siguiente": "Siguiente"
+    },
+    "buscador": {
+      "vacio": "No encontré ningún mapa con eso. Probá con otra palabra."
+    },
+    "volver": {
+      "explorar": "Volver a explorar",
+      "estilos": "Volver a estilos"
+    },
+    "detalle": {
+      "tonica": "Tónica",
+      "escritoEn": "escrito en",
+      "esteMapa": "Este mapa",
+      "circuloQuintas": "Círculo de quintas",
+      "desde": "Desde",
+      "podesIrA": "podés ir a",
+      "proposito": "Propósito",
+      "sensacion": "Sensación",
+      "tecnica": "Técnica / ejecución",
+      "coloresDelMapa": "Colores del mapa",
+      "recorridoAcordes": "Recorrido de acordes",
+      "enEsteMapa": "En este mapa",
+      "otrosCaminos": "Otros caminos del sistema"
+    },
+    "estilosVista": {
+      "intro": "Cada estilo con lo suyo: con qué acordes se arma, qué escalas van encima, sus transiciones típicas y algunos licks en tablatura.",
+      "progresiones": "Progresiones",
+      "progresionesPista": "Tocá cualquier acorde para verlo en el mástil.",
+      "licksTitulo": "Licks en tablatura",
+      "licksPista": "El número es el traste; la línea de arriba es la primera cuerda. <b>b</b> = bend, <b>/</b> = slide.",
+      "acordesDelEstilo": "Acordes del estilo",
+      "escalasYModos": "Escalas y modos",
+      "transicionesTitulo": "Transiciones que lo definen",
+      "progresionesCuenta": "progresiones",
+      "lick": "lick",
+      "licks": "licks"
+    },
+    "acerca": {
+      "titulo": "Cómo leer los gráficos",
+      "p1": "Cada gráfico muestra <strong>sólo los acordes que ese mapa usa</strong>, y\n        con la forma que el propio mapa declara: una estrella con la tónica\n        al centro, una grilla, un embudo que converge, una cascada que baja\n        en zigzag. Si un acorde no está en el dibujo, es porque no pertenece\n        a ese mapa — y por eso tampoco te lo va a ofrecer como salida.",
+      "p2": "<strong>Pasá el mouse por un acorde</strong> y el resto se desenfoca:\n        quedan encendidos sólo los lugares a los que podés ir desde ahí,\n        dentro de este mismo gráfico. La lista de la derecha separa lo que\n        propone el mapa (con su propia explicación) de las otras relaciones\n        que existen entre esos acordes, y a cada uno le pone su grado — el\n        ii, el V7, el bVI — que es lo que te ubica de verdad.",
+      "p3": "<strong>Hacé click</strong> para fijar un acorde y ver cómo se toca:\n        la digitación en guitarra y bajo, y las teclas en el piano. Las\n        posiciones se calculan desde las notas del acorde, buscando que la\n        fundamental quede en el bajo y que la mano llegue — el número\n        adentro de cada punto es el grado (1 la fundamental, 3 la tercera,\n        b7 la séptima menor…).",
+      "p4": "Arriba del gráfico podés <strong>cambiar la tónica</strong>: el mapa\n        entero se transporta a esa tonalidad, acordes y notas incluidos, así\n        no terminás practicando siempre en Do. Y con\n        <strong>Círculo de quintas</strong> pasás a la vista de referencia,\n        donde se ve el sistema completo de las 12 tonalidades con esta\n        progresión encendida encima.",
+      "p5": "Esto no reemplaza tocar y escuchar — es un mapa, no el territorio.\n        Sirve para tener una referencia visual rápida mientras improvisás o\n        armás una progresión nueva."
+    },
+    "grafoPista": "Pasá el mouse por un acorde para ver a dónde podés ir desde ahí ·\n          hacé click para fijarlo y ver cómo se toca.",
+    "seccionIntroEstilos": "Cada estilo con lo suyo: con qué acordes se arma, qué escalas van encima,\n    las transiciones que lo hacen sonar a eso y algunos licks en tablatura.",
+    "modalInstrumento": {
+      "cerrar": "Cerrar (Esc)",
+      "comoTocar": "Cómo tocar",
+      "guitarra": "Guitarra",
+      "piano": "Piano",
+      "bajo": "Bajo",
+      "afinacion": "Afinación",
+      "escalaEncima": "Escala encima",
+      "queSuene": "Que suene…",
+      "notas": "Notas",
+      "grados": "Grados",
+      "posicionAnterior": "Posición anterior",
+      "posicionSiguiente": "Posición siguiente",
+      "delAcorde": "del acorde",
+      "puente": "puente",
+      "tension": "tensión",
+      "resuelve": "resuelve",
+      "comoEsta": "Como está",
+      "soloElAcorde": "Sólo el acorde",
+      "posicionAbierta": "posición abierta",
+      "traste": "traste",
+      "de": "de",
+      "notasLabel": "Notas",
+      "vacio": "No encontré una posición cómoda de este acorde para ese instrumento.",
+      "tecladoAlt": "Teclas del acorde"
+    },
+    "emocion": {
+      "queSuene": "Que suene",
+      "tocaAsi": "Tocá el acorde así",
+      "clickVerlo": "(click para verlo en el mástil)",
+      "yEncimaEstasEscalas": "Y encima, estas escalas",
+      "comoSeToca": "Cómo se toca:",
+      "enEstaProgresion": "En esta progresión:",
+      "deAcaSalisHacia": "de acá salís hacia",
+      "eseEsElLugar": "Ese es el lugar del color — poné la versión coloreada en el compás de",
+      "yDejaQueElCambio": "y dejá que el cambio a",
+      "laResuelva": "la resuelva."
+    },
+    "aprender": {
+      "titulo": "Ruta de aprendizaje",
+      "puentesTitulo": "Puentes entre estilos",
+      "porDondeEmpezar": "Por dónde empezar",
+      "pistaRuta": "Seis pasos en orden. Cada uno se apoya en el anterior, y cada uno dice\n        cuándo lo tenés — no por tiempo, sino por lo que podés hacer.",
+      "pasarDeEstilo": "Pasar de un estilo a otro",
+      "pistaPuentes": "Casi todo lo que sabés de un estilo sirve para el de al lado. Esto es qué\n        se reusa y qué hay que cambiar.",
+      "que": "Qué:",
+      "porque": "Por qué:",
+      "donde": "Dónde:",
+      "listo": "Lo tenés cuando:",
+      "yaSabes": "Ya sabés:",
+      "cambia": "Cambiá:"
+    },
+    "relacion": {
+      "paralelo": "su paralelo (mismo nombre, otro modo)",
+      "sinTension": "la versión sin tensión",
+      "dominantizar": "dominantizarlo (mismo acorde con 7ma)",
+      "resuelveV7I": "resuelve acá — V7 → I",
+      "subV7": "sustitución tritonal — el subV7",
+      "cadenaDominantes": "sigue la cadena de dominantes",
+      "suDominante": "su dominante — el V7 que lo prepara",
+      "backdoor": "resolución backdoor (bVII7 → I)",
+      "relativoMenor": "su relativo menor — el vi",
+      "relativoMayor": "su relativo mayor",
+      "resolucionRota": "resolución rota — V7 → vi",
+      "quintaArriba": "una quinta arriba — el V",
+      "quintaAbajo": "una quinta abajo — el IV",
+      "tonoArriba": "un tono arriba",
+      "tonoAbajo": "un tono abajo",
+      "semitonoArriba": "un semitono arriba (cromático)",
+      "semitonoAbajo": "un semitono abajo (cromático)",
+      "mediante": "mediante — salto de tercera",
+      "medianteInferior": "mediante inferior — salto de tercera",
+      "tritono": "a distancia de tritono",
+      "movimientoGenerico": "movimiento de este mapa"
+    },
+    "leyenda": {
+      "tonica": "tónica",
+      "dominante": "dominante",
+      "subdominante": "subdominante",
+      "sustitucion": "sustitución",
+      "tritonal": "tritonal",
+      "tension": "tensión",
+      "resolucion": "resolución",
+      "armonica": "armónica",
+      "cromatica": "cromática",
+      "cromatico": "cromático",
+      "modulacion": "modulación",
+      "disminuido": "disminuido",
+      "mediante": "mediante",
+      "frigio": "frigio",
+      "modal": "modal",
+      "pedal": "pedal",
+      "septima": "séptima",
+      "novena": "novena",
+      "quinta": "quinta",
+      "tercera": "tercera",
+      "menor": "menor",
+      "mayor": "mayor",
+      "suspension": "suspensión",
+      "pivote": "pivote",
+      "prestamo": "préstamo",
+      "secundaria": "secundaria",
+      "relativo": "relativo",
+      "cadencia": "cadencia",
+      "tonico": "tónico",
+      "dominantes": "dominantes",
+      "tensiones": "tensiones",
+      "color": "color",
+      "puente": "puente",
+      "paso": "paso"
+    },
+    "estilosMapa": {
+      "jazz": "Jazz",
+      "blues": "Blues",
+      "rock": "Rock",
+      "pop": "Pop",
+      "metal": "Metal & oscuro",
+      "country": "Country & folk",
+      "western": "Dark Western",
+      "cine": "Cine & épica",
+      "clasico": "Clásico & barroco",
+      "soul": "Soul, funk & R&B",
+      "ambient": "Ambient & electrónica",
+      "otros": "Otros"
+    },
+    "idioma": {
+      "es": "Español",
+      "en": "English",
+      "th": "ไทย"
+    },
+    "ruta": [
+      {
+        "paso": "1",
+        "titulo": "Los cuatro acordes y el oído",
+        "que": "Aprendete una sola progresión — I–V–vi–IV — en dos tonalidades distintas.",
+        "porque": "No es para tocar pop: es para que la mano deje de pensar y puedas escuchar lo que estás haciendo. Hasta que no tengas eso automatizado, todo lo demás es ruido.",
+        "donde": "Estilo Pop, primera progresión.",
+        "listo": "Podés cambiar de acorde sin mirar la mano y cantando encima."
+      },
+      {
+        "paso": "2",
+        "titulo": "Una escala, todo el mástil",
+        "que": "La pentatónica menor en las cinco posiciones, en una sola tonalidad.",
+        "porque": "Cinco notas sin ninguna que choque: podés improvisar desde el primer día sin sonar mal. Es la red que te deja equivocarte.",
+        "donde": "Estilo Blues, lick de la caja de La.",
+        "listo": "Podés arrancar una frase en cualquier parte del mástil sin buscar."
+      },
+      {
+        "paso": "3",
+        "titulo": "Los doce compases",
+        "que": "El blues completo en A, tocando el acompañamiento y el solo.",
+        "porque": "Es el primer formato donde acompañás y solás sobre la misma estructura. Y te obliga a escuchar el cambio al IV, que es la primera transición que hay que sentir, no contar.",
+        "donde": "Estilo Blues, progresión de doce compases.",
+        "listo": "Sabés en qué compás estás sin contar."
+      },
+      {
+        "paso": "4",
+        "titulo": "El modo que cambia el color",
+        "que": "Mixolidio sobre un dominante, y dórico sobre un menor.",
+        "porque": "Acá dejás de tocar 'la escala de la canción' y empezás a tocar la escala de cada acorde. Es el salto más grande: una nota distinta cambia el género entero.",
+        "donde": "Estilos Rock (mixolidio) y Blues (dórico sobre el ii).",
+        "listo": "Escuchás la diferencia entre mixolidio y jónico sin mirar."
+      },
+      {
+        "paso": "5",
+        "titulo": "La tensión y su resolución",
+        "que": "Identificar en cada escala cuál es la nota que choca y a dónde baja.",
+        "porque": "Es lo que separa tocar notas correctas de tocar música. La tensión bien usada es lo que hace que una frase tenga dirección en vez de dar vueltas.",
+        "donde": "Cualquier acorde: abrí el mástil y elegí una escala. Lo crimson choca, lo dorado resuelve.",
+        "listo": "Podés meter la nota tensa a propósito y sacarla cuando querés."
+      },
+      {
+        "paso": "6",
+        "titulo": "Sustituir y recolorear",
+        "que": "Cambiar un acorde por otro que cumpla la misma función: tritonal, relativo, prestado del paralelo.",
+        "porque": "Es cómo se reescribe una progresión sin romperla. Y es lo que te deja poner el color que querés — sensual, tenso, luminoso — sin cambiar la canción.",
+        "donde": "Mapas armónicos: sustitución tritonal e intercambio modal. Y el selector 'Que suene…' del mástil.",
+        "listo": "Podés tomar una progresión ajena y hacerla sonar tuya."
+      }
+    ],
+    "puentes": [
+      {
+        "de": "Blues",
+        "a": "Rock",
+        "comparten": "La pentatónica menor y los dominantes.",
+        "cambia": "El rock endurece el acorde (quintas sin tercera) y suma el bVII del mixolidio. Mismo solo, otra base."
+      },
+      {
+        "de": "Blues",
+        "a": "Country",
+        "comparten": "Los tres acordes y el formato.",
+        "cambia": "El country se va a la pentatónica MAYOR y cambia el quejido por bends dobles. La misma caja, tres trastes más arriba."
+      },
+      {
+        "de": "Rock",
+        "a": "Metal",
+        "comparten": "Las quintas y la pentatónica menor.",
+        "cambia": "El metal baja la afinación y reemplaza el bVII por el bII frigio. El salto de medio tono es todo el cambio."
+      },
+      {
+        "de": "Blues",
+        "a": "Jazz",
+        "comparten": "El blues de doce compases, que en jazz se toca igual pero con más acordes.",
+        "cambia": "Aparecen los ii-V y las escalas bebop: la misma estructura con una nota cromática de paso."
+      },
+      {
+        "de": "Metal",
+        "a": "Dark Western",
+        "comparten": "El modo frigio y la tensión sin resolver.",
+        "cambia": "El western cambia la distorsión por trémolo y reverb, y usa la menor armónica para tener sensible. Es el mismo miedo, con otra ropa."
+      }
+    ]
+  },
+  "mapas": {
+    "armonia-1": {
+      "nombre": "Red de Intercambio Modal (Dramatismo y Cine)",
+      "geometria": "Matriz / Grilla de 7x4",
+      "proposito": "Mezclar acordes de modo Mayor y Menor Paralelo (por ejemplo, Do Mayor y Do Menor) para lograr transiciones emotivas y cinemáticas.",
+      "sensacion_emocional": "Nostalgia, melancolía heroica, giros inesperados."
+    },
+    "armonia-2": {
+      "nombre": "Estrella de Dominantes Secundarias (Jazz y Pop Avanzado)",
+      "geometria": "Estrella Central con Órbitas Radial",
+      "proposito": "Mapear los 'acordes puente' (acordes 7) que te llevan temporalmente a cualquier otro grado de la escala.",
+      "sensacion_emocional": "Sofisticación, tensión de resolución inmediata, movimiento continuo."
+    },
+    "armonia-3": {
+      "nombre": "Mapa de Sustitución Tritonal y Cadencias Alteradas (Jazz / Fusion)",
+      "geometria": "Diagrama en X (Diamante Intersectado)",
+      "proposito": "Reemplazar el acorde dominante tradicional por uno a distancia de tritono para tensión extrema.",
+      "sensacion_emocional": "Tensión flotante, misterio urbano, elegancia técnica."
+    },
+    "armonia-4": {
+      "nombre": "Rueda de Modos Griegos y Color Modal (Fantasía y Aventura)",
+      "geometria": "Anillos Concentricos",
+      "proposito": "Navegar entre el centro (Modo Jónico/Eólico) y sus modulaciones de brillo/oscuridad (Lidio, Dórico, Frigio).",
+      "sensacion_emocional": "Épica, misticismo, mundos fantásticos, aventura."
+    },
+    "armonia-5": {
+      "nombre": "Red de Acordes Diminutos y Ejes de Simetría (Suspenso / Terror)",
+      "geometria": "Octágono de Enlaces Simétricos",
+      "proposito": "Utilizar acordes disminuidos ($7^\\circ$) como 'comodines' para conectar tonalidades lejanas sin pasar por el círculo clásico.",
+      "sensacion_emocional": "Incertidumbre, peligro, suspenso, terror psicológico."
+    },
+    "armonia-6": {
+      "nombre": "Círculo de la Cadencia de Blues y Dominantes Continuas (Blues / Rock)",
+      "geometria": "Bucle Triangular Continuo",
+      "proposito": "Mapear la estructura de 12 compases con acordes dominantes que rompen la regla clásica de la tónica mayor.",
+      "sensacion_emocional": "Energía, ritmo, tensión terrenal, groove."
+    },
+    "armonia-7": {
+      "nombre": "Círculo de Terceras Mayores (Coltrane Changes)",
+      "geometria": "Triángulo Equilátero Rotativo",
+      "proposito": "Modular rápidamente dividiendo la octava en tres partes iguales, evitando la progresión tradicional por quintas.",
+      "sensacion_emocional": "Vértigo, genialidad matemática, cascada sonora, jazz de vanguardia."
+    },
+    "armonia-8": {
+      "nombre": "Red de Armonía Cuartal",
+      "geometria": "Escalera de Pilares Paralelos",
+      "proposito": "Construir acordes apilando cuartas en lugar de terceras para crear armonías suspendidas y sin un centro tonal agresivo.",
+      "sensacion_emocional": "Espacio abierto, gravedad cero, meditación, jazz modal."
+    },
+    "armonia-9": {
+      "nombre": "Matriz de Cadencias Rotas (Deceptive Cadences)",
+      "geometria": "Bifurcaciones (Árbol de Decisiones)",
+      "proposito": "Preparar al oyente para una resolución en la tónica, pero desviar la armonía hacia acordes inesperados para extender la frase.",
+      "sensacion_emocional": "Sorpresa, revelación, continuación narrativa, épica pop."
+    },
+    "armonia-10": {
+      "nombre": "Sistema del Eje (Teoría de Bartók)",
+      "geometria": "Círculo Dividido en Ejes Ortogonales (Cruz)",
+      "proposito": "Agrupar los 12 tonos en tres ejes funcionales (Tónica, Subdominante, Dominante) separados por terceras menores, permitiendo intercambiar acordes dentro del mismo eje.",
+      "sensacion_emocional": "Tensión geométrica, disonancia estructurada, música contemporánea/cine thriller."
+    },
+    "armonia-11": {
+      "nombre": "Acordes de Sexta Aumentada y Napolitana",
+      "geometria": "Embudo Convergente",
+      "proposito": "Crear una tensión cromática extrema que converge desde arriba y desde abajo hacia el acorde dominante.",
+      "sensacion_emocional": "Dramatismo operístico, tragedia clásica, fatalidad inminente."
+    },
+    "armonia-12": {
+      "nombre": "Red de Armonía Paralela (Planing)",
+      "geometria": "Líneas Diagonales Sincronizadas",
+      "proposito": "Mover la misma estructura de acorde (ej. Maj7 o m9) exacta arriba o abajo por el mástil/teclado sin respetar la escala diatónica.",
+      "sensacion_emocional": "Flotabilidad, sueño lúcido, impresionismo (estilo Debussy), misterio etéreo."
+    },
+    "armonia-13": {
+      "nombre": "Ciclo de Cadencia Andaluza",
+      "geometria": "Cascada Descendente de 4 Pasos",
+      "proposito": "Una progresión menor que desciende por grados conjuntos creando un ciclo continuo de tensión que nunca resuelve completamente en paz.",
+      "sensacion_emocional": "Pasión terrenal, furia controlada, desierto, folclore español y rock neoclásico."
+    },
+    "armonia-14": {
+      "nombre": "Malla de la Escala de Tonos Enteros",
+      "geometria": "Hexágono Flotante",
+      "proposito": "Utilizar acordes aumentados derivados de la escala de tonos enteros, eliminando cualquier sensación de tónica o semitono directriz.",
+      "sensacion_emocional": "Desorientación total, magia, ambiente alienígena, transición a un sueño o flashback."
+    },
+    "armonia-15": {
+      "nombre": "Diagrama de Acordes de Paso Cromáticos (Bebop)",
+      "geometria": "Camino en Zig-Zag",
+      "proposito": "Insertar acordes disminuidos o séptimas dominantes entre los acordes diatónicos principales para crear líneas de bajo continuas (Walking Bass).",
+      "sensacion_emocional": "Movimiento constante, sofisticación urbana, swing fluido."
+    },
+    "armonia-16": {
+      "nombre": "Vamp Armónico de Ostinato (Pedal Point)",
+      "geometria": "Bucle Circular Fijo sobre un Ancla",
+      "proposito": "Mantener una nota constante en el bajo (Nota Pedal) mientras los acordes cambian en las voces superiores para generar una tensión acumulativa.",
+      "sensacion_emocional": "Hipnosis, anticipación monstruosa, trance, crescendo épico de cine."
+    },
+    "armonia-17": {
+      "nombre": "Cadencia Plagal Expandida (Gospel y Soul)",
+      "geometria": "Arco Flotante de Retorno",
+      "proposito": "Extender la llegada a la tónica mediante el uso de la subdominante menor y sus variaciones de color sin pasar por la dominante clásica.",
+      "sensacion_emocional": "Redención, calidez espiritual, nostalgia confortante."
+    },
+    "armonia-18": {
+      "nombre": "Círculo de Cromaticismo Contrapuntístico (Line Cliché)",
+      "geometria": "Espiral Descendente Interna",
+      "proposito": "Mantener la tónica o acorde base fijo mientras una sola voz interior o de bajo desciende semitono a semitono.",
+      "sensacion_emocional": "Misterio detectivesco, melancolía elegante, tensión de espionaje/noir."
+    },
+    "armonia-19": {
+      "nombre": "Red de Cadencia Royal / J-Pop (IV - V - iii - vi)",
+      "geometria": "Bucle en Zigma (Z-Loop)",
+      "proposito": "Crear una sensación de movimiento melódico continuo e ininterrumpido muy popular en la música anime y pop moderno.",
+      "sensacion_emocional": "Nostalgia heroica, euforia, marcha juvenil, dinamismo constante."
+    },
+    "armonia-20": {
+      "nombre": "Matriz de Acordes Suspendidos (Sus2 / Sus4)",
+      "geometria": "Red de Nodos Flotantes Sin Centro",
+      "proposito": "Eliminar la tercera del acorde para crear armonías ambiguas que no son ni mayores ni menores, ideales para texturas ambientales.",
+      "sensacion_emocional": "Eteriedad, aire, calma meditativa, ingravidez."
+    },
+    "armonia-21": {
+      "nombre": "Progresión Épica Pop/Rock de 4 Acordes",
+      "geometria": "Cuadrilátero Rotativo Continuo",
+      "proposito": "Estructurar las progresiones más utilizadas en la música comercial (I - V - vi - IV y vi - IV - I - V).",
+      "sensacion_emocional": "Trunfo, familiaridad, motivación, emotividad universal."
+    },
+    "armonia-22": {
+      "nombre": "Mapa de Modulación por Acorde Pivote",
+      "geometria": "Puente Interdimensional entre dos Círculos",
+      "proposito": "Conectar dos tonalidades distantes utilizando un acorde que sea común a ambas escalas.",
+      "sensacion_emocional": "Transición orgánica, cambio de paisaje, evolución de la historia."
+    },
+    "armonia-23": {
+      "nombre": "Malla de Extensiones R&B / Neo-Soul (9nas, 11nas y 13nas)",
+      "geometria": "Matriz Poligonada de Capas Superpuestas",
+      "proposito": "Enriquecer las progresiones simples agregando capas superiores de notas para un sonido sofisticado y sedoso.",
+      "sensacion_emocional": "Cálida, urbana, sensual, relajante, de producción moderna."
+    },
+    "armonia-24": {
+      "nombre": "Círculo de Inversiones y Líneas de Bajo Cantables",
+      "geometria": "Onda Sinusoidal sobre un Eje Central",
+      "proposito": "Conectar acordes no por sus raíces, sino creando una melodía continua en las notas graves usando notas pisadas por la tercera o quinta.",
+      "sensacion_emocional": "Fluidez barroca, elegancia, continuidad orgánica, profundidad."
+    },
+    "armonia-25": {
+      "nombre": "Red Politonales / Superposición de Triadas (Upper Structures)",
+      "geometria": "Pirámides Dobles Superpuestas",
+      "proposito": "Tocar una triada mayor sobre un acorde dominante diferente para generar disonancias jazzísticas complejas.",
+      "sensacion_emocional": "Complejidad cerebral, vanguardia, tensión eléctrica, virtuosismo."
+    },
+    "armonia-26": {
+      "nombre": "Matriz de Pentatónicas Armonizadas (Sintetizadores y EDM)",
+      "geometria": "Red Pentagonal Conectada",
+      "proposito": "Construir acordes únicamente utilizando las notas de la escala pentatónica mayor o menor para evitar choques armónicos.",
+      "sensacion_emocional": "Brillo futurista, energía electrónica, euforia limpia."
+    },
+    "armonia-27": {
+      "nombre": "Mapa de la Armonía Negativa (Simetría Invertida)",
+      "geometria": "Espejo Bi-Planar Horizontal",
+      "proposito": "Invertir la polaridad de las relaciones armónicas sobre un eje fijo (Eje Do-Sol) para convertir progresiones mayores en versiones menores oscuras espejo.",
+      "sensacion_emocional": "Mundo del revés, extrañeza familiar, sombra psicológica."
+    },
+    "armonia-28": {
+      "nombre": "Diagrama de Acordes de Bloque / Slap (Funk y Disco)",
+      "geometria": "Bloques Rectangulares de Impacto",
+      "proposito": "Mover pequeños bloques de acordes de 3 o 4 notas en rítmicas sincopadas con pausas secas.",
+      "sensacion_emocional": "Groove, baile, actitud, ritmo bailable irresistible."
+    },
+    "armonia-29": {
+      "nombre": "Mapa de Clústers y Sonoridades Microtonales (Cine de Terror / Thriller)",
+      "geometria": "Nube de Puntos Densos",
+      "proposito": "Agrupar notas a distancia de semitono o microtono para crear muros de sonido llenos de disonancia disonante.",
+      "sensacion_emocional": "Claustrofobia, pánico, locura, peligro inminente."
+    },
+    "armonia-30": {
+      "nombre": "Sistema de Voces Abiertas (Drop 2 y Drop 3 para Cuerdas)",
+      "geometria": "Diagrama de Expansión Vertical",
+      "proposito": "Separar las notas de un acorde dejando espacio en el centro para que suene más amplio y claro en arreglos orquestales.",
+      "sensacion_emocional": "Majestuosidad, claridad sinfónica, amplitud de sala de concierto."
+    },
+    "armonia-31": {
+      "nombre": "Red de Intercambio Modal Paralelo Completo (Los 7 Modos en Do)",
+      "geometria": "Estrella Octagonal Múltiple de 7 Capas",
+      "proposito": "Tener acceso directo a los acordes principales de los 7 modos griegos partiendo de la misma nota tónica (Do Jónico, Do Dórico, Do Frigio, etc.).",
+      "sensacion_emocional": "Espectro completo del color armónico humano, desde la luz divina hasta la oscuridad absoluta."
+    },
+    "armonia-32": {
+      "nombre": "Malla de Mediantes Cromáticas (Cine Épico y Fantasía)",
+      "geometria": "Hexágono de Saltos de Tercera",
+      "proposito": "Conectar acordes del mismo tipo (mayores o menores) separados por una tercera mayor o menor que no pertenecen a la misma tonalidad, creando giros cinemáticos drásticos.",
+      "sensacion_emocional": "Asombro, revelación heroica, magia, escala monumental (estilo Hans Zimmer)."
+    },
+    "armonia-33": {
+      "nombre": "Red Neo-Riemanniana (Diagrama Tonnetz)",
+      "geometria": "Red Triangular Infiniti-Malla",
+      "proposito": "Conectar acordes cambiando solo una nota por paso mediante transformaciones P (Paralelo), L (Leitnodo/Tercera) y R (Relativo), sin necesidad de dominantes.",
+      "sensacion_emocional": "Fluidez geométrica, gravedad cero, belleza matemática, cine de ciencia ficción."
+    },
+    "armonia-34": {
+      "nombre": "Cadencia Backdoor / Puerta Trasera (Bb7 -> C)",
+      "geometria": "Ruta en Diagonal Inversa",
+      "proposito": "Resolver a la tónica mayor utilizando el subV7 prestado del modo menor (bVII7) en lugar de la dominante clásica (V7).",
+      "sensacion_emocional": "Triunfo suave, resolución inesperada pero reconfortante, pop ochentero y soul."
+    },
+    "armonia-35": {
+      "nombre": "Círculo de las Tres Sombras Menores (Natural, Armónica y Melódica)",
+      "geometria": "Espiral Triple Concéntrica",
+      "proposito": "Alternar entre las variaciones de la escala menor para obtener tensión melódica (Armónica) o fluidez de jazz (Melódica) en una sola pieza.",
+      "sensacion_emocional": "Misterio clásico, tensión dramática, virtuosismo técnico."
+    },
+    "armonia-36": {
+      "nombre": "Red de Acordes Híbridos y Slash Chords (Pop Balada / Elton John)",
+      "geometria": "Pasarela de Escalones Paralelos",
+      "proposito": "Mantener una nota fija o un bajo caminando mientras la triada superior cambia, generando acordes de tipo F/G, Eb/F o G/C.",
+      "sensacion_emocional": "Sofisticación pop, emotividad de piano, calidez, nostalgia televisiva."
+    },
+    "armonia-37": {
+      "nombre": "Mapa del Acorde Mu / 'Mu Major' (Estilo Steely Dan / Jazz Rock)",
+      "geometria": "Triángulo con Núcleo Incrustado",
+      "proposito": "Añadir la segunda nota (add2/add9) inmediatamente al lado de la tercera mayor dentro del acorde para crear una disonancia sutil pero brillante.",
+      "sensacion_emocional": "Ironía, elegancia compleja, pulidez de estudio, jazz-rock setentero."
+    },
+    "armonia-38": {
+      "nombre": "Circuito de la Subdominante Mayor en Modo Menor (Efecto Dórico)",
+      "geometria": "Bucle en Bucle Oculto",
+      "proposito": "Introducir el IV grado mayor (como D7 o D mayor) dentro de una canción en tonalidad menor (como Am), elevando el sexto grado de la escala.",
+      "sensacion_emocional": "Misterio psicodélico, vuelo espacial, rock británico (estilo Pink Floyd / Santana)."
+    },
+    "armonia-39": {
+      "nombre": "Red de Dominantes Encadenadas (Circle of Dominants)",
+      "geometria": "Círculo de Engranajes Consecutivos",
+      "proposito": "Encadenar múltiples acordes de séptima dominante donde cada uno es el V7 del siguiente, viajando largas distancias antes de resolver.",
+      "sensacion_emocional": "Aceleración, empuje implacable, ragtime, swing clásico, comedia."
+    },
+    "armonia-40": {
+      "nombre": "Matriz Neoclásica 'La Folia de España'",
+      "geometria": "Zig-Zag Barroco Simétrico",
+      "proposito": "Estructura armónica renacentista y barroca basada en la alternancia constante entre la tónica menor y su relativa mayor a través de la dominante.",
+      "sensacion_emocional": "Dramatismo antiguo, danza aristocrática, tensión solemne, guitarra neoclásica."
+    },
+    "armonia-41": {
+      "nombre": "Diagrama de Retardos e Inversiones (Resoluciones 4-3 y 9-8)",
+      "geometria": "Casada de Módulos Caídos",
+      "proposito": "Retrasar la nota armónica esperada manteniendo una nota del acorde anterior para que resuelva un paso más tarde.",
+      "sensacion_emocional": "Alivio, devoción, música sacra, coral barroco, emotividad contenida."
+    },
+    "armonia-42": {
+      "nombre": "Mapa de Armonización Pentatónica Exótica (Hirajoshi / Insen)",
+      "geometria": "Estrella Asimétrica de 5 Puntas",
+      "proposito": "Crear acordes a partir de escalas pentatónicas tradicionales japonesas o del medio oriente para evitar sonoridades occidentales estándar.",
+      "sensacion_emocional": "Misterio oriental, folclore lejano, naturaleza ancestral, meditación oscura."
+    },
+    "armonia-43": {
+      "nombre": "Red de Armonización por Movimiento Contrario (Contrapunto de Bloques)",
+      "geometria": "Líneas Cruzadas en X",
+      "proposito": "Diseñar progresiones donde la melodía superior sube mientras el bajo desciende de forma estrictamente simétrica.",
+      "sensacion_emocional": "Equilibrio perfecto, conducción de voces clásica, solidez coral."
+    },
+    "armonia-44": {
+      "nombre": "Circuito de Blues Menor Urbano (12 Compases Menores)",
+      "geometria": "Matriz Rectangular de 12 Bloques",
+      "proposito": "Estructurar la progresión de blues utilizando acordes menores con séptima y un turnaround con quinta aumentada o novena alterada.",
+      "sensacion_emocional": "Melancolía urbana, lamento, lluvia, club nocturno de jazz."
+    },
+    "armonia-45": {
+      "nombre": "Mapa de Acordes Aumentados como Nodos Wormhole (Caug / Eaug / Abaug)",
+      "geometria": "Triángulo Simétrico de Portales",
+      "proposito": "Usar la simetría del acorde aumentado (división de la octava en 3 partes iguales) para saltar instantáneamente a tonalidades completamente desconectadas.",
+      "sensacion_emocional": "Teletransportación sonora, sorpresa, surrealismo, viaje en el tiempo."
+    },
+    "armonia-46": {
+      "nombre": "Red de Bordones y Quintas Abiertas (Folk Nórdico / Post-Rock)",
+      "geometria": "Ancla Central con Líneas Radiales Largas",
+      "proposito": "Mantener acordes sin tercera (Power Chords / 5) sobre una nota grave retumbante para lograr sonoridades primitivas o épicas sin definir mayor/menor.",
+      "sensacion_emocional": "Frío, paisaje vikingo, inmensidad, peso hipnótico, atmósfera post-rock."
+    },
+    "armonia-47": {
+      "nombre": "Matriz de Sustitución Por Grados Colindantes (Neighboring Chords)",
+      "geometria": "Órbita de Escudo Protector",
+      "proposito": "Reemplazar un acorde principal por su vecino inmediato en la escala (ej. cambiar C por Dm/C o Em/C) para suavizar las transiciones.",
+      "sensacion_emocional": "Suavidad extrema, elegancia contemplativa, textura ambiental."
+    },
+    "country-1": {
+      "nombre": "El Círculo 'Bakersfield Sound' (I - IV - V7 con Twang)",
+      "geometria": "Triángulo de Ataque Agudo",
+      "proposito": "Armonía básica del country moderno y clásico. Uso de acordes dominantes brillantes para dar el empuje directo y bailable.",
+      "sensacion_emocional": "Brillo, energía de Honky-Tonk, baile directo, ritmo caminante.",
+      "tecnica_o_ejecucion": "Uso de cápsula del puente (Telecaster), ataque con púa de metal/plástico duro cerca del puente."
+    },
+    "country-2": {
+      "nombre": "Lick de Pedal Steel Bend (Bends de Doble Cuerda / Double Stops)",
+      "geometria": "Vectores Paralelos con Curva de Presión",
+      "proposito": "Imitar el sonido del Pedal Steel Guitar estirando una cuerda mientras mantienes otra fija en su nota.",
+      "sensacion_emocional": "Lamento vaquero, nostalgia, dulzura country, transición suave entre acordes.",
+      "tecnica_o_ejecucion": "Dedo anular/medio estira la cuerda B hacia arriba mientras el meñique sostiene la cuerda E en un traste fijo."
+    },
+    "country-3": {
+      "nombre": "Matriz de Mezcla Pentatónica (Pentatónica Mayor + Bluenote Menor)",
+      "geometria": "Rejilla Intercalada de 5x6 Trastes",
+      "proposito": "Combinar la Pentatónica Mayor (sonido dulce country) con la 3ra menor / b5 cromática para dar el sonido 'picante' del solo country.",
+      "sensacion_emocional": "Sabor campero, picardía, fluidez, virtuosidad ágil.",
+      "tecnica_o_ejecucion": "Martillados (hammer-ons) rápidos pasando de la 3ra menor a la 3ra mayor inmediatamente."
+    },
+    "country-4": {
+      "nombre": "Malla Chicken Pickin' (Rítmica y Solos Percusivos)",
+      "geometria": "Puntos Disparados en Zig-Zag Apretado",
+      "proposito": "Crear notas 'fantasma' ahogando las cuerdas con la mano derecha/izquierda para lograr un chasquido rítmico percusivo.",
+      "sensacion_emocional": "Aceleración, ritmo frenético, estilo 'gallina', destreza rítmica.",
+      "tecnica_o_ejecucion": "Hybrid Picking (Púa golpea abajo, dedo medio/anular jala la cuerda hacia afuera para que chaste contra los trastes)."
+    },
+    "country-5": {
+      "nombre": "Cascadas de Cuerda Aire / Banjo Rolls en Guitarra",
+      "geometria": "Onda Arpegiada Descendente Continua",
+      "proposito": "Utilizar cuerdas al aire como notas de paso mientras la mano izquierda se mueve por el mástil, creando un efecto de arpa o banjo.",
+      "sensacion_emocional": "Velocidad deslumbrante, fluidez cristalina, ambiente Bluegrass.",
+      "tecnica_o_ejecucion": "Patrones arpegiados continuos (Púa - Medio - Anular) manteniendo cuerdas abiertas afinadas en la escala."
+    },
+    "country-6": {
+      "nombre": "Cromatismos de Aproximación a la 3ra (The Ultimate Twang Lick)",
+      "geometria": "Escalón Cromático Tripartito",
+      "proposito": "Llegar a la nota clave del acorde (la 3ra mayor) deslizando dos notas cromáticas desde abajo.",
+      "sensacion_emocional": "Firma clásica del solista country, resolución satisfactoria.",
+      "tecnica_o_ejecucion": "Slide (deslizamiento) ultrarrápido con el dedo índice o medio hacia la tónica o 3ra."
+    },
+    "country-7": {
+      "nombre": "Red Armónica Western Swing (Sustituciones Jazz-Country)",
+      "geometria": "Círculo con Acordes Sextos y Novenas Reorganizados",
+      "proposito": "Mezclar el ritmo country con la sofisticación del Swing mediante acordes 6, 9 y disminuidos de paso.",
+      "sensacion_emocional": "Elegancia bailable, swing tejano, sofisticación retro."
+    },
+    "country-8": {
+      "nombre": "Líneas de Bajo Walk-ups y Walk-downs (Tradición Bluegrass)",
+      "geometria": "Escalera Descendente/Ascendente de Cuerdas Graves",
+      "proposito": "Conectar un acorde con el siguiente mediante notas individuales en las cuerdas 5ta y 6ta antes de rasguear.",
+      "sensacion_emocional": "Caminata rítmica, conducción clara, sabor tradicional folk.",
+      "tecnica_o_ejecucion": "Punteo con púa apoyada en cuerdas graves seguido de rasgueo 'boom-chick'."
+    },
+    "country-9": {
+      "nombre": "Armonización de Guitarras Gemelas en Sexteadas (6ths Double Stops)",
+      "geometria": "Diagonales Dobles en Cuerdas Separadas",
+      "proposito": "Tocar dos notas separadas por un intervalo de 6ta para crear una melodía armonizada típica de duo de guitarras.",
+      "sensacion_emocional": "Canto a dos voces, sonido tejano-mexicano, dulzura melódica.",
+      "tecnica_o_ejecucion": "Púa en cuerda grave + Dedo medio pulsando cuerda B (o apagando la cuerda G del medio)."
+    },
+    "country-10": {
+      "nombre": "Mapa de Balada Country / Americana (I - IVadd9 - V - vi)",
+      "geometria": "Anillo de Acordes Abiertos con Notas Suspendidas",
+      "proposito": "Progresión emotiva para baladas acústicas con notas que quedan sonando libres (cuerdas al aire).",
+      "sensacion_emocional": "Intimidad, carretera abierta, nostalgia, storytelling."
+    },
+    "western-1": {
+      "nombre": "El Bucle 'Desierto Gótico' (Escala Menor Armónica / Morricone)",
+      "geometria": "Círculo Oscuro con Espiral Interna",
+      "proposito": "Armonía base para secuencias de duelo, suspenso o caminatas bajo el sol. Usa el V7 mayor en una tonalidad menor para dar ese sabor 'clásico' y peligroso.",
+      "sensacion_emocional": "Peligro inminente, juicio final, calor sofocante, suspenso de duelo."
+    },
+    "western-2": {
+      "nombre": "Riff Barítono de Cuerdas Graves (Palm Muting + Spring Reverb)",
+      "geometria": "Línea Horizontal Grave con Pulsación Ocular",
+      "proposito": "Líneas melódicas graves y amenazantes ejecutadas en guitarra barítona o cuerdas 5ta y 6ta en afinación caída (Drop D / Drop C).",
+      "sensacion_emocional": "Pasos de un forajido, amenaza latente, peso, marcha fúnebre.",
+      "tecnica_o_ejecucion": "Palm muting denso + Púa dura cerca del puente + Reverb de muelle (Spring Reverb) al máximo con un toque de Tremolo lento."
+    },
+    "western-3": {
+      "nombre": "Cadencia Frigia del Homicida (i - bII - bIII - bII)",
+      "geometria": "Pendulo de Oscilación Asimétrica",
+      "proposito": "Generar una tensión 'española/árabe' muy oscura típica de emboscadas, cambiando entre el acorde raíz y su medio tono superior.",
+      "sensacion_emocional": "Ataque, desesperación, desierto sin ley, venganza."
+    },
+    "western-4": {
+      "nombre": "Slide Guitar Gótico en Dm Abierto (Open Dm Tuning: D-A-D-F-A-D)",
+      "geometria": "Línea Cóncava Glissando",
+      "proposito": "Tocar líneas melódicas flotantes y desoladas usando un slide de cristal o metal sobre una afinación abierta en menor.",
+      "sensacion_emocional": "Viento en un pueblo fantasma, soledad absoluta, lamento distante.",
+      "tecnica_o_ejecucion": "Slide con la mano izquierda + vibrato amplio al final de cada nota + eco de cinta (Tape Delay)."
+    },
+    "western-5": {
+      "nombre": "Arpegio de Sombras con Segunda Añadida (Dmadd9 / Amadd9)",
+      "geometria": "Triángulo de Puntas Afiladas",
+      "proposito": "Crear armonías de guitarra acústica o de caja de pulso lento donde las cuerdas al aire generan disonancias frías.",
+      "sensacion_emocional": "Melancolía helada, trauma del pasado, historia trágica alrededor de la fogata.",
+      "tecnica_o_ejecucion": "Arpegio lento con dedos (Fingerpicking) dejando que la nota Mi (segunda) resuene directamente contra la tercera menor."
+    },
+    "western-6": {
+      "nombre": "Tremolo Picking 'Grit & Pluck' (Lick de Alta Tensión en Agudos)",
+      "geometria": "Descarga de Rayos Paralelos",
+      "proposito": "Hacer trémolo ultrarrápido con la púa en la primera cuerda mientras se varía la nota en la escala menor melódica.",
+      "sensacion_emocional": "Histerismo, clímax de persecución a caballo, locura.",
+      "tecnica_o_ejecucion": "Punteo alternado a máxima velocidad en una sola cuerda combinado con pedal de Tremolo rápido de onda cuadrada."
+    },
+    "western-7": {
+      "nombre": "Sextas Macabras en Tonalidad Menor (Gothic Double Stops)",
+      "geometria": "Vías Paralelas Desplazadas",
+      "proposito": "Tocar armonías en intervalos de 6ta descendentes sobre la 1ra y 3ra cuerda en clave menor.",
+      "sensacion_emocional": "Romance trágico, funeral en la frontera, belleza macabra.",
+      "tecnica_o_ejecucion": "Pulsar ambas cuerdas simultáneamente dejando la 2da cuerda silenciada con el borde del dedo."
+    },
+    "western-8": {
+      "nombre": "Cromatismo 'Tritono del Cazador' (Uso de la b5 como ancla)",
+      "geometria": "Cruz Discontinua",
+      "proposito": "Utilizar la quinta disminuida no solo como nota de paso rápido, sino como acorde de parada (Powerchord con b5).",
+      "sensacion_emocional": "Maldición, brujería del desierto, presencia demoníaca o sobrenatural."
+    },
+    "western-9": {
+      "nombre": "Marcha Fúnebre 'Pedal Point' (Bajo Fijo + Acordes Flotantes)",
+      "geometria": "Muro Horizontal Base con Bloques Cayendo",
+      "proposito": "Mantener la nota grave Re tocándose rítmicamente sin parar mientras la mano derecha cambia mini-triadas mayores y menores en las cuerdas agudas.",
+      "sensacion_emocional": "Inexorabilidad, marcha hacia la horca, destino fatal implacable.",
+      "tecnica_o_ejecucion": "Pulse de bajo constante en octavas mientras se rasguean o puntean acordes de dos notas en la parte superior."
+    },
+    "western-10": {
+      "nombre": "Lick 'Whammy Dip' (Caída de Tonalidad con Palanca de Vibrato)",
+      "geometria": "Arco Descendente de Presión",
+      "proposito": "Tocar un acorde menor o acorde de 5ta con saturación suave y presionar la palanca de vibrato hacia abajo para desafinar la nota intencionalmente.",
+      "sensacion_emocional": "Instabilidad mental, mareo por calor, alucinación, desesperanza.",
+      "tecnica_o_ejecucion": "Ataque seco al acorde + presión física inmediata sobre la palanca de la Bigsby o Fender Stratocaster para bajar 1/2 o 1 tono la afinación completa."
+    },
+    "blues-101": {
+      "nombre": "Blues de Chicago (Shuffle en La)",
+      "geometria": "Bucle Triangular Continuo",
+      "proposito": "Fijar el esqueleto de tres acordes del blues de 12 compases en La, tocado con subdivisión de shuffle. Sirve para que el alumno escuche el ciclo I-IV-V sin adornos antes de agregar sustituciones.",
+      "sensacion_emocional": "Groove terrenal, sudor, empuje."
+    },
+    "blues-102": {
+      "nombre": "Blues de 12 compases con quick change (Blues en Do)",
+      "geometria": "Matriz Rectangular de 12 Bloques",
+      "proposito": "Mostrar la variante donde el IV aparece ya en el compás 2 y recién después vuelve el I. Te entrena el oído para anticipar el movimiento temprano al IV.",
+      "sensacion_emocional": "Claridad, movimiento, respiración amplia."
+    },
+    "blues-103": {
+      "nombre": "Blues menor (Blues en Do menor)",
+      "geometria": "Cascada Descendente",
+      "proposito": "Trabajar el blues menor: i y iv con séptima menor y un V7 alterado que aprieta la vuelta. Sirve para solear con menor natural y frigio dominante sobre el V.",
+      "sensacion_emocional": "Oscuro, resignado, tenso."
+    },
+    "blues-104": {
+      "nombre": "Blues jazz con ii-V (Blues en Fa)",
+      "geometria": "Círculo de Engranajes Consecutivos",
+      "proposito": "Rellenar el blues de 12 con cadenas ii-V para que cada dominante llegue preparado. Base para improvisar con voice leading en lugar de escala pentatónica sola.",
+      "sensacion_emocional": "Elegante, hablado, sofisticado."
+    },
+    "blues-105": {
+      "nombre": "Catálogo de turnarounds (Blues en Sol)",
+      "geometria": "Camino en Zig-Zag",
+      "proposito": "Comparar tres salidas distintas para los compases 11 y 12: el I-VI-II-V, el I-IV-I-V y el descenso cromático hacia el V. Elegís el turnaround según cuánta tensión querés dejar abierta.",
+      "sensacion_emocional": "Curiosidad, suspenso, decisión."
+    },
+    "blues-106": {
+      "nombre": "Blues de 8 compases (Blues en Mi)",
+      "geometria": "Línea Horizontal Grave",
+      "proposito": "Practicar la forma corta de 8 compases, donde el V aparece muy temprano y la vuelta llega antes de que el oído la espere. Ideal para frases de dos compases.",
+      "sensacion_emocional": "Conciso, campero, directo."
+    },
+    "blues-107": {
+      "nombre": "Blues de 16 compases (Blues extendido en Sol)",
+      "geometria": "Escalera de Pilares Paralelos",
+      "proposito": "Estirar la forma con cuatro compases extra sobre el IV antes del V, para que puedas desarrollar una idea melódica larga sin que el ciclo te corte.",
+      "sensacion_emocional": "Paciencia, relato, respiro largo."
+    },
+    "blues-108": {
+      "nombre": "Blues de novenas y bajo caminante (Blues en Mi)",
+      "geometria": "Onda Sinusoidal",
+      "proposito": "Trabajar el blues lento y ondulante con acordes de novena en lugar de séptima seca. La novena suaviza el color y deja espacio para el bajo caminante.",
+      "sensacion_emocional": "Hipnótico, perezoso, balanceado."
+    },
+    "blues-109": {
+      "nombre": "Blues con paradas (Stop-time en La)",
+      "geometria": "Diagrama en X (Diamante Intersectado)",
+      "proposito": "Organizar los cortes de banda: los primeros compases quedan en silencio salvo los golpes, y el groove vuelve entero al llegar al IV. Sirve para ensayar dinámica de conjunto.",
+      "sensacion_emocional": "Suspenso, golpe, expectativa."
+    },
+    "blues-110": {
+      "nombre": "Gospel blues con iv menor (Blues en Fa)",
+      "geometria": "Anillos Concéntricos",
+      "proposito": "Meter el color de iglesia en el blues: acordes mayores en lugar de séptimas dominantes, el iv menor como bisagra emotiva y un VI7 que empuja el turnaround.",
+      "sensacion_emocional": "Elevación, consuelo, calor."
+    },
+    "blues-111": {
+      "nombre": "Blues con sustitución tritonal (Blues en Si bemol)",
+      "geometria": "Espiral Descendente",
+      "proposito": "Reemplazar dominantes por su tritono para conseguir bajos que bajan de medio tono. Te obliga a pensar el V7 y su sustituto como la misma función.",
+      "sensacion_emocional": "Resbaladizo, moderno, inquieto."
+    },
+    "blues-112": {
+      "nombre": "Blues en menor armónica (Blues en La menor)",
+      "geometria": "Pentágono Conectado",
+      "proposito": "Usar la menor armónica para que el V7 tenga tercera mayor y sensible real. El contraste entre el iv menor y ese dominante es el corazón del mapa.",
+      "sensacion_emocional": "Dramático, español, filoso."
+    },
+    "blues-113": {
+      "nombre": "Slow blues con novenas y trecenas (Blues en Do)",
+      "geometria": "Embudo Convergente",
+      "proposito": "Armar un blues lento de doce compases donde cada dominante se enriquece con novena o trecena, y el V llega alterado para maximizar la tensión antes del cierre.",
+      "sensacion_emocional": "Lamento, terciopelo, peso."
+    },
+    "blues-114": {
+      "nombre": "Jump blues de sección de vientos (Blues en Si bemol)",
+      "geometria": "Octágono de Enlaces Simétricos",
+      "proposito": "Blues rápido con armonía de big band chica: cadenas de dominantes y ii-V que dan a los vientos algo que morder en cada riff de dos compases.",
+      "sensacion_emocional": "Fiesta, velocidad, brillo."
+    },
+    "blues-115": {
+      "nombre": "Blues con disminuidos de paso (Blues en Do)",
+      "geometria": "Hexágono Flotante",
+      "proposito": "Insertar acordes disminuidos cromáticos entre los grados del blues para que el bajo suba de medio tono en lugar de saltar. Recurso clásico de piano y guitarra de acompañamiento.",
+      "sensacion_emocional": "Deslizante, artesanal, pícaro."
+    },
+    "blues-116": {
+      "nombre": "Texas shuffle (Blues en Sol)",
+      "geometria": "Bucle Triangular Continuo",
+      "proposito": "Shuffle de tres acordes con riff en el bajo y mezcla de séptima, novena y trecena sobre el mismo grado. Sirve para pensar el color del acorde como decisión de arreglo.",
+      "sensacion_emocional": "Polvoriento, ancho, insistente."
+    },
+    "blues-117": {
+      "nombre": "Blues funk de un acorde (Vamp en Mi)",
+      "geometria": "Estrella Central con Órbitas Radial",
+      "proposito": "Sostener un vamp funk sobre el I y salir sólo lo indispensable al IV y al V. El interés melódico viene de las alteraciones del acorde central, no del cambio.",
+      "sensacion_emocional": "Grasa, cadera, insistencia."
+    },
+    "blues-118": {
+      "nombre": "Blues bebop con densidad armónica (Blues en Fa)",
+      "geometria": "Árbol de Decisiones",
+      "proposito": "Versión de doce compases con cambios cada dos tiempos: disminuido en el compás 6, ii-V encadenados y sustituto tritonal opcional. Es el mapa para elegir camino en tiempo real.",
+      "sensacion_emocional": "Vertiginoso, cerebral, brillante."
+    },
+    "rock-201": {
+      "nombre": "Mixolidio I-bVII-IV (Rock modal en Re)",
+      "geometria": "Bucle Triangular Continuo",
+      "proposito": "Fijar el bucle mixolidio más usado del rock: la tónica mayor con el bVII que evita la sensible y el IV como respiro. Sirve para riffs sin cadencia clásica.",
+      "sensacion_emocional": "Abierto, ruta, confianza."
+    },
+    "rock-202": {
+      "nombre": "Eólico i-bVII-bVI (Rock menor en Mi menor)",
+      "geometria": "Cascada Descendente",
+      "proposito": "Trabajar el descenso eólico por grados enteros y decidir si volvés al i directamente o pasás por un V7 prestado para cerrar con más fuerza.",
+      "sensacion_emocional": "Épico, melancólico, inevitable."
+    },
+    "rock-203": {
+      "nombre": "Power chords sin tercera (Riff en La)",
+      "geometria": "Línea Horizontal Grave",
+      "proposito": "Pensar el riff con quintas puras, donde la ausencia de tercera deja la tonalidad ambigua y el orden de los bloques define el carácter. Base para distorsión pesada.",
+      "sensacion_emocional": "Crudo, macizo, ambiguo."
+    },
+    "rock-204": {
+      "nombre": "Rock de los cincuenta I-vi-IV-V (Progresión en Do)",
+      "geometria": "Círculo de Engranajes Consecutivos",
+      "proposito": "Fijar el ciclo de cuatro acordes que sostiene el rock and roll temprano y las baladas doo-wop, y ver cómo cambia si sustituís el vi por su dominante.",
+      "sensacion_emocional": "Nostálgico, inocente, luminoso."
+    },
+    "rock-205": {
+      "nombre": "Hard rock con bIII prestado (Riff en La)",
+      "geometria": "Pirámides Superpuestas",
+      "proposito": "Mezclar la tónica mayor del blues rock con los grados bIII y bVII del menor natural. El choque entre tercera mayor del riff y bIII del acorde es el sonido buscado.",
+      "sensacion_emocional": "Pesado, arrogante, filoso."
+    },
+    "rock-206": {
+      "nombre": "Rock progresivo en compases irregulares (Centro en Re menor)",
+      "geometria": "Cruz de Ejes Ortogonales",
+      "proposito": "Sostener un centro tonal menor mientras la métrica cambia de 7/8 a 5/4. Los acordes se eligen para que cada cabeza de compás caiga en una nota común.",
+      "sensacion_emocional": "Laberíntico, ambicioso, inestable."
+    },
+    "rock-207": {
+      "nombre": "Grunge i-bIII-bVI (Progresión en Mi menor)",
+      "geometria": "Camino en Zig-Zag",
+      "proposito": "Encadenar grados menores con saltos de tercera en lugar de cadencias, y dejar el bVI sonando de más para que la resolución llegue tarde y sucia.",
+      "sensacion_emocional": "Áspero, resentido, resignado."
+    },
+    "rock-208": {
+      "nombre": "Stoner con nota pedal (Riff en Re)",
+      "geometria": "Anillos Concéntricos",
+      "proposito": "Mantener el bajo clavado en la tónica mientras las quintas de arriba se mueven cromáticamente. El pedal genera fricción sin abandonar el centro.",
+      "sensacion_emocional": "Denso, hipnótico, mineral."
+    },
+    "rock-209": {
+      "nombre": "Punk I-IV-V a toda velocidad (Progresión en Sol)",
+      "geometria": "Pentágono Conectado",
+      "proposito": "Reducir la armonía a tres o cuatro bloques repetidos a tempo alto, con el vi como única sombra. Sirve para trabajar precisión rítmica antes que color armónico.",
+      "sensacion_emocional": "Urgente, tosco, eufórico."
+    },
+    "rock-210": {
+      "nombre": "Rock sureño con doble guitarra (Jam en Sol)",
+      "geometria": "Espiral Descendente",
+      "proposito": "Alternar el color mixolidio del jam largo con un ii menor con séptima para las armonías de terceras. Pensado para solos extendidos sobre pocos acordes.",
+      "sensacion_emocional": "Soleado, fraterno, extendido."
+    },
+    "rock-211": {
+      "nombre": "Arena rock con suspensiones (Estribillo en Re)",
+      "geometria": "Estrella Central con Órbitas Radial",
+      "proposito": "Retrasar la resolución de la tónica con sus4 y add9 para que el estribillo suene enorme en las cuerdas al aire. El sus siempre cae al acorde plano.",
+      "sensacion_emocional": "Enorme, luminoso, triunfal."
+    },
+    "rock-212": {
+      "nombre": "Psicodélico modal en dórico (Vamp en Mi)",
+      "geometria": "Onda Sinusoidal",
+      "proposito": "Girar sobre un vamp dórico donde el IV mayor y el bIII con séptima mayor cuestionan el centro tonal. Ideal para drones, sitar y solos sin resolución.",
+      "sensacion_emocional": "Flotante, caleidoscópico, suspendido."
+    },
+    "pop-301": {
+      "nombre": "Los Cuatro Acordes y sus Rotaciones (I-V-vi-IV)",
+      "geometria": "Círculo de Engranajes Consecutivos",
+      "proposito": "Mostrar el bucle de cuatro acordes más usado del pop y cómo cambia el carácter según dónde arranques. Sirve para entender que vi-IV-I-V, IV-I-V-vi y I-V-vi-IV son el mismo círculo con otro punto de entrada.",
+      "sensacion_emocional": "Optimismo simple, arrastre colectivo"
+    },
+    "pop-302": {
+      "nombre": "Doo-Wop de los 50 (I-vi-IV-V)",
+      "geometria": "Cuadrilátero Rotativo",
+      "proposito": "Fijar el bucle doo-wop, motor de las baladas de los años 50 y de medio siglo de pop posterior. Sirve para practicar el descenso I-vi y la tensión final del V que empuja a repetir.",
+      "sensacion_emocional": "Inocencia retro, baile lento"
+    },
+    "pop-303": {
+      "nombre": "Cadencia Royal (IV-V-iii-vi)",
+      "geometria": "Camino en Zig-Zag",
+      "proposito": "Trabajar el giro de cuatro acordes típico del pop japonés y del anime, que arranca ya en movimiento sobre el IV y aterriza en el vi. Sirve para escribir estribillos épicos sin tocar la tónica.",
+      "sensacion_emocional": "Nostalgia heroica, euforia juvenil"
+    },
+    "pop-304": {
+      "nombre": "Suspensiones Abiertas (sus4 y sus2)",
+      "geometria": "Onda Sinusoidal",
+      "proposito": "Practicar el retardo de la tercera: cada acorde llega suspendido y recién después se define. Sirve para estrofas de pop luminoso donde querés evitar que se sienta mayor o menor demasiado rápido.",
+      "sensacion_emocional": "Amplitud, aire, expectativa suave"
+    },
+    "pop-305": {
+      "nombre": "Salto de Semitono al Estribillo",
+      "geometria": "Escalera de Pilares Paralelos",
+      "proposito": "Modular un semitono arriba justo al entrar el estribillo, sin acorde de transición. Sirve para levantar la energía de golpe cuando la estrofa ya agotó su registro.",
+      "sensacion_emocional": "Vértigo, empuje, subidón"
+    },
+    "pop-306": {
+      "nombre": "Préstamo Modal (bVI y bVII)",
+      "geometria": "Diagrama en X (Diamante Intersectado)",
+      "proposito": "Meter acordes prestados del modo menor paralelo dentro de un pop mayor. Sirve para oscurecer un estribillo sin cambiar de tono y para lograr finales que suenan anchos y cinematográficos.",
+      "sensacion_emocional": "Épica gris, fuerza contenida"
+    },
+    "pop-307": {
+      "nombre": "Balada de Bajo Descendente",
+      "geometria": "Cascada Descendente",
+      "proposito": "Armonizar una línea de bajo que baja por grados conjuntos usando inversiones. Sirve para baladas de piano donde la mano izquierda camina y la armonía parece moverse sola.",
+      "sensacion_emocional": "Melancolía serena, despedida"
+    },
+    "pop-308": {
+      "nombre": "Pop Punk de Quintas",
+      "geometria": "Matriz Rectangular",
+      "proposito": "Tocar el bucle pop clásico con acordes de quinta y distorsión, donde importa el empuje más que el color. Sirve para estribillos rápidos en los que la guitarra apenas cambia de forma.",
+      "sensacion_emocional": "Urgencia, rebeldía adolescente"
+    },
+    "pop-309": {
+      "nombre": "Synthpop con el vi como Centro",
+      "geometria": "Estrella Central con Órbitas Radial",
+      "proposito": "Tratar el acorde menor relativo como tónica real y hacer girar todo alrededor. Sirve para pistas de sintetizador donde querés un centro melancólico que igual baile.",
+      "sensacion_emocional": "Neón frío, tristeza bailable"
+    },
+    "pop-310": {
+      "nombre": "Pre-Estribillo que Aprieta",
+      "geometria": "Pirámides Superpuestas",
+      "proposito": "Construir el puente de cuatro compases que acumula tensión antes del estribillo, subiendo por grados y frenando en una suspensión. Sirve para que la entrada del estribillo se sienta ganada.",
+      "sensacion_emocional": "Aceleración, ansiedad linda"
+    },
+    "pop-311": {
+      "nombre": "Acorde Pivote para Cambiar de Tono",
+      "geometria": "Árbol de Decisiones",
+      "proposito": "Usar un acorde que pertenece a las dos tonalidades como bisagra: el Am es vi en Do y ii en Sol. Sirve para modular sin que se escuche la costura.",
+      "sensacion_emocional": "Giro inesperado, claridad nueva"
+    },
+    "pop-312": {
+      "nombre": "Gancho de Dos Acordes",
+      "geometria": "Línea Horizontal",
+      "proposito": "Sostener una canción entera con un vaivén de dos acordes y reservar un tercero sólo para el final de la sección. Sirve cuando el interés tiene que venir de la melodía, el ritmo y la producción.",
+      "sensacion_emocional": "Hipnosis amable, repetición"
+    },
+    "pop-313": {
+      "nombre": "Mediante Cromática (I-III)",
+      "geometria": "Pentágono Conectado",
+      "proposito": "Saltar a un acorde mayor construido sobre el tercer grado, que no pertenece a la tonalidad y comparte una sola nota con la tónica. Sirve para abrir una puerta de color y después volver por el vi.",
+      "sensacion_emocional": "Deslumbre, extrañeza dulce"
+    },
+    "soul-401": {
+      "nombre": "ii-V-I con Novenas de Neo-Soul",
+      "geometria": "Bucle Triangular Continuo",
+      "proposito": "Tocar la cadencia básica del jazz con las extensiones que usa el neo-soul: novenas en el menor, trecena en el dominante, novena mayor en la tónica. Sirve para que un ii-V-I suene moderno y no a ejercicio.",
+      "sensacion_emocional": "Terciopelo, calma sensual"
+    },
+    "soul-402": {
+      "nombre": "Vamp Funk de Dos Acordes",
+      "geometria": "Onda Sinusoidal",
+      "proposito": "Sostener un groove indefinido alternando un menor con novena y su dominante a distancia de cuarta. Sirve para jams, intros largas y todo lo que se construya sobre el ritmo antes que sobre el movimiento armónico.",
+      "sensacion_emocional": "Cadera, insistencia, sudor"
+    },
+    "soul-403": {
+      "nombre": "Cadencia Plagal Gospel (IV-iv-I)",
+      "geometria": "Embudo Convergente",
+      "proposito": "Oscurecer el subdominante antes de volver a la tónica: primero mayor, después menor, y recién entonces el reposo. Sirve para los finales de himno y para cualquier cierre que pida gravedad.",
+      "sensacion_emocional": "Recogimiento, consuelo, altura"
+    },
+    "soul-404": {
+      "nombre": "Cadena de Dominantes Secundarias",
+      "geometria": "Espiral Descendente",
+      "proposito": "Encadenar dominantes que se resuelven uno en otro por cuartas hasta llegar a la tónica. Sirve para los puentes de gospel y soul donde cada acorde empuja al siguiente sin descanso.",
+      "sensacion_emocional": "Arrastre, fervor, vértigo"
+    },
+    "soul-405": {
+      "nombre": "R&B de Acordes Once",
+      "geometria": "Matriz Rectangular",
+      "proposito": "Trabajar con acordes de undécima, donde la cuarta reemplaza a la tercera y todo queda flotando. Sirve para R&B de tempo medio en el que la armonía tiene que sonar borrosa y no dirigida.",
+      "sensacion_emocional": "Bruma, intimidad, suspensión"
+    },
+    "soul-406": {
+      "nombre": "Slow Jam con Maj9",
+      "geometria": "Cascada Descendente",
+      "proposito": "Bajar por acordes de novena mayor y menor, sin dominantes fuertes, para sostener un tempo lento. Sirve para la balada de soul donde cada acorde tiene que durar dos compases sin aburrir.",
+      "sensacion_emocional": "Sábanas, lentitud, deseo"
+    },
+    "soul-407": {
+      "nombre": "Dominantes Nueve Estáticos de Funk",
+      "geometria": "Cuadrilátero Rotativo",
+      "proposito": "Usar acordes de novena dominante como colores fijos, sin función de resolución: cada uno es un lugar donde quedarse. Sirve para riffs de metales y rasgueos de guitarra en dieciseisavos.",
+      "sensacion_emocional": "Brillo metálico, chispa, calle"
+    },
+    "soul-408": {
+      "nombre": "Turnaround Gospel de Cuatro Compases",
+      "geometria": "Círculo de Engranajes Consecutivos",
+      "proposito": "Rellenar los últimos compases de una sección para devolverla al principio, alterando el vi para que empuje más. Sirve para acompañar vueltas de coro y solos de órgano.",
+      "sensacion_emocional": "Vuelta caliente, arenga, gozo"
+    },
+    "soul-409": {
+      "nombre": "Amén Extendido",
+      "geometria": "Anillos Concéntricos",
+      "proposito": "Estirar el cierre plagal de dos acordes en una sucesión de subdominantes cada vez más oscuros antes del reposo final. Sirve para terminar un tema con cuatro u ocho compases de pura cadencia.",
+      "sensacion_emocional": "Solemnidad, gratitud, cierre"
+    },
+    "soul-410": {
+      "nombre": "Vuelta Motown (I-vi-ii-V)",
+      "geometria": "Camino en Zig-Zag",
+      "proposito": "Rodar el bucle de cuatro acordes del soul clásico, con el ii en lugar del IV para que el bajo camine por cuartas. Sirve para temas de tempo medio con bajo protagónico.",
+      "sensacion_emocional": "Alegría vintage, swing liviano"
+    },
+    "soul-411": {
+      "nombre": "Disco de Menores Séptima Paralelos",
+      "geometria": "Escalera de Pilares Paralelos",
+      "proposito": "Mover una misma estructura de menor séptima por grados de la escala, sin cambiar de forma en la guitarra o el teclado. Sirve para pistas de disco y house donde la armonía sube y baja como un bloque.",
+      "sensacion_emocional": "Luces, giro, euforia nocturna"
+    },
+    "soul-412": {
+      "nombre": "Quiet Storm con Extensiones",
+      "geometria": "Hexágono Flotante",
+      "proposito": "Armar una progresión de tempo lento donde ningún acorde es una tríada simple y los dominantes llegan siempre con trecena. Sirve para el soul nocturno de radio, con saxo y guitarra limpia.",
+      "sensacion_emocional": "Noche, seda, confidencia"
+    },
+    "soul-413": {
+      "nombre": "Groove sobre Pedal de Bajo",
+      "geometria": "Estrella Central con Órbitas Radial",
+      "proposito": "Dejar el bajo clavado en una nota mientras los acordes de arriba cambian, escritos como inversiones sobre ese pedal. Sirve para construir tensión en intros y puentes sin mover el groove.",
+      "sensacion_emocional": "Trance, presión baja, acecho"
+    },
+    "soul-414": {
+      "nombre": "Soul con Subdominante Menor",
+      "geometria": "Cruz de Ejes Ortogonales",
+      "proposito": "Comparar las tres versiones del subdominante en un mismo tono: mayor, dominante y menor, para elegir cuánto quiere doler el acorde antes de la tónica. Sirve para estribillos de soul con giro agridulce.",
+      "sensacion_emocional": "Dulzura herida, hondura"
+    },
+    "country-501": {
+      "nombre": "Walk-up de bluegrass (I-IV con bajo caminante)",
+      "geometria": "Escalera de Pilares Paralelos",
+      "proposito": "Practicar el paso de I a IV rellenando el hueco con notas de paso en el bajo, como hace la guitarra rítmica en bluegrass. Sirve para que el cambio de acorde suene empujado y no cortado.",
+      "sensacion_emocional": "Brillo, ruta abierta, baile directo."
+    },
+    "country-502": {
+      "nombre": "Honky-tonk I-V-IV (vuelta invertida)",
+      "geometria": "Bucle Triangular Continuo",
+      "proposito": "Fijar el giro típico de honky-tonk donde el IV llega después del V y no antes, generando ese balanceo de bar. Ideal para tocar sobre un shuffle en dos tiempos.",
+      "sensacion_emocional": "Cerveza, madera, swing torcido."
+    },
+    "country-503": {
+      "nombre": "Western swing con sextas y disminuido de paso",
+      "geometria": "Círculo de Engranajes Consecutivos",
+      "proposito": "Entrenar el vocabulario de western swing: tónica con sexta, disminuido cromático como bisagra y turnaround ii-V. Sirve para armonizar melodías con sabor de orquesta de baile.",
+      "sensacion_emocional": "Elegante, polvoriento, bailable."
+    },
+    "country-504": {
+      "nombre": "Balada country I-vi-IV-V",
+      "geometria": "Matriz Rectangular",
+      "proposito": "Sostener una balada lenta con el giro más clásico de la canción country: tónica, relativo menor, subdominante y dominante. Sirve para versos largos y letras narrativas.",
+      "sensacion_emocional": "Nostalgia tibia, ruta nocturna."
+    },
+    "country-505": {
+      "nombre": "Bluegrass con dominantes encadenadas",
+      "geometria": "Espiral Descendente",
+      "proposito": "Encadenar dominantes por quintas para armar el puente de un tema de bluegrass rápido. Sirve para entender cómo cada acorde prepara al siguiente sin escalas raras.",
+      "sensacion_emocional": "Velocidad, chispa, competencia."
+    },
+    "country-506": {
+      "nombre": "Country modal en mixolidio (bVII sin tensión)",
+      "geometria": "Camino en Zig-Zag",
+      "proposito": "Trabajar el color mixolidio del country rockero, donde el bVII reemplaza al dominante y la tensión baja. Sirve para riffs de estrofa que no quieren resolver todo el tiempo.",
+      "sensacion_emocional": "Terroso, relajado, campo abierto."
+    },
+    "country-507": {
+      "nombre": "Cadencia con sus4 tipo pedal steel",
+      "geometria": "Onda Sinusoidal",
+      "proposito": "Imitar el efecto de la pedal steel: retardar la tercera con un sus4 y dejar que caiga. Sirve para intros y finales donde querés que el acorde respire antes de definirse.",
+      "sensacion_emocional": "Suspiro metálico, amanecer lento."
+    },
+    "country-508": {
+      "nombre": "Train beat sobre I-IV",
+      "geometria": "Línea Horizontal Grave",
+      "proposito": "Mantener el motor de un train beat con un vaivén mínimo entre I y IV, usando el I7 como pivote bluesero. Sirve para practicar rasgueo constante sin perder el pulso.",
+      "sensacion_emocional": "Traqueteo, avance, kilómetros."
+    },
+    "country-509": {
+      "nombre": "Folk de acordes abiertos con pedal en D",
+      "geometria": "Estrella Central con Órbitas Radial",
+      "proposito": "Explotar la cuerda grave de D como pedal fijo mientras cambian los acordes arriba. Sirve para fingerpicking folk y afinaciones abiertas donde el bajo nunca se mueve.",
+      "sensacion_emocional": "Madera, calma, amplitud."
+    },
+    "country-510": {
+      "nombre": "Outlaw country en menor",
+      "geometria": "Cascada Descendente",
+      "proposito": "Armar el clima áspero del country en modo menor con descenso natural y un dominante mayor prestado que aprieta el final. Sirve para letras duras y tempos medios.",
+      "sensacion_emocional": "Polvo, rencor, camino sin vuelta."
+    },
+    "ambient-601": {
+      "nombre": "Pedal point con acordes flotando",
+      "geometria": "Anillos Concéntricos",
+      "proposito": "Fijar un bajo inmóvil en C y hacer girar armonías encima para lograr quietud con movimiento interno. Sirve para camas de sintetizador y transiciones largas.",
+      "sensacion_emocional": "Suspensión, niebla, quietud amplia."
+    },
+    "ambient-602": {
+      "nombre": "Cadena de sus2 y sus4 sin tercera",
+      "geometria": "Hexágono Flotante",
+      "proposito": "Trabajar armonía ambigua eliminando la tercera de todos los acordes, así nada suena claramente mayor ni menor. Sirve para pads que no comprometen el color de la melodía.",
+      "sensacion_emocional": "Vidrio, ambigüedad, aire frío."
+    },
+    "ambient-603": {
+      "nombre": "Planing de maj7 paralelos",
+      "geometria": "Camino en Zig-Zag",
+      "proposito": "Mover la misma estructura de maj7 por semitonos y tonos sin función tonal, dejando que el color se imponga sobre la gramática. Sirve para escenas sin centro definido.",
+      "sensacion_emocional": "Deriva luminosa, ingravidez."
+    },
+    "ambient-604": {
+      "nombre": "Lidio flotante para cine",
+      "geometria": "Nube de Puntos Densos",
+      "proposito": "Sostener el brillo lidio usando el II mayor como color permanente sobre tónica de F. Sirve para planos aéreos, asombro y descubrimiento.",
+      "sensacion_emocional": "Asombro, altura, luz limpia."
+    },
+    "ambient-605": {
+      "nombre": "Mediantes cromáticas cinematográficas",
+      "geometria": "Diagrama en X (Diamante Intersectado)",
+      "proposito": "Conectar acordes mayores a distancia de tercera con una sola nota en común, el recurso más directo para que una escena cambie de escala sin modular formalmente.",
+      "sensacion_emocional": "Épico, extraño, escala enorme."
+    },
+    "ambient-606": {
+      "nombre": "Loop hipnótico de dos acordes (con variante)",
+      "geometria": "Bucle Triangular Continuo",
+      "proposito": "Sostener un vaivén de dos acordes durante minutos y usar un tercer acorde sólo como desvío ocasional. Sirve para música de estado, no de narración.",
+      "sensacion_emocional": "Trance, repetición, respiración lenta."
+    },
+    "ambient-607": {
+      "nombre": "Armonía cuartal ambiental",
+      "geometria": "Pirámides Superpuestas",
+      "proposito": "Apilar cuartas en lugar de terceras para obtener acordes sin jerarquía, escritos como sus4. Sirve para texturas de sintetizador que suenan modernas y neutras.",
+      "sensacion_emocional": "Cristalino, neutro, flotante."
+    },
+    "ambient-608": {
+      "nombre": "Tonos enteros para transición onírica",
+      "geometria": "Octágono de Enlaces Simétricos",
+      "proposito": "Usar acordes aumentados y mayores separados por tono para borrar el centro tonal en un pasaje de sueño o desmayo. Sirve para cruzar de una escena a otra sin cadencia.",
+      "sensacion_emocional": "Sueño, mareo, irrealidad."
+    },
+    "ambient-609": {
+      "nombre": "Menores paralelos descendentes",
+      "geometria": "Cascada Descendente",
+      "proposito": "Bajar la misma tríada menor por grados conjuntos para producir una caída emocional continua sin resolución. Sirve para escenas de pérdida o desgaste.",
+      "sensacion_emocional": "Duelo, hundimiento, gris."
+    },
+    "ambient-610": {
+      "nombre": "Drone con tríadas superpuestas sobre D",
+      "geometria": "Estrella Central con Órbitas Radial",
+      "proposito": "Mantener una quinta vacía como drone y superponer tríadas encima para que el color cambie sin que el fondo se mueva. Sirve para intros largas y diseño sonoro.",
+      "sensacion_emocional": "Vasto, ritual, inmóvil."
+    },
+    "metal-701": {
+      "nombre": "Frigio i-bII (el choque de semitono)",
+      "geometria": "Camino en Zig-Zag",
+      "proposito": "Instalar el sonido frigio con el bII a un semitono de la tónica, el recurso más económico para que algo suene oscuro. Sirve para riffs de estrofa y tremolo picking.",
+      "sensacion_emocional": "Amenaza, tensión seca, encierro."
+    },
+    "metal-702": {
+      "nombre": "Power chords con tritono",
+      "geometria": "Diagrama en X (Diamante Intersectado)",
+      "proposito": "Usar el salto de tritono entre quintas paralelas como eje del riff, sin terceras que suavicen. Sirve para riffs de drop tuning donde importa la distancia, no la función.",
+      "sensacion_emocional": "Violencia, desequilibrio, filo."
+    },
+    "metal-703": {
+      "nombre": "Eólico i-bVI-bVII",
+      "geometria": "Bucle Triangular Continuo",
+      "proposito": "Fijar el bucle menor natural más usado del metal melódico, donde el bVII reemplaza al dominante y todo queda dentro del modo. Sirve para estribillos épicos.",
+      "sensacion_emocional": "Épico, melancólico, marcha."
+    },
+    "metal-704": {
+      "nombre": "Frigio dominante (tónica mayor con bII)",
+      "geometria": "Pentágono Conectado",
+      "proposito": "Trabajar el modo frigio dominante: tónica mayor, segunda bemol y séptima menor, para riffs con sabor oriental y tensión constante. Sirve para solos exóticos sobre pedal.",
+      "sensacion_emocional": "Exótico, ardiente, inquietante."
+    },
+    "metal-705": {
+      "nombre": "Disminuidos simétricos (ciclo de terceras menores)",
+      "geometria": "Octágono de Enlaces Simétricos",
+      "proposito": "Rotar el mismo acorde disminuido por terceras menores para generar tensión sin dirección, ideal para puentes y pasajes de barrido. Sirve para entender simetría en el mástil.",
+      "sensacion_emocional": "Vértigo, caos ordenado, pánico."
+    },
+    "metal-706": {
+      "nombre": "Doom lento con quintas desnudas",
+      "geometria": "Línea Horizontal Grave",
+      "proposito": "Sostener acordes de quinta durante compases enteros y moverlos lo mínimo, dejando que el peso lo haga el tempo y la distorsión. Sirve para riffs de doom y sludge.",
+      "sensacion_emocional": "Pesadez, lentitud, plomo."
+    },
+    "metal-707": {
+      "nombre": "Progresión cromática descendente en quintas",
+      "geometria": "Espiral Descendente",
+      "proposito": "Bajar power chords semitono a semitono para crear una caída mecánica e inevitable. Sirve para pre-estribillos y breakdowns donde la armonía sólo tiene que empujar hacia abajo.",
+      "sensacion_emocional": "Derrumbe, presión, inevitable."
+    },
+    "metal-708": {
+      "nombre": "Menor armónica con V7",
+      "geometria": "Árbol de Decisiones",
+      "proposito": "Meter el dominante mayor con séptima en un contexto menor para tener una resolución dura, más clásica que modal. Sirve para metal neoclásico y finales de estribillo.",
+      "sensacion_emocional": "Dramático, barroco, filoso."
+    },
+    "metal-709": {
+      "nombre": "Thrash con pedal en la cuerda grave",
+      "geometria": "Estrella Central con Órbitas Radial",
+      "proposito": "Alternar la nota grave fija con quintas que se disparan hacia otros grados, el motor rítmico del thrash. Sirve para riffs de galope y palm mute constante.",
+      "sensacion_emocional": "Galope, furia, precisión."
+    },
+    "metal-710": {
+      "nombre": "Djent con suspendidos y disonancias añadidas",
+      "geometria": "Embudo Convergente",
+      "proposito": "Combinar quintas de octavas bajas con acordes suspendidos y notas añadidas que chocan, para riffs rítmicos de métrica irregular. Sirve para trabajar color disonante sin perder groove.",
+      "sensacion_emocional": "Angular, mecánico, brillante y áspero."
+    },
+    "western-801": {
+      "nombre": "Cabalgata al amanecer (Am)",
+      "geometria": "escalera descendente en cascada",
+      "proposito": "Sirve para armar el trote largo de una cabalgata: cuatro peldaños que bajan solos y nunca dejan de empujar hacia adelante. Se usa repitiendo el ciclo con galope constante en el bajo y dejando la melodía arriba en negras con puntillo. Al llegar al último peldaño se puede frenar la cabalgata o volver a arrancar sin cortar el pulso.",
+      "sensacion_emocional": "Arenoso, obstinado y sudado, con una urgencia seca que no se apura pero tampoco perdona."
+    },
+    "western-802": {
+      "nombre": "Duelo a tres bandas (E frigio dominante)",
+      "geometria": "triángulo equilátero con vértices enfrentados",
+      "proposito": "Es el mapa del cara a cara: tres acordes que se miran sin bajar la mano, uno por cada pistolero. Se usa alternando los vértices en silencios largos, sin resolver nunca del todo, para estirar la tensión antes del disparo. El segundo grado napolitano es el que arma el sudor frío.",
+      "sensacion_emocional": "Inmóvil, filoso y sudoroso, como tres sombras clavadas al mediodía esperando el primer parpadeo."
+    },
+    "western-803": {
+      "nombre": "Bajo cromático del enterrador (Dm)",
+      "geometria": "línea horizontal en diagonal descendente",
+      "proposito": "Mapa de línea de bajo cromática bajo un acorde que casi no se mueve: el bajo camina un semitono por compás mientras arriba queda el trémolo. Se usa para acompañar caminatas lentas, entierros y llegadas al pueblo. Cada escalón cromático cambia el color sin cambiar de tonalidad.",
+      "sensacion_emocional": "Fúnebre, resbaladizo y pesado, como un cajón arrastrado por la calle principal."
+    },
+    "western-804": {
+      "nombre": "Tríadas aumentadas al mediodía (C / Am)",
+      "geometria": "espiral de terceras mayores",
+      "proposito": "Usa tríadas aumentadas para girar sin centro: cada una repite la anterior desplazada una tercera mayor, así que la espiral nunca aterriza. Se usa en planos de calor, alucinación y sed, con trémolo de guitarra y silbido arriba. Los dos acordes naturales al final son la única salida hacia tierra firme.",
+      "sensacion_emocional": "Deslumbrante, mareado y reverberante, como mirar el horizonte hasta que tiembla."
+    },
+    "western-805": {
+      "nombre": "Pedal de tónica en el pueblo fantasma (Am)",
+      "geometria": "núcleo con órbita radial alrededor del pedal",
+      "proposito": "El bajo se clava en la tónica y toda la armonía gira arriba: el núcleo es Am y los satélites cambian una sola voz por vez. Se usa para sostener escenas de pueblo vacío, persianas golpeando y planos largos sin acción. Volver siempre al núcleo antes de pasar al satélite siguiente mantiene el vacío intacto.",
+      "sensacion_emocional": "Hueco, suspendido y polvoriento, con una quietud que raspa como madera reseca."
+    },
+    "western-806": {
+      "nombre": "Menor armónica en el cañón (Gm)",
+      "geometria": "hexágono cerrado de menor armónica",
+      "proposito": "Recorre los seis grados más útiles de la menor armónica en Gm, con la séptima aumentada como filo permanente. Se usa cuando hace falta amenaza sin resolver rápido: cada lado del hexágono es un paso legal y cualquier diagonal funciona como corte brusco. El dominante con novena bemol es la puerta de salida.",
+      "sensacion_emocional": "Angosto, amenazante y metálico, como un eco de piedra que devuelve el disparo antes del disparo."
+    },
+    "western-807": {
+      "nombre": "Sextas menores del sepulturero (Em)",
+      "geometria": "rombo de cuatro esquinas",
+      "proposito": "Mapa de acordes de sexta menor, ese color medio disminuido que suena a cruz de madera. Se usa en tempo lento, arpegiado, dejando la sexta sonando más de lo cómodo. Las diagonales del rombo permiten saltar directo del reposo al dominante cuando la escena necesita un golpe seco.",
+      "sensacion_emocional": "Solemne, agrio y resignado, con el peso de una pala que ya cavó demasiado."
+    },
+    "western-808": {
+      "nombre": "Suspensiones que el viento no resuelve (Dm)",
+      "geometria": "clúster en nube, sin centro fijo",
+      "proposito": "Todos los nodos son suspensiones y añadidos que jamás resuelven a tríada: la nube flota y se mueve por cercanía, no por función. Se usa en pasajes de espera, arena volando y decisiones que no se toman. La regla es que ningún acorde puede caer a su resolución obvia mientras el mapa esté activo.",
+      "sensacion_emocional": "Flotante, incompleto y reseco, como una pregunta que se queda colgada en el aire caliente."
+    },
+    "western-809": {
+      "nombre": "Emboscada en el desfiladero (Bm)",
+      "geometria": "embudo convergente hacia el dominante",
+      "proposito": "Cinco entradas anchas que se van angostando hasta caer todas en el mismo dominante: el mapa del cerco que se cierra. Se usa acelerando el ritmo armónico a medida que se avanza por el embudo, de cuatro compases a uno. Nada sale del embudo salvo por la boca final.",
+      "sensacion_emocional": "Opresivo, acelerado y sin salida, con el pulso apretándose contra la pared de piedra."
+    },
+    "western-810": {
+      "nombre": "Galope cruzado en zig-zag (Cm)",
+      "geometria": "zig-zag entre dos ejes contrarios",
+      "proposito": "Alterna en zig-zag entre el eje menor y los acordes prestados del mayor, sin quedarse dos veces del mismo lado. Se usa para persecuciones donde el terreno cambia: cada rebote del zig-zag es un corte de plano. El dominante aparece siempre en el rebote de arriba para que el golpe caiga a contratiempo.",
+      "sensacion_emocional": "Trepidante, brusco y desprolijo, con la energía de cascos cambiando de dirección sobre pedregullo."
+    }
+  },
+  "estilos": {
+    "pop": {
+      "nombre": "Pop",
+      "resumen": "Cuatro acordes que ya te sabés, y todo el trabajo puesto en que la melodía entre a la primera.",
+      "progresiones": [
+        {
+          "nota": "La más usada de la música popular. Funciona porque nunca llega a irse del todo: el vi te hace creer que se puso triste y el IV te devuelve."
+        },
+        {
+          "nota": "La misma rueda arrancando por el menor. Suena más melancólica sin cambiar una nota."
+        },
+        {
+          "nota": "La de los años 50. Más inocente, más redonda."
+        },
+        {
+          "nota": "Empezar en el IV le saca peso al primer compás: la tónica llega recién en el segundo y el estribillo suena como si ya estuviera en marcha."
+        },
+        {
+          "nota": "Bajo descendente por terceras con dos acordes menores en el medio. Sirve para puentes porque baja la energía sin cambiar de tonalidad."
+        },
+        {
+          "nota": "El bVII es un préstamo del mixolidio: trae la séptima menor y saca el semitono de la cadencia clásica, por eso suena más plano y más rockero que un V – I."
+        },
+        {
+          "nota": "El mismo loop de cuatro acordes leído en menor. Todos son grados naturales del eólico, así que no hay dominante y la progresión gira sin resolver."
+        },
+        {
+          "nota": "El iv prestado del menor baja la tercera del IV un semitono y ese movimiento contra la tónica es el que produce el efecto agridulce típico del final de estribillo."
+        },
+        {
+          "nota": "Puente en bajada por grados conjuntos que se frena en el V y se queda ahí. Al no tocar la tónica, cuando vuelve el estribillo en I el alivio es evidente."
+        },
+        {
+          "nota": "El II7 es la dominante de la dominante: mete una nota ajena al tono que empuja fuerte al V. Es el camino más corto para modular al tono del V en el último estribillo."
+        },
+        {
+          "nota": "La fundamental baja por quintas de D a G a C, y el tritono F–B del G7 resuelve por semitonos a E–C. El paso a Am7 mantiene tres notas comunes con Cmaj7, así que el ciclo vuelve a empezar sin corte."
+        },
+        {
+          "nota": "Em comparte E y G con C, por eso el movimiento es casi un cambio de bajo. El paso de F a Fm baja la tercera A a Ab, un semitonito que apunta directo a G o vuelve a E del acorde de tónica."
+        },
+        {
+          "nota": "Los dos primeros acordes son menores con quinta descendente y comparten la nota E. Después F sube a C por movimiento plagal, y la sensible nunca aparece: el color queda suspendido entre menor y mayor."
+        },
+        {
+          "nota": "El arranque en IV empuja por grados conjuntos hasta vi, que actúa como tónica sustituta. El cierre en iii deja la tercera mayor de la tónica (G) en el bajo del oído, así que la vuelta a I no necesita dominante."
+        },
+        {
+          "nota": "D7 es dominante secundaria de G: su F# es una sensible prestada que resuelve al G. Sirve para tonizar el V un compás antes de volver a I, sin salir de la tonalidad."
+        },
+        {
+          "nota": "Ab viene del menor paralelo y hace que el bajo baje A–Ab, medio tono. Desde ahí Bb y C suben por tonos enteros, así que la llegada a la tónica es por grado conjunto y no por quinta."
+        },
+        {
+          "nota": "Cuatro acordes con el bajo subiendo por grados de la escala: la tensión crece sólo por altura, sin cambio de función fuerte. Funciona como pre-estribillo porque deja el V abierto esperando el I."
+        },
+        {
+          "nota": "El intercambio modal cambia A por Ab dentro del mismo bajo F. Ese Ab baja luego a G, la quinta de la tónica, y ahí el I aparece resuelto aunque no haya habido dominante."
+        },
+        {
+          "nota": "Agregar Bb a C lo convierte en dominante de F, así que el IV llega tonizado. El Fm que sigue baja A a Ab y prepara un descenso cromático hacia G o hacia el E de la tónica."
+        },
+        {
+          "nota": "Tres pasos de quinta descendente encadenados, con séptimas que resuelven bajando un grado en cada cambio. El C6 final evita el reposo total porque la sexta A sigue sonando como nota común con Am7."
+        },
+        {
+          "nota": "Arranca fuera de la tonalidad mayor: el Bb aporta la séptima menor y hace que todo sea una cadena de quintas ascendentes. Como cada acorde es dominante del siguiente por posición, el impulso no se detiene hasta el V."
+        },
+        {
+          "nota": "Los tres primeros acordes comparten dos notas cada uno, así que la voz superior puede quedarse quieta en E. El salto a V al final introduce la sensible B recién en el último compás."
+        },
+        {
+          "nota": "Dm y F tienen las mismas notas menos una, es un cambio de color más que de función. El cierre en iii mantiene el G común con la tónica y deja la frase entreabierta para repetir el ciclo."
+        },
+        {
+          "nota": "Todo en menor natural hasta el final, donde el E7 trae G# de la menor armónica. Ese G# está a un semitono del A de la tónica y a un semitono del bajo de F, así que cierra por conducción mínima."
+        },
+        {
+          "nota": "El D7 aparece justo después del IV, con el que comparte el bajo a distancia de quinta descendente invertida. Su F# contradice el F anterior y ese choque cromático es lo que empuja hacia el V."
+        }
+      ],
+      "transiciones": [
+        {
+          "como": "Cadencia plagal",
+          "porque": "El 'amén'. Resuelve sin el empuje del V, más suave y abierto — por eso tantos estribillos terminan ahí."
+        },
+        {
+          "como": "Resolución rota",
+          "porque": "Prometés la tónica y caés en el relativo menor. Es el truco para que un estribillo no termine y siga girando."
+        },
+        {
+          "como": "Con sus4 en el medio",
+          "porque": "Meté un Isus4 antes del IV: la cuarta ya te adelanta la nota del acorde que viene y el cambio se siente inevitable."
+        },
+        {
+          "como": "Cadencia interrumpida",
+          "porque": "El oído espera la tónica y llega el relativo menor, que comparte dos notas con ella. Es un cierre falso y sirve para estirar el estribillo un ciclo más."
+        },
+        {
+          "como": "Descenso de tercera",
+          "porque": "Comparten dos notas, así que el cambio se siente como color nuevo y no como modulación. El bajo baja una tercera y arrastra la frase hacia abajo."
+        },
+        {
+          "como": "I7 de paso",
+          "porque": "Convertir la tónica en dominante agrega la séptima menor, que está un semitono arriba de la tercera del IV y resuelve ahí. Empuja al IV en vez de simplemente llegar."
+        },
+        {
+          "como": "Cadencia mixolidia",
+          "porque": "El bajo sube un tono entero en lugar de un semitono, así que no hay tensión de dominante: cierra por peso y no por resolución. Suena moderno y algo modal."
+        },
+        {
+          "como": "Plagal menor",
+          "porque": "La sexta menor del iv baja un semitono hasta la quinta de la tónica. Es un cierre plagal con una nota prestada del menor y por eso suena nostálgico."
+        },
+        {
+          "como": "Dominante secundaria",
+          "porque": "Trata al vi como tónica momentánea: el III7 es su dominante y trae el semitono que lo confirma. Le da entidad al relativo menor antes de volver al I."
+        },
+        {
+          "como": "Modulación por dominante nueva",
+          "porque": "En vez de resolver, se usa la dominante del tono nuevo: el estribillo final entra un tono más arriba y todo suena más brillante y con más aire para la voz."
+        },
+        {
+          "como": "Dm7 – Gsus4 – G7",
+          "porque": "El sus4 retrasa la tercera B y la deja caer recién en el último tiempo. Cuando entra el estribillo la sensible ya está activa y el I llega sin necesidad de golpe rítmico."
+        },
+        {
+          "como": "F – E7 – Am",
+          "porque": "F y Am comparten A y C, así que el centro tonal se corre sin cambiar de material. El G# del E7 es la única nota nueva y funciona como sensible del nuevo eje."
+        },
+        {
+          "como": "G – Bb – F/A – Bb",
+          "porque": "Bb es el bVII de la tonalidad original y el IV de la nueva, o sea un acorde pivote. El bajo G–Bb–A–Bb encierra la nueva tónica por arriba y por abajo antes de afirmarla."
+        },
+        {
+          "como": "G – D/F# – Em",
+          "porque": "El bajo baja por grados conjuntos G–F#–E y llega a la relativa menor por paso, no por salto. G y Em comparten G y B, así que sólo cambia la nota más grave del arreglo."
+        },
+        {
+          "como": "F – Fm7 – C/E",
+          "porque": "El Ab del Fm7 baja a G y el Eb implícito del color menor tironea hacia el E del bajo. La llegada a I en primera inversión mantiene el movimiento sin sonar a final."
+        },
+        {
+          "como": "C – Am7 – D7 – G",
+          "porque": "El D7 tonaliza el V y avisa que arranca una sección nueva sin cambiar de tonalidad. Sus notas F# y C forman tritono, que resuelve a G y B al empezar el solo."
+        },
+        {
+          "como": "Am – F6 – G – C",
+          "porque": "F6 mete la sexta D, que es nota común con el G siguiente y suaviza el cambio de función. De ahí el bajo sube por grados F–G–C y la tónica mayor vuelve sin contraste brusco."
+        },
+        {
+          "como": "C – Cmaj7 – C6 – Cadd9",
+          "porque": "La fundamental queda fija y sólo se mueve la voz superior B–A–D dentro de la misma armonía. Al no haber cambio de función, la sección se disuelve en lugar de cerrar."
+        },
+        {
+          "como": "D – A/C# – Bm7",
+          "porque": "El bajo cromático D–C#–B llega a la relativa menor por semitono y tono. A/C# funciona como dominante invertida de Bm, con el C# a un semitono del nuevo centro."
+        },
+        {
+          "como": "Fmaj7 – Em7 – Dm7 – G7",
+          "porque": "Las séptimas bajan por grados conjuntos en tres acordes seguidos, así que el descenso es lineal. El G7 al final reinstala el tritono y devuelve la tensión que la estrofa necesita al arrancar."
+        }
+      ],
+      "licks": [
+        {
+          "nombre": "Remate de estribillo en Do",
+          "nota": "Baja por la pentatónica mayor y cae en la tónica. Es el relleno entre dos frases cantadas."
+        },
+        {
+          "nombre": "Relleno en pentatónica mayor de C",
+          "nota": "Frase corta para meter entre dos versos: baja de E a C en la primera cuerda y cierra con un hammer-on que devuelve a la tónica. Al ser pentatónica mayor no choca con ningún acorde de la tonalidad."
+        },
+        {
+          "nombre": "Contorno en G, posición baja",
+          "nota": "Sube D-E-G-A y vuelve por el mismo camino: una curva simétrica que funciona como respuesta a una frase cantada. El hammer-on y el pull-off la hacen sonar ligada y no picada."
+        },
+        {
+          "nombre": "Subida jónica en D hacia la tónica",
+          "nota": "Sube por grados conjuntos desde el F# hasta el D agudo: al usar la escala completa aparece el semitono C#-D del final, que es el que confirma la tonalidad mayor."
+        },
+        {
+          "nombre": "Arco en A, quinta posición",
+          "nota": "Cinco notas subiendo y tres bajando dentro de la misma caja. Sirve de puente entre dos frases porque empieza y termina en notas del acorde de tónica."
+        },
+        {
+          "nombre": "Frase en F jónico con la cuarta",
+          "nota": "Llega hasta el F agudo pasando por el Bb, la cuarta de la escala: esa nota roza la tercera del acorde de tónica, así que hay que soltarla rápido hacia el E."
+        },
+        {
+          "nombre": "Relleno amplio en E",
+          "nota": "Usa tres cuerdas para abrir el registro: sube del E de la tercera cuerda al E agudo y vuelve. Al moverse por terceras en lugar de grados conjuntos suena cantable y no escalístico."
+        },
+        {
+          "nombre": "Resolución de pre-estribillo",
+          "nota": "Sube por la caja de pentatónica mayor apoyando en las terceras B y E. Al no haber cuarta ni séptima, ninguna nota choca con el IV ni con el V de la progresión."
+        },
+        {
+          "nombre": "Línea de estrofa con cuerdas al aire",
+          "nota": "Alterna notas pisadas con cuerdas al aire, así que las alturas se superponen y suenan como arpegio. El apoyo está en E y G, tercera y quinta de la tónica."
+        },
+        {
+          "nombre": "Vamp dórico de puente",
+          "nota": "La sexta mayor F# es lo que separa este color del menor natural y aparece como nota de paso hacia G. La séptima menor G deja la frase abierta, sin sensible."
+        },
+        {
+          "nombre": "Relleno sobre dominante",
+          "nota": "La séptima menor C y la tercera mayor F# forman el intervalo que define el acorde de dominante. La frase termina en la novena E para que la resolución quede pendiente."
+        },
+        {
+          "nombre": "Arranque de intro en menor",
+          "nota": "Usa la primera posición para que el bajo E al aire funcione como pedal. El G natural fija la tercera menor y el D evita cualquier sensación de sensible."
+        },
+        {
+          "nombre": "Roce de tercera mayor y menor",
+          "nota": "El par C–C# pone la tercera menor y la mayor pegadas, y ese semitono es todo el efecto. Al resolver siempre en C# la frase sigue sonando mayor."
+        },
+        {
+          "nombre": "Contracanto de estribillo",
+          "nota": "Se queda en las cuerdas agudas para no pelearse con la voz en el registro medio. Las notas cargadas son G y A, quinta y sexta, que son comunes al I y al vi."
+        },
+        {
+          "nombre": "Cierre con sensible",
+          "nota": "La frase pasa por F# y cae en G, o sea sensible a tónica por semitono ascendente. Antes se apoya en C y E, cuarta y sexta, que son las notas del IV y bajan al acorde de tónica."
+        }
+      ]
+    },
+    "rock": {
+      "nombre": "Rock",
+      "resumen": "El bVII prestado del mixolidio, quintas sin tercera y la pentatónica menor encima de todo.",
+      "progresiones": [
+        {
+          "nota": "La progresión mixolidia. Ese Re mayor no pertenece a Mi mayor: viene del modo mixolidio y es exactamente lo que suena a rock y no a pop."
+        },
+        {
+          "nota": "La bajada eólica. Desciende sola, sirve de riff y de estribillo."
+        },
+        {
+          "nota": "El esqueleto de siempre, tocado con quintas y distorsión."
+        },
+        {
+          "nota": "Progresión mixolidia por excelencia: el bVII reemplaza al V y deja la tonalidad mayor pero sin cadencia clásica. Arriba cae bien la pentatónica menor de la tónica."
+        },
+        {
+          "nota": "Los tres primeros grados descendentes del eólico y vuelta. Al no llegar nunca al V, el loop se sostiene solo con el peso del bajo bajando por grados."
+        },
+        {
+          "nota": "El loop menor más común del rock: todos los acordes son mayores salvo la tónica, así que suena grande y abierto pese a estar en menor."
+        },
+        {
+          "nota": "La versión modal del I-IV-V: el v menor, sin séptima mayor, evita la cadencia clásica y mantiene el color eólico oscuro de punta a punta."
+        },
+        {
+          "nota": "El bIII es un préstamo de la pentatónica menor sobre una tonalidad mayor: ese choque entre tercera menor y mayor es la base del sonido blues-rock."
+        },
+        {
+          "nota": "Riff en quintas donde el bajo se mueve por cuartas descendentes. Al ser power chords la misma digitación se corre por el mástil sin pensar calidades."
+        },
+        {
+          "nota": "Baja al v y después sube por grados desde el bVI. El ascenso final genera impulso hacia la tónica sin usar dominante."
+        },
+        {
+          "nota": "Descenso andaluz: los tres primeros son del eólico y el acorde mayor del final viene de la menor armónica. Ese G# prestado hace que el ciclo se reinicie con fuerza."
+        },
+        {
+          "nota": "El sus4 suspende la tercera y la devuelve al resolver: es un truco de riff para que la tónica se mueva sin cambiar de acorde antes de bajar al bVII."
+        },
+        {
+          "nota": "Los tres primeros acordes son los del menor natural con el bajo bajando por terceras y cuartas. El iv al final trae de nuevo el F, que baja medio tono al E del acorde de tónica cuando vuelve el ciclo."
+        },
+        {
+          "nota": "Cada acorde está a una cuarta ascendente del anterior, así que es una cadena de quintas descendentes disfrazada. Al no haber sensible, el D funciona como reposo temporal y no como dominante."
+        },
+        {
+          "nota": "El G contradice el G# que traía el E mayor, y ese semitono es el punto de giro de la progresión. Después el D baja por quinta al I y cierra la vuelta sin necesidad de dominante."
+        },
+        {
+          "nota": "F y Dm comparten F y A, por eso el movimiento del medio es casi estático. El E mayor al final introduce G# como sensible y resuelve por semitono al A."
+        },
+        {
+          "nota": "El ii menor aparece donde se esperaba un V, así que la tensión se deja abierta. El C es un bVII prestado del mixolidio y baja por tono al bajo D cuando vuelve la vuelta."
+        },
+        {
+          "nota": "El bajo sube por tonos enteros F–G y después cae por terceras hasta la tónica. Como el v es menor, la llegada a i no tiene sensible y suena por descenso de quinta, no por atracción."
+        },
+        {
+          "nota": "Sube por terceras y después por cuartas, recorriendo casi toda la escala menor natural en cuatro pasos. El D deja la séptima menor arriba y vuelve al i por movimiento descendente de tono."
+        },
+        {
+          "nota": "El G choca con el G# de la tríada mayor de tónica: ese roce de tercera menor sobre acorde mayor es el motor del riff. Después D y A bajan por quintas y devuelven el foco al I."
+        },
+        {
+          "nota": "El E trae G# de la menor armónica y forma un salto de segunda aumentada con el F del iv. La vuelta a i es por descenso de cuarta y deja el color menor intacto."
+        },
+        {
+          "nota": "C#m comparte C# y E con el acorde de tónica, así que el cambio es de bajo más que de armonía. El D sube al A por cuarta y mantiene todo dentro del mayor, sin bVII."
+        },
+        {
+          "nota": "El bajo baja E–D y sigue bajando hasta B, todo por grados de la escala menor. El C al final sube medio tono al B previo invertido y empuja de vuelta al i."
+        },
+        {
+          "nota": "Sin terceras, la progresión no es mayor ni menor y las quintas paralelas mantienen todo abierto. El C aporta el intervalo de tercera menor sobre la tónica sólo como movimiento de bajo."
+        },
+        {
+          "nota": "Cuatro quintas descendentes seguidas, así que cada acorde prepara al siguiente por la fundamental. Al llegar al bIII el oído lo toma como tónica relativa y la repetición reencuadra el Bm."
+        },
+        {
+          "nota": "El E mayor mete G#, la cuarta aumentada de la tonalidad, y eso es lo que da el color brillante. El G que sigue devuelve la cuarta natural y el contraste de ese semitono sostiene el riff."
+        },
+        {
+          "nota": "Cadena de quintas ascendentes que llega a la tónica desde abajo en la escala de fundamentales. Como cada acorde es mayor, la séptima menor del bIII se resuelve recién al final."
+        }
+      ],
+      "transiciones": [
+        {
+          "como": "Cadencia doble plagal",
+          "porque": "Sube un tono entero hasta la tónica sin pasar por el V. No tiene sensible, y esa falta de urgencia es la que suena a rock."
+        },
+        {
+          "como": "Salto al relativo prestado",
+          "porque": "De Mi a Sol: te lleva al terreno menor sin cambiar de tónica. Clásico para el puente."
+        },
+        {
+          "como": "Bajada de blues",
+          "porque": "Del V al IV en vez de resolver. Rompe la regla clásica y por eso empuja."
+        },
+        {
+          "como": "Cadencia mixolidia",
+          "porque": "El bajo sube un tono entero en lugar de un semitono: cierra con peso pero sin la tensión del tritono, que es justo lo que separa el rock modal del pop tonal."
+        },
+        {
+          "como": "Dominante prestada",
+          "porque": "En una progresión eólica el V mayor mete la séptima mayor del tono, ajena al modo. Ese semitono resolviendo a la tónica hace que el reinicio del riff suene inevitable."
+        },
+        {
+          "como": "Ascenso por grados",
+          "porque": "Dos acordes mayores separados por un tono empujan hacia la tónica solo por movimiento paralelo. Es la forma más directa de armar un crescendo armónico."
+        },
+        {
+          "como": "Salto al relativo mayor",
+          "porque": "Comparten dos notas, así que el cambio abre el sonido sin modular. Sirve para que el estribillo suene más luminoso que la estrofa."
+        },
+        {
+          "como": "Quintas paralelas",
+          "porque": "Con power chords las dos voces se mueven en paralelo y no hay conducción de voces: el efecto es de bloque que se desplaza, característico del riff de rock."
+        },
+        {
+          "como": "Riff transportado",
+          "porque": "El mismo dibujo de dedos corrido cinco trastes arriba mantiene la identidad del riff y cambia la armonía. Ahorra pensar dos figuras distintas."
+        },
+        {
+          "como": "Descenso de semitono",
+          "porque": "El bajo baja medio tono y el acorde pasa de modal a dominante: es el punto donde una progresión eólica se vuelve tensa y pide la tónica."
+        },
+        {
+          "como": "Subdominante menor",
+          "porque": "Sube una cuarta manteniendo la tercera menor del modo. No hay notas ajenas, así que el cambio oscurece sin sacar la progresión del eólico."
+        },
+        {
+          "como": "E5 – D5 – A",
+          "porque": "El D es el bVII de la tonalidad de partida y el IV de la que llega, o sea un pivote directo. El bajo baja por tonos E–D y después sube por cuarta, así que la llegada tiene golpe."
+        },
+        {
+          "como": "Am – A7 – D",
+          "porque": "Cambiar C por C# convierte la tónica menor en dominante y habilita la tercera mayor en el solo. El D que sigue confirma la nueva cuarta y deja el C natural como séptima."
+        },
+        {
+          "como": "F – G – A5",
+          "porque": "Los bajos suben por tonos enteros F–G–A sin acordes de dominante. La subida por grado conjunto da el empuje que en este contexto haría el V, y no aparece ninguna sensible."
+        },
+        {
+          "como": "D5 – C5 – G5 – D5",
+          "porque": "Las quintas sin tercera dejan la modalidad sin definir hasta que entra la voz. El bajo recorre D–C–G, que son las fundamentales del mixolidio, y vuelve al centro por cuarta descendente."
+        },
+        {
+          "como": "Em – D/F# – G",
+          "porque": "El bajo sube cromáticamente E–F#–G hasta la relativa mayor. Em y G comparten G y B, así que sólo se corre el centro de gravedad, no las notas."
+        },
+        {
+          "como": "A – Asus4 – A – G",
+          "porque": "El sus4 saca la tercera y afloja el color mayor antes de bajar al bVII. Cuando llega el G la sección ya perdió la sensible y suena más grave sin cambiar la fundamental de referencia."
+        },
+        {
+          "como": "C – D – E5",
+          "porque": "Dos acordes mayores subiendo por tonos y llegada a la quinta de tónica. El movimiento paralelo evita la resolución funcional y por eso el riff vuelve a entrar como si nunca se hubiera ido."
+        },
+        {
+          "como": "A5 – F5 – Bb",
+          "porque": "El F es el bVI de la tonalidad vieja y el V de la nueva, así que sirve de pivote. Su tercera A es a la vez la tónica que se abandona y la sensible del nuevo centro."
+        },
+        {
+          "como": "Bb – C – D – G",
+          "porque": "Las fundamentales suben por tonos hasta el D, que recién ahí se comporta como dominante. La sensible F# aparece sólo en ese último acorde y resuelve por semitono al G."
+        },
+        {
+          "como": "Em – Em7 – Em6",
+          "porque": "La fundamental queda fija y baja la voz interna D–C#, que convierte la séptima en sexta. Sin cambio de bajo ni de función, la sección se sostiene hasta el corte."
+        }
+      ],
+      "licks": [
+        {
+          "nombre": "Riff en quintas sobre Mi",
+          "nota": "Las notas graves del riff: tónica, séptima menor y cuarta. Con palm mute y todo abajo."
+        },
+        {
+          "nombre": "Respuesta en pentatónica de Mi",
+          "nota": "La caja de la 12va posición, subiendo y bajando. El bend del traste 15 va un tono entero."
+        },
+        {
+          "nombre": "Riff grave en E con cuerda al aire",
+          "nota": "Alterna la sexta al aire con notas de la pentatónica menor: el E al aire funciona como pedal rítmico y el resto es la respuesta. Púa alterna y palm mute suave."
+        },
+        {
+          "nombre": "Riff mixolidio en A",
+          "nota": "Sube por las tres cuerdas graves hasta el G, la séptima menor, y vuelve: esa nota es la que define el color mixolidio frente a una escala mayor."
+        },
+        {
+          "nombre": "Solo con bend en A pentatónica menor",
+          "nota": "Sube por la caja de quinta posición y el bend del G lo lleva un tono arriba, hasta la tónica: ese gesto resuelve la frase sin cambiar de posición."
+        },
+        {
+          "nombre": "Frase eólica en E, doceava posición",
+          "nota": "Usa la escala completa para que aparezca el C, la sexta menor, que es la nota que distingue el eólico de la pentatónica menor. Termina en la tónica una octava arriba."
+        },
+        {
+          "nombre": "Caja de G con bend de cuarta",
+          "nota": "El bend del F sube un tono hasta el G: en la segunda cuerda se controla fácil y deja la frase apuntando a la tónica antes de bajar a la caja."
+        },
+        {
+          "nombre": "Riff medio en D mixolidio",
+          "nota": "Trabaja entre la cuarta y la tercera cuerda en torno al C y el G: la séptima menor y la cuarta dan ese sonido de riff plano, sin resolución tonal."
+        },
+        {
+          "nombre": "Caja menor con bend",
+          "nota": "La séptima menor G tira hacia el A por tono descendente y el bend sobre la quinta E carga la frase. Sin segunda ni sexta, ninguna nota interfiere con el bVII ni con el iv."
+        },
+        {
+          "nombre": "Blues grave en primera posición",
+          "nota": "El Bb es la cuarta aumentada y aparece siempre entre A y B, como nota de paso cromática. La resolución cae en el E al aire, que funciona de pedal."
+        },
+        {
+          "nombre": "Frase mixolidia sobre riff mayor",
+          "nota": "La tercera mayor C# y la séptima menor G conviven, que es exactamente el color de dominante sostenida. El G baja por tono al F# y de ahí a E, quinta de la tónica."
+        },
+        {
+          "nombre": "Descenso eólico de puente",
+          "nota": "La sexta menor Bb baja por semitono al A, y ese movimiento es lo que fija el color menor natural. La frase evita la sensible, así que el bVII suena como reposo y no como tensión."
+        },
+        {
+          "nombre": "Vamp dórico de dos acordes",
+          "nota": "La sexta mayor E es la nota que distingue este color del menor natural y cae siempre sobre el acorde de IV. La séptima menor F sube al G por tono y cierra la vuelta."
+        },
+        {
+          "nombre": "Pentatónica abierta en agudos",
+          "nota": "Combina cuerdas al aire con notas pisadas, así que las alturas se solapan y la frase suena continua. El apoyo está en G y D, tercera menor y séptima menor."
+        },
+        {
+          "nombre": "Relleno mayor entre riffs",
+          "nota": "La tercera mayor F# y la sexta B dan un color abierto sin séptima, así que sirve sobre I y sobre IV. La frase termina en E, la novena, y queda suspendida para que entre el riff."
+        },
+        {
+          "nombre": "Blues con desliz",
+          "nota": "El Db entre C y D funciona como cuarta aumentada de paso y el desliz remarca ese semitono. El F baja por tono al Eb implícito o sube al G, según cómo se cierre la frase."
+        }
+      ]
+    },
+    "blues": {
+      "nombre": "Blues",
+      "resumen": "Doce compases, tres acordes dominantes y una tercera que nunca se decide entre mayor y menor.",
+      "progresiones": [
+        {
+          "nota": "Los doce compases. Lo raro y lo bueno es que la tónica también es dominante: no resuelve nunca del todo."
+        },
+        {
+          "nota": "El turnaround completo: los dos últimos compases te devuelven al principio."
+        },
+        {
+          "nota": "Blues menor. El mismo esqueleto con acordes menores y la dominante alterada al final."
+        },
+        {
+          "nota": "Quick change: el IV7 aparece ya en el segundo compás y después se vuelve al I7. Rompe la monotonía de cuatro compases iguales al arranque."
+        },
+        {
+          "nota": "Los últimos cuatro compases del blues clásico. Que el V7 vaya al IV7 sería raro en armonía tonal, pero acá es la firma del estilo; el V7 final reinicia la vuelta."
+        },
+        {
+          "nota": "Turnaround de jazz-blues: en lugar de quedarse en el V7 arma un ciclo de cuartas que aterriza en la dominante. Da más movimiento armónico para improvisar."
+        },
+        {
+          "nota": "Blues menor: todo el ciclo en menor salvo el bVI7 y el V7, que bajan por semitono hasta la tónica. Esa bajada es lo que le da el carácter dramático."
+        },
+        {
+          "nota": "Compases 9 a 12 en clave de jazz-blues: resuelve al I7 y el VI7 del final vuelve a abrir el ciclo hacia el ii7, encadenando dominantes."
+        },
+        {
+          "nota": "El disminuido cromático entre el IV7 y el I7 aprovecha que comparten tres notas: sube el bajo un semitono y funciona como puente sin cambiar de color."
+        },
+        {
+          "nota": "Sustitución tritonal del V7: el bII7 tiene el mismo tritono que la dominante pero el bajo baja por semitono hasta la tónica, lo que suena más liso y más jazzero."
+        },
+        {
+          "nota": "Blues de ocho compases: la dominante llega mucho antes y el ciclo se cierra en la mitad del tiempo. Muy usado en blues cantado a tempo medio."
+        },
+        {
+          "nota": "Cadena de dominantes secundarias: cada acorde es la dominante del siguiente. Es el recurso ragtime que se usa para introducciones y puentes dentro del blues."
+        },
+        {
+          "nota": "Formato de 16 compases: el IV7 vuelve a aparecer en la segunda frase antes de que el I7 se afirme. Cada movimiento I7–IV7 mueve la séptima del I (F) un semitono a la tercera del IV (E), así que el salto de cuarta suena por conducción cromática y no por fuerza."
+        },
+        {
+          "nota": "El iv7 menoriza el IV y baja su tercera (F# a F) medio tono, que es la séptima menor del I. Ese F queda como nota común con el A7 siguiente y cierra la frase sin necesidad de dominante."
+        },
+        {
+          "nota": "Sustitución por terceras mayores: cada dominante resuelve una tercera mayor abajo y encadena tres centros a distancia de 4 semitonos. Las séptimas de los dominantes bajan medio tono a la tercera del maj7 siguiente, así que la cadena se sostiene por resolución de tritono en cada eslabón."
+        },
+        {
+          "nota": "El VI7 con b9 funciona como dominante secundaria del ii: su b9 (Bb) baja a la quinta A del Dm7 y su tercera C# sube a la fundamental D. Después el ii–V ordinario devuelve el tritono al I."
+        },
+        {
+          "nota": "Los últimos compases del slow blues bajan por tonos desde el I hasta el VI7 y ahí entra el ii–V. El #9 del D7 es el F que venía sonando como fundamental del I, así que el cambio de función se escucha sin mover esa voz."
+        },
+        {
+          "nota": "Blues menor con dominante alterada: el b9 (F) del E7 es nota común con el bVImaj7 y baja a la quinta E del Am7. El bVImaj7 antes del V7 aporta movimiento de fundamental por semitono descendente (F a E)."
+        },
+        {
+          "nota": "Giro de jump blues: la sexta del I evita la séptima y deja la sonoridad abierta para el VI7, cuya tercera B sube a la fundamental C del ii7. El V9 agrega la novena G, que es nota común con el G7 del compás anterior."
+        },
+        {
+          "nota": "El bIII7 es un dominante de paso entre I y IV: su tercera B es la quinta del I y su séptima F sube por semitono a la fundamental... más exacto, su fundamental G sube un tono a la fundamental A del IV. La tercera común B une los tres acordes."
+        },
+        {
+          "nota": "Descenso cromático de dominantes hacia el V. Cada fundamental baja medio tono o un tono y las séptimas dibujan una línea paralela descendente, así que la tensión se acumula sin resolver hasta el V7."
+        },
+        {
+          "nota": "El bII13 es el sustituto de tritono del V: comparte tercera y séptima con el G7 invertidas (F y Cb/B). Su fundamental Db baja medio tono al C final, que es la conducción más directa posible al I."
+        },
+        {
+          "nota": "El #ivdim7 aparece como acorde de paso entre IV y I: sus cuatro voces están a un semitono o un tono de las del I con la quinta en el bajo. El D# resuelve subiendo a E, quinta del I."
+        },
+        {
+          "nota": "Versión de blues gospel con el I en maj7: el vi7 comparte tres notas con el I y baja una tercera hasta el ii7. El 13 del V (G) es la tercera del I y ya está presente antes de la resolución."
+        },
+        {
+          "nota": "Descenso diatónico de la menor natural con los grados convertidos en dominantes. El paso bVI7–V7 mueve la fundamental por semitono y el b9 del V (Ab) es nota común con el acorde anterior."
+        },
+        {
+          "nota": "Blues sobre menor armónica: la sexta del i (F#) contrasta con el F natural del b9 del V y genera el movimiento cromático que define la sonoridad. El G# del dominante sube medio tono a la fundamental del i cada vez que vuelve."
+        },
+        {
+          "nota": "El dim7 sobre #I camina el bajo de I a ii por semitonos y funciona como dominante del ii sin fundamental. Sus notas E, G y Bb ya estaban en el C7, así que sólo el bajo se mueve."
+        }
+      ],
+      "transiciones": [
+        {
+          "como": "El cambio del compás 5",
+          "porque": "Es el momento donde el blues 'abre'. Anticipalo tocando la b7 del I en el compás anterior: esa nota ya pertenece al IV."
+        },
+        {
+          "como": "Bajada del turnaround",
+          "porque": "En vez de resolver al I, baja al IV. Es lo que estira los últimos compases."
+        },
+        {
+          "como": "Paso cromático",
+          "porque": "Un disminuido medio tono arriba conecta el I con el ii o de vuelta al IV sin que se note la costura."
+        },
+        {
+          "como": "Entrada al compás 5",
+          "porque": "La séptima menor del I7 está un semitono arriba de la tercera del IV7 y resuelve ahí. Es el movimiento más tonal del blues y por eso marca el cambio de sección."
+        },
+        {
+          "como": "Retroceso de dominante",
+          "porque": "Va de la dominante a la subdominante, al revés de lo que pide la armonía clásica. Suena a caída controlada y prepara la llegada al I7."
+        },
+        {
+          "como": "Puente cromático",
+          "porque": "El disminuido comparte tres notas con el IV7 y sube el bajo un semitono, así que el cambio se siente como tensión creciente y no como acorde nuevo."
+        },
+        {
+          "como": "Cadencia de jazz-blues",
+          "porque": "Convierte el compás 9 en un dos-cinco: aparece la conducción por semitonos que el blues básico no tiene, y habilita frases con notas fuera de la pentatónica."
+        },
+        {
+          "como": "Bajada de semitono",
+          "porque": "Dos dominantes a distancia de semitono: el descenso paralelo es la manera más directa de generar tensión en un blues menor antes de volver a la tónica."
+        },
+        {
+          "como": "Dominante secundaria",
+          "porque": "El VI7 es la dominante del ii7, así que anticipa el turnaround. Mete una tercera mayor ajena al tono que llama la atención justo antes del final de la vuelta."
+        },
+        {
+          "como": "Sustitución tritonal",
+          "porque": "Comparte el tritono con el V7 pero el bajo cae un semitono hasta la tónica. Mismo grado de tensión con un movimiento más suave."
+        },
+        {
+          "como": "Walk-up cromático en el bajo",
+          "porque": "Subir por semitonos desde la tónica hasta la fundamental del IV7 llena el compás sin cambiar de acorde: la tensión la produce el bajo, no la armonía."
+        },
+        {
+          "como": "Mantené el F del G7 y bajá el B a Bb en la voz de arriba.",
+          "porque": "El F es séptima del I y tercera del IV, así que queda fijo; el B baja medio tono a la séptima del IV y produce el único movimiento audible."
+        },
+        {
+          "como": "Subí sólo el bajo un semitono y dejá quietas las tres voces superiores.",
+          "porque": "E, G y Bb pertenecen a los dos acordes; con el bajo en C# el conjunto se lee como dominante del ii y el movimiento queda en una sola voz."
+        },
+        {
+          "como": "Bajá la tercera C# a C y subí la séptima G a A.",
+          "porque": "El tritono C#–G se abre a C–A, que son la séptima y la quinta del Dm7; el intervalo se resuelve hacia afuera por semitono y tono."
+        },
+        {
+          "como": "Deslizá todo el voicing un semitono abajo antes de resolver al I.",
+          "porque": "El Db7 es sustituto de tritono del V alternativo y su séptima Cb/B baja al Bb; el paralelismo cromático conserva la estructura interválica y sólo cambia el nivel."
+        },
+        {
+          "como": "Bajá la tercera D a C y la séptima Ab a Gb, en bloque.",
+          "porque": "Las dos voces caen un tono y mantienen el tritono intacto, así que el color dominante se preserva mientras la fundamental desciende un tono hacia el bVI."
+        },
+        {
+          "como": "Subí la quinta E a F y la fundamental A a G#.",
+          "porque": "El F es el b9 del dominante y aparece por movimiento ascendente de semitono; el G# entra como tercera y crea el cromatismo A–G# que anuncia el retorno al i."
+        },
+        {
+          "como": "Bajá la séptima Eb a D y dejá sonando el G como novena convertida en sexta.",
+          "porque": "El Eb resuelve medio tono abajo a la tercera del I y el G pasa de novena del V a sexta del I sin moverse, lo que suaviza el corte entre los dos acordes."
+        },
+        {
+          "como": "Bajá las cuatro voces un semitono sin cambiar la digitación.",
+          "porque": "Todas las tensiones se mueven en paralelo y el tritono desciende un semitono, así que la llegada al V se escucha como empuje cromático y no como cambio de función."
+        },
+        {
+          "como": "Mantené el Eb como nota superior y bajá el G a F en el bajo.",
+          "porque": "El Eb del i7 es la novena del F si se lo sostiene, y el descenso de quinta en el bajo deja tres notas comunes entre los dos acordes."
+        },
+        {
+          "como": "Bajá fundamental y séptima un semitono y sostené el Bb como novena.",
+          "porque": "El Db baja a C y el Cb baja a Bb, que pasa a ser la novena del acorde final; dos semitonos descendentes bastan para cerrar la cadencia."
+        }
+      ],
+      "licks": [
+        {
+          "nombre": "Caja de La, quinta posición",
+          "nota": "El lick que todos aprenden primero. El bend del traste 8 en la primera cuerda sube un tono hasta la tónica."
+        },
+        {
+          "nombre": "Quejido con la b5",
+          "nota": "La nota azul es el traste 8 de la tercera cuerda (Mib). Pasá por ella rápido, no te quedes."
+        },
+        {
+          "nombre": "Caja de A con blue note",
+          "nota": "Sube D-Eb-E en la tercera cuerda: el Eb es la quinta bemol, la blue note, y se cruza rápido porque su función es rozar la quinta, no quedarse. Cierra en la tónica."
+        },
+        {
+          "nombre": "Llamada en E, doceava posición",
+          "nota": "Caja clásica con el bend del D un tono arriba hasta el E: es el gesto de llamada que después se responde en el registro grave. Todo cae en la misma posición."
+        },
+        {
+          "nombre": "Ascenso cromático en C blues",
+          "nota": "F-F#-G en la tercera cuerda: la quinta bemol aparece entre la cuarta y la quinta y arma el deslizamiento cromático que define la escala de blues."
+        },
+        {
+          "nombre": "Respuesta descendente en G",
+          "nota": "Baja desde el Bb agudo hasta la tónica atravesando la caja: sirve como respuesta a una frase ascendente porque invierte el contorno y termina abajo."
+        },
+        {
+          "nombre": "Tercera menor y mayor en A",
+          "nota": "El paso C-C# es el corazón del asunto: roza la tercera menor y la resuelve en la mayor, que es lo que hace sonar a blues sobre un acorde mayor sin salirse del acorde."
+        },
+        {
+          "nombre": "Turnaround en D",
+          "nota": "G-G#-A en la tercera cuerda arma la subida cromática y después salta a la caja aguda para cerrar en la tónica: frase típica de los últimos dos compases."
+        },
+        {
+          "nombre": "Caja uno en La",
+          "nota": "Las notas se concentran en la cuarta y la séptima menor, los grados que definen el color pentatónico. El bend sobre la tercera menor la lleva hacia la tercera mayor y crea la ambigüedad típica del blues."
+        },
+        {
+          "nombre": "Ascenso abierto en Mi",
+          "nota": "El paso La–Sib–Si recorre la quinta disminuida entre cuarta y quinta, que es la nota que distingue la escala de blues de la pentatónica. Resolver del Sib al Si por semitono descarga esa tensión."
+        },
+        {
+          "nombre": "Mixolidio en Sol, zona baja",
+          "nota": "La línea sube por grados conjuntos y apoya en la séptima menor y la cuarta, que son las notas que sostienen el I7. El Fa natural evita el color mayor y mantiene la función dominante."
+        },
+        {
+          "nombre": "Bebop dominante en Do",
+          "nota": "El tramo Sib–Si–Do encadena las dos séptimas y aterriza en la fundamental a tiempo fuerte. Ese cromatismo es lo que permite correr ocho notas seguidas sin que ninguna caiga fuera del acorde en los apoyos."
+        },
+        {
+          "nombre": "Dórico descendente en Re",
+          "nota": "El descenso pasa por la sexta mayor y la séptima menor, el par que define el dórico sobre un ii7. Cada nota está a un grado conjunto de la siguiente, así que la línea se escucha como conducción de voces y no como arpegio."
+        },
+        {
+          "nombre": "Blues mayor en Sib",
+          "nota": "El ligado entre la tercera menor y la tercera mayor es el eje de la escala: dos notas a semitono que funcionan como apoyatura. La sexta mayor cierra la frase sobre la quinta sin tocar la séptima."
+        },
+        {
+          "nombre": "Blues en Do, zona media",
+          "nota": "El ligado Fa–Fa#–Sol atraviesa la quinta disminuida y la deja como nota de paso entre cuarta y quinta. Terminar en la fundamental una octava arriba cierra el recorrido sin ambigüedad."
+        },
+        {
+          "nombre": "Descenso pentatónico en Mi",
+          "nota": "La frase baja de dos en dos notas por cuerda y cada par forma una tercera menor o un tono. El bend inicial sobre la tercera menor sube hacia la cuarta y da el impulso para todo el descenso."
+        }
+      ]
+    },
+    "metal": {
+      "nombre": "Metal",
+      "resumen": "Frigio, tritonos y la sexta cuerda abajo. La tensión no se resuelve: se sostiene.",
+      "progresiones": [
+        {
+          "nota": "El salto frigio. Medio tono arriba de la tónica: es la distancia más corta y la más incómoda, y de ahí sale todo el género."
+        },
+        {
+          "nota": "La bajada épica. Sirve de estribillo cuando el riff necesita abrirse."
+        },
+        {
+          "nota": "El tritono directo. Sin preparar, sin resolver."
+        },
+        {
+          "nota": "Ciclo eólico cerrado: el bVI y el bVII son mayores y suben por grados hasta la tónica menor. Es el loop más usado en estrofas de metal melódico."
+        },
+        {
+          "nota": "Descenso andaluz con el V mayor tomado de la menor armónica: el G# prestado agrega el semitono que reinicia el ciclo con tensión."
+        },
+        {
+          "nota": "Progresión de menor armónica: el bII y el V mayor comparten notas y encadenan dos tensiones seguidas antes de volver a la tónica."
+        },
+        {
+          "nota": "Tritono puro en quintas: la distancia de tres tonos no pertenece a ninguna tonalidad estable, así que el acorde de paso suena disonante por definición. Va con palm mute."
+        },
+        {
+          "nota": "Grados naturales del eólico ordenados para que el bajo se mueva por cuartas y terceras. El iv del final oscurece y evita que el loop suene resuelto."
+        },
+        {
+          "nota": "Combina el color eólico del bVI con el bII frigio: el salto de uno a otro contra un pedal de tónica mantiene el centro tonal mientras la armonía se corre."
+        },
+        {
+          "nota": "La b9 está a un semitono de la tónica y las cuatro notas superiores del acorde forman un disminuido: máxima tensión con mínimo movimiento."
+        },
+        {
+          "nota": "Riff cromático en quintas: no hay función armónica, la lógica es el desplazamiento por semitonos. Funciona porque los power chords no tienen tercera que defina el modo."
+        },
+        {
+          "nota": "Baja por el eólico y termina en el bII frigio, que está un semitono arriba de la tónica: el corte es abrupto y sirve como final de sección."
+        },
+        {
+          "nota": "El bVI comparte dos notas con el i y su fundamental está a una tercera mayor abajo, así que el cambio se produce moviendo una sola voz. El iv reintroduce la cuarta como bajo y prepara el retorno por movimiento de quinta."
+        },
+        {
+          "nota": "Riff construido sobre tonos enteros: todas las fundamentales están a un tono y ninguna define tercera, así que no hay tonalidad. El tritono entre la primera y la última fundamental cierra el ciclo sin resolución."
+        },
+        {
+          "nota": "Con la fundamental sonando como pedal abajo, el bII5 produce un semitono contra el pedal y es el punto de máxima tensión. El bVII5 la descarga bajando un tono y dejando el intervalo de séptima con el pedal."
+        },
+        {
+          "nota": "La tríada disminuida sobre el bVI aporta un tritono que no existe en la escala menor natural y empuja al bII. Del bII al i la fundamental baja un semitono, la conducción más corta posible hacia la tónica."
+        },
+        {
+          "nota": "Los tres grados provienen de la pentatónica menor y las fundamentales se mueven por tercera menor y tono. Al no haber terceras en los acordes, el peso queda en el intervalo entre fundamentales."
+        },
+        {
+          "nota": "Ciclo sin dominante: el bVII y el bVI están a un tono y a un tono y medio del i y comparten notas con él. Terminar en bVII deja la frase abierta porque su tercera no conduce a la tónica."
+        },
+        {
+          "nota": "El b9 del dominante es la misma nota que la fundamental del bVI, así que el paso entre esos dos acordes no mueve la voz superior. La séptima del V baja medio tono a la tercera del i cuando la cadencia finalmente resuelve."
+        },
+        {
+          "nota": "Las fundamentales trazan el tetracordio locrio con su quinta disminuida incluida. La ausencia de quinta justa sobre la tónica es lo que impide cualquier sensación de reposo."
+        },
+        {
+          "nota": "Las cuatro fundamentales encadenan quintas descendentes salvo el primer salto, y cada acorde comparte dos notas con el siguiente. A tempo lento esa cadena de notas comunes sostiene el movimiento sin necesidad de dominante."
+        },
+        {
+          "nota": "El bII y el VII rodean la tónica por semitono desde arriba y desde abajo. Ese cerco cromático es el que produce la tensión, porque ninguna de las dos notas pertenece a la escala menor natural."
+        },
+        {
+          "nota": "La tríada aumentada sobre el bIII aparece al elevar la séptima de la escala: su nota G# es la sensible y sube medio tono a la fundamental del i o a la tercera del V7. Los dos acordes centrales comparten el C."
+        },
+        {
+          "nota": "El #IV está a un tritono de la tónica, el intervalo más lejano del ciclo, y volver a ella se escucha como caída. El bII final deja la frase a un semitono de la tónica y obliga a repetir el ciclo."
+        },
+        {
+          "nota": "Las fundamentales forman un arpegio disminuido: cada salto es una tercera menor y el patrón se repite cada tres semitonos. Esa simetría permite empezar el riff en cualquiera de las cuatro notas sin cambiar el color."
+        },
+        {
+          "nota": "El sus4 retrasa la tercera y al resolver baja un semitono hasta la tercera menor, que es el gesto que define la tonalidad. Después bVI y bVII bajan y suben un tono manteniendo la fundamental del i como nota común."
+        },
+        {
+          "nota": "La primera mitad se mueve por terceras y quintas dentro de la menor natural; la segunda introduce la sensible en el V7 para cerrar. La tercera D# del dominante es la única nota ajena a la escala y sube medio tono al E."
+        }
+      ],
+      "transiciones": [
+        {
+          "como": "Semitono frigio",
+          "porque": "Es la firma del estilo. Tocá las dos quintas con la misma forma corrida un traste: el movimiento físico es el sonido."
+        },
+        {
+          "como": "Cierre modal",
+          "porque": "Vuelve a la tónica sin sensible. Más pesado que el V-i porque no te lo anuncia."
+        },
+        {
+          "como": "Salto de tritono",
+          "porque": "Parte la octava justo al medio. No pertenece a ninguna tonalidad y por eso suena a amenaza."
+        },
+        {
+          "como": "Cadencia frigia",
+          "porque": "El bajo baja un semitono hasta la tónica. Es el movimiento más corto posible y por eso suena pesado y definitivo, sin necesidad de dominante."
+        },
+        {
+          "como": "Ascenso modal",
+          "porque": "Dos acordes mayores separados por un tono empujan a la tónica menor sin usar el semitono de la dominante. Da impulso sin volver la progresión tonal."
+        },
+        {
+          "como": "Cadencia de menor armónica",
+          "porque": "La séptima mayor del modo resuelve a la tónica y la b9 baja un semitono a la quinta. Dos semitonos a la vez: la resolución es inmediata."
+        },
+        {
+          "como": "Pedal en la sexta cuerda",
+          "porque": "Mantener la tónica al aire mientras la armonía se mueve arriba genera la disonancia sola: el bVI contra el pedal deja una segunda que tensiona sin mover el bajo."
+        },
+        {
+          "como": "Aproximación cromática",
+          "porque": "Si se intercala el acorde un semitono debajo del objetivo, la llegada se refuerza por proximidad y no por función. Es la lógica de los riffs cromáticos."
+        },
+        {
+          "como": "Subdominante menor",
+          "porque": "Sube una cuarta manteniendo el modo menor. No aporta notas nuevas, así que sirve para cambiar de sección sin perder el color oscuro."
+        },
+        {
+          "como": "Apertura al relativo mayor",
+          "porque": "Comparten dos notas y la tercera menor de la tónica pasa a ser fundamental. El estribillo suena más amplio sin dejar la tonalidad."
+        },
+        {
+          "como": "Sostené el G y bajá el E a Eb con el bajo en C.",
+          "porque": "El G es nota común entre las dos tríadas y el descenso de semitono E–Eb crea el tritono C–Gb cuando aparece el bajo, que es lo que genera la tensión."
+        },
+        {
+          "como": "Movés la forma de quinta un semitono arriba y dejás la sexta cuerda al aire como pedal.",
+          "porque": "La fundamental G queda a semitono del pedal F# y su quinta D forma una sexta con él, así que el choque se concentra en una sola relación interválica."
+        },
+        {
+          "como": "Saltá la forma seis trastes arriba sobre la misma cuerda.",
+          "porque": "Seis semitonos es el tritono: la quinta del primer acorde queda a semitono de la fundamental del segundo, y ninguna nota es común entre los dos."
+        },
+        {
+          "como": "Subí el G a G# y dejá A y C donde están.",
+          "porque": "Un solo semitono ascendente convierte el menor en aumentado y produce la sensible; A y C se mantienen como notas comunes, así que el cambio se percibe como coloración y no como acorde nuevo."
+        },
+        {
+          "como": "Dejá el F arriba y bajá el resto al voicing de tríada mayor.",
+          "porque": "El b9 del dominante es la fundamental del bVI, así que esa voz no se mueve; el G# baja a A y el D baja a C, dos semitonos descendentes."
+        },
+        {
+          "como": "Bajá el B a A sin tocar la fundamental ni la quinta.",
+          "porque": "La cuarta resuelve un semitono abajo a la tercera menor, que es el movimiento que define la tonalidad; al no moverse las otras voces, la atención queda en esa sola nota."
+        },
+        {
+          "como": "Mantené D y F y bajá el bajo a Bb.",
+          "porque": "El bVI contiene la fundamental y la tercera del i, así que dos de tres voces quedan fijas y el cambio ocurre sólo en el bajo por tercera descendente."
+        },
+        {
+          "como": "Cruzá a la cuerda siguiente conservando el mismo traste relativo, seis semitonos arriba.",
+          "porque": "La quinta disminuida entre las fundamentales no tiene resolución implícita, y eso permite alternar los dos acordes indefinidamente sin que ninguno funcione como tónica."
+        },
+        {
+          "como": "Sostené G y Bb y bajá el bajo una tercera mayor.",
+          "porque": "Las dos voces superiores son la tercera y la quinta del bVI, así que sólo se mueve la fundamental; a tempo lento eso mantiene la continuidad armónica."
+        },
+        {
+          "como": "Bajá la forma un semitono al final de la frase.",
+          "porque": "La fundamental queda medio tono abajo de la tónica y funciona como sensible sin tercera, lo que fuerza el retorno al i por movimiento ascendente de semitono."
+        }
+      ],
+      "licks": [
+        {
+          "nombre": "Riff frigio en Mi",
+          "nota": "Tónica y b2 en la cuerda grave, con palm mute. La forma es la misma corrida un traste."
+        },
+        {
+          "nombre": "Galope con tritono",
+          "nota": "El traste 6 de la sexta cuerda es la b5 (Sib). Entra y sale rápido: es un golpe, no un lugar."
+        },
+        {
+          "nombre": "Riff frigio en E con palm mute",
+          "nota": "Todo en la sexta cuerda: el F del primer traste es la segunda menor, y alternarlo con la tónica al aire es lo que produce el roce frigio. Púa hacia abajo y palm mute."
+        },
+        {
+          "nombre": "Galope eólico en E",
+          "nota": "Tres golpes en la tónica al aire, que es la figura de galope, y después un giro G-F# y un salto a A-B. La séptima menor y la sexta mayor son las que dan el aire épico."
+        },
+        {
+          "nombre": "Riff en A frigio, quinta posición",
+          "nota": "Alterna la tónica con el Bb, la segunda menor, y después sube a E-F en la quinta cuerda: el mismo semitono repetido en otra octava refuerza el color del modo."
+        },
+        {
+          "nombre": "Lead de menor armónica en A",
+          "nota": "Sube por la escala hasta el G#, la séptima mayor, que resuelve a la tónica un semitono arriba. El salto F-G# es una segunda aumentada y es lo que suena neoclásico."
+        },
+        {
+          "nombre": "Riff de tritono en E locrio",
+          "nota": "El Bb del sexto traste es la quinta bemol: alternarlo con la tónica al aire deja el tritono expuesto. Al final baja A-G-F para aterrizar en la segunda menor."
+        },
+        {
+          "nombre": "Pedal en D frigio",
+          "nota": "La cuarta cuerda al aire funciona como pedal y entre golpe y golpe entran Eb, F y G: la nota fija hace que todo lo demás se escuche como tensión contra la tónica."
+        },
+        {
+          "nombre": "Frigio abierto en Mi",
+          "nota": "El semitono entre fundamental y segunda menor aparece en las dos primeras notas y marca el modo desde el arranque. El resto asciende por grados conjuntos hasta la octava sin tocar ninguna nota alterada."
+        },
+        {
+          "nombre": "Frigio dominante en Mi",
+          "nota": "La segunda menor y la tercera mayor forman un intervalo de tercera menor entre sí, y ese salto es lo que separa este modo del frigio. La tercera mayor lo vuelve compatible con un acorde dominante sobre la tónica."
+        },
+        {
+          "nombre": "Menor armónica en La",
+          "nota": "El tramo final G#–A resuelve la sensible a la tónica por semitono. Entre la sexta menor y la séptima mayor hay una segunda aumentada, el salto de tono y medio que caracteriza la escala."
+        },
+        {
+          "nombre": "Locrio en Si",
+          "nota": "La quinta disminuida está en la mitad de la frase y nunca se resuelve hacia arriba, así que la tónica no se afirma. La segunda menor inicial refuerza la inestabilidad desde el primer intervalo."
+        },
+        {
+          "nombre": "Tonos enteros en Do",
+          "nota": "Todos los intervalos son de un tono, así que no hay semitonos que orienten el oído hacia una tónica. Llegar a la octava después de seis pasos iguales cierra la frase por simetría y no por resolución."
+        },
+        {
+          "nombre": "Disminuida semitono-tono en Re",
+          "nota": "El patrón alterna semitono y tono, así que cada par de notas repite el mismo diseño una tercera menor arriba. Eso permite mover la frase en bloques de tres trastes sin salir de la escala."
+        },
+        {
+          "nombre": "Pentatónica alta en Fa#",
+          "nota": "Sin segundas ni sextas, todos los intervalos son de tono o tercera menor y la frase no roza ningún semitono. El bend sobre la cuarta la empuja hacia la quinta, que es el único apoyo estable de la escala junto a la tónica."
+        },
+        {
+          "nombre": "Eólico en Do, zona media",
+          "nota": "La sexta menor y la séptima menor están a un tono entre sí y evitan cualquier sensible, así que la tónica se sostiene por repetición y no por atracción. La frase sube por grados conjuntos hasta la octava."
+        }
+      ]
+    },
+    "country": {
+      "nombre": "Country",
+      "resumen": "Mayor y luminoso, con bends que imitan al pedal steel y bajos que caminan entre acordes.",
+      "progresiones": [
+        {
+          "nota": "El esqueleto. Lo que lo hace country no son los acordes sino cómo se llega a ellos: caminando con el bajo."
+        },
+        {
+          "nota": "Con el V antes del IV, que le da el balanceo de honky-tonk."
+        },
+        {
+          "nota": "La balada. El vi abre el espacio para la letra triste."
+        },
+        {
+          "nota": "Los tres acordes básicos en el orden más directo. En country el interés no está en la armonía sino en lo que hace el bajo entre acorde y acorde."
+        },
+        {
+          "nota": "Vuelve a la tónica antes de la dominante, así que la estrofa respira dos veces en el I. El V del final queda abierto para repetir."
+        },
+        {
+          "nota": "Ciclo de cuartas típico del western swing: cada acorde está una cuarta arriba del anterior y eso da movimiento constante para improvisar por acordes."
+        },
+        {
+          "nota": "Convertir la tónica en dominante antes del IV agrega la séptima menor, que resuelve un semitono abajo a la tercera del IV. Es el empujón clásico al cuarto grado."
+        },
+        {
+          "nota": "El II7 es la dominante de la dominante: mete una tercera mayor ajena al tono y encadena dos dominantes seguidas, sonido honky-tonk de bar."
+        },
+        {
+          "nota": "Cadencia de swing: el I6 en lugar de la tríada simple agrega la sexta, que suaviza el cierre y es la voz típica de las guitarras de western swing."
+        },
+        {
+          "nota": "El bajo camina por grados en lugar de saltar entre fundamentales: el slash chord permite mover el bajo sin cambiar de armonía."
+        },
+        {
+          "nota": "Préstamo mixolidio muy usado en country rock: el bVII reemplaza la dominante y deja la progresión sin semitono de resolución, más relajada."
+        },
+        {
+          "nota": "Cadena completa de dominantes secundarias: cada acorde prepara al siguiente. Sirve de turnaround largo al final de la estrofa."
+        },
+        {
+          "nota": "Las mismas tres funciones con voces extendidas: sextas y novenas en lugar de tríadas. Es el color de las orquestas de western swing, más jazz que folk."
+        },
+        {
+          "nota": "El iii comparte tercera y quinta con el I, así que el bajo sube un tercera mayor sin mover las voces internas. El sus4 retrasa la tercera del V un tiempo y la resolución 4–3 cae justo antes de volver al I."
+        },
+        {
+          "nota": "El IV y el ii7 comparten tres notas, por eso el paso entre ellos se siente como un cambio de bajo más que como un cambio de acorde. La séptima del ii7 baja un semitono a la tercera del V7 y el círculo se cierra solo."
+        },
+        {
+          "nota": "La tercera del V es la fundamental del vi, así que el movimiento V–vi es una nota común que se convierte en raíz. El IV final deja la sexta del tono en el bajo del acorde anterior resuelta hacia abajo por tercera."
+        },
+        {
+          "nota": "Arrancar en IV pone la tónica en la quinta del acorde, lo que deja la resolución pendiente hasta el tercer compás. El vi final es el relativo menor del I: cambian una sola voz y el ciclo puede repetirse sin cadencia."
+        },
+        {
+          "nota": "La séptima menor agregada al I lo convierte en dominante del IV y baja por semitono a la tercera de ese acorde. El iv prestado baja la sexta mayor del tono a sexta menor, y esa nota empuja por semitono hacia la quinta del I cuando vuelve."
+        },
+        {
+          "nota": "El bIII trae la tercera menor del tono como fundamental y choca a propósito con la tercera mayor del I. Su quinta es la fundamental del IV, así que el enlace se resuelve por nota común y el bajo sube por tono."
+        },
+        {
+          "nota": "El I6 y el vi7 tienen las mismas cuatro notas: solo cambia cuál está en el bajo. Desde ahí el círculo de quintas descendente encadena séptimas que bajan por semitono, y la trece del V agrega la tercera del tono arriba de la dominante."
+        },
+        {
+          "nota": "La séptima mayor del I se sostiene como quinta del vi7, así que la voz superior queda quieta dos acordes. El 6/9 sobre el IV evita la séptima y mantiene la sonoridad abierta hasta que la novena del V pide el regreso al I."
+        },
+        {
+          "nota": "Cada acorde es dominante del siguiente, y las séptimas bajan por semitono en cadena hasta la tercera del acorde que sigue. Al ser todos mayores, cada raíz introduce una nota ajena al tono que se justifica por la resolución inmediata."
+        },
+        {
+          "nota": "El disminuido cromático pone la fundamental un semitono debajo del ii7 y empuja el bajo hacia arriba. Sus notas son todas terceras menores, así que funciona como dominante de paso sin definir tonalidad propia."
+        },
+        {
+          "nota": "El bVII baja la séptima del tono un semitono y crea un giro modal mixolidio. Su tercera es la fundamental del IV, por eso el descenso bVII–IV–I suena como una cadena de quintas hacia abajo."
+        },
+        {
+          "nota": "El bVII aparece después del V, así que la sensible se escucha primero y luego se cancela por semitono. El bajo baja por tono y por cuarta, y el IV final queda como reposo suspendido en vez de cadencia."
+        },
+        {
+          "nota": "Sin terceras, los tres acordes son solo fundamental y quinta, y la progresión queda ambigua entre mayor y menor. El movimiento es paralelo por cuartas, por eso la conducción de voces es un traslado de bloque y no un enlace."
+        }
+      ],
+      "transiciones": [
+        {
+          "como": "Walk-up por el bajo",
+          "porque": "En vez de saltar, caminás las notas intermedias en las cuerdas graves. El oyente llega al acorde antes que vos."
+        },
+        {
+          "como": "Con doble cuerda",
+          "porque": "Resolvé tocando dos cuerdas a la vez en intervalo de tercera o sexta: es el sonido de dos guitarras o del pedal steel."
+        },
+        {
+          "como": "Bend de tercera",
+          "porque": "Estirá la segunda hasta la tercera mayor mientras sostenés otra cuerda fija. Eso imita el pedal."
+        },
+        {
+          "como": "Walk-up cromático en el bajo",
+          "porque": "Subir del I al IV pasando por las notas intermedias llena el compás y anuncia el cambio antes de que llegue. El acorde no cambia hasta el final del recorrido."
+        },
+        {
+          "como": "Dominante secundaria",
+          "porque": "La séptima menor agregada a la tónica resuelve un semitono abajo a la tercera del IV. Convierte una llegada neutra en una resolución."
+        },
+        {
+          "como": "Cierre con dobles cuerdas",
+          "porque": "Tocar la tercera y la sexta del acorde juntas duplica la conducción de voces: dos líneas resolviendo en paralelo suenan como una sección de dos guitarras."
+        },
+        {
+          "como": "Cadena de dominantes",
+          "porque": "Cada dominante resuelve a la siguiente por cuartas, así que el oído siempre tiene a dónde ir. Es lo que mantiene el swing en movimiento."
+        },
+        {
+          "como": "Plagal con relleno",
+          "porque": "El cierre plagal no tiene tensión propia, así que se rellena con un lick de dobles cuerdas: el interés lo aporta la línea, no la armonía."
+        },
+        {
+          "como": "Salto al relativo menor",
+          "porque": "Comparten dos notas, así que el puente cambia de ánimo sin modular. El bajo baja una tercera y la sección se vuelve más introspectiva."
+        },
+        {
+          "como": "Bend de pedal steel",
+          "porque": "Subir la cuarta hasta la quinta con un bend mientras suena otra nota fija imita el efecto del pedal steel: una voz se mueve y la otra se queda quieta."
+        },
+        {
+          "como": "Cadencia mixolidia",
+          "porque": "El bajo sube un tono entero en vez de un semitono. Cierra sin la formalidad del V7 y por eso suena más campero y menos de salón."
+        },
+        {
+          "como": "En el último tiempo del V7 poné la tercera del acorde en el bajo y subí un semitono a la fundamental del iii.",
+          "porque": "La tercera del V7 es la séptima del iii, así que el cambio se hace por nota común y solo el bajo se mueve."
+        },
+        {
+          "como": "Sobre el IV agregá la fundamental del tono en la voz superior y bajala un semitono cuando entra el iv.",
+          "porque": "Esa nota es la quinta del IV y se vuelve tercera menor del iv, de modo que el pasaje se define con un solo semitono."
+        },
+        {
+          "como": "Reemplazá el V final por el III7 y entrá a la cadena de dominantes desde ahí.",
+          "porque": "El III7 y el V comparten la quinta del tono, y la séptima nueva del III7 baja por semitono a la tercera del VI7."
+        },
+        {
+          "como": "Dejá la sexta del I6 quieta y subila un semitono para convertirla en séptima mayor.",
+          "porque": "Las dos progresiones comparten el vi7, así que la única voz que cambia es la que define la calidad del primer acorde."
+        },
+        {
+          "como": "En lugar de volver al I después del bVII, subí el bajo una tercera menor desde la tónica al bIII.",
+          "porque": "El bVII y el bIII comparten dos notas, y la tercera menor que trae el bIII ya estaba presente como séptima del bVII."
+        },
+        {
+          "como": "Sacá las terceras de los tres acordes y mantené solo fundamental y quinta.",
+          "porque": "Al quedar sin tercera, los acordes pierden función y la progresión pasa a leerse como movimiento paralelo de quintas."
+        },
+        {
+          "como": "En vez del disminuido cromático, bajá la fundamental una tercera menor al vi7 y agregá la sexta al I.",
+          "porque": "El I6 ya contiene las cuatro notas del vi7, así que el reemplazo no mueve ninguna voz interna."
+        },
+        {
+          "como": "Desde el vi bajá la fundamental un tono hasta el V y seguí con el descenso al bVII.",
+          "porque": "El vi y el V comparten la séptima del tono como nota común, y desde el V el bVII cancela esa misma nota por semitono."
+        },
+        {
+          "como": "Cambiá el bIII por el V manteniendo la quinta del tono, que está en los dos acordes.",
+          "porque": "El bIII usa la tercera menor y el V la sensible: sustituir uno por otro mueve una sola voz un semitono en cada dirección."
+        },
+        {
+          "como": "Sacá la novena del V y bajá la séptima mayor del I a la sexta y después a la quinta.",
+          "porque": "El IV6/9 y el ii7 comparten fundamental y quinta del IV, por eso la reducción a acordes de cuatro notas no rompe la línea del bajo."
+        }
+      ],
+      "licks": [
+        {
+          "nombre": "Doble cuerda en Sol",
+          "nota": "Terceras sobre la tónica. Tocá las dos cuerdas juntas, es el sonido de dos guitarras."
+        },
+        {
+          "nombre": "Walk-up de Sol a Do",
+          "nota": "Las notas que conectan un acorde con el siguiente, en las cuerdas graves. Termina en el Do del acorde que llega."
+        },
+        {
+          "nombre": "Chicken pickin' en G",
+          "nota": "Sube D-E-G-A-B y baja por el mismo camino, todo en tercera posición. El sonido lo da la mano derecha: nota apagada con la palma y después pellizcada con el dedo."
+        },
+        {
+          "nombre": "Bend de pedal steel en A",
+          "nota": "El bend del E al F# en la segunda cuerda, con las notas vecinas quietas, imita el pedal del steel: una voz sube y las otras sostienen el acorde."
+        },
+        {
+          "nombre": "Walk-up abierto en E",
+          "nota": "Escalera ascendente que atraviesa cuatro cuerdas desde la sexta al aire: sirve de introducción porque va sumando registro hasta llegar al acorde."
+        },
+        {
+          "nombre": "Walk-up mixolidio en D",
+          "nota": "Sube por grados conjuntos desde la cuarta cuerda al aire hasta el D de la segunda: el C natural de la séptima menor es el que le saca formalidad al recorrido."
+        },
+        {
+          "nombre": "Honky-tonk en C con bend",
+          "nota": "El bend sube un tono del G al A y después la frase cae a la caja de octava posición. El pull-off del final le da el ataque irregular típico del estilo."
+        },
+        {
+          "nombre": "Frase de swing en G mixolidio",
+          "nota": "Incluye el F natural, séptima menor, que es la nota que hace que la frase suene sobre un G7 y no sobre un G mayor. Termina con pull-off para ligar el final."
+        },
+        {
+          "nombre": "Rodada de pentatónica en tercera cuerda",
+          "nota": "La frase encadena terceras mayores y menores de la pentatónica sin tocar la cuarta ni la séptima, así que ningún grado pide resolución. El salto final de sexta menor entre cuerdas deja la quinta del acorde arriba."
+        },
+        {
+          "nombre": "Ascenso mixolidio sobre dominante",
+          "nota": "El ascenso pasa por la séptima menor y la tercera mayor en la misma frase, que es el par de intervalos que define la dominante. La sexta mayor entra como paso conjunto y evita el salto de tritono directo."
+        },
+        {
+          "nombre": "Escala jónica en posición octava",
+          "nota": "La línea sube por grados conjuntos y usa la cuarta como apoyatura que baja a la tercera. La séptima mayor aparece antes de la tónica, así que el semitono final define el reposo."
+        },
+        {
+          "nombre": "Arranque honky-tonk en cuerdas graves",
+          "nota": "El tramo cromático entre la segunda mayor y la tercera mayor pasa por la tercera menor, que funciona como nota de paso y no como grado estable. Al terminar en la sexta mayor la frase queda abierta hacia la dominante."
+        },
+        {
+          "nombre": "Dórico en pares de trastes",
+          "nota": "Cada cuerda aporta dos notas separadas por un tono, lo que reparte la escala en segundas mayores y evita semitonos consecutivos. La sexta mayor es lo que diferencia este pasaje de un menor natural."
+        },
+        {
+          "nombre": "Bebop mayor con quinta menor de paso",
+          "nota": "La sexta menor se intercala entre la quinta y la sexta mayor, de modo que el tramo queda cromático y los grados estables caen en tiempo fuerte. La séptima mayor queda para la nota final y cierra el semitono hacia la tónica."
+        },
+        {
+          "nombre": "Pentatónica abierta con cuerdas al aire",
+          "nota": "Las cuerdas al aire duplican grados de la escala en otra octava, así que la línea alterna registros sin cambiar de posición. Sin cuarta ni séptima, cualquier orden de las notas sigue sonando consonante sobre el acorde de tónica."
+        },
+        {
+          "nombre": "Subida mixolidia hacia la novena",
+          "nota": "La frase sube desde la cuarta hasta la segunda mayor de la octava siguiente, pasando por la tercera mayor y la séptima menor. Ese par de notas es el intervalo de tritono del acorde dominante y es lo que le da el empuje."
+        }
+      ]
+    },
+    "western": {
+      "nombre": "Dark Western",
+      "resumen": "Menor armónica, trémolo y reverb de muelle. El desierto antes del duelo.",
+      "progresiones": [
+        {
+          "nota": "El bucle de Morricone. Ese A7 con la sensible viene de la menor armónica y es lo que pone el peligro."
+        },
+        {
+          "nota": "Péndulo frigio. No va a ningún lado: se mece, y esa quietud es la tensión."
+        },
+        {
+          "nota": "La cadencia trágica completa."
+        },
+        {
+          "nota": "El bVI y el V7 están a un semitono: esa caída del bajo es el gesto que define el sonido. El V7 trae la séptima mayor prestada de la menor armónica."
+        },
+        {
+          "nota": "Cadencia reducida al mínimo. Se usa como final de tema porque concentra toda la tensión en el semitono descendente del bajo."
+        },
+        {
+          "nota": "Descenso andaluz completo: tres grados del eólico bajando y el V mayor al final. El G# del dominante contra el G natural anterior da el contraste característico."
+        },
+        {
+          "nota": "Péndulo de dos acordes: se alterna tensión y reposo sin avanzar. Al no haber tercer acorde la sensación es de espera, justo lo que se busca en pasajes de suspenso."
+        },
+        {
+          "nota": "Balanceo frigio: el bII a un semitono de la tónica se pone y se saca. No hay progresión, hay roce, y eso alcanza para sostener una sección entera."
+        },
+        {
+          "nota": "Sube por terceras hasta el bVI y cae al V7. La primera mitad suena mayor y la segunda cierra la puerta con la dominante: el cambio de luz es el recurso."
+        },
+        {
+          "nota": "La b9 está a un semitono de la tónica y suena a disminuido; después el bVI abre el registro. El ciclo alterna angustia y amplitud."
+        },
+        {
+          "nota": "Línea descendente sobre bajo fijo: la voz superior baja por semitonos mientras la tónica no se mueve. Cada paso cambia el color sin cambiar de acorde."
+        },
+        {
+          "nota": "El bII entre el bVI y el V7 agrega una segunda tensión: dos acordes ajenos seguidos antes de la dominante hacen que la resolución final pese más."
+        },
+        {
+          "nota": "El bVI y el iv comparten dos notas, así que el bajo baja una tercera mayor con mínima conducción. Desde el bVI la fundamental cae un semitono a la del V7, y la sensible cierra el semitono hacia la tónica."
+        },
+        {
+          "nota": "Poner el bVI antes del iv deja la sexta menor en el bajo y retarda la subdominante. La séptima del V7 baja por semitono a la tercera del i y la sensible sube, por eso la cadencia cierra con dos semitonos opuestos."
+        },
+        {
+          "nota": "Los tres acordes suben por grados conjuntos y ninguno trae sensible, así que la llegada al i es modal y no cadencial. El bVII contiene la séptima menor, que sube un tono entero a la tónica en vez de un semitono."
+        },
+        {
+          "nota": "El aumentado es la tríada de la tercera menor con la quinta subida un semitono, y esa nota es la sensible del tono. Al estar en terceras mayores superpuestas no define fundamental, por eso puede caer tanto en el iv como en el V7."
+        },
+        {
+          "nota": "El bajo desciende por grados conjuntos mientras las voces de arriba quedan fijas sobre las notas del i. Cada nota del bajo pasa a ser séptima, quinta y después fundamental, así que un mismo acorde cambia de función tres veces."
+        },
+        {
+          "nota": "Dos acordes mayores y menores a distancia de tono entero, sin sensible y sin cadencia: la repetición sostiene el pulso en lugar de resolver. La tercera menor del i baja un semitono a la séptima del bVII y vuelve a subir."
+        },
+        {
+          "nota": "El iv y el bVI comparten tercera y quinta, así que el arranque es un cambio de bajo sobre la misma sonoridad. El paso bVI–V7 baja la fundamental un semitono, que es el movimiento más fuerte de toda la progresión."
+        },
+        {
+          "nota": "La séptima mayor del bII es la sensible del tono, por eso ese acorde ya contiene la nota que empuja al i. Su fundamental está un semitono arriba de la tónica y un cuarta arriba de la del V7, lo que permite las dos resoluciones."
+        },
+        {
+          "nota": "La sexta del iv es la sensible del tono anticipada dentro de un acorde menor. La novena aumentada del V7 es enarmónica con la tercera menor del i, así que el acorde de dominante ya trae el color menor de la resolución."
+        },
+        {
+          "nota": "El bVII y el bVI se alternan a distancia de tono y ninguno contiene sensible, por eso el bloque puede repetirse sin pedir cierre. Los tres acordes se explican por la escala menor natural y comparten al menos una nota de a pares."
+        },
+        {
+          "nota": "El bIII es el relativo mayor y comparte dos notas con el i, así que la progresión arranca con una sola voz moviéndose. Después el bajo sube por segundas y terceras hasta el V7, cuya sensible es la única nota ajena a la escala menor natural."
+        },
+        {
+          "nota": "El ii de la menor armónica es semidisminuido porque su quinta es la sexta menor del tono. Esa misma nota reaparece como b13 del V7 y baja un semitono a la quinta del i."
+        },
+        {
+          "nota": "Las fundamentales bajan por tono, tono y semitono, y cada acorde mantiene la estructura de séptima de dominante. Los tritonos se desplazan en paralelo, así que ninguno resuelve hasta que el V7 llega a la tónica."
+        },
+        {
+          "nota": "Sin terceras solo quedan fundamentales y quintas, de modo que la sonoridad es la línea de bajo y nada más. El perfil sexta menor–séptima menor–tónica define el modo aunque no haya ningún acorde completo."
+        },
+        {
+          "nota": "Es un círculo de quintas descendente dentro de la menor natural, así que cada séptima baja por semitono a la tercera del acorde siguiente. El V7 rompe la serie al subir la sensible y corta el descenso."
+        }
+      ],
+      "transiciones": [
+        {
+          "como": "Aproximación descendente",
+          "porque": "De Bb a A7 baja medio tono. Es la mecha: el V7 ya está cargado y sólo falta que caiga."
+        },
+        {
+          "como": "Resolución con sensible",
+          "porque": "El Do# del A7 empuja al Re. Esa nota no está en la menor natural: por eso se usa la armónica."
+        },
+        {
+          "como": "Tritono del cazador",
+          "porque": "Salto directo sin preparación, como un disparo. Sirve para cortar la frase en seco."
+        },
+        {
+          "como": "Descenso de semitono",
+          "porque": "La fundamental baja medio tono y el acorde pasa de reposo a máxima tensión. Es el movimiento más reconocible del estilo y funciona incluso sin tónica después."
+        },
+        {
+          "como": "Cadencia de menor armónica",
+          "porque": "La séptima mayor del dominante resuelve un semitono arriba a la tónica. Esa nota no existe en el menor natural y es lo que hace que el cierre suene antiguo y definitivo."
+        },
+        {
+          "como": "Apertura por terceras",
+          "porque": "Comparten dos notas, así que el cambio no modula: solo ensancha el registro. Sirve para pasar de un pasaje tenso a uno de paisaje."
+        },
+        {
+          "como": "Péndulo sin resolver",
+          "porque": "Repetir tensión y reposo sin agregar acordes deja la armonía congelada. Queda la sensación de que algo está por pasar y no pasa."
+        },
+        {
+          "como": "Cadencia frigia",
+          "porque": "El bajo baja un semitono hasta la tónica sin usar dominante. Como no hay tritono, el cierre suena áspero en lugar de resuelto."
+        },
+        {
+          "como": "Tensión disminuida",
+          "porque": "Las cuatro notas superiores del acorde forman un disminuido y la b9 está a un semitono de la tónica: dos voces resuelven por semitono al mismo tiempo."
+        },
+        {
+          "como": "Subdominante menor",
+          "porque": "Sube una cuarta manteniendo la tercera menor. No hay notas nuevas, así que oscurece el pasaje sin sacarlo de la tonalidad."
+        },
+        {
+          "como": "Giro al relativo mayor",
+          "porque": "La tercera menor de la tónica pasa a ser fundamental y el color se aclara de golpe. Se usa para los temas principales, antes de volver al menor."
+        },
+        {
+          "como": "En vez de ir al iv, bajá la fundamental un tono y agregá séptima menor para armar el bVII7.",
+          "porque": "El iv y el bVII7 comparten dos notas, y la séptima nueva instala el patrón de dominantes paralelas que sigue bajando."
+        },
+        {
+          "como": "Al llegar al i volvé al bVI manteniendo la tónica en la voz superior, que es la tercera de ese acorde.",
+          "porque": "La tónica es nota común entre el i y el bVI, así que el retorno no interrumpe la voz de arriba y el ciclo se cierra sin cadencia."
+        },
+        {
+          "como": "Subí un semitono la quinta del bIII antes de pasar al iv.",
+          "porque": "Esa quinta se convierte en la sensible del tono, y el aumentado resultante ya apunta al V7 sin cambiar de fundamental."
+        },
+        {
+          "como": "Sacá las terceras de los dos acordes y sumá el bVI entre el i y el bVII.",
+          "porque": "Al quedar solo fundamental y quinta el contraste queda en el bajo, y el bVI completa el descenso por semitono desde la séptima menor."
+        },
+        {
+          "como": "Reemplazá el iv por el iim7b5, que es el mismo acorde con la fundamental bajada un tercera menor.",
+          "porque": "El iim7b5 contiene las notas del iv más la segunda del tono, y su quinta disminuida es la misma nota que después funciona como b13 del V7."
+        },
+        {
+          "como": "En lugar de bajar el bajo por grados, salteá al iv y seguí el círculo de quintas hasta el bVI.",
+          "porque": "Las dos versiones llegan al mismo bVI antes del V7, pero una mueve el bajo por segundas y la otra por cuartas ascendentes."
+        },
+        {
+          "como": "Sostené la sensible que trae el iv6 y usala como séptima mayor del bII.",
+          "porque": "Esa nota es común a los dos acordes, así que el cambio de fundamental de una cuarta no mueve la voz superior."
+        },
+        {
+          "como": "Invertí el orden de los dos acordes del medio para que el bajo suba una tercera mayor en vez de bajarla.",
+          "porque": "El iv y el bVI comparten tercera y quinta, así que el intercambio solo cambia qué nota queda en el bajo y cómo se llega al V7."
+        },
+        {
+          "como": "Saltá del bVII7 al bIII bajando la séptima del acorde a la tercera del siguiente.",
+          "porque": "El bVII7 es la dominante del bIII, y esa resolución por semitono corta la cadena de dominantes paralelas en un punto estable."
+        },
+        {
+          "como": "Dejá el bVI final como punto de partida y subí al bVII sin volver al i.",
+          "porque": "El ostinato ya contiene los dos acordes, así que la transición es solo dejar de repetir y cerrar el ascenso por grados conjuntos."
+        }
+      ],
+      "licks": [
+        {
+          "nombre": "Línea de menor armónica en Re",
+          "nota": "El salto de b6 a 7ma (traste 6 al 9 en la tercera cuerda) es la firma del estilo. Con trémolo."
+        },
+        {
+          "nombre": "Respuesta grave con slide",
+          "nota": "Notas largas en las cuerdas graves, con reverb de muelle al máximo."
+        },
+        {
+          "nombre": "Trémolo en A menor armónica",
+          "nota": "Gira alrededor de la tónica y sube a B y C; el G# de la segunda cuerda es la séptima mayor que empuja de vuelta a A. Se toca con trémolo de púa, una nota por vez."
+        },
+        {
+          "nombre": "Slide grave en E menor armónica",
+          "nota": "Sube por las dos cuerdas graves desde la sexta al aire: el D# del final es la séptima mayor y el slide hasta el E lo convierte en una llegada, no en una nota más."
+        },
+        {
+          "nombre": "Frase con séptima mayor en D",
+          "nota": "El C# es la séptima mayor de la menor armónica: aparece dos veces, primero como aproximación desde abajo y al final colgando a un semitono de la tónica."
+        },
+        {
+          "nombre": "Trémolo frigio en E",
+          "nota": "Alterna E y F, el semitono que define el modo, y después baja D-C-B para cerrar en la tónica. En posición abierta, con trémolo constante y mucha reverb."
+        },
+        {
+          "nombre": "Línea grave en A frigio",
+          "nota": "Sube A-Bb-C en la sexta cuerda y sigue por la quinta hasta el F: los dos semitonos del modo aparecen seguidos y el regreso cierra en la tónica."
+        },
+        {
+          "nombre": "Frigio dominante en E",
+          "nota": "Tiene el bII frigio y la tercera mayor al mismo tiempo: el salto F-G# es una segunda aumentada y es lo que suena a desierto. Cierra bajando hasta la tónica."
+        },
+        {
+          "nombre": "Menor armónica con salto de segunda aumentada",
+          "nota": "El paso de la sexta menor a la séptima mayor es una segunda aumentada, el intervalo que separa esta escala del menor natural. La frase la cruza dos veces, así que la tensión no se disuelve aunque el contorno sea ascendente."
+        },
+        {
+          "nombre": "Frigio dominante en posición abierta",
+          "nota": "La segunda menor y la tercera mayor conviven en la misma frase, y ese semitono sobre la tónica es lo que fuerza el sonido de dominante. El salto de la segunda menor a la tercera mayor abre una segunda aumentada en el registro grave."
+        },
+        {
+          "nombre": "Ascenso frigio sobre pedal",
+          "nota": "La escala trae segunda menor y sexta menor, así que hay dos semitonos que empujan hacia abajo aunque la línea suba. La frase termina en la séptima menor y deja el descenso de tono hacia la tónica pendiente."
+        },
+        {
+          "nombre": "Eólico por grados conjuntos",
+          "nota": "Tres notas por cuerda en segundas mayores y menores, sin sensible, así que la octava se completa sin ninguna atracción hacia la tónica. El semitono entre quinta y sexta menor es el único punto de tensión y cae en el medio de la frase."
+        },
+        {
+          "nombre": "Pentatónica menor con bend en la séptima",
+          "nota": "La pentatónica menor deja fuera la segunda y la sexta, por eso el contorno queda en cuartas y terceras menores sin semitonos. El bend sube la quinta hacia la séptima menor, que es el intervalo que carga la frase."
+        },
+        {
+          "nombre": "Dórico ascendente en registro medio",
+          "nota": "La sexta mayor sobre una tercera menor es lo que separa este pasaje del menor natural y le quita la caída del semitono. La línea sube por grados conjuntos y termina en la cuarta, que queda suspendida sobre el acorde de tónica."
+        },
+        {
+          "nombre": "Menor armónica hacia la sensible",
+          "nota": "La frase sube desde la tónica hasta la séptima mayor pasando por la sexta menor, así que el último tramo es una segunda aumentada seguida de semitono. Ese cierre deja la sensible apuntando a la tónica una octava arriba."
+        },
+        {
+          "nombre": "Descenso frigio dominante",
+          "nota": "Bajar la escala pone la segunda menor justo antes de la tónica, y ese semitono descendente es la resolución más fuerte del modo. La sexta menor y la tercera mayor forman una segunda aumentada que aparece al cruzar de cuerda."
+        }
+      ]
+    }
+  },
+  "emociones": {
+    "sensual": {
+      "nombre": "Sensual",
+      "resumen": "Terciopelo: acordes anchos, sin aristas, que se quedan flotando.",
+      "comoUsar": "Agregá la 9na y dejá el acorde sonar. Tocá poco y lento: lo sensual está en el espacio que dejás, no en las notas que metés. Evitá la fundamental en la melodía — buscá la 9na y la 6ta, que son las que dan ese aire."
+    },
+    "melancolico": {
+      "nombre": "Melancólico",
+      "resumen": "La nostalgia de lo que no volvió: menores con séptima, sin dramatismo.",
+      "comoUsar": "El m7 es el punto de partida. Si querés apretar el nudo, pasá un compás por mmaj7: esa séptima mayor adentro de un menor es la que duele. Frases descendentes y notas largas."
+    },
+    "tenso": {
+      "nombre": "Tenso / inquietante",
+      "resumen": "Algo está por pasar: dominantes alterados y disminuidos que no dejan respirar.",
+      "comoUsar": "Meté el acorde alterado justo ANTES de resolver, nunca sobre el reposo. La tensión sirve si después soltás: un compás tenso y resolvés al siguiente. Si la dejás mucho, deja de ser tensión y pasa a ser ruido."
+    },
+    "luminoso": {
+      "nombre": "Luminoso / épico",
+      "resumen": "Cielo abierto: mayores con 9na y esa #11 que levanta todo.",
+      "comoUsar": "La nota clave es la #11 (la cuarta subida): es la que convierte un mayor común en algo cinematográfico. Dejala sonar arriba de todo, en la voz más aguda."
+    },
+    "oscuro": {
+      "nombre": "Oscuro / amenazante",
+      "resumen": "Sin adornos y con la segunda bemol: peso, tierra, amenaza.",
+      "comoUsar": "Menos notas, más abajo. Sacá las extensiones: acá el acorde desnudo o directo la quinta sola pesa más que cualquier color. La b2 es la que da el sabor: usala como nota de arranque de la frase."
+    },
+    "nostalgico": {
+      "nombre": "Nostálgico / cálido",
+      "resumen": "Foto vieja: séptimas mayores y sextas, todo redondo.",
+      "comoUsar": "La 6ta en vez de la 7ma le saca el peso jazzero y lo deja más cálido y viejo. Arpegios lentos, nada de bloques."
+    },
+    "swing": {
+      "nombre": "Con swing",
+      "resumen": "Que camine: dominantes con 13na y el cromatismo del bebop.",
+      "comoUsar": "Las escalas bebop tienen una nota cromática de más justamente para que, bajando corcheas, los tiempos fuertes caigan en notas del acorde. Tocá corcheas parejas y dejá que la nota de paso caiga en el tiempo débil: ahí aparece el balanceo."
+    },
+    "desgarrado": {
+      "nombre": "Desgarrado / blues",
+      "resumen": "El quejido: la tercera peleándose consigo misma.",
+      "comoUsar": "El truco del blues es tocar la tercera menor encima de un acorde con tercera mayor: esa fricción es el quejido. Bendeá la b3 hacia la 3ra mayor sin llegar del todo y quedate ahí."
+    }
+  },
+  "escalas": {
+    "jonico": {
+      "nombre": "Jónica (mayor)",
+      "sabor": "La mayor de toda la vida. Suena a casa, a resuelto."
+    },
+    "lidio": {
+      "nombre": "Lidia",
+      "sabor": "Mayor pero flotando: la #11 le da aire de banda sonora."
+    },
+    "mixolidio": {
+      "nombre": "Mixolidia",
+      "sabor": "Mayor con 7ma menor. Es la escala del dominante y del rock."
+    },
+    "lidioDominante": {
+      "nombre": "Lidia dominante",
+      "sabor": "Dominante con #11. Jazz moderno, sin el roce de la 4ta justa."
+    },
+    "eolico": {
+      "nombre": "Eólica (menor natural)",
+      "sabor": "El menor clásico, con la 6ta bemol que lo pone melancólico."
+    },
+    "dorico": {
+      "nombre": "Dórica",
+      "sabor": "Menor con 6ta mayor. Más luminoso: Santana, funk, jazz modal."
+    },
+    "frigio": {
+      "nombre": "Frigia",
+      "sabor": "Menor con b2. Sabor español y oscuro, muy tenso."
+    },
+    "frigioDominante": {
+      "nombre": "Frigia dominante",
+      "sabor": "La del flamenco y el metal oriental: b2 y 3ra mayor."
+    },
+    "locrio": {
+      "nombre": "Locria",
+      "sabor": "La del m7b5. Inestable por definición, no tiene reposo."
+    },
+    "menorArmonica": {
+      "nombre": "Menor armónica",
+      "sabor": "Menor con sensible. El salto de 6ta a 7ma es su firma."
+    },
+    "menorMelodica": {
+      "nombre": "Menor melódica",
+      "sabor": "Menor con 6ta y 7ma mayores. Suena a jazz cuando sube."
+    },
+    "alterada": {
+      "nombre": "Alterada (súper locria)",
+      "sabor": "Todas las tensiones alteradas juntas. Máxima tirantez antes de resolver."
+    },
+    "bebopDominante": {
+      "nombre": "Bebop dominante (swing)",
+      "sabor": "Mixolidia con la 7ma mayor de paso. Es EL sonido del swing sobre un dominante."
+    },
+    "bebopMayor": {
+      "nombre": "Bebop mayor (swing)",
+      "sabor": "Mayor con la b6 de paso. Swing sobre acordes de tónica mayor."
+    },
+    "bebopMenor": {
+      "nombre": "Bebop dórica (swing)",
+      "sabor": "Dórica con la 3ra mayor de paso. Swing sobre los menores del ii-V."
+    },
+    "bluesMayor": {
+      "nombre": "Blues mayor",
+      "sabor": "Pentatónica mayor + la b3 que roza. Suena dulce y sucia a la vez."
+    },
+    "pentaMayor": {
+      "nombre": "Pentatónica mayor",
+      "sabor": "Cinco notas, ninguna choca. Es la red de seguridad."
+    },
+    "pentaMenor": {
+      "nombre": "Pentatónica menor",
+      "sabor": "La del blues y el rock. Directa, sin notas incómodas."
+    },
+    "blues": {
+      "nombre": "Blues",
+      "sabor": "Pentatónica menor + la b5 de paso. El quejido."
+    },
+    "tonosEnteros": {
+      "nombre": "Tonos enteros",
+      "sabor": "Todo a distancia de tono: no hay centro, flota."
+    },
+    "disminuida": {
+      "nombre": "Disminuida (T-S)",
+      "sabor": "Simétrica, para los acordes disminuidos. Suspenso."
+    },
+    "disminuidaST": {
+      "nombre": "Disminuida (S-T)",
+      "sabor": "La misma simetría arrancando por el semitono: es la de los dominantes con b9. Te da b9, #9, #11 y 13 sin salirte."
+    }
+  },
+  "afinaciones": {
+    "guitarra": {
+      "estandar": "Mi estándar (E)",
+      "ebEstandar": "Mi bemol (Eb)",
+      "dEstandar": "Re estándar (D)",
+      "dropD": "Drop D",
+      "dropDb": "Drop Db",
+      "dropC": "Drop C",
+      "dropB": "Drop B",
+      "dropA": "Drop A",
+      "dadgad": "DADGAD",
+      "abiertoG": "Sol abierto (DGDGBD)"
+    },
+    "bajo": {
+      "estandar": "Mi estándar (E)",
+      "ebBajo": "Mi bemol (Eb)",
+      "dropD": "Drop D",
+      "dropC": "Drop C",
+      "bGrave": "5 cuerdas (B)"
+    }
+  }
+}

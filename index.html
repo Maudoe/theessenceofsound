@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Essence of Sound — mapas armónicos</title>
+<meta name="description" content="Explorador visual de mapas armónicos, progresiones y licks para músicos.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&family=Cinzel:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="css/style.css?v=40">
+</head>
+<body>
+
+<!-- ---------------- loader de entrada ---------------- -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-escena" id="loader-escena"></div>
+  <div class="loader-titulo" id="loader-titulo">
+    <p class="loader-titulo-linea1">The Essence</p>
+    <div class="loader-titulo-regla" aria-hidden="true"></div>
+    <p class="loader-titulo-linea2">of Sound</p>
+    <p class="loader-titulo-firma">— By Mau —</p>
+  </div>
+  <div class="loader-vineta" aria-hidden="true"></div>
+</div>
+
+<div class="cursor-antorcha" id="cursor-antorcha" aria-hidden="true"></div>
+
+<div id="fondo-3d" aria-hidden="true"></div>
+<div class="velo-global" aria-hidden="true"></div>
+
+<div class="envoltorio">
+
+  <header class="cabecera" id="cabecera">
+    <p class="lema" data-i18n="intro.lema">The Essence of Sound — by Mau</p>
+    <h1 class="logo-texto" data-i18n="intro.titulo">Mapas armónicos<span class="punto">.</span></h1>
+    <p class="intro" data-i18n="intro.texto">Progresiones, sustituciones y licks — con las notas escritas, flechas de a dónde va cada acorde, y todo separado por color.</p>
+    <div class="sel-idioma" id="sel-idioma"></div>
+  </header>
+
+  <nav class="nav" id="nav">
+    <button class="nav-btn activo" data-vista="estilos" data-i18n="nav.estilos">Estilos</button>
+    <button class="nav-btn" data-vista="explorar" data-i18n="nav.mapas">Mapas armónicos</button>
+    <button class="nav-btn" data-vista="aprender" data-i18n="nav.aprender">Aprender</button>
+    <button class="nav-btn" data-vista="acerca" data-i18n="nav.acerca">Cómo leer esto</button>
+  </nav>
+
+  <!-- ---------------- vista: explorar ---------------- -->
+  <section class="vista oculto" id="vista-explorar">
+
+    <div class="barra-filtros">
+      <input class="buscador" id="buscador" type="search" placeholder="Buscar por nombre, sensación o acorde (ej: “tritono”, “nostalgia”, “G7”)…" autocomplete="off">
+      <div class="chips" id="chips-coleccion">
+        <button class="chip activo" data-col="todas">Todas <span class="chip-n" id="n-todas"></span></button>
+        <button class="chip" data-col="armonia">Armonía &amp; Jazz <span class="chip-n" id="n-armonia"></span></button>
+        <button class="chip" data-col="country">Country &amp; Guitar Licks <span class="chip-n" id="n-country"></span></button>
+        <button class="chip" data-col="western">Dark Western <span class="chip-n" id="n-western"></span></button>
+      </div>
+    </div>
+
+    <div class="grilla-mapas" id="grilla-mapas"></div>
+    <nav class="paginacion" id="paginacion" hidden>
+      <button class="pag-flecha" id="pag-anterior" data-i18n-title="paginacion.anterior" title="Anterior">&lsaquo;</button>
+      <span class="pag-puntos" id="pag-puntos"></span>
+      <span class="pag-info" id="pag-info"></span>
+      <button class="pag-flecha" id="pag-siguiente" data-i18n-title="paginacion.siguiente" title="Siguiente">&rsaquo;</button>
+    </nav>
+    <div class="vacio oculto" id="vacio">
+      <div class="vacio-icono">♪</div>
+      <p data-i18n="buscador.vacio">No encontré ningún mapa con eso. Probá con otra palabra.</p>
+    </div>
+  </section>
+
+  <!-- ---------------- vista: detalle de un mapa ---------------- -->
+  <section class="vista oculto" id="vista-detalle">
+    <button class="volver" id="btn-volver"><span class="volver-flecha">←</span> <span data-i18n="volver.explorar">Volver a explorar</span></button>
+
+    <div class="detalle-cabeza">
+      <p class="detalle-coleccion" id="d-coleccion"></p>
+      <h2 class="detalle-nombre" id="d-nombre"></h2>
+      <p class="detalle-geometria" id="d-geometria"></p>
+    </div>
+
+    <div class="barra-grafo">
+      <div class="control-tonica">
+        <label for="sel-tonica" data-i18n="detalle.tonica">Tónica</label>
+        <select id="sel-tonica"></select>
+        <span class="tonica-original" id="tonica-original"></span>
+      </div>
+      <div class="control-vista">
+        <button class="vista-btn activo" data-modo="mapa" data-i18n="detalle.esteMapa">Este mapa</button>
+        <button class="vista-btn" data-modo="rueda" data-i18n="detalle.circuloQuintas">Círculo de quintas</button>
+      </div>
+    </div>
+
+    <div class="detalle-cuerpo">
+      <div class="detalle-grafo">
+        <svg id="svg-grafo" class="sh-svg"></svg>
+        <p class="grafo-pista" id="grafo-pista" data-i18n="grafoPista">
+          Pasá el mouse por un acorde para ver a dónde podés ir desde ahí ·
+          hacé click para fijarlo y ver cómo se toca.
+        </p>
+      </div>
+
+      <div class="detalle-lateral">
+        <div class="bloque bloque-explorar" id="bloque-explorar-wrap" hidden>
+          <div class="bloque-titulo"><span data-i18n="detalle.desde">Desde</span> <span id="d-explorar-acorde"></span> <span id="d-explorar-grado" class="explorar-grado"></span> <span data-i18n="detalle.podesIrA">podés ir a</span></div>
+          <ul class="lista-movimientos" id="lista-movimientos"></ul>
+        </div>
+
+        <div class="bloque">
+          <div class="bloque-titulo" data-i18n="detalle.proposito">Propósito</div>
+          <p class="detalle-texto" id="d-proposito"></p>
+        </div>
+
+        <div class="bloque">
+          <div class="bloque-titulo" data-i18n="detalle.sensacion">Sensación</div>
+          <p class="detalle-texto detalle-sensacion" id="d-sensacion"></p>
+        </div>
+
+        <div class="bloque" id="bloque-tecnica-wrap" hidden>
+          <div class="bloque-titulo" data-i18n="detalle.tecnica">Técnica / ejecución</div>
+          <p class="detalle-texto" id="d-tecnica"></p>
+        </div>
+
+        <div class="bloque">
+          <div class="bloque-titulo" data-i18n="detalle.coloresDelMapa">Colores del mapa</div>
+          <div class="leyenda-colores" id="leyenda-colores"></div>
+        </div>
+
+        <div class="bloque" id="bloque-conexiones-wrap" hidden>
+          <div class="bloque-titulo" data-i18n="detalle.recorridoAcordes">Recorrido de acordes</div>
+          <ol class="pasos" id="lista-conexiones"></ol>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+
+  <!-- ---------------- vista: estilos ---------------- -->
+  <section class="vista" id="vista-estilos">
+    <p class="seccion-intro" data-i18n="seccionIntroEstilos">Cada estilo con lo suyo: con qué acordes se arma, qué escalas van encima,
+    las transiciones que lo hacen sonar a eso y algunos licks en tablatura.</p>
+    <div class="grilla-estilos" id="grilla-estilos"></div>
+  </section>
+
+  <!-- ---------------- vista: detalle de un estilo ---------------- -->
+  <section class="vista oculto" id="vista-estilo">
+    <button class="volver" id="btn-volver-estilos"><span class="volver-flecha">←</span> <span data-i18n="volver.estilos">Volver a estilos</span></button>
+    <div class="estilo-cabeza">
+      <h2 class="estilo-nombre" id="e-nombre"></h2>
+      <p class="estilo-resumen" id="e-resumen"></p>
+    </div>
+    <div class="estilo-cuerpo" id="e-cuerpo"></div>
+  </section>
+
+  <!-- ---------------- vista: aprender ---------------- -->
+  <section class="vista oculto" id="vista-aprender">
+    <div class="aprender-cuerpo" id="aprender-cuerpo"></div>
+  </section>
+
+  <!-- ---------------- vista: cómo leer esto ---------------- -->
+  <section class="vista oculto" id="vista-acerca">
+    <div class="bloque bloque-acerca">
+      <div class="bloque-titulo" data-i18n="acerca.titulo">Cómo leer los gráficos</div>
+      <p class="detalle-texto" data-i18n="acerca.p1" data-i18n-html>
+        Cada gráfico muestra <strong>sólo los acordes que ese mapa usa</strong>, y
+        con la forma que el propio mapa declara: una estrella con la tónica
+        al centro, una grilla, un embudo que converge, una cascada que baja
+        en zigzag. Si un acorde no está en el dibujo, es porque no pertenece
+        a ese mapa — y por eso tampoco te lo va a ofrecer como salida.
+      </p>
+      <p class="detalle-texto" data-i18n="acerca.p2" data-i18n-html>
+        <strong>Pasá el mouse por un acorde</strong> y el resto se desenfoca:
+        quedan encendidos sólo los lugares a los que podés ir desde ahí,
+        dentro de este mismo gráfico. La lista de la derecha separa lo que
+        propone el mapa (con su propia explicación) de las otras relaciones
+        que existen entre esos acordes, y a cada uno le pone su grado — el
+        ii, el V7, el bVI — que es lo que te ubica de verdad.
+      </p>
+      <p class="detalle-texto" data-i18n="acerca.p3" data-i18n-html>
+        <strong>Hacé click</strong> para fijar un acorde y ver cómo se toca:
+        la digitación en guitarra y bajo, y las teclas en el piano. Las
+        posiciones se calculan desde las notas del acorde, buscando que la
+        fundamental quede en el bajo y que la mano llegue — el número
+        adentro de cada punto es el grado (1 la fundamental, 3 la tercera,
+        b7 la séptima menor…).
+      </p>
+      <p class="detalle-texto" data-i18n="acerca.p4" data-i18n-html>
+        Arriba del gráfico podés <strong>cambiar la tónica</strong>: el mapa
+        entero se transporta a esa tonalidad, acordes y notas incluidos, así
+        no terminás practicando siempre en Do. Y con
+        <strong>Círculo de quintas</strong> pasás a la vista de referencia,
+        donde se ve el sistema completo de las 12 tonalidades con esta
+        progresión encendida encima.
+      </p>
+      <p class="detalle-texto" data-i18n="acerca.p5" data-i18n-html>
+        Esto no reemplaza tocar y escuchar — es un mapa, no el territorio.
+        Sirve para tener una referencia visual rápida mientras improvisás o
+        armás una progresión nueva.
+      </p>
+    </div>
+  </section>
+
+</div>
+
+
+<!-- ---------------- modal: cómo tocar el acorde ---------------- -->
+<div class="modal-fondo" id="modal-instrumento" hidden>
+  <div class="modal-caja" role="dialog" aria-modal="true" aria-labelledby="d-instrumento-acorde">
+    <button class="modal-cerrar" id="btn-cerrar-instrumento" data-i18n-title="modalInstrumento.cerrar" title="Cerrar (Esc)">×</button>
+
+    <div class="modal-cima">
+      <div>
+        <h3 class="modal-titulo-acorde"><span data-i18n="modalInstrumento.comoTocar">Cómo tocar</span> <span id="d-instrumento-acorde"></span></h3>
+        <p class="instrumento-notas" id="d-instrumento-notas"></p>
+      </div>
+      <div class="instrumento-tabs" id="instrumento-tabs">
+        <button class="inst-tab activo" data-inst="guitarra" data-i18n="modalInstrumento.guitarra">Guitarra</button>
+        <button class="inst-tab" data-inst="piano" data-i18n="modalInstrumento.piano">Piano</button>
+        <button class="inst-tab" data-inst="bajo" data-i18n="modalInstrumento.bajo">Bajo</button>
+      </div>
+    </div>
+
+    <div class="modal-controles">
+      <label class="ctrl" id="ctrl-afinacion">
+        <span data-i18n="modalInstrumento.afinacion">Afinación</span>
+        <select id="sel-afinacion"></select>
+      </label>
+      <label class="ctrl">
+        <span data-i18n="modalInstrumento.escalaEncima">Escala encima</span>
+        <select id="sel-escala"></select>
+      </label>
+      <label class="ctrl">
+        <span data-i18n="modalInstrumento.queSuene">Que suene…</span>
+        <select id="sel-emocion"></select>
+      </label>
+      <div class="etiqueta-tabs" id="etiqueta-tabs">
+        <button class="etq-tab activo" data-mostrar="notas" data-i18n="modalInstrumento.notas">Notas</button>
+        <button class="etq-tab" data-mostrar="grados" data-i18n="modalInstrumento.grados">Grados</button>
+      </div>
+    </div>
+
+    <div class="instrumento-diagrama" id="instrumento-diagrama"></div>
+
+    <div class="instrumento-pie" id="instrumento-pie">
+      <div class="posiciones" id="posiciones-nav">
+        <button class="pos-flecha" id="pos-anterior" data-i18n-title="modalInstrumento.posicionAnterior" title="Posición anterior">&lsaquo;</button>
+        <span class="pos-info" id="pos-info"></span>
+        <button class="pos-flecha" id="pos-siguiente" data-i18n-title="modalInstrumento.posicionSiguiente" title="Posición siguiente">&rsaquo;</button>
+      </div>
+      <div class="leyenda-papeles" id="leyenda-papeles" hidden>
+        <span class="lp"><i class="lp-punto p-base"></i><span data-i18n="modalInstrumento.delAcorde">del acorde</span></span>
+        <span class="lp"><i class="lp-punto p-puente"></i><span data-i18n="modalInstrumento.puente">puente</span></span>
+        <span class="lp"><i class="lp-punto p-tension"></i><span data-i18n="modalInstrumento.tension">tensión</span></span>
+        <span class="lp"><i class="lp-punto p-resolucion"></i><span data-i18n="modalInstrumento.resuelve">resuelve</span></span>
+      </div>
+    </div>
+
+    <div class="color-emocional" id="color-emocional" hidden></div>
+    <div class="escala-explica" id="escala-explica" hidden></div>
+  </div>
+</div>
+
+<script src="js/idiomas.js?v=40"></script>
+<script src="js/i18n.js?v=40"></script>
+<script src="js/data.js?v=40"></script>
+<script src="js/chords.js?v=40"></script>
+<script src="js/colors.js?v=40"></script>
+<script src="js/transporte.js?v=40"></script>
+<script src="js/layouts.js?v=40"></script>
+<script src="js/graph.js?v=40"></script>
+<script src="js/escalas.js?v=40"></script>
+<script src="js/emociones.js?v=40"></script>
+<script src="js/estilos.js?v=40"></script>
+<script src="js/instrumentos.js?v=40"></script>
+<script src="js/rueda.js?v=40"></script>
+<script src="js/app.js?v=40"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js"></script>
+<script src="js/three-bg.js?v=40"></script>
+<script src="js/fx.js?v=40"></script>
+</body>
+</html>
