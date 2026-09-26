@@ -9,6 +9,33 @@
    Todo respeta prefers-reduced-motion: quien lo pide no ve nada de esto
    animado, va directo al contenido. */
 
+/* El anillo que se va llenando alrededor de un nodo mientras lo mantenés
+   apretado en touch — el reemplazo táctil del hover: en vez de pasar el
+   mouse para ver el preview de "a dónde puedo ir", en el celular lo
+   mantenés apretado hasta que el anillo se completa. Lo usan graph.js y
+   rueda.js, por eso vive acá como función global. */
+function crearAnilloPresion(g, duracionMs) {
+  const SVG_NS = "http://www.w3.org/2000/svg";
+  const circulo = g.querySelector(".sh-nodo-circulo");
+  if (!circulo) return null;
+  const r = Number(circulo.getAttribute("r") || 20) + 5;
+  const anillo = document.createElementNS(SVG_NS, "circle");
+  anillo.setAttribute("cx", circulo.getAttribute("cx"));
+  anillo.setAttribute("cy", circulo.getAttribute("cy"));
+  anillo.setAttribute("r", r);
+  anillo.setAttribute("class", "sh-anillo-presion");
+  const circunferencia = 2 * Math.PI * r;
+  anillo.style.strokeDasharray = String(circunferencia);
+  anillo.style.strokeDashoffset = String(circunferencia);
+  g.appendChild(anillo);
+  // fuerza el layout antes de animar, si no el navegador junta el estado
+  // inicial y el final en un solo frame y no se ve el llenado
+  anillo.getBoundingClientRect();
+  anillo.style.transition = `stroke-dashoffset ${duracionMs}ms linear`;
+  requestAnimationFrame(() => { anillo.style.strokeDashoffset = "0"; });
+  return anillo;
+}
+
 /* Cabeza brillante + un par de ecos detrás en el mismo camino, un poco
    antes en el tiempo y más chicos/tenues — se ve un cometa viajando, no
    un punto seco. La usan tanto el loader como los mapas armónicos

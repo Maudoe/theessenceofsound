@@ -1682,3 +1682,16 @@ a, button, .nav-btn, .chip, .chip-idioma, .tarjeta-acorde, .carta-mapa, .carta-t
   .pag-flecha { width: 44px; height: 44px; font-size: 1.25rem; }
   .modal-cerrar { width: 42px; height: 42px; font-size: 1.3rem; }
 }
+
+/* ---------------- anillo de mantener presionado (touch) ---------------- */
+.sh-anillo-presion {
+  fill: none;
+  stroke: var(--acento);
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  opacity: 0.9;
+  pointer-events: none;
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: rotate(-90deg);
+}

@@ -373,7 +373,60 @@ function engancharInteraccionMapa(svgEl) {
   const nodoDe = (ev) => (ev.target.closest ? ev.target.closest("[data-nodo-idx]") : null);
   const idxDe = (g) => Number(g.getAttribute("data-nodo-idx"));
 
+  // en touch no hay hover: mantener presionado hasta que el anillo se
+  // llena hace de preview (lo que el mouse ve al pasar por arriba), y
+  // un toque corto sigue abriendo el modal como siempre. Si fue
+  // mantenido, el click que el navegador dispara solo después de
+  // soltar se ignora una vez, para no abrir el modal de encima.
+  const DURACION_PRESION = 480;
+  let temporizadorPresion = null;
+  let anilloPresion = null;
+  let fuePresionLarga = false;
+  let ignorarProximoClick = false;
+  let suprimirMouseoutHasta = 0;
+
+  const soltarPresion = () => {
+    clearTimeout(temporizadorPresion);
+    if (anilloPresion) { anilloPresion.remove(); anilloPresion = null; }
+  };
+
+  svgEl.addEventListener("touchstart", (ev) => {
+    const g = nodoDe(ev);
+    if (!g) return;
+    fuePresionLarga = false;
+    anilloPresion = typeof crearAnilloPresion === "function" ? crearAnilloPresion(g, DURACION_PRESION) : null;
+    const i = idxDe(g);
+    temporizadorPresion = setTimeout(() => {
+      fuePresionLarga = true;
+      try { if (navigator.vibrate) navigator.vibrate(12); } catch (e) { /* algunos navegadores lo bloquean sin gesto previo */ }
+      explorarNodoMapa(svgEl, i);
+    }, DURACION_PRESION);
+  }, { passive: true });
+
+  svgEl.addEventListener("touchend", () => {
+    soltarPresion();
+    if (fuePresionLarga) {
+      ignorarProximoClick = true;
+      setTimeout(() => { ignorarProximoClick = false; }, 400);
+      // al soltar, el navegador dispara un mouseout "de compatibilidad"
+      // (para sitios viejos que sólo escuchan mouse) — sin esto, ese
+      // mouseout fantasma cierra el preview que recién mostramos.
+      suprimirMouseoutHasta = Date.now() + 500;
+    }
+  });
+
+  svgEl.addEventListener("touchmove", () => {
+    soltarPresion();
+    fuePresionLarga = false;
+  }, { passive: true });
+
+  svgEl.addEventListener("touchcancel", () => {
+    soltarPresion();
+    fuePresionLarga = false;
+  });
+
   svgEl.addEventListener("mouseover", (ev) => {
+    if (Date.now() < suprimirMouseoutHasta) return;
     if (nodoFijadoMapa !== null) return;
     const g = nodoDe(ev);
     if (!g || g.classList.contains("sh-nodo-origen")) return;
@@ -381,6 +434,7 @@ function engancharInteraccionMapa(svgEl) {
   });
 
   svgEl.addEventListener("mouseout", (ev) => {
+    if (Date.now() < suprimirMouseoutHasta) return;
     if (nodoFijadoMapa !== null) return;
     const g = nodoDe(ev);
     if (!g) return;
@@ -391,6 +445,13 @@ function engancharInteraccionMapa(svgEl) {
   });
 
   svgEl.addEventListener("click", (ev) => {
+    // el mismo <svg> se reusa para "este mapa" y para la rueda; si ahora
+    // mismo está la rueda dibujada, estos listeners viejos no tienen que
+    // hacer nada (si no, un click en un nodo de la rueda dispara esto
+    // Y el handler de la rueda, y "no encontré nodo" cierra el panel que
+    // el otro recién abrió).
+    if (!svgEl.querySelector("[data-nodo-idx]")) return;
+    if (ignorarProximoClick) { ignorarProximoClick = false; return; }
     const g = nodoDe(ev);
     if (!g) { soltarFijadoMapa(svgEl); return; }
     const i = idxDe(g);
@@ -404,6 +465,7 @@ function engancharInteraccionMapa(svgEl) {
   });
 
   svgEl.addEventListener("keydown", (ev) => {
+    if (!svgEl.querySelector("[data-nodo-idx]")) return;
     if (ev.key === "Escape") { soltarFijadoMapa(svgEl); return; }
     if (ev.key !== "Enter" && ev.key !== " ") return;
     const g = nodoDe(ev);

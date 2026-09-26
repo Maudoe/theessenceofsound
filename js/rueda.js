@@ -564,7 +564,57 @@ function engancharInteraccion(svgEl) {
 
   const nodoDe = (ev) => (ev.target.closest ? ev.target.closest("[data-rueda-id]") : null);
 
+  // mismo mecanismo que el mapa propio: mantener presionado hasta que el
+  // anillo se llena hace de preview en touch, donde no hay hover.
+  const DURACION_PRESION = 480;
+  let temporizadorPresion = null;
+  let anilloPresion = null;
+  let fuePresionLarga = false;
+  let ignorarProximoClick = false;
+  let suprimirMouseoutHasta = 0;
+
+  const soltarPresion = () => {
+    clearTimeout(temporizadorPresion);
+    if (anilloPresion) { anilloPresion.remove(); anilloPresion = null; }
+  };
+
+  svgEl.addEventListener("touchstart", (ev) => {
+    const g = nodoDe(ev);
+    if (!g) return;
+    fuePresionLarga = false;
+    anilloPresion = typeof crearAnilloPresion === "function" ? crearAnilloPresion(g, DURACION_PRESION) : null;
+    const id = g.getAttribute("data-rueda-id");
+    temporizadorPresion = setTimeout(() => {
+      fuePresionLarga = true;
+      try { if (navigator.vibrate) navigator.vibrate(12); } catch (e) { /* algunos navegadores lo bloquean sin gesto previo */ }
+      explorarNodo(svgEl, id);
+    }, DURACION_PRESION);
+  }, { passive: true });
+
+  svgEl.addEventListener("touchend", () => {
+    soltarPresion();
+    if (fuePresionLarga) {
+      ignorarProximoClick = true;
+      setTimeout(() => { ignorarProximoClick = false; }, 400);
+      // al soltar, el navegador dispara un mouseout "de compatibilidad"
+      // (para sitios viejos que sólo escuchan mouse) — sin esto, ese
+      // mouseout fantasma cierra el preview que recién mostramos.
+      suprimirMouseoutHasta = Date.now() + 500;
+    }
+  });
+
+  svgEl.addEventListener("touchmove", () => {
+    soltarPresion();
+    fuePresionLarga = false;
+  }, { passive: true });
+
+  svgEl.addEventListener("touchcancel", () => {
+    soltarPresion();
+    fuePresionLarga = false;
+  });
+
   svgEl.addEventListener("mouseover", (ev) => {
+    if (Date.now() < suprimirMouseoutHasta) return;
     if (nodoFijado) return;
     const g = nodoDe(ev);
     if (!g) return;
@@ -574,6 +624,7 @@ function engancharInteraccion(svgEl) {
   });
 
   svgEl.addEventListener("mouseout", (ev) => {
+    if (Date.now() < suprimirMouseoutHasta) return;
     if (nodoFijado) return;
     const g = nodoDe(ev);
     if (!g) return;
@@ -586,6 +637,10 @@ function engancharInteraccion(svgEl) {
   });
 
   svgEl.addEventListener("click", (ev) => {
+    // el mismo <svg> se reusa para "este mapa" y para la rueda; si ahora
+    // mismo está el mapa propio dibujado, estos listeners no hacen nada.
+    if (!svgEl.querySelector("[data-rueda-id]")) return;
+    if (ignorarProximoClick) { ignorarProximoClick = false; return; }
     const g = nodoDe(ev);
     if (!g) { soltarNodoFijado(svgEl); return; }
     const id = g.getAttribute("data-rueda-id");
@@ -596,6 +651,7 @@ function engancharInteraccion(svgEl) {
   });
 
   svgEl.addEventListener("keydown", (ev) => {
+    if (!svgEl.querySelector("[data-rueda-id]")) return;
     if (ev.key === "Escape") { soltarNodoFijado(svgEl); return; }
     if (ev.key !== "Enter" && ev.key !== " ") return;
     const g = nodoDe(ev);
@@ -607,6 +663,7 @@ function engancharInteraccion(svgEl) {
   });
 
   svgEl.addEventListener("focusin", (ev) => {
+    if (!svgEl.querySelector("[data-rueda-id]")) return;
     if (nodoFijado) return;
     const g = nodoDe(ev);
     if (g) explorarNodo(svgEl, g.getAttribute("data-rueda-id"));
