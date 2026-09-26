@@ -185,6 +185,16 @@ function dibujarNodoRueda(capa, nodo, activo, color, notas) {
   const tip = crearSVGEl("title", {});
   tip.textContent = nodo.tooltip || nodo.etiqueta;
   g.appendChild(tip);
+
+  // los círculos que este mapa de verdad invoca (los "activos", con
+  // color propio) laten solos, cada uno a su ritmo — los tenues del
+  // resto de la rueda se quedan quietos, son fondo, no protagonistas.
+  if (activo) {
+    g.classList.add("sh-vivo");
+    g.style.setProperty("--sh-pulso-dur", (2.1 + Math.random() * 1.5).toFixed(2) + "s");
+    g.style.setProperty("--sh-pulso-delay", (-Math.random() * 3).toFixed(2) + "s");
+  }
+
   capa.appendChild(g);
 }
 
@@ -267,6 +277,7 @@ function renderRuedaCompleta(mapa, svgEl) {
      Son las que manda el hover: si estás mirando "Intercambio Modal", lo
      que importa es que de C se va a Fm, no las quintas de siempre. */
   const conexionesPorNodo = new Map();
+  let indiceFlechaRueda = 0;
   (mapa.conexiones_flechas || []).forEach((c) => {
     const nucO = nucleoEtiqueta(c.origen) || String(c.origen).trim().toLowerCase();
     const nucD = nucleoEtiqueta(c.destino) || String(c.destino).trim().toLowerCase();
@@ -323,6 +334,12 @@ function renderRuedaCompleta(mapa, svgEl) {
 
     const ang = Math.atan2(fin.y - cy, fin.x - cx);
     capaFlechas.appendChild(flechaPolígono(fin, ang, 10, color));
+
+    // el mismo cometa de energía que ya viaja por las flechas del mapa
+    // propio, acá también — para que se note hacia dónde se mueve.
+    if (typeof agregarRayoEnergia === "function") {
+      agregarRayoEnergia(path, capaFlechas, "sh-rayo-rueda", indiceFlechaRueda++);
+    }
   });
 
   // si el mapa usa un cifrado más rico que el del sistema (Cmaj9 en vez de C),
@@ -460,6 +477,7 @@ function explorarNodo(svgEl, id) {
   const capaNodos = svgEl.querySelector(".sh-capa-nodos");
   svgEl.insertBefore(capa, capaNodos);
 
+  let indiceExplorar = 0;
   movs.todos.forEach(({ destino, etiqueta, delMapa, color }) => {
     const d = RUEDA_POR_ID.get(destino);
     const colorMov = color || colorDeMovimiento(delMapa ? "mapa" : null);
@@ -487,6 +505,12 @@ function explorarNodo(svgEl, id) {
     const cabeza = flechaPolígono(fin, ang, delMapa ? 12 : 10, colorMov);
     cabeza.setAttribute("class", delMapa ? "sh-cabeza-explorar es-del-mapa" : "sh-cabeza-explorar");
     capa.appendChild(cabeza);
+
+    // acá también: mientras señala a dónde podés ir, un cometa viajando
+    // por esa flecha muestra el movimiento, no sólo la puntita fija.
+    if (typeof agregarRayoEnergia === "function") {
+      agregarRayoEnergia(path, capa, "sh-rayo-explorar", indiceExplorar++);
+    }
 
     const nodoDestino = svgEl.querySelector(`[data-rueda-id="${destino}"]`);
     if (nodoDestino) {
