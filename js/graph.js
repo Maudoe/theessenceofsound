@@ -565,6 +565,7 @@ function renderMapaPropio(mapa, svgEl) {
     g.classList.add("sh-vivo");
     g.style.setProperty("--sh-pulso-dur", (2.1 + Math.random() * 1.5).toFixed(2) + "s");
     g.style.setProperty("--sh-pulso-delay", (-Math.random() * 3).toFixed(2) + "s");
+    g.style.setProperty("--sh-pulso-amp", (1.09 + Math.random() * 0.1).toFixed(3));
 
     capaNodos.appendChild(g);
   });
