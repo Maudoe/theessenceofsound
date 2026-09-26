@@ -9,6 +9,7 @@
       "mapas": "Mapas armónicos",
       "aprender": "Aprender",
       "diccionario": "Diccionario de acordes",
+      "escalas": "Escalas en el mástil",
       "acerca": "Cómo leer esto"
     },
     "intro": {
@@ -206,6 +207,22 @@
       "notas": "Notas",
       "pistaMastil": "Cada diagrama es una posición distinta del mismo acorde — de los trastes abiertos hasta arriba del mástil.",
       "sinPosiciones": "No encontré una digitación cómoda para este acorde en este instrumento."
+    },
+    "escalas": {
+      "intro": "Elegí una tónica y una escala, y mirá dónde caen todas sus notas en todo el mástil — no una caja, el mapa completo. Abajo tenés varios acordes para tocar de base, no sólo el de la tónica: cada uno con la relación real que tiene con ella, para poder salir de improvisar siempre sobre lo mismo.",
+      "acordesQueArmonizan": "Acordes que armonizan con esta escala",
+      "pistaAcordes": "No es sólo la tónica: éstos son los acordes que se arman con las mismas notas, cada uno con su función. Elegí uno para ver el mástil coloreado en base a ÉL.",
+      "pistaMastil": "El mástil completo, coloreado en base a",
+      "tonicaLabel": "Tónica de la escala",
+      "sinSugerencias": "No encontré acordes de esta lista que armonicen con esta escala en particular.",
+      "categorias": {
+        "mayores": "Modos mayores",
+        "menores": "Modos menores",
+        "menorArmMel": "Menor armónica, melódica y parientes",
+        "pentaBlues": "Pentatónicas y blues",
+        "bebop": "Bebop (swing)",
+        "simetricas": "Simétricas"
+      }
     },
     "idioma": {
       "es": "Español",

@@ -2578,7 +2578,8 @@
       "mapas": "Harmonic maps",
       "aprender": "Learn",
       "acerca": "How to read this",
-      "diccionario": "Chord Dictionary"
+      "diccionario": "Chord Dictionary",
+      "escalas": "Scales on the fretboard"
     },
     "intro": {
       "lema": "The Essence of Sound — by Mau",
@@ -2862,6 +2863,22 @@
       "notas": "Notes",
       "pistaMastil": "Each diagram is a different position of the same chord — from open frets all the way up the neck.",
       "sinPosiciones": "Couldn't find a comfortable fingering for this chord on this instrument."
+    },
+    "escalas": {
+      "intro": "Pick a tonic and a scale, and see where all its notes land across the whole fretboard — not one box, the full map. Below you'll find several chords to jam over, not just the tonic one — each with its real relationship to the tonic, so you can break out of always improvising over the same thing.",
+      "acordesQueArmonizan": "Chords that harmonize with this scale",
+      "pistaAcordes": "It's not just the tonic — these are the chords built from the same notes, each with its own function. Pick one to see the fretboard colored around IT.",
+      "pistaMastil": "The full fretboard, colored around",
+      "tonicaLabel": "Scale tonic",
+      "sinSugerencias": "Couldn't find any chords from this list that harmonize with this particular scale.",
+      "categorias": {
+        "mayores": "Major modes",
+        "menores": "Minor modes",
+        "menorArmMel": "Harmonic minor, melodic minor, and relatives",
+        "pentaBlues": "Pentatonic and blues",
+        "bebop": "Bebop (swing)",
+        "simetricas": "Symmetric"
+      }
     }
   },
   "categoriasAcordes": {

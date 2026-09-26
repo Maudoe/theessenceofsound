@@ -1,0 +1,232 @@
+/* ============ The Essence of Sound — escalas en todo el mástil ============
+   El diccionario de acordes contesta "¿cómo toco este acorde?". Esta
+   sección contesta la otra mitad: "¿qué escala me muevo arriba, y con
+   qué acorde de base?" — elegís una tónica y una escala, ves TODAS las
+   notas de esa escala en todo el mástil (reusando el mismo dibujo con
+   colores por función que ya usa el modal — base/puente/tensión/
+   resolución), y abajo una lista de acordes que armonizan con esa
+   escala, no sólo el de la tónica: para una menor podés tocar con la
+   propia menor de base, pero también con su relativo mayor, con el ii,
+   etc — cada uno con la relación real que tiene con la tónica.
+
+   No dibuja nada propio tampoco: reusa svgMastil() pasándole sólo
+   `papeles`, sin digitación — es el mismo mecanismo que ya pinta la
+   escala completa en el modal "Cómo tocar", sólo que acá es el punto de
+   entrada en vez de un agregado. */
+
+const CATEGORIAS_ESCALAS = [
+  { id: "mayores", nombre: "Modos mayores", escalas: ["jonico", "lidio", "mixolidio", "lidioDominante"] },
+  { id: "menores", nombre: "Modos menores", escalas: ["dorico", "frigio", "eolico", "locrio"] },
+  { id: "menorArmMel", nombre: "Menor armónica, melódica y parientes", escalas: ["menorArmonica", "menorMelodica", "alterada", "frigioDominante"] },
+  { id: "pentaBlues", nombre: "Pentatónicas y blues", escalas: ["pentaMayor", "pentaMenor", "blues", "bluesMayor"] },
+  { id: "bebop", nombre: "Bebop (swing)", escalas: ["bebopDominante", "bebopMayor", "bebopMenor"] },
+  { id: "simetricas", nombre: "Simétricas", escalas: ["tonosEnteros", "disminuida", "disminuidaST"] },
+];
+
+/* Calidad de acorde por defecto para tocar de base sobre cada escala —
+   el punto de partida antes de mostrar las demás opciones. */
+const TONICA_POR_ESCALA = {
+  jonico: "maj7", lidio: "maj7", mixolidio: "7", lidioDominante: "7",
+  dorico: "m7", frigio: "m7", eolico: "m7", locrio: "m7b5",
+  menorArmonica: "m", menorMelodica: "m", alterada: "7", frigioDominante: "7",
+  pentaMayor: "", pentaMenor: "m", blues: "m7", bluesMayor: "7",
+  bebopDominante: "7", bebopMayor: "maj7", bebopMenor: "m7",
+  tonosEnteros: "aug", disminuida: "dim7", disminuidaST: "7",
+};
+
+/* Para escalas de 7 notas: arma los 7 acordes diatónicos apilando
+   terceras dentro de la propia escala (grado 1-3-5 de cada nota, dentro
+   de la escala, no cromáticos). Si alguna combinación no da una tríada
+   reconocida (no debería pasar en una escala de 7 notas bien formada)
+   ese grado se salta en vez de inventar algo raro. */
+function acordesDiatonicos(escalaId, raizSemitono) {
+  const esc = ESCALAS[escalaId];
+  if (!esc || !esc.grados || esc.grados.length !== 7) return null;
+  const grados = esc.grados.map((g) => g % 12);
+  const out = [];
+  for (let i = 0; i < 7; i++) {
+    const g1 = grados[i];
+    const g3 = grados[(i + 2) % 7];
+    const g5 = grados[(i + 4) % 7];
+    const i3 = (g3 - g1 + 12) % 12;
+    const i5 = (g5 - g1 + 12) % 12;
+    let calidad;
+    if (i3 === 4 && i5 === 7) calidad = "";
+    else if (i3 === 3 && i5 === 7) calidad = "m";
+    else if (i3 === 3 && i5 === 6) calidad = "dim";
+    else if (i3 === 4 && i5 === 8) calidad = "aug";
+    else continue;
+    const raizNota = NOTAS_SOSTENIDOS[(raizSemitono + g1) % 12];
+    const acorde = spellChord(raizNota + calidad);
+    if (!acorde) continue;
+    out.push({ acorde, cifrado: raizNota + calidad, esTonica: i === 0 });
+  }
+  return out;
+}
+
+/* Para escalas que no son de 7 notas (pentatónicas, blues, bebop,
+   simétricas), no hay "grados diatónicos" en el sentido clásico — en
+   cambio se prueban las calidades más comunes SOBRE LA MISMA raíz y se
+   quedan las que la propia app ya recomienda para esta escala
+   (escalasParaAcorde, la misma lista que arma el selector del modal). */
+const CALIDADES_A_PROBAR = ["", "m", "7", "m7", "maj7", "dim", "dim7", "aug", "sus4", "m7b5", "9", "m9", "maj9", "6", "m6"];
+
+/* A diferencia de las escalas de 7 notas (que tienen "grados" clásicos
+   y se arman apilando terceras dentro de la propia escala), acá se
+   prueban las 12 raíces posibles y nos quedamos con las que arman un
+   acorde CUYAS NOTAS ESTÁN TODAS DENTRO de esta escala puntual — no
+   alcanza con que la calidad "generalmente" recomiende esta familia de
+   escala (un dim7 en cualquier lado sugiere "disminuida" en general,
+   pero sólo un dim7 concreto formado con las notas de ESTA disminuida
+   en particular es una raíz de verdad válida acá). Por raíz nos
+   quedamos con una sola calidad: no hace falta listar Am, Am7 y Am6
+   como si fueran tres opciones distintas cuando es la misma raíz
+   vestida distinto. */
+function acordesCompatibles(escalaId, raizSemitono) {
+  const esc = ESCALAS[escalaId];
+  const notasEscala = new Set(esc.grados.map((g) => (raizSemitono + g) % 12));
+  const tonicaSufijo = TONICA_POR_ESCALA[escalaId];
+  const porRaiz = new Map();
+  for (let r = 0; r < 12; r++) {
+    const raizNota = NOTAS_SOSTENIDOS[r];
+    CALIDADES_A_PROBAR.forEach((suf) => {
+      const acorde = spellChord(raizNota + suf);
+      if (!acorde) return;
+      const clases = acorde.notas.map((n) => INDICE_NOTA[n]);
+      if (!clases.every((c) => notasEscala.has(c))) return;
+      const esTonica = r === raizSemitono % 12 && suf === tonicaSufijo;
+      const actual = porRaiz.get(r);
+      // entre varias calidades válidas para la misma raíz, preferimos la
+      // que tenga más notas (aprovecha mejor la escala) salvo que ya
+      // hayamos guardado la de la tónica, esa siempre gana
+      if (esTonica || !actual || (!actual.esTonica && clases.length > actual.acorde.notas.length)) {
+        porRaiz.set(r, { acorde, cifrado: raizNota + suf, esTonica });
+      }
+    });
+  }
+  return [...porRaiz.values()];
+}
+
+let estadoEscalas = { raiz: "A", escala: "eolico", acordeElegido: null };
+
+function pintarSelectorEscalas() {
+  const raices = ["C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab", "A", "Bb", "B"];
+  return `
+    <div class="dic-raiz">
+      <label for="sel-raiz-escalas">${t("diccionario.tonica")}</label>
+      <select id="sel-raiz-escalas">
+        ${raices.map((r) => `<option value="${r}"${r === estadoEscalas.raiz ? " selected" : ""}>${r}</option>`).join("")}
+      </select>
+    </div>`;
+}
+
+function tarjetasDeCategoriaEscala(cat) {
+  return cat.escalas.map((id) => {
+    const activo = estadoEscalas.escala === id;
+    const nombre = tesc(id, "nombre", ESCALAS[id].nombre);
+    return `<button class="tarjeta-acorde${activo ? " activo" : ""}" data-escala="${id}">
+      <span class="tarjeta-acorde-cifrado">${nombre}</span>
+    </button>`;
+  }).join("");
+}
+
+function pintarVistaEscalas() {
+  const cont = $("#escalas-cuerpo");
+  if (!cont) return;
+
+  const categorias = CATEGORIAS_ESCALAS.map((c) => `
+    <section class="dic-categoria">
+      <div class="bloque-titulo">${t("escalas.categorias." + c.id)}</div>
+      <div class="dic-tarjetas">${tarjetasDeCategoriaEscala(c)}</div>
+    </section>`).join("");
+
+  cont.innerHTML = `
+    <p class="seccion-intro">${t("escalas.intro")}</p>
+    ${pintarSelectorEscalas()}
+    ${categorias}
+    <div class="dic-detalle" id="esc-detalle"></div>`;
+
+  $("#sel-raiz-escalas").addEventListener("change", (e) => {
+    estadoEscalas.raiz = e.target.value;
+    estadoEscalas.acordeElegido = null;
+    pintarVistaEscalas();
+    pintarDetalleEscala();
+  });
+
+  $$(".tarjeta-acorde", cont).forEach((b) => {
+    b.addEventListener("click", () => {
+      estadoEscalas.escala = b.dataset.escala;
+      estadoEscalas.acordeElegido = null;
+      pintarVistaEscalas();
+      pintarDetalleEscala();
+      const detalle = $("#esc-detalle");
+      if (detalle) detalle.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+
+  pintarDetalleEscala();
+}
+
+function pintarDetalleEscala() {
+  const detalle = $("#esc-detalle");
+  if (!detalle) return;
+
+  const escalaId = estadoEscalas.escala;
+  const raizSemitono = INDICE_NOTA[estadoEscalas.raiz];
+  const esc = ESCALAS[escalaId];
+  const diatonicos = acordesDiatonicos(escalaId, raizSemitono);
+  const sugerencias = diatonicos || acordesCompatibles(escalaId, raizSemitono);
+
+  const tonicaSufijo = TONICA_POR_ESCALA[escalaId] || "";
+  const tonicaCifrado = estadoEscalas.raiz + tonicaSufijo;
+  const tonicaAcorde = spellChord(tonicaCifrado);
+  const entradaTonica = sugerencias.find((s) => s.esTonica) || { acorde: tonicaAcorde, cifrado: tonicaCifrado, esTonica: true };
+  const elegido = estadoEscalas.acordeElegido
+    ? sugerencias.find((s) => s.cifrado === estadoEscalas.acordeElegido) || entradaTonica
+    : entradaTonica;
+
+  const chipsAcordes = sugerencias.map((s) => {
+    const esTonica = s.esTonica;
+    const activo = s.cifrado === elegido.cifrado;
+    const rel = esTonica ? t("escalas.tonicaLabel") : (relacionEntre(tonicaAcorde, s.acorde) || {}).etiqueta;
+    return `<button class="tarjeta-acorde tarjeta-acorde-chica${activo ? " activo" : ""}" data-cifrado="${s.cifrado}">
+      <span class="tarjeta-acorde-cifrado">${s.cifrado}</span>
+      <span class="tarjeta-acorde-nombre">${rel || ""}</span>
+    </button>`;
+  }).join("") || `<p class="dic-vacio">${t("escalas.sinSugerencias")}</p>`;
+
+  const info = clasesDelAcorde(elegido.acorde);
+  const papeles = info ? papelesDeEscala(escalaId, elegido.acorde) : null;
+  const cuerdas = cuerdasDe("guitarra");
+  const diagrama = papeles
+    ? svgMastil(null, cuerdas, elegido.acorde, {
+        nombresCuerdas: nombresCuerdasDe("guitarra", false),
+        mostrar: "notas",
+        papeles: papeles.papeles,
+        alt: `${tesc(escalaId, "nombre", esc.nombre)} sobre ${elegido.cifrado}`,
+      })
+    : "";
+
+  const explicacion = papeles ? explicacionDeEscala(escalaId, elegido.acorde, false) : "";
+
+  detalle.innerHTML = `
+    <div class="dic-detalle-cabeza">
+      <h3>${estadoEscalas.raiz} <span class="dic-detalle-nombre">${tesc(escalaId, "nombre", esc.nombre)}</span></h3>
+      <p class="dic-detalle-descripcion">${tesc(escalaId, "sabor", esc.sabor)}</p>
+    </div>
+    <div class="esc-acordes-bloque">
+      <div class="bloque-titulo">${t("escalas.acordesQueArmonizan")}</div>
+      <p class="bloque-pista">${t("escalas.pistaAcordes")}</p>
+      <div class="dic-tarjetas">${chipsAcordes}</div>
+    </div>
+    <p class="dic-pista">${t("escalas.pistaMastil")} <b>${elegido.cifrado}</b>.</p>
+    <div class="dic-posicion-svg esc-mastil-completo">${diagrama}</div>
+    <div class="escala-explica">${explicacion || ""}</div>`;
+
+  $$(".tarjeta-acorde-chica", detalle).forEach((b) => {
+    b.addEventListener("click", () => {
+      estadoEscalas.acordeElegido = b.dataset.cifrado;
+      pintarDetalleEscala();
+    });
+  });
+}

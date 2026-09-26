@@ -13,6 +13,7 @@ const IDIOMAS = {
         "mapas": "Mapas armónicos",
         "aprender": "Aprender",
         "diccionario": "Diccionario de acordes",
+        "escalas": "Escalas en el mástil",
         "acerca": "Cómo leer esto"
       },
       "intro": {
@@ -210,6 +211,22 @@ const IDIOMAS = {
         "notas": "Notas",
         "pistaMastil": "Cada diagrama es una posición distinta del mismo acorde — de los trastes abiertos hasta arriba del mástil.",
         "sinPosiciones": "No encontré una digitación cómoda para este acorde en este instrumento."
+      },
+      "escalas": {
+        "intro": "Elegí una tónica y una escala, y mirá dónde caen todas sus notas en todo el mástil — no una caja, el mapa completo. Abajo tenés varios acordes para tocar de base, no sólo el de la tónica: cada uno con la relación real que tiene con ella, para poder salir de improvisar siempre sobre lo mismo.",
+        "acordesQueArmonizan": "Acordes que armonizan con esta escala",
+        "pistaAcordes": "No es sólo la tónica: éstos son los acordes que se arman con las mismas notas, cada uno con su función. Elegí uno para ver el mástil coloreado en base a ÉL.",
+        "pistaMastil": "El mástil completo, coloreado en base a",
+        "tonicaLabel": "Tónica de la escala",
+        "sinSugerencias": "No encontré acordes de esta lista que armonicen con esta escala en particular.",
+        "categorias": {
+          "mayores": "Modos mayores",
+          "menores": "Modos menores",
+          "menorArmMel": "Menor armónica, melódica y parientes",
+          "pentaBlues": "Pentatónicas y blues",
+          "bebop": "Bebop (swing)",
+          "simetricas": "Simétricas"
+        }
       },
       "idioma": {
         "es": "Español",
@@ -5550,7 +5567,8 @@ const IDIOMAS = {
         "mapas": "Harmonic maps",
         "aprender": "Learn",
         "acerca": "How to read this",
-        "diccionario": "Chord Dictionary"
+        "diccionario": "Chord Dictionary",
+        "escalas": "Scales on the fretboard"
       },
       "intro": {
         "lema": "The Essence of Sound — by Mau",
@@ -5834,6 +5852,22 @@ const IDIOMAS = {
         "notas": "Notes",
         "pistaMastil": "Each diagram is a different position of the same chord — from open frets all the way up the neck.",
         "sinPosiciones": "Couldn't find a comfortable fingering for this chord on this instrument."
+      },
+      "escalas": {
+        "intro": "Pick a tonic and a scale, and see where all its notes land across the whole fretboard — not one box, the full map. Below you'll find several chords to jam over, not just the tonic one — each with its real relationship to the tonic, so you can break out of always improvising over the same thing.",
+        "acordesQueArmonizan": "Chords that harmonize with this scale",
+        "pistaAcordes": "It's not just the tonic — these are the chords built from the same notes, each with its own function. Pick one to see the fretboard colored around IT.",
+        "pistaMastil": "The full fretboard, colored around",
+        "tonicaLabel": "Scale tonic",
+        "sinSugerencias": "Couldn't find any chords from this list that harmonize with this particular scale.",
+        "categorias": {
+          "mayores": "Major modes",
+          "menores": "Minor modes",
+          "menorArmMel": "Harmonic minor, melodic minor, and relatives",
+          "pentaBlues": "Pentatonic and blues",
+          "bebop": "Bebop (swing)",
+          "simetricas": "Symmetric"
+        }
       }
     },
     "categoriasAcordes": {
@@ -8518,7 +8552,8 @@ const IDIOMAS = {
         "mapas": "แผนที่ฮาร์โมนิก",
         "aprender": "เรียนรู้",
         "acerca": "วิธีอ่านเว็บนี้",
-        "diccionario": "พจนานุกรมคอร์ด"
+        "diccionario": "พจนานุกรมคอร์ด",
+        "escalas": "สเกลบนคอกีตาร์"
       },
       "intro": {
         "lema": "The Essence of Sound — by Mau",
@@ -8802,6 +8837,22 @@ const IDIOMAS = {
         "notas": "โน้ต",
         "pistaMastil": "แต่ละไดอะแกรมคือตำแหน่งที่ต่างกันของคอร์ดเดียวกัน — ตั้งแต่เฟรตเปิดไปจนถึงปลายคอกีตาร์",
         "sinPosiciones": "ไม่พบตำแหน่งจับคอร์ดที่ถนัดสำหรับคอร์ดนี้บนเครื่องดนตรีนี้"
+      },
+      "escalas": {
+        "intro": "เลือกโน้ตหลัก (Tonic) และสเกล แล้วดูว่าโน้ตทั้งหมดในสเกลนั้นตกอยู่ตรงไหนบนคอกีตาร์ทั้งคอ ไม่ใช่แค่ตำแหน่งเดียว แต่เป็นแผนที่ทั้งหมด ด้านล่างมีคอร์ดหลายตัวให้เล่นเป็นแบ็กกิ้ง ไม่ใช่แค่คอร์ดโทนิค แต่ละตัวมีความสัมพันธ์จริงกับโน้ตหลัก เพื่อให้คุณสามารถอิมโพรไวส์ได้หลากหลาย ไม่ซ้ำแบบเดิมตลอด",
+        "acordesQueArmonizan": "คอร์ดที่เข้ากับสเกลนี้",
+        "pistaAcordes": "ไม่ใช่แค่โทนิคเท่านั้น นี่คือคอร์ดที่สร้างขึ้นจากโน้ตเดียวกัน แต่ละตัวมีหน้าที่ของตัวเอง เลือกคอร์ดหนึ่งเพื่อดูคอกีตาร์ที่ไล่สีตามคอร์ดนั้น",
+        "pistaMastil": "คอกีตาร์ทั้งหมด ไล่สีตาม",
+        "tonicaLabel": "โน้ตหลัก (Tonic) ของสเกล",
+        "sinSugerencias": "ไม่พบคอร์ดในรายการนี้ที่เข้ากับสเกลนี้โดยเฉพาะ",
+        "categorias": {
+          "mayores": "โมด major",
+          "menores": "โมด minor",
+          "menorArmMel": "Harmonic minor, Melodic minor และสเกลที่เกี่ยวข้อง",
+          "pentaBlues": "Pentatonic และ blues",
+          "bebop": "Bebop (swing)",
+          "simetricas": "สเกลสมมาตร"
+        }
       }
     },
     "categoriasAcordes": {
