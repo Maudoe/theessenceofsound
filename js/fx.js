@@ -9,6 +9,41 @@
    Todo respeta prefers-reduced-motion: quien lo pide no ve nada de esto
    animado, va directo al contenido. */
 
+/* Cabeza brillante + un par de ecos detrás en el mismo camino, un poco
+   antes en el tiempo y más chicos/tenues — se ve un cometa viajando, no
+   un punto seco. La usan tanto el loader como los mapas armónicos
+   reales (graph.js), así que vive acá, en el módulo que carga después
+   de los dos, pero como función de nivel superior queda en el ámbito
+   global disponible para cuando graph.js la llame más tarde. */
+function agregarRayoEnergia(path, capa, idBase, indice) {
+  const SVG_NS = "http://www.w3.org/2000/svg";
+  const id = idBase + "-" + indice;
+  path.setAttribute("id", id);
+  const color = path.getAttribute("stroke") || "#fff";
+  const dur = (2.2 + Math.random() * 1.6).toFixed(2);
+  const inicio = Math.random() * 2;
+  [
+    { r: 4.2, op: 1, delta: 0 },
+    { r: 3, op: 0.55, delta: -0.12 },
+    { r: 1.8, op: 0.3, delta: -0.22 },
+  ].forEach((capaChispa) => {
+    const chispa = document.createElementNS(SVG_NS, "circle");
+    chispa.setAttribute("r", capaChispa.r);
+    chispa.setAttribute("fill", color);
+    chispa.setAttribute("opacity", capaChispa.op);
+    chispa.setAttribute("filter", "url(#sh-glow)");
+    const mov = document.createElementNS(SVG_NS, "animateMotion");
+    mov.setAttribute("dur", dur + "s");
+    mov.setAttribute("repeatCount", "indefinite");
+    mov.setAttribute("begin", Math.max(0, inicio + capaChispa.delta).toFixed(2) + "s");
+    const mpath = document.createElementNS(SVG_NS, "mpath");
+    mpath.setAttributeNS("http://www.w3.org/1999/xlink", "href", "#" + id);
+    mov.appendChild(mpath);
+    chispa.appendChild(mov);
+    capa.appendChild(chispa);
+  });
+}
+
 /* ---------------- 1) loader ---------------- */
 (function loaderDeEntrada() {
   const loader = document.getElementById("loader");
@@ -123,26 +158,12 @@
       g.style.setProperty("--sh-pulso-delay", (-Math.random() * 2.4).toFixed(2) + "s");
     });
 
-    // rayos de energía: una chispa que recorre cada flecha real, con su
+    // rayos de energía: un cometa que recorre cada flecha real, con su
     // propio arranque para que no viajen todas juntas.
     const capaFlechas = svgMapa.querySelector(".sh-capa-flechas");
     if (capaFlechas) {
       svgMapa.querySelectorAll("path.sh-flecha").forEach((path, i) => {
-        const id = "loader-flecha-" + i;
-        path.setAttribute("id", id);
-        const chispa = document.createElementNS(SVG_NS, "circle");
-        chispa.setAttribute("r", "3.6");
-        chispa.setAttribute("fill", path.getAttribute("stroke") || "#fff");
-        chispa.setAttribute("filter", "url(#sh-glow)");
-        const mov = document.createElementNS(SVG_NS, "animateMotion");
-        mov.setAttribute("dur", (2.4 + Math.random() * 1.6).toFixed(2) + "s");
-        mov.setAttribute("repeatCount", "indefinite");
-        mov.setAttribute("begin", (Math.random() * 2).toFixed(2) + "s");
-        const mpath = document.createElementNS(SVG_NS, "mpath");
-        mpath.setAttributeNS("http://www.w3.org/1999/xlink", "href", "#" + id);
-        mov.appendChild(mpath);
-        chispa.appendChild(mov);
-        capaFlechas.appendChild(chispa);
+        agregarRayoEnergia(path, capaFlechas, "loader-flecha", i);
       });
     }
   } catch (e) {

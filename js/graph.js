@@ -471,6 +471,7 @@ function renderMapaPropio(mapa, svgEl) {
 
   // --- flechas del mapa ---
   const vistoPar = new Map();
+  let indiceFlecha = 0;
   salientes.forEach((lista, i) => {
     lista.forEach(({ destino: j, tipo }) => {
       const clave = `${i}-${j}`;
@@ -496,6 +497,13 @@ function renderMapaPropio(mapa, svgEl) {
       t.textContent = `${nodos[i].etiqueta} → ${nodos[j].etiqueta}${tipo ? " · " + tipo : ""}`;
       path.appendChild(t);
       capaFlechas.appendChild(path);
+
+      // el rayo de energía que viaja por la flecha: se ve la dirección
+      // del movimiento, no sólo que existe. Cada uno con su propio
+      // arranque para que no viajen todos juntos.
+      if (typeof agregarRayoEnergia === "function") {
+        agregarRayoEnergia(path, capaFlechas, "sh-rayo", indiceFlecha++);
+      }
 
       const ang = Math.atan2(fin.y - cy, fin.x - cx);
       capaFlechas.appendChild(flechaPolígono(fin, ang, 10, color));
@@ -550,6 +558,14 @@ function renderMapaPropio(mapa, svgEl) {
     const tip = crearSVGEl("title", {});
     tip.textContent = nodo.etiqueta;
     g.appendChild(tip);
+
+    // vivas desde que se dibuja el mapa, no sólo al hacer hover: un
+    // pulso orgánico sutil y propio por nodo, para que no lateen todas
+    // juntas como un solo bloque.
+    g.classList.add("sh-vivo");
+    g.style.setProperty("--sh-pulso-dur", (2.1 + Math.random() * 1.5).toFixed(2) + "s");
+    g.style.setProperty("--sh-pulso-delay", (-Math.random() * 3).toFixed(2) + "s");
+
     capaNodos.appendChild(g);
   });
 

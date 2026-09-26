@@ -1633,3 +1633,15 @@ body.loader-activo { overflow: hidden; height: 100vh; }
 .esc-acordes-bloque { margin: 20px 0; }
 .esc-mastil-completo { margin-top: 10px; }
 .esc-mastil-completo svg { width: 100%; height: auto; display: block; }
+
+/* ---------------- cursor propio ---------------- */
+body {
+  cursor: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%3E%3Ccircle%20cx%3D%2215%22%20cy%3D%2215%22%20r%3D%2210.5%22%20fill%3D%22none%22%20stroke%3D%22%235be8d8%22%20stroke-opacity%3D%220.25%22%20stroke-width%3D%221%22/%3E%3Ccircle%20cx%3D%2215%22%20cy%3D%2215%22%20r%3D%226.5%22%20fill%3D%22%2307070a%22%20fill-opacity%3D%220.35%22%20stroke%3D%22%235be8d8%22%20stroke-width%3D%221.4%22/%3E%3Ccircle%20cx%3D%2215%22%20cy%3D%2215%22%20r%3D%221.5%22%20fill%3D%22%235be8d8%22/%3E%3Cline%20x1%3D%2215%22%20y1%3D%221.5%22%20x2%3D%2215%22%20y2%3D%225.5%22%20stroke%3D%22%235be8d8%22%20stroke-width%3D%221.3%22%20stroke-linecap%3D%22round%22/%3E%3Cline%20x1%3D%2215%22%20y1%3D%2224.5%22%20x2%3D%2215%22%20y2%3D%2228.5%22%20stroke%3D%22%235be8d8%22%20stroke-width%3D%221.3%22%20stroke-linecap%3D%22round%22/%3E%3Cline%20x1%3D%221.5%22%20y1%3D%2215%22%20x2%3D%225.5%22%20y2%3D%2215%22%20stroke%3D%22%235be8d8%22%20stroke-width%3D%221.3%22%20stroke-linecap%3D%22round%22/%3E%3Cline%20x1%3D%2224.5%22%20y1%3D%2215%22%20x2%3D%2228.5%22%20y2%3D%2215%22%20stroke%3D%22%235be8d8%22%20stroke-width%3D%221.3%22%20stroke-linecap%3D%22round%22/%3E%3C/svg%3E") 15 15, auto;
+}
+a, button, .nav-btn, .chip, .chip-idioma, .tarjeta-acorde, .carta-mapa, .carta-tarot,
+.acorde-chip, .prog-acorde, .escala-color, .acorde-color, .inst-tab, .etq-tab,
+.vista-btn, .pag-flecha, .pos-flecha, .loader-saltear, .modal-cerrar,
+[data-idioma], [data-vista], [data-cifrado], [data-escala], select, input[type="search"],
+.sh-nodo, .volver {
+  cursor: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%3E%3Cg%20fill%3D%22%2307070a%22%20fill-opacity%3D%220.55%22%20stroke%3D%22%23ffd873%22%20stroke-width%3D%221.3%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%204.5c0-1.1.9-2%202-2s2%20.9%202%202v7.2l1.6-1.1c.7-.5%201.6-.4%202.2.2.5.5.6%201.3.2%202l-2.6%204.6c-1%201.8-2.9%202.9-4.9%202.9h-1.8c-2.3%200-4.4-1.3-5.4-3.4l-2.3-4.7c-.4-.8-.1-1.7.6-2.2.7-.5%201.7-.4%202.3.3l1.6%201.8V8.6c0-1.1.9-2%202-2s2%20.9%202%202%22/%3E%3C/g%3E%3C/svg%3E") 8 3, pointer;
+}
