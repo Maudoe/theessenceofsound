@@ -1645,3 +1645,40 @@ a, button, .nav-btn, .chip, .chip-idioma, .tarjeta-acorde, .carta-mapa, .carta-t
 .sh-nodo, .volver {
   cursor: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%3E%3Cg%20fill%3D%22%2307070a%22%20fill-opacity%3D%220.55%22%20stroke%3D%22%23ffd873%22%20stroke-width%3D%221.3%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%204.5c0-1.1.9-2%202-2s2%20.9%202%202v7.2l1.6-1.1c.7-.5%201.6-.4%202.2.2.5.5.6%201.3.2%202l-2.6%204.6c-1%201.8-2.9%202.9-4.9%202.9h-1.8c-2.3%200-4.4-1.3-5.4-3.4l-2.3-4.7c-.4-.8-.1-1.7.6-2.2.7-.5%201.7-.4%202.3.3l1.6%201.8V8.6c0-1.1.9-2%202-2s2%20.9%202%202%22/%3E%3C/g%3E%3C/svg%3E") 8 3, pointer;
 }
+
+/* ---------------- mobile: mastil legible con scroll horizontal ----------
+   En vez de achicar los 12 trastes hasta que el traste tiene 2mm y las
+   notas no se leen, en pantallas chicas el diagrama mantiene su tamaño
+   natural (legible) y el contenedor scrollea — el patron de siempre
+   para tablaturas en el celular, en vez de forzarlo a entrar entero. */
+@media (max-width: 640px) {
+  .instrumento-diagrama {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+  }
+  .diag-svg.diag-mastil {
+    width: auto;
+    min-width: 460px;
+    max-width: none;
+    margin: 0 auto;
+  }
+  .dic-posicion-svg, .esc-mastil-completo {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+  }
+  .dic-posicion-svg svg, .esc-mastil-completo svg {
+    width: auto;
+    min-width: 460px;
+    max-width: none;
+  }
+
+  /* los botones de navegar posiciones/paginas/cerrar modal eran mas
+     chicos que el minimo cómodo para el dedo (26-34px); en touch pasan
+     a 42-44px sin agrandar tanto el icono de adentro. */
+  .pos-flecha { width: 42px; height: 42px; font-size: 1.15rem; }
+  .pag-flecha { width: 44px; height: 44px; font-size: 1.25rem; }
+  .modal-cerrar { width: 42px; height: 42px; font-size: 1.3rem; }
+}
