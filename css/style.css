@@ -1684,14 +1684,19 @@ a, button, .nav-btn, .chip, .chip-idioma, .tarjeta-acorde, .carta-mapa, .carta-t
 }
 
 /* ---------------- anillo de mantener presionado (touch) ---------------- */
+.sh-grupo-presion { pointer-events: none; }
 .sh-anillo-presion {
   fill: none;
-  stroke: var(--acento);
-  stroke-width: 2.6;
+  stroke-width: 3.4;
   stroke-linecap: round;
-  opacity: 0.9;
+  opacity: 0.95;
   pointer-events: none;
   transform-box: fill-box;
   transform-origin: center;
   transform: rotate(-90deg);
+}
+.sh-disco-presion {
+  pointer-events: none;
+  transform-box: fill-box;
+  transform-origin: center;
 }

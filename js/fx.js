@@ -18,22 +18,52 @@ function crearAnilloPresion(g, duracionMs) {
   const SVG_NS = "http://www.w3.org/2000/svg";
   const circulo = g.querySelector(".sh-nodo-circulo");
   if (!circulo) return null;
-  const r = Number(circulo.getAttribute("r") || 20) + 5;
+  const cx = circulo.getAttribute("cx"), cy = circulo.getAttribute("cy");
+  const rBase = Number(circulo.getAttribute("r") || 20);
+  const color = circulo.getAttribute("stroke") || "var(--acento)";
+  const grupo = document.createElementNS(SVG_NS, "g");
+  grupo.setAttribute("class", "sh-grupo-presion");
+
+  // el disco de "cargando": arranca pegado al nodo y crece bien grande,
+  // con un glow que se va sintiendo más fuerte — la sensación de que se
+  // está juntando energía para abrir algo, no sólo una rayita fina.
+  const rDisco = rBase * 2.1;
+  const disco = document.createElementNS(SVG_NS, "circle");
+  disco.setAttribute("cx", cx); disco.setAttribute("cy", cy);
+  disco.setAttribute("r", String(rBase * 0.7));
+  disco.setAttribute("fill", color);
+  disco.setAttribute("class", "sh-disco-presion");
+  disco.setAttribute("filter", "url(#sh-glow)");
+  grupo.appendChild(disco);
+
+  // el anillo de progreso, más grande y más grueso que antes, alrededor
+  // de todo el disco — se termina de llenar justo cuando el disco llega
+  // a su tamaño máximo.
+  const rAnillo = rDisco + 6;
   const anillo = document.createElementNS(SVG_NS, "circle");
-  anillo.setAttribute("cx", circulo.getAttribute("cx"));
-  anillo.setAttribute("cy", circulo.getAttribute("cy"));
-  anillo.setAttribute("r", r);
+  anillo.setAttribute("cx", cx); anillo.setAttribute("cy", cy);
+  anillo.setAttribute("r", rAnillo);
   anillo.setAttribute("class", "sh-anillo-presion");
-  const circunferencia = 2 * Math.PI * r;
+  anillo.setAttribute("stroke", color);
+  const circunferencia = 2 * Math.PI * rAnillo;
   anillo.style.strokeDasharray = String(circunferencia);
   anillo.style.strokeDashoffset = String(circunferencia);
-  g.appendChild(anillo);
+  grupo.appendChild(anillo);
+
+  g.insertBefore(grupo, g.firstChild);
   // fuerza el layout antes de animar, si no el navegador junta el estado
-  // inicial y el final en un solo frame y no se ve el llenado
-  anillo.getBoundingClientRect();
+  // inicial y el final en un solo frame y no se ve ni el llenado ni el
+  // crecimiento
+  grupo.getBoundingClientRect();
   anillo.style.transition = `stroke-dashoffset ${duracionMs}ms linear`;
-  requestAnimationFrame(() => { anillo.style.strokeDashoffset = "0"; });
-  return anillo;
+  disco.style.transition = `r ${duracionMs}ms cubic-bezier(.2,.6,.3,1), opacity ${duracionMs}ms linear`;
+  disco.style.opacity = "0.16";
+  requestAnimationFrame(() => {
+    anillo.style.strokeDashoffset = "0";
+    disco.setAttribute("r", String(rDisco));
+    disco.style.opacity = "0.4";
+  });
+  return grupo;
 }
 
 /* Cabeza brillante + un par de ecos detrás en el mismo camino, un poco
