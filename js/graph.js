@@ -10,6 +10,17 @@
 const SVG_NS = "http://www.w3.org/2000/svg";
 
 function nucleoEtiqueta(s) {
+  // si el texto de verdad describe un acorde (con paréntesis descriptivo
+  // o no: "I7 (C7)" y "C7" son el mismo acorde), el núcleo se arma desde
+  // el acorde resuelto — así no aparecen dos círculos para el mismo
+  // acorde sólo porque nodos_principales y conexiones_flechas lo
+  // escriben distinto. Si no hay acorde (texto puramente descriptivo),
+  // se cae al recorte de texto de siempre.
+  const resuelto = acordeDeEtiqueta(String(s));
+  if (resuelto && resuelto.acorde) {
+    const a = resuelto.acorde;
+    return "acorde:" + INDICE_NOTA[a.raiz] + ":" + (a.calidad || "") + ":" + (a.bajo || "");
+  }
   return normalizarClave(String(s).replace(/\(.*$/, "")).trim();
 }
 
@@ -43,6 +54,23 @@ function crearSVGEl(tag, attrs) {
 
 /* Une nodos_principales + todo lo que aparezca en conexiones_flechas,
    deduplicando por "núcleo" (el cifrado sin las anotaciones). */
+/* Algunos mapas viejos no ponen el cifrado solo ("C7") sino con una
+   explicación al lado ("I7 (C7)", "Traste 3 (F)"): si la etiqueta entera
+   no parsea, se prueba con lo que hay entre los últimos paréntesis —
+   pero sólo si ADENTRO hay un único cifrado (nada de comas), para no
+   inventar un acorde de una lista de varios ("Tonalidad A (C, Am, Dm)"
+   sigue sin abrir nada, porque ahí no hay UN acorde que mostrar). */
+function acordeDeEtiqueta(etiqueta) {
+  const directo = spellChord(etiqueta);
+  if (directo) return { acorde: directo, cifrado: etiqueta };
+  const m = etiqueta.match(/\(([^()]+)\)\s*$/);
+  if (!m) return null;
+  const adentro = m[1].trim();
+  if (!adentro || adentro.includes(",")) return null;
+  const acorde = spellChord(adentro);
+  return acorde ? { acorde, cifrado: adentro } : null;
+}
+
 function construirNodos(mapa) {
   const orden = [];
   const vistos = new Map();
@@ -65,9 +93,11 @@ function construirNodos(mapa) {
 
   const esquema = mapa.esquema_colores || {};
   return orden.map((n, i) => {
-    const acorde = spellChord(n.etiqueta);
+    const resuelto = acordeDeEtiqueta(n.etiqueta);
+    const acorde = resuelto ? resuelto.acorde : null;
+    const cifrado = resuelto ? resuelto.cifrado : null;
     const { colorKey, color } = elegirColorNodo(n.etiqueta, esquema, acorde, i);
-    return { ...n, indice: i, acorde, colorKey, color };
+    return { ...n, indice: i, acorde, cifrado, colorKey, color };
   });
 }
 
@@ -369,7 +399,7 @@ function engancharInteraccionMapa(svgEl) {
     explorarNodoMapa(svgEl, i);
     if (alFijarNodo && mapaEnPantalla) {
       const n = mapaEnPantalla.nodos[i];
-      alFijarNodo(n.acorde ? n.acorde.raiz + (n.acorde.calidad || "") : null);
+      alFijarNodo(n.cifrado || null);
     }
   });
 
@@ -383,7 +413,7 @@ function engancharInteraccionMapa(svgEl) {
     explorarNodoMapa(svgEl, nodoFijadoMapa);
     if (alFijarNodo && mapaEnPantalla) {
       const n = mapaEnPantalla.nodos[nodoFijadoMapa];
-      alFijarNodo(n.acorde ? n.acorde.raiz + (n.acorde.calidad || "") : null);
+      alFijarNodo(n.cifrado || null);
     }
   });
 }

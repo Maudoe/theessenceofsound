@@ -179,7 +179,7 @@ const MAPAS_ARMONICOS = [
       "C",
       "C#dim7",
       "Edim7",
-      "Gddim7",
+      "Gdim7",
       "Adim7",
       "D",
       "Eb",
@@ -1975,7 +1975,7 @@ const MAPAS_ARMONICOS = [
     "nodos_principales": [
       "G",
       "Cadd9",
-      "Ddsus4",
+      "Dsus4",
       "Em7"
     ],
     "conexiones_flechas": [
