@@ -14,6 +14,7 @@ const IDIOMAS = {
         "aprender": "Aprender",
         "diccionario": "Diccionario de acordes",
         "escalas": "Escalas en el mástil",
+        "identificar": "Identificar acorde",
         "acerca": "Cómo leer esto"
       },
       "intro": {
@@ -227,6 +228,17 @@ const IDIOMAS = {
           "bebop": "Bebop (swing)",
           "simetricas": "Simétricas"
         }
+      },
+      "identificar": {
+        "intro": "Tocá las notas que estás usando en el mástil — marcá cada traste que estás pisando — y te digo qué acorde es. Después te muestro con qué acordes podés seguir, no sólo volver a la tónica.",
+        "limpiar": "Limpiar",
+        "altMastil": "Mástil para marcar las notas de tu acorde",
+        "pocasNotas": "Marcá al menos tres notas distintas para poder reconocer un acorde.",
+        "sinCoincidencia": "No reconozco esta combinación como uno de los acordes de la lista — puede ser una nota de paso, un cluster, o un acorde muy poco común.",
+        "tambien": "También podría ser:",
+        "paraSeguir": "Para dónde seguir",
+        "pistaSeguir": "No sólo la tónica: estos son otros acordes que tienen una relación real con el que tocaste.",
+        "sinSugerencias": "No encontré una relación conocida desde este acorde."
       },
       "idioma": {
         "es": "Español",
@@ -5568,7 +5580,8 @@ const IDIOMAS = {
         "aprender": "Learn",
         "acerca": "How to read this",
         "diccionario": "Chord Dictionary",
-        "escalas": "Scales on the fretboard"
+        "escalas": "Scales on the fretboard",
+        "identificar": "Identify chord"
       },
       "intro": {
         "lema": "The Essence of Sound — by Mau",
@@ -5868,6 +5881,17 @@ const IDIOMAS = {
           "bebop": "Bebop (swing)",
           "simetricas": "Symmetric"
         }
+      },
+      "identificar": {
+        "intro": "Play the notes you're using on the fretboard — mark each fret you're pressing — and I'll tell you what chord it is. Then I'll show you which chords you can move to next, not just back to the tonic.",
+        "limpiar": "Clear",
+        "altMastil": "Fretboard for marking your chord's notes",
+        "pocasNotas": "Mark at least three different notes so I can recognize a chord.",
+        "sinCoincidencia": "I don't recognize this combination as one of the chords on the list — it might be a passing note, a cluster, or a very uncommon chord.",
+        "tambien": "It could also be:",
+        "paraSeguir": "Where to go next",
+        "pistaSeguir": "Not just the tonic: these are other chords with a real relationship to the one you played.",
+        "sinSugerencias": "I couldn't find a known relationship from this chord."
       }
     },
     "categoriasAcordes": {
@@ -8553,7 +8577,8 @@ const IDIOMAS = {
         "aprender": "เรียนรู้",
         "acerca": "วิธีอ่านเว็บนี้",
         "diccionario": "พจนานุกรมคอร์ด",
-        "escalas": "สเกลบนคอกีตาร์"
+        "escalas": "สเกลบนคอกีตาร์",
+        "identificar": "ระบุคอร์ด"
       },
       "intro": {
         "lema": "The Essence of Sound — by Mau",
@@ -8853,6 +8878,17 @@ const IDIOMAS = {
           "bebop": "Bebop (swing)",
           "simetricas": "สเกลสมมาตร"
         }
+      },
+      "identificar": {
+        "intro": "เล่นโน้ตที่คุณใช้บนคอกีตาร์ — เลือกทุกช่องที่คุณกดอยู่ — แล้วฉันจะบอกว่ามันคือคอร์ดอะไร จากนั้นฉันจะแสดงให้ดูว่าคุณสามารถไปต่อด้วยคอร์ดใดได้ ไม่ใช่แค่กลับไปที่คอร์ดโทนิก",
+        "limpiar": "ล้าง",
+        "altMastil": "คอฟรีตสำหรับเลือกโน้ตของคอร์ดของคุณ",
+        "pocasNotas": "เลือกโน้ตที่แตกต่างกันอย่างน้อยสามตัวเพื่อให้สามารถระบุคอร์ดได้",
+        "sinCoincidencia": "ฉันไม่สามารถระบุชุดโน้ตนี้ว่าเป็นคอร์ดใดในรายการ — อาจเป็นโน้ตผ่าน คลัสเตอร์ หรือคอร์ดที่พบได้น้อยมาก",
+        "tambien": "อาจเป็นไปได้ว่า:",
+        "paraSeguir": "จะไปทางไหนต่อ",
+        "pistaSeguir": "ไม่ใช่แค่คอร์ดโทนิก: นี่คือคอร์ดอื่น ๆ ที่มีความสัมพันธ์จริงกับคอร์ดที่คุณเล่น",
+        "sinSugerencias": "ฉันไม่พบความสัมพันธ์ที่รู้จักจากคอร์ดนี้"
       }
     },
     "categoriasAcordes": {

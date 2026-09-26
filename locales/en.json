@@ -2579,7 +2579,8 @@
       "aprender": "Learn",
       "acerca": "How to read this",
       "diccionario": "Chord Dictionary",
-      "escalas": "Scales on the fretboard"
+      "escalas": "Scales on the fretboard",
+      "identificar": "Identify chord"
     },
     "intro": {
       "lema": "The Essence of Sound — by Mau",
@@ -2879,6 +2880,17 @@
         "bebop": "Bebop (swing)",
         "simetricas": "Symmetric"
       }
+    },
+    "identificar": {
+      "intro": "Play the notes you're using on the fretboard — mark each fret you're pressing — and I'll tell you what chord it is. Then I'll show you which chords you can move to next, not just back to the tonic.",
+      "limpiar": "Clear",
+      "altMastil": "Fretboard for marking your chord's notes",
+      "pocasNotas": "Mark at least three different notes so I can recognize a chord.",
+      "sinCoincidencia": "I don't recognize this combination as one of the chords on the list — it might be a passing note, a cluster, or a very uncommon chord.",
+      "tambien": "It could also be:",
+      "paraSeguir": "Where to go next",
+      "pistaSeguir": "Not just the tonic: these are other chords with a real relationship to the one you played.",
+      "sinSugerencias": "I couldn't find a known relationship from this chord."
     }
   },
   "categoriasAcordes": {

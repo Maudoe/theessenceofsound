@@ -868,7 +868,9 @@ function alCambiarIdioma() {
   pintarAprender();
   if (typeof pintarDiccionario === "function") pintarDiccionario();
   if (typeof pintarVistaEscalas === "function") pintarVistaEscalas();
+  if (typeof pintarIdentificar === "function") pintarIdentificar();
   if (typeof pintarVistaEscalas === "function") pintarVistaEscalas();
+  if (typeof pintarIdentificar === "function") pintarIdentificar();
   if (estado.mapaActivo) abrirMapa(estado.mapaActivo);
   if (estado.estiloActivo) abrirEstilo(estado.estiloActivo);
 }
@@ -885,6 +887,7 @@ function iniciar() {
   pintarAprender();
   if (typeof pintarDiccionario === "function") pintarDiccionario();
   if (typeof pintarVistaEscalas === "function") pintarVistaEscalas();
+  if (typeof pintarIdentificar === "function") pintarIdentificar();
   if (typeof setExploradorDeRueda === "function") setExploradorDeRueda(mostrarMovimientos);
   if (typeof setFijadorDeRueda === "function") setFijadorDeRueda(mostrarComoTocar);
 

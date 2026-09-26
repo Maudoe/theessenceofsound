@@ -10,6 +10,7 @@
       "aprender": "Aprender",
       "diccionario": "Diccionario de acordes",
       "escalas": "Escalas en el mástil",
+      "identificar": "Identificar acorde",
       "acerca": "Cómo leer esto"
     },
     "intro": {
@@ -223,6 +224,17 @@
         "bebop": "Bebop (swing)",
         "simetricas": "Simétricas"
       }
+    },
+    "identificar": {
+      "intro": "Tocá las notas que estás usando en el mástil — marcá cada traste que estás pisando — y te digo qué acorde es. Después te muestro con qué acordes podés seguir, no sólo volver a la tónica.",
+      "limpiar": "Limpiar",
+      "altMastil": "Mástil para marcar las notas de tu acorde",
+      "pocasNotas": "Marcá al menos tres notas distintas para poder reconocer un acorde.",
+      "sinCoincidencia": "No reconozco esta combinación como uno de los acordes de la lista — puede ser una nota de paso, un cluster, o un acorde muy poco común.",
+      "tambien": "También podría ser:",
+      "paraSeguir": "Para dónde seguir",
+      "pistaSeguir": "No sólo la tónica: estos son otros acordes que tienen una relación real con el que tocaste.",
+      "sinSugerencias": "No encontré una relación conocida desde este acorde."
     },
     "idioma": {
       "es": "Español",
