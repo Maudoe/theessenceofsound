@@ -21,6 +21,10 @@ const CATEGORIAS_ESCALAS = [
   { id: "pentaBlues", nombre: "Pentatónicas y blues", escalas: ["pentaMayor", "pentaMenor", "blues", "bluesMayor"] },
   { id: "bebop", nombre: "Bebop (swing)", escalas: ["bebopDominante", "bebopMayor", "bebopMenor"] },
   { id: "simetricas", nombre: "Simétricas", escalas: ["tonosEnteros", "disminuida", "disminuidaST"] },
+  { id: "asiatico", nombre: "Sonido asiático", escalas: SONIDOS_ESCALAS.asiatico },
+  { id: "egipcio", nombre: "Sonido egipcio", escalas: SONIDOS_ESCALAS.egipcio },
+  { id: "oriental", nombre: "Sonido de Medio Oriente / flamenco", escalas: SONIDOS_ESCALAS.oriental },
+  { id: "exotico", nombre: "Otras exóticas", escalas: SONIDOS_ESCALAS.exotico },
 ];
 
 /* Calidad de acorde por defecto para tocar de base sobre cada escala —
@@ -32,6 +36,10 @@ const TONICA_POR_ESCALA = {
   pentaMayor: "", pentaMenor: "m", blues: "m7", bluesMayor: "7",
   bebopDominante: "7", bebopMayor: "maj7", bebopMenor: "m7",
   tonosEnteros: "aug", disminuida: "dim7", disminuidaST: "7",
+  hirajoshi: "m", inSen: "5", iwato: "5", kumoi: "m",
+  egipcia: "sus4", bizantina: "maj7", persa: "",
+  hungaraMenor: "m", hungaraMayor: "",
+  enigmatica: "aug", napolitanaMenor: "m", napolitanaMayor: "m",
 };
 
 /* Para escalas de 7 notas: arma los 7 acordes diatónicos apilando
@@ -109,14 +117,17 @@ function acordesCompatibles(escalaId, raizSemitono) {
 
 let estadoEscalas = { raiz: "A", escala: "eolico", acordeElegido: null };
 
+const RAICES_ESCALA = ["C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab", "A", "Bb", "B"];
+
 function pintarSelectorEscalas() {
-  const raices = ["C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab", "A", "Bb", "B"];
   return `
     <div class="dic-raiz">
       <label for="sel-raiz-escalas">${t("diccionario.tonica")}</label>
+      <button type="button" class="esc-transportar" id="esc-transportar-abajo" title="${t("escalas.transportarAbajo")}" aria-label="${t("escalas.transportarAbajo")}">−</button>
       <select id="sel-raiz-escalas">
-        ${raices.map((r) => `<option value="${r}"${r === estadoEscalas.raiz ? " selected" : ""}>${r}</option>`).join("")}
+        ${RAICES_ESCALA.map((r) => `<option value="${r}"${r === estadoEscalas.raiz ? " selected" : ""}>${r}</option>`).join("")}
       </select>
+      <button type="button" class="esc-transportar" id="esc-transportar-arriba" title="${t("escalas.transportarArriba")}" aria-label="${t("escalas.transportarArriba")}">+</button>
     </div>`;
 }
 
@@ -152,6 +163,16 @@ function pintarVistaEscalas() {
     pintarVistaEscalas();
     pintarDetalleEscala();
   });
+
+  const transportar = (delta) => {
+    const i = RAICES_ESCALA.indexOf(estadoEscalas.raiz);
+    estadoEscalas.raiz = RAICES_ESCALA[(i + delta + 12) % 12];
+    estadoEscalas.acordeElegido = null;
+    pintarVistaEscalas();
+    pintarDetalleEscala();
+  };
+  $("#esc-transportar-abajo").addEventListener("click", () => transportar(-1));
+  $("#esc-transportar-arriba").addEventListener("click", () => transportar(1));
 
   $$(".tarjeta-acorde", cont).forEach((b) => {
     b.addEventListener("click", () => {
@@ -209,6 +230,14 @@ function pintarDetalleEscala() {
 
   const explicacion = papeles ? explicacionDeEscala(escalaId, elegido.acorde, false) : "";
 
+  const leyenda = `
+    <div class="esc-leyenda">
+      <span class="esc-leyenda-item"><i class="esc-leyenda-punto p-base"></i>${t("modalInstrumento.delAcorde")}</span>
+      <span class="esc-leyenda-item"><i class="esc-leyenda-punto p-puente"></i>${t("modalInstrumento.puente")}</span>
+      <span class="esc-leyenda-item"><i class="esc-leyenda-punto p-tension"></i>${t("modalInstrumento.tension")}</span>
+      <span class="esc-leyenda-item"><i class="esc-leyenda-punto p-resolucion"></i>${t("modalInstrumento.resuelve")}</span>
+    </div>`;
+
   detalle.innerHTML = `
     <div class="dic-detalle-cabeza">
       <h3>${estadoEscalas.raiz} <span class="dic-detalle-nombre">${tesc(escalaId, "nombre", esc.nombre)}</span></h3>
@@ -220,6 +249,7 @@ function pintarDetalleEscala() {
       <div class="dic-tarjetas">${chipsAcordes}</div>
     </div>
     <p class="dic-pista">${t("escalas.pistaMastil")} <b>${elegido.cifrado}</b>.</p>
+    ${papeles ? leyenda : ""}
     <div class="dic-posicion-svg esc-mastil-completo">${diagrama}</div>
     <div class="escala-explica">${explicacion || ""}</div>`;
 

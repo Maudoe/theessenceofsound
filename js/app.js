@@ -607,6 +607,18 @@ function mostrarComoTocar(cifrado) {
   abrirModalInstrumento();
 }
 
+/* Como mostrarComoTocar(), pero entrando ya con un color emocional
+   elegido — lo usa la sección de Emociones para que al abrir el acorde
+   se vea directo el "Que suene…" aplicado, en vez de que el usuario
+   tenga que elegirlo de nuevo en el selector. */
+function mostrarComoTocarConEmocion(cifrado, emocionId) {
+  mostrarComoTocar(cifrado);
+  if (!instrumento.diagramas || !EMOCIONES[emocionId]) return;
+  instrumento.emocion = emocionId;
+  armarSelectorEmocion();
+  pintarColorEmocional();
+}
+
 
 
 /* ============ los símbolos de las cartas ============
@@ -869,8 +881,7 @@ function alCambiarIdioma() {
   if (typeof pintarDiccionario === "function") pintarDiccionario();
   if (typeof pintarVistaEscalas === "function") pintarVistaEscalas();
   if (typeof pintarIdentificar === "function") pintarIdentificar();
-  if (typeof pintarVistaEscalas === "function") pintarVistaEscalas();
-  if (typeof pintarIdentificar === "function") pintarIdentificar();
+  if (typeof pintarVistaEmociones === "function") pintarVistaEmociones();
   if (estado.mapaActivo) abrirMapa(estado.mapaActivo);
   if (estado.estiloActivo) abrirEstilo(estado.estiloActivo);
 }
@@ -888,6 +899,7 @@ function iniciar() {
   if (typeof pintarDiccionario === "function") pintarDiccionario();
   if (typeof pintarVistaEscalas === "function") pintarVistaEscalas();
   if (typeof pintarIdentificar === "function") pintarIdentificar();
+  if (typeof pintarVistaEmociones === "function") pintarVistaEmociones();
   if (typeof setExploradorDeRueda === "function") setExploradorDeRueda(mostrarMovimientos);
   if (typeof setFijadorDeRueda === "function") setFijadorDeRueda(mostrarComoTocar);
 

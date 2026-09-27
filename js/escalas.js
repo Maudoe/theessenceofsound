@@ -42,6 +42,36 @@ const ESCALAS = {
   tonosEnteros:  { nombre: "Tonos enteros",         grados: [0, 2, 4, 6, 8, 10], sabor: "Todo a distancia de tono: no hay centro, flota." },
   disminuida:    { nombre: "Disminuida (T-S)",      grados: [0, 2, 3, 5, 6, 8, 9, 11], sabor: "Simétrica, para los acordes disminuidos. Suspenso." },
   disminuidaST:  { nombre: "Disminuida (S-T)",      grados: [0, 1, 3, 4, 6, 7, 9, 10], sabor: "La misma simetría arrancando por el semitono: es la de los dominantes con b9. Te da b9, #9, #11 y 13 sin salirte." },
+
+  /* Pentatónicas japonesas: cada una es la escala "yo" o "in" de un modo
+     distinto, todas de cinco notas. No tienen tercera clásica en varios
+     casos — es parte del sabor, no falta nada. */
+  hirajoshi:     { nombre: "Hirajoshi",             grados: [0, 2, 3, 7, 8], sabor: "Koto japonés: tiene 3ra menor pero salta directo a la b6, sin 4ta ni 7ma. Suena a jardín de piedras." },
+  inSen:         { nombre: "In (In Sen)",           grados: [0, 1, 5, 7, 8], sabor: "Sin tercera: b2, 4ta, 5ta y b6. Es la más oscura de las japonesas, casi un lamento." },
+  iwato:         { nombre: "Iwato",                 grados: [0, 1, 5, 6, 10], sabor: "La In con la 5ta bajada a b5. Muy inestable, ideal para algo inquietante y ceremonial." },
+  kumoi:         { nombre: "Kumoi",                 grados: [0, 2, 3, 7, 9], sabor: "Como la Hirajoshi pero con 6ta en vez de b6: más dulce, menos tensa." },
+
+  egipcia:       { nombre: "Egipcia (suspendida)",  grados: [0, 2, 5, 7, 10], sabor: "Pentatónica sin ninguna tercera: 2da, 4ta, 5ta y b7. Todo suena en suspenso, ni mayor ni menor — la escala del oud sobre una nota pedal." },
+
+  bizantina:     { nombre: "Bizantina (doble armónica)", grados: [0, 1, 4, 5, 7, 8, 11], sabor: "b2 y b6 alrededor de una 3ra y 7ma mayores: dos saltos de tercera aumentada. Es el maqam Hijaz Kar y también la raga Bhairav de la India." },
+  persa:         { nombre: "Persa",                 grados: [0, 1, 4, 5, 6, 8, 11], sabor: "Como la bizantina pero con la 5ta bajada: no hay quinta justa desde la raíz. Muy filosa — pensada para cuartos de tono que acá se aproximan en 12." },
+  hungaraMenor:  { nombre: "Húngara menor (gitana)", grados: [0, 2, 3, 6, 7, 8, 11], sabor: "Menor armónica con la 4ta subida: dos saltos de tercera (b3 a #4, b6 a 7ma). El sonido de la música klezmer y gitana de Europa del este." },
+  hungaraMayor:  { nombre: "Húngara mayor",         grados: [0, 3, 4, 6, 7, 9, 10], sabor: "Tiene la 2da subida (#2) Y la 3ra mayor al mismo tiempo, más la 4ta subida. Rarísima y colorida, poco pisada fuera de Europa del este." },
+
+  enigmatica:    { nombre: "Enigmática",            grados: [0, 1, 4, 6, 8, 10, 11], sabor: "b2, 3ra mayor, tritono, quinta y sexta aumentadas, y 7ma mayor: no tiene quinta justa. Verdiana y rarísima, más un experimento armónico que una escala de uso diario." },
+  napolitanaMenor:{ nombre: "Napolitana menor",     grados: [0, 1, 3, 5, 7, 8, 11], sabor: "Menor con la 2da bajada y la 7ma subida: b2 le da el color oscuro, la 7ma mayor le da tensión hacia la tónica." },
+  napolitanaMayor:{ nombre: "Napolitana mayor",     grados: [0, 1, 3, 5, 7, 9, 11], sabor: "La napolitana menor con 6ta mayor en vez de b6: menos pesada, casi luminosa a pesar de la b2." },
+};
+
+/* Escalas agrupadas por el "sonido" que evocan más que por su función
+   armónica clásica — mismo criterio honesto que en emociones.js: esto es
+   una asociación cultural/de género musical, no una propiedad física del
+   sonido. Sirve para explorar por oído, no como taxonomía académica. */
+const SONIDOS_ESCALAS = {
+  asiatico: ["hirajoshi", "inSen", "iwato", "kumoi"],
+  egipcio: ["egipcia"],
+  oriental: ["frigioDominante", "bizantina", "persa", "hungaraMenor"],
+  exotico: ["hungaraMayor", "enigmatica", "napolitanaMenor", "napolitanaMayor"],
 };
 
 /* Qué escalas entran sobre qué acorde. El orden importa: la primera es la

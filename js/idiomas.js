@@ -15,6 +15,7 @@ const IDIOMAS = {
         "diccionario": "Diccionario de acordes",
         "escalas": "Escalas en el mástil",
         "identificar": "Identificar acorde",
+        "emociones": "Emociones",
         "acerca": "Cómo leer esto"
       },
       "intro": {
@@ -220,13 +221,19 @@ const IDIOMAS = {
         "pistaMastil": "El mástil completo, coloreado en base a",
         "tonicaLabel": "Tónica de la escala",
         "sinSugerencias": "No encontré acordes de esta lista que armonicen con esta escala en particular.",
+        "transportarAbajo": "Bajar medio tono",
+        "transportarArriba": "Subir medio tono",
         "categorias": {
           "mayores": "Modos mayores",
           "menores": "Modos menores",
           "menorArmMel": "Menor armónica, melódica y parientes",
           "pentaBlues": "Pentatónicas y blues",
           "bebop": "Bebop (swing)",
-          "simetricas": "Simétricas"
+          "simetricas": "Simétricas",
+          "asiatico": "Sonido asiático",
+          "egipcio": "Sonido egipcio",
+          "oriental": "Sonido de Medio Oriente / flamenco",
+          "exotico": "Otras exóticas"
         }
       },
       "identificar": {
@@ -241,6 +248,17 @@ const IDIOMAS = {
         "sinSugerencias": "No encontré una relación conocida desde este acorde.",
         "espectro": "Espectro",
         "pistaEspectro": "El mismo movimiento, en el círculo de quintas."
+      },
+      "emocionesVista": {
+        "intro": "Elegí qué emoción querés transmitir y una tónica, y te muestro qué versión de ese acorde (mayor, menor y dominante) le da ese color, con las escalas que van arriba de cada una. Es la sección de acordes al revés: en vez de partir de un cifrado, partís de la sensación.",
+        "sinVersiones": "No hay versiones cargadas para esta combinación todavía.",
+        "sinEscalas": "Sin escala sugerida para esta versión en particular.",
+        "escalasQueAcompanan": "Escalas que acompañan esta versión — clickeá una para verla completa en el mástil:",
+        "familia": {
+          "mayor": "Sobre un acorde mayor",
+          "menor": "Sobre un acorde menor",
+          "dominante": "Sobre un dominante"
+        }
       },
       "idioma": {
         "es": "Español",
@@ -2876,6 +2894,54 @@ const IDIOMAS = {
       "disminuidaST": {
         "nombre": "Disminuida (S-T)",
         "sabor": "La misma simetría arrancando por el semitono: es la de los dominantes con b9. Te da b9, #9, #11 y 13 sin salirte."
+      },
+      "hirajoshi": {
+        "nombre": "Hirajoshi",
+        "sabor": "Koto japonés: tiene 3ra menor pero salta directo a la b6, sin 4ta ni 7ma. Suena a jardín de piedras."
+      },
+      "inSen": {
+        "nombre": "In (In Sen)",
+        "sabor": "Sin tercera: b2, 4ta, 5ta y b6. Es la más oscura de las japonesas, casi un lamento."
+      },
+      "iwato": {
+        "nombre": "Iwato",
+        "sabor": "La In con la 5ta bajada a b5. Muy inestable, ideal para algo inquietante y ceremonial."
+      },
+      "kumoi": {
+        "nombre": "Kumoi",
+        "sabor": "Como la Hirajoshi pero con 6ta en vez de b6: más dulce, menos tensa."
+      },
+      "egipcia": {
+        "nombre": "Egipcia (suspendida)",
+        "sabor": "Pentatónica sin ninguna tercera: 2da, 4ta, 5ta y b7. Todo suena en suspenso, ni mayor ni menor — la escala del oud sobre una nota pedal."
+      },
+      "bizantina": {
+        "nombre": "Bizantina (doble armónica)",
+        "sabor": "b2 y b6 alrededor de una 3ra y 7ma mayores: dos saltos de tercera aumentada. Es el maqam Hijaz Kar y también la raga Bhairav de la India."
+      },
+      "persa": {
+        "nombre": "Persa",
+        "sabor": "Como la bizantina pero con la 5ta bajada: no hay quinta justa desde la raíz. Muy filosa — pensada para cuartos de tono que acá se aproximan en 12."
+      },
+      "hungaraMenor": {
+        "nombre": "Húngara menor (gitana)",
+        "sabor": "Menor armónica con la 4ta subida: dos saltos de tercera (b3 a #4, b6 a 7ma). El sonido de la música klezmer y gitana de Europa del este."
+      },
+      "hungaraMayor": {
+        "nombre": "Húngara mayor",
+        "sabor": "Tiene la 2da subida (#2) Y la 3ra mayor al mismo tiempo, más la 4ta subida. Rarísima y colorida, poco pisada fuera de Europa del este."
+      },
+      "enigmatica": {
+        "nombre": "Enigmática",
+        "sabor": "b2, 3ra mayor, tritono, quinta y sexta aumentadas, y 7ma mayor: no tiene quinta justa. Verdiana y rarísima, más un experimento armónico que una escala de uso diario."
+      },
+      "napolitanaMenor": {
+        "nombre": "Napolitana menor",
+        "sabor": "Menor con la 2da bajada y la 7ma subida: b2 le da el color oscuro, la 7ma mayor le da tensión hacia la tónica."
+      },
+      "napolitanaMayor": {
+        "nombre": "Napolitana mayor",
+        "sabor": "La napolitana menor con 6ta mayor en vez de b6: menos pesada, casi luminosa a pesar de la b2."
       }
     },
     "afinaciones": {
@@ -5548,6 +5614,54 @@ const IDIOMAS = {
       "disminuidaST": {
         "nombre": "Diminished (half-whole)",
         "sabor": "The same symmetry starting on the half step: it's the one for dominants with a b9. Gives you b9, #9, #11, and 13 without leaving the scale."
+      },
+      "hirajoshi": {
+        "nombre": "Hirajoshi",
+        "sabor": "Japanese koto scale: it has a minor 3rd but jumps straight to the b6, no 4th or 7th. Sounds like a stone garden."
+      },
+      "inSen": {
+        "nombre": "In (In Sen)",
+        "sabor": "No third at all: b2, 4th, 5th and b6. The darkest of the Japanese scales, almost a lament."
+      },
+      "iwato": {
+        "nombre": "Iwato",
+        "sabor": "The In scale with the 5th flattened to a b5. Very unstable — great for something unsettling and ceremonial."
+      },
+      "kumoi": {
+        "nombre": "Kumoi",
+        "sabor": "Like Hirajoshi but with a natural 6th instead of b6: sweeter, less tense."
+      },
+      "egipcia": {
+        "nombre": "Egyptian (suspended)",
+        "sabor": "A pentatonic with no third at all: 2nd, 4th, 5th and b7. Everything sounds suspended, neither major nor minor — the oud scale over a pedal note."
+      },
+      "bizantina": {
+        "nombre": "Byzantine (double harmonic)",
+        "sabor": "b2 and b6 around a major 3rd and major 7th: two augmented-second leaps. This is the Hijaz Kar maqam, and also the Bhairav raga from India."
+      },
+      "persa": {
+        "nombre": "Persian",
+        "sabor": "Like the Byzantine scale but with the 5th flattened too: there is no perfect fifth from the root. Very sharp — it approximates quarter tones within 12-tone tuning."
+      },
+      "hungaraMenor": {
+        "nombre": "Hungarian minor (gypsy)",
+        "sabor": "Harmonic minor with a raised 4th: two augmented-second leaps (b3 to #4, b6 to 7th). The sound of klezmer and Eastern European gypsy music."
+      },
+      "hungaraMayor": {
+        "nombre": "Hungarian major",
+        "sabor": "Has both the raised 2nd (#2) AND the major 3rd at once, plus a raised 4th. Rare and colorful, rarely played outside Eastern Europe."
+      },
+      "enigmatica": {
+        "nombre": "Enigmatic",
+        "sabor": "b2, major 3rd, tritone, augmented 5th and 6th, and major 7th: no perfect fifth at all. Verdi-esque and very rare — more a harmonic experiment than an everyday scale."
+      },
+      "napolitanaMenor": {
+        "nombre": "Neapolitan minor",
+        "sabor": "Minor with a flattened 2nd and a raised 7th: the b2 gives it the dark color, the major 7th pulls hard toward the tonic."
+      },
+      "napolitanaMayor": {
+        "nombre": "Neapolitan major",
+        "sabor": "The Neapolitan minor with a major 6th instead of b6: lighter, almost luminous despite the b2."
       }
     },
     "afinaciones": {
@@ -5583,7 +5697,8 @@ const IDIOMAS = {
         "acerca": "How to read this",
         "diccionario": "Chord Dictionary",
         "escalas": "Scales on the fretboard",
-        "identificar": "Identify chord"
+        "identificar": "Identify chord",
+        "emociones": "Emotions"
       },
       "intro": {
         "lema": "The Essence of Sound — by Mau",
@@ -5881,8 +5996,14 @@ const IDIOMAS = {
           "menorArmMel": "Harmonic minor, melodic minor, and relatives",
           "pentaBlues": "Pentatonic and blues",
           "bebop": "Bebop (swing)",
-          "simetricas": "Symmetric"
-        }
+          "simetricas": "Symmetric",
+          "asiatico": "Asian sound",
+          "egipcio": "Egyptian sound",
+          "oriental": "Middle Eastern / flamenco sound",
+          "exotico": "Other exotic scales"
+        },
+        "transportarAbajo": "Transpose down a half step",
+        "transportarArriba": "Transpose up a half step"
       },
       "identificar": {
         "intro": "Play the notes you're using on the fretboard — mark each fret you're pressing — and I'll tell you what chord it is. Then I'll show you which chords you can move to next, not just back to the tonic.",
@@ -5896,6 +6017,17 @@ const IDIOMAS = {
         "sinSugerencias": "I couldn't find a known relationship from this chord.",
         "espectro": "Spectrum",
         "pistaEspectro": "The same movement, on the circle of fifths."
+      },
+      "emocionesVista": {
+        "intro": "Pick the emotion you want to convey and a root, and I'll show you which version of that chord (major, minor and dominant) gives it that color, with the scales that go on top of each one. It's the chords section in reverse: instead of starting from a chord symbol, you start from the feeling.",
+        "sinVersiones": "No versions loaded for this combination yet.",
+        "sinEscalas": "No suggested scale for this particular version.",
+        "escalasQueAcompanan": "Scales that go with this version — click one to see it across the whole fretboard:",
+        "familia": {
+          "mayor": "Over a major chord",
+          "menor": "Over a minor chord",
+          "dominante": "Over a dominant"
+        }
       }
     },
     "categoriasAcordes": {
