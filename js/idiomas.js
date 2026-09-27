@@ -251,6 +251,8 @@ const IDIOMAS = {
       },
       "emocionesVista": {
         "intro": "Elegí qué emoción querés transmitir y una tónica, y te muestro qué versión de ese acorde (mayor, menor y dominante) le da ese color, con las escalas que van arriba de cada una. Es la sección de acordes al revés: en vez de partir de un cifrado, partís de la sensación.",
+        "progresionTitulo": "Cuatro acordes para una estrofa o estribillo entero",
+        "progresionPista": "No es un acorde suelto: es una vuelta armónica real, coloreada con esta emoción. Elegí cualquiera para ver cómo se toca.",
         "sinVersiones": "No hay versiones cargadas para esta combinación todavía.",
         "sinEscalas": "Sin escala sugerida para esta versión en particular.",
         "escalasQueAcompanan": "Escalas que acompañan esta versión — clickeá una para verla completa en el mástil:",
@@ -6027,7 +6029,9 @@ const IDIOMAS = {
           "mayor": "Over a major chord",
           "menor": "Over a minor chord",
           "dominante": "Over a dominant"
-        }
+        },
+        "progresionTitulo": "Four chords for a whole verse or chorus",
+        "progresionPista": "Not a single chord — a real chord progression, colored with this emotion. Click any of them to see how to play it."
       }
     },
     "categoriasAcordes": {
@@ -9072,6 +9076,8 @@ const IDIOMAS = {
       },
       "emocionesVista": {
         "intro": "เลือกอารมณ์ที่คุณอยากถ่ายทอดและโน้ตหลัก แล้วฉันจะแสดงให้ดูว่าคอร์ดแบบไหน (major, minor หรือ dominant) ที่ให้สีเสียงนั้น พร้อมสเกลที่เล่นทับได้กับแต่ละแบบ นี่คือหมวดคอร์ดแบบย้อนกลับ: แทนที่จะเริ่มจากสัญลักษณ์คอร์ด คุณเริ่มจากความรู้สึก",
+        "progresionTitulo": "สี่คอร์ดสำหรับหนึ่งท่อนหรือหนึ่งประโยคฮุกเต็ม ๆ",
+        "progresionPista": "นี่ไม่ใช่คอร์ดเดี่ยว ๆ แต่เป็นวงจรฮาร์โมนีจริงที่ระบายด้วยอารมณ์นี้ เลือกคอร์ดไหนก็ได้เพื่อดูวิธีเล่น",
         "sinVersiones": "ยังไม่มีเวอร์ชันที่โหลดไว้สำหรับชุดนี้",
         "sinEscalas": "ไม่มีสเกลที่แนะนำสำหรับเวอร์ชันนี้โดยเฉพาะ",
         "escalasQueAcompanan": "สเกลที่เข้ากับเวอร์ชันนี้ — คลิกเพื่อดูเต็มคอฟีตาร์:",

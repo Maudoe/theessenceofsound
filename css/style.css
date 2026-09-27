@@ -1655,6 +1655,15 @@ body.loader-activo { overflow: hidden; height: 100vh; }
 .emo-familia { margin: 22px 0; }
 .emo-chips-escalas { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
 .emo-como-usar { margin-top: 24px; }
+.emo-progresion-bloque { margin: 20px 0 26px; padding: 16px 18px; border: 1px solid rgba(var(--acento-rgb), 0.3); border-radius: 14px; background: rgba(255,255,255,0.02); }
+.emo-progresion { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 10px; }
+.emo-paso { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; min-width: 84px; }
+.emo-paso-grado { font-size: 0.68rem; letter-spacing: 1px; text-transform: uppercase; color: var(--acento); font-weight: 700; }
+.emo-progresion-flecha { color: var(--tenue); font-size: 1.1rem; flex: none; }
+@media (max-width: 640px) {
+  .emo-progresion { gap: 6px; }
+  .emo-progresion-flecha { transform: rotate(90deg); }
+}
 
 /* ---------------- identificar acorde: espectro (rueda de quintas) ---------------- */
 .id-espectro-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 22px; align-items: start; margin: 20px 0; }

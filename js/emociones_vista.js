@@ -96,6 +96,36 @@ function bloqueFamiliaEmocion(familia, emocionId, raiz) {
     </div>`;
 }
 
+/* Un grupo de 4 acordes reales para armar una estrofa o estribillo
+   entero con este color — no un acorde suelto. emo.progresion trae los
+   grados en semitonos + a qué familia pertenece cada uno; acá se
+   transporta a la tónica elegida y se le aplica el color de la emoción
+   (la primera versión de versionesConColor, la más representativa). */
+function chipsDeProgresionEmocion(emocionId, raiz) {
+  const emo = EMOCIONES[emocionId];
+  if (!emo || !emo.progresion) return "";
+
+  const pasos = emo.progresion.map((paso) => {
+    const raizAcorde = transportarNota(raiz, paso.semitonos, false);
+    const sufijoBase = paso.familia === "menor" ? "m" : paso.familia === "dominante" ? "7" : "";
+    const acordeBase = spellChord(raizAcorde + sufijoBase);
+    if (!acordeBase) return null;
+    const versiones = versionesConColor(acordeBase, emocionId);
+    const elegido = versiones[0] || { cifrado: raizAcorde + sufijoBase, notas: acordeBase.notas.join(" ") };
+    return { grado: paso.grado, cifrado: elegido.cifrado, notas: elegido.notas };
+  }).filter(Boolean);
+
+  if (!pasos.length) return "";
+
+  return pasos.map((p, i) => `
+    ${i > 0 ? '<span class="emo-progresion-flecha">→</span>' : ""}
+    <button class="tarjeta-acorde tarjeta-acorde-chica emo-paso" data-cifrado="${p.cifrado}">
+      <span class="emo-paso-grado">${p.grado}</span>
+      <span class="tarjeta-acorde-cifrado">${p.cifrado}</span>
+      <span class="tarjeta-acorde-nombre">${p.notas}</span>
+    </button>`).join("");
+}
+
 function pintarDetalleEmocion() {
   const detalle = $("#emo-detalle");
   if (!detalle) return;
@@ -105,6 +135,14 @@ function pintarDetalleEmocion() {
   const emo = EMOCIONES[emocionId];
   if (!emo) { detalle.innerHTML = ""; return; }
 
+  const chipsProgresion = chipsDeProgresionEmocion(emocionId, raiz);
+  const bloqueProgresion = chipsProgresion ? `
+    <div class="emo-progresion-bloque">
+      <div class="bloque-titulo">${t("emocionesVista.progresionTitulo")}</div>
+      <p class="bloque-pista">${t("emocionesVista.progresionPista")}</p>
+      <div class="emo-progresion">${chipsProgresion}</div>
+    </div>` : "";
+
   const familias = FAMILIAS_EMOCION.map((f) => bloqueFamiliaEmocion(f, emocionId, raiz)).filter(Boolean).join("");
 
   detalle.innerHTML = `
@@ -112,6 +150,7 @@ function pintarDetalleEmocion() {
       <h3>${tem(emocionId, "nombre", emo.nombre)}</h3>
       <p class="dic-detalle-descripcion">${tem(emocionId, "resumen", emo.resumen)}</p>
     </div>
+    ${bloqueProgresion}
     ${familias || `<p class="dic-vacio">${t("emocionesVista.sinVersiones")}</p>`}
     <p class="dic-pista emo-como-usar"><b>${t("emocion.comoSeToca")}</b> ${tem(emocionId, "comoUsar", emo.comoUsar)}</p>`;
 

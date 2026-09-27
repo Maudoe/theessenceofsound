@@ -2958,7 +2958,9 @@
         "mayor": "Over a major chord",
         "menor": "Over a minor chord",
         "dominante": "Over a dominant"
-      }
+      },
+      "progresionTitulo": "Four chords for a whole verse or chorus",
+      "progresionPista": "Not a single chord — a real chord progression, colored with this emotion. Click any of them to see how to play it."
     }
   },
   "categoriasAcordes": {
