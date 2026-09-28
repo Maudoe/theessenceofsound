@@ -1287,11 +1287,17 @@ body::before {
   fill: var(--tenue); font-size: 8px; text-anchor: middle;
   font-family: "Space Grotesk", sans-serif; font-weight: 600;
 }
-.tab-fondo { fill: #0c0c11; }
+.tab-fondo { fill: #0c0c11; transition: fill 90ms ease; }
 .tab-num {
   fill: var(--acento-claro); font-size: 9.5px; font-weight: 700;
   text-anchor: middle; font-family: "Space Grotesk", sans-serif;
+  transition: fill 90ms ease;
 }
+/* nota que está sonando en este instante, en sincro con "Escuchar" —
+   mismo dorado que usa el resto del sitio para "esto está sonando
+   ahora", ver resaltarLickEnTab() en licks_vista.js */
+.tab-fondo.en-sonido { fill: #ffd54a; }
+.tab-num.en-sonido { fill: #1a1408; }
 .lick-notas { font-size: 0.74rem; color: var(--tenue); margin-top: 8px; letter-spacing: 0.4px; }
 
 /* ============ aprender ============ */
@@ -1730,6 +1736,8 @@ body.loader-activo { overflow: hidden; height: 100vh; }
   display: flex; align-items: center; gap: 10px;
   margin-bottom: 22px;
 }
+.dic-raiz-fila { display: flex; flex-wrap: wrap; gap: 10px 28px; }
+.dic-raiz-fila .dic-raiz { margin-bottom: 22px; }
 .dic-raiz label {
   font-size: 0.72rem; letter-spacing: 1.4px; text-transform: uppercase;
   color: var(--tenue); font-weight: 700;

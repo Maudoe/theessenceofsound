@@ -14,6 +14,7 @@ const IDIOMAS = {
         "aprender": "Aprender",
         "diccionario": "Diccionario de acordes",
         "escalas": "Escalas en el mástil",
+        "licks": "Licks de guitarra",
         "identificar": "Identificar acorde",
         "emociones": "Emociones",
         "temas": "Temas",
@@ -246,6 +247,20 @@ const IDIOMAS = {
           "oriental": "Sonido de Medio Oriente / flamenco",
           "exotico": "Otras exóticas"
         }
+      },
+      "licksVista": {
+        "intro": "Cien frases de guitarra acústica en el terreno de Brad Paisley y Blues Saraceno: chicken pickin', bends de pedal steel, flatpicking de bluegrass y turnarounds de western swing. Elegí una tonalidad o una técnica para filtrar, tocá una tarjeta para ver la tablatura, y apretá Escuchar para saber cómo suena antes de tocarla vos.",
+        "filtrarTonalidad": "Tonalidad",
+        "filtrarTecnica": "Técnica",
+        "todas": "Todas",
+        "contador": "Mostrando {n} de {total} licks.",
+        "tonalidad": "Tonalidad",
+        "tecnica": "Técnica",
+        "dificultad": "Nivel",
+        "escuchar": "Escuchar el lick",
+        "notas": "Notas",
+        "leyendaTecnicas": "h = hammer-on · p = pull-off · b = bend · / = slide ascendente · \\ = slide descendente",
+        "sinResultados": "No hay licks con ese filtro — probá con otra combinación."
       },
       "identificar": {
         "intro": "Tocá las notas que estás usando en el mástil — marcá cada traste que estás pisando — y te digo qué acorde es. Después te muestro con qué acordes podés seguir, no sólo volver a la tónica.",
@@ -5825,7 +5840,8 @@ const IDIOMAS = {
         "escalas": "Scales on the fretboard",
         "identificar": "Identify chord",
         "emociones": "Emotions",
-        "temas": "Themes"
+        "temas": "Themes",
+        "licks": "Guitar licks"
       },
       "intro": {
         "lema": "The Essence of Sound — by Mau",
@@ -6182,6 +6198,20 @@ const IDIOMAS = {
       },
       "ajustes": {
         "abrir": "Settings"
+      },
+      "licksVista": {
+        "intro": "A hundred acoustic-guitar phrases in the Brad Paisley / Blues Saraceno territory: chicken pickin', pedal-steel-style bends, bluegrass flatpicking, and western-swing turnarounds. Pick a key or a technique to filter, tap a card to see the tab, and hit Listen to hear it before you play it yourself.",
+        "filtrarTonalidad": "Key",
+        "filtrarTecnica": "Technique",
+        "todas": "All",
+        "contador": "Showing {n} of {total} licks.",
+        "tonalidad": "Key",
+        "tecnica": "Technique",
+        "dificultad": "Level",
+        "escuchar": "Listen to the lick",
+        "notas": "Notes",
+        "leyendaTecnicas": "h = hammer-on · p = pull-off · b = bend · / = slide up · \\ = slide down",
+        "sinResultados": "No licks match that filter — try a different combination."
       }
     },
     "categoriasAcordes": {
@@ -9048,7 +9078,8 @@ const IDIOMAS = {
         "escalas": "สเกลบนคอกีตาร์",
         "identificar": "ระบุคอร์ด",
         "emociones": "อารมณ์",
-        "temas": "ธีม"
+        "temas": "ธีม",
+        "licks": "ลิคกีตาร์"
       },
       "intro": {
         "lema": "The Essence of Sound — by Mau",
@@ -9405,6 +9436,20 @@ const IDIOMAS = {
         "pistaEspectro": "การเคลื่อนไหวแบบเดียวกัน แสดงบนวงกลมคู่ห้า",
         "verEspectro": "ดูสเปกตรัม",
         "cerrarEspectro": "ปิดสเปกตรัม"
+      },
+      "licksVista": {
+        "intro": "บทกีตาร์โปร่งร้อยบทในสไตล์ Brad Paisley / Blues Saraceno: chicken pickin', การเบนด์แบบ pedal-steel, การถอนสาย flatpicking แบบ bluegrass และวลีปิดจบแบบ western-swing เลือกคีย์หรือเทคนิคเพื่อกรอง แตะการ์ดเพื่อดูแท็บ แล้วกด \"ฟัง\" เพื่อฟังก่อนเล่นเอง",
+        "filtrarTonalidad": "คีย์",
+        "filtrarTecnica": "เทคนิค",
+        "todas": "ทั้งหมด",
+        "contador": "แสดง {n} จาก {total} ลิคทั้งหมด",
+        "tonalidad": "คีย์",
+        "tecnica": "เทคนิค",
+        "dificultad": "ระดับ",
+        "escuchar": "ฟังลิคนี้",
+        "notas": "โน้ต",
+        "leyendaTecnicas": "h = hammer-on · p = pull-off · b = bend · / = slide up · \\ = slide down",
+        "sinResultados": "ไม่มีลิคที่ตรงกับตัวกรองนี้ ลองเปลี่ยนตัวกรองดูนะ"
       }
     },
     "categoriasAcordes": {

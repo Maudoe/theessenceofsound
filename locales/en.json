@@ -2630,7 +2630,8 @@
       "escalas": "Scales on the fretboard",
       "identificar": "Identify chord",
       "emociones": "Emotions",
-      "temas": "Themes"
+      "temas": "Themes",
+      "licks": "Guitar licks"
     },
     "intro": {
       "lema": "The Essence of Sound — by Mau",
@@ -2987,6 +2988,20 @@
     },
     "ajustes": {
       "abrir": "Settings"
+    },
+    "licksVista": {
+      "intro": "A hundred acoustic-guitar phrases in the Brad Paisley / Blues Saraceno territory: chicken pickin', pedal-steel-style bends, bluegrass flatpicking, and western-swing turnarounds. Pick a key or a technique to filter, tap a card to see the tab, and hit Listen to hear it before you play it yourself.",
+      "filtrarTonalidad": "Key",
+      "filtrarTecnica": "Technique",
+      "todas": "All",
+      "contador": "Showing {n} of {total} licks.",
+      "tonalidad": "Key",
+      "tecnica": "Technique",
+      "dificultad": "Level",
+      "escuchar": "Listen to the lick",
+      "notas": "Notes",
+      "leyendaTecnicas": "h = hammer-on · p = pull-off · b = bend · / = slide up · \\ = slide down",
+      "sinResultados": "No licks match that filter — try a different combination."
     }
   },
   "categoriasAcordes": {

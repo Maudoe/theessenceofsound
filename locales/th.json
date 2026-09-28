@@ -2662,7 +2662,8 @@
       "escalas": "สเกลบนคอกีตาร์",
       "identificar": "ระบุคอร์ด",
       "emociones": "อารมณ์",
-      "temas": "ธีม"
+      "temas": "ธีม",
+      "licks": "ลิคกีตาร์"
     },
     "intro": {
       "lema": "The Essence of Sound — by Mau",
@@ -3019,6 +3020,20 @@
       "pistaEspectro": "การเคลื่อนไหวแบบเดียวกัน แสดงบนวงกลมคู่ห้า",
       "verEspectro": "ดูสเปกตรัม",
       "cerrarEspectro": "ปิดสเปกตรัม"
+    },
+    "licksVista": {
+      "intro": "บทกีตาร์โปร่งร้อยบทในสไตล์ Brad Paisley / Blues Saraceno: chicken pickin', การเบนด์แบบ pedal-steel, การถอนสาย flatpicking แบบ bluegrass และวลีปิดจบแบบ western-swing เลือกคีย์หรือเทคนิคเพื่อกรอง แตะการ์ดเพื่อดูแท็บ แล้วกด \"ฟัง\" เพื่อฟังก่อนเล่นเอง",
+      "filtrarTonalidad": "คีย์",
+      "filtrarTecnica": "เทคนิค",
+      "todas": "ทั้งหมด",
+      "contador": "แสดง {n} จาก {total} ลิคทั้งหมด",
+      "tonalidad": "คีย์",
+      "tecnica": "เทคนิค",
+      "dificultad": "ระดับ",
+      "escuchar": "ฟังลิคนี้",
+      "notas": "โน้ต",
+      "leyendaTecnicas": "h = hammer-on · p = pull-off · b = bend · / = slide up · \\ = slide down",
+      "sinResultados": "ไม่มีลิคที่ตรงกับตัวกรองนี้ ลองเปลี่ยนตัวกรองดูนะ"
     }
   },
   "categoriasAcordes": {

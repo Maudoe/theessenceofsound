@@ -266,9 +266,12 @@ function svgTablatura(lick, afinacion) {
     const x = x0 + i * pasoX + pasoX / 2;
     const y = yDe(n.cuerda);
     const texto = String(n.traste) + (n.tecnica || "");
-    // el fondo tapa la línea para que el número se lea
-    partes.push(`<rect x="${x - 9}" y="${y - 6}" width="18" height="12" class="tab-fondo"/>`);
-    partes.push(`<text x="${x}" y="${y + 3.4}" class="tab-num">${texto}</text>`);
+    // el fondo tapa la línea para que el número se lea. data-idx: para
+    // poder resaltar la nota que está sonando en sincro con el audio
+    // (ver resaltarLickEnTab en licks_vista.js) sin tocar el resto de
+    // los llamados a esta función, que no usan ese atributo.
+    partes.push(`<rect x="${x - 9}" y="${y - 6}" width="18" height="12" class="tab-fondo" data-idx="${i}"/>`);
+    partes.push(`<text x="${x}" y="${y + 3.4}" class="tab-num" data-idx="${i}">${texto}</text>`);
   });
 
   return `<svg class="tab-svg" viewBox="0 0 ${ancho} ${alto}" role="img" aria-label="Tablatura de ${lick.nombre}">${partes.join("")}</svg>`;

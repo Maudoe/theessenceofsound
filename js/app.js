@@ -933,6 +933,7 @@ function alCambiarIdioma() {
   pintarAprender();
   if (typeof pintarDiccionario === "function") pintarDiccionario();
   if (typeof pintarVistaEscalas === "function") pintarVistaEscalas();
+  if (typeof pintarLicks === "function") pintarLicks();
   if (typeof pintarIdentificar === "function") pintarIdentificar();
   if (typeof pintarVistaEmociones === "function") pintarVistaEmociones();
   if (typeof pintarVistaTemas === "function") pintarVistaTemas();
@@ -978,6 +979,7 @@ function iniciar() {
   pintarAprender();
   if (typeof pintarDiccionario === "function") pintarDiccionario();
   if (typeof pintarVistaEscalas === "function") pintarVistaEscalas();
+  if (typeof pintarLicks === "function") pintarLicks();
   if (typeof pintarIdentificar === "function") pintarIdentificar();
   if (typeof pintarVistaEmociones === "function") pintarVistaEmociones();
   if (typeof pintarVistaTemas === "function") pintarVistaTemas();
