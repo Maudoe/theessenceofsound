@@ -966,6 +966,16 @@ function iniciar() {
     if (ev.key === "Escape" && !$("#modal-instrumento").hidden) cerrarModalInstrumento();
   });
 
+  if (typeof cerrarModalEscala === "function") {
+    $("#btn-cerrar-escala").addEventListener("click", cerrarModalEscala);
+    $("#modal-escala").addEventListener("click", (ev) => {
+      if (ev.target === $("#modal-escala")) cerrarModalEscala();
+    });
+    document.addEventListener("keydown", (ev) => {
+      if (ev.key === "Escape" && !$("#modal-escala").hidden) cerrarModalEscala();
+    });
+  }
+
   $("#sel-tonica").addEventListener("change", (e) => {
     estado.tonica = e.target.value;
     dibujarGrafoYRecorrido();

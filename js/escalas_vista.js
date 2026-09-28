@@ -168,14 +168,12 @@ function pintarVistaEscalas() {
   cont.innerHTML = `
     <p class="seccion-intro">${t("escalas.intro")}</p>
     ${pintarSelectorEscalas()}
-    ${categorias}
-    <div class="dic-detalle" id="esc-detalle"></div>`;
+    ${categorias}`;
 
   $("#sel-raiz-escalas").addEventListener("change", (e) => {
     estadoEscalas.raiz = e.target.value;
     estadoEscalas.acordeElegido = null;
     pintarVistaEscalas();
-    pintarDetalleEscala();
   });
 
   const transportar = (delta) => {
@@ -183,27 +181,38 @@ function pintarVistaEscalas() {
     estadoEscalas.raiz = RAICES_ESCALA[(i + delta + 12) % 12];
     estadoEscalas.acordeElegido = null;
     pintarVistaEscalas();
-    pintarDetalleEscala();
   };
   $("#esc-transportar-abajo").addEventListener("click", () => transportar(-1));
   $("#esc-transportar-arriba").addEventListener("click", () => transportar(1));
 
+  // las escalas se ven en su propio modal — la lista de categorías de
+  // acá al lado queda para elegir, no para mostrar el detalle expandido
+  // abajo de la página (mismo criterio que el diccionario de acordes).
   $$(".tarjeta-acorde", cont).forEach((b) => {
     b.addEventListener("click", () => {
       estadoEscalas.escala = b.dataset.escala;
       estadoEscalas.acordeElegido = null;
-      pintarVistaEscalas();
+      estadoEscalas.vista = "mastil";
       pintarDetalleEscala();
-      const detalle = $("#esc-detalle");
-      if (detalle) detalle.scrollIntoView({ behavior: "smooth", block: "start" });
+      abrirModalEscala();
     });
   });
+}
 
-  pintarDetalleEscala();
+function abrirModalEscala() {
+  const modal = $("#modal-escala");
+  modal.hidden = false;
+  requestAnimationFrame(() => modal.classList.add("abierto"));
+}
+
+function cerrarModalEscala() {
+  const modal = $("#modal-escala");
+  modal.classList.remove("abierto");
+  setTimeout(() => { modal.hidden = true; }, 200);
 }
 
 function pintarDetalleEscala() {
-  const detalle = $("#esc-detalle");
+  const detalle = $("#esc-modal-cuerpo");
   if (!detalle) return;
 
   const escalaId = estadoEscalas.escala;
@@ -273,7 +282,7 @@ function pintarDetalleEscala() {
 
   detalle.innerHTML = `
     <div class="dic-detalle-cabeza">
-      <h3>${estadoEscalas.raiz} <span class="dic-detalle-nombre">${nombreEscala}</span></h3>
+      <h3 id="esc-modal-titulo">${estadoEscalas.raiz} <span class="dic-detalle-nombre">${nombreEscala}</span></h3>
       <p class="dic-detalle-descripcion">${tesc(escalaId, "sabor", esc.sabor)}</p>
       <button class="btn-escuchar" id="btn-escuchar-escala" type="button">
         <span class="btn-escuchar-icono">▶</span>

@@ -1662,6 +1662,7 @@ body.loader-activo { overflow: hidden; height: 100vh; }
   cursor: pointer; display: flex; align-items: center; justify-content: center;
 }
 .esc-transportar:hover { border-color: var(--acento); color: var(--acento); }
+.esc-modal-cuerpo { padding-right: 4px; }
 .esc-vista-switch { display: flex; gap: 6px; margin: 16px 0 10px; }
 .esc-vista-mastil, .esc-vista-partitura, .esc-vista-tablatura { margin-top: 4px; }
 
