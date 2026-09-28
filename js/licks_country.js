@@ -240,4 +240,117 @@ const LICKS_COUNTRY = [
       { cuerda: 1, traste: 4, tecnica: "h" }, { cuerda: 1, traste: 3 }, { cuerda: 1, traste: 1 },
     ],
   },
+
+  /* ---- tanda 3 ---- */
+  {
+    id: "cp-g-06",
+    nombre: "Sextas descendentes en Sol",
+    tonalidad: "G", raiz: "G", escala: "pentaMayor",
+    tecnica: "sextas (salto de cuerda)", dificultad: "intermedio-avanzado",
+    nota: "Salta entre dos cuerdas separadas para sugerir el intervalo de sexta que tanto usa la pedal steel, aunque acá se toque nota por nota: el salto constante es lo que hace que suene 'ancho' sin ser un acorde de verdad.",
+    notas: [
+      { cuerda: 4, traste: 5 }, { cuerda: 3, traste: 0 }, { cuerda: 2, traste: 0 },
+      { cuerda: 4, traste: 0 }, { cuerda: 3, traste: 0 }, { cuerda: 4, traste: 5 },
+    ],
+  },
+  {
+    id: "cp-g-07",
+    nombre: "Cascada de pull-offs en Sol",
+    tonalidad: "G", raiz: "G", escala: "bluesMayor",
+    tecnica: "pull-off en cascada", dificultad: "avanzado",
+    nota: "Tres pull-offs seguidos en la misma cuerda, pasando por la tercera menor de camino a la mayor (el 'roce sucio' del blues mayor), y después dos notas de cierre en cuerdas vecinas para no quedarte pegado en una sola cuerda.",
+    notas: [
+      { cuerda: 3, traste: 4 }, { cuerda: 3, traste: 3, tecnica: "p" }, { cuerda: 3, traste: 2, tecnica: "p" },
+      { cuerda: 3, traste: 0, tecnica: "p" }, { cuerda: 4, traste: 0 }, { cuerda: 2, traste: 0 },
+    ],
+  },
+  {
+    id: "cp-c-05",
+    nombre: "Bajo alternante estilo Merle Travis en Do",
+    tonalidad: "C", raiz: "C", escala: "jonico",
+    tecnica: "bajo alternante (Merle Travis)", dificultad: "intermedio",
+    nota: "La melodía escrita sola, sin el bajo alternante de verdad debajo (para eso hace falta el pulgar tocando aparte) — pero el salto de registro grave-agudo-grave ya deja ver el esqueleto rítmico del estilo Travis antes de sumarle el acompañamiento.",
+    notas: [
+      { cuerda: 1, traste: 3 }, { cuerda: 5, traste: 0 }, { cuerda: 2, traste: 0 },
+      { cuerda: 5, traste: 3 }, { cuerda: 3, traste: 0 }, { cuerda: 5, traste: 0 },
+    ],
+  },
+  {
+    id: "cp-c-06",
+    nombre: "Chicken pickin' con salto de cuerda en Do",
+    tonalidad: "C", raiz: "C", escala: "mixolidio",
+    tecnica: "chicken pickin' (salto de cuerda)", dificultad: "avanzado",
+    nota: "De la sexta cuerda a la primera y de vuelta, todo picado seco: el salto brusco de registro es puro Brent Mason, pensado para sorprender al oído en medio de una frase que hasta ahí venía tranquila.",
+    notas: [
+      { cuerda: 1, traste: 3 }, { cuerda: 5, traste: 1 }, { cuerda: 1, traste: 3 },
+      { cuerda: 5, traste: 3 }, { cuerda: 0, traste: 3 }, { cuerda: 5, traste: 1, tecnica: "h" },
+    ],
+  },
+  {
+    id: "cp-d-05",
+    nombre: "Vals de bluegrass en Re",
+    tonalidad: "D", raiz: "D", escala: "jonico",
+    tecnica: "compás de vals (3/4)", dificultad: "intermedio",
+    nota: "Pensado para un 3/4 de vals de bluegrass: la tónica y la sexta se turnan como si fueran el 'bajo-acorde-acorde' de un vals, con una nota de paso (la séptima) conectando la vuelta.",
+    notas: [
+      { cuerda: 3, traste: 2 }, { cuerda: 2, traste: 4 }, { cuerda: 2, traste: 0 },
+      { cuerda: 2, traste: 2 }, { cuerda: 1, traste: 4 }, { cuerda: 2, traste: 0 },
+    ],
+  },
+  {
+    id: "cp-d-06",
+    nombre: "Doble bend cromático en Re",
+    tonalidad: "D", raiz: "D", escala: "mixolidio",
+    tecnica: "chicken pickin' (doble bend)", dificultad: "avanzado",
+    nota: "Dos bends de tono entero seguidos, cada uno resolviendo un semitono más arriba que el anterior — la tensión sube dos veces antes de aflojar en el hammer-on final. Muy Brad Paisley en los puentes instrumentales.",
+    notas: [
+      { cuerda: 1, traste: 3, tecnica: "b" }, { cuerda: 1, traste: 3 },
+      { cuerda: 2, traste: 4, tecnica: "b" }, { cuerda: 2, traste: 4 },
+      { cuerda: 2, traste: 2, tecnica: "h" }, { cuerda: 2, traste: 0 },
+    ],
+  },
+  {
+    id: "cp-a-04",
+    nombre: "Corrida country-rock ascendente en La",
+    tonalidad: "A", raiz: "A", escala: "mixolidio",
+    tecnica: "flatpicking (alternado)", dificultad: "intermedio",
+    nota: "Cinco notas subiendo por la mixolidia sin ligados, todo púa abajo-arriba: la base de cualquier solo de country-rock acústico, para tocar rápido y parejo antes de meterle inflexiones encima.",
+    notas: [
+      { cuerda: 1, traste: 0 }, { cuerda: 1, traste: 2 }, { cuerda: 1, traste: 4 },
+      { cuerda: 2, traste: 0 }, { cuerda: 2, traste: 2 },
+    ],
+  },
+  {
+    id: "cp-a-05",
+    nombre: "Turnaround final en La",
+    tonalidad: "A", raiz: "A", escala: "jonico",
+    tecnica: "turnaround (vuelta armónica)", dificultad: "intermedio",
+    nota: "El cierre típico antes de repetir la vuelta de acordes: pasa por la tercera mayor y la sensible (B, la segunda) antes de aterrizar en una nota que deja la frase abierta, pidiendo que el ciclo arranque de nuevo.",
+    notas: [
+      { cuerda: 2, traste: 2 }, { cuerda: 1, traste: 4 }, { cuerda: 1, traste: 2 },
+      { cuerda: 1, traste: 0 }, { cuerda: 3, traste: 2 }, { cuerda: 4, traste: 0 },
+    ],
+  },
+  {
+    id: "cp-e-04",
+    nombre: "Riff de apertura western swing en Mi",
+    tonalidad: "E", raiz: "E", escala: "bebopDominante",
+    tecnica: "riff de apertura (western swing)", dificultad: "avanzado",
+    nota: "Un caminado cromático corto (D subiendo a D#) resuelve en la tónica antes de seguir de largo: es la nota bebop metida justo donde el tiempo fuerte la necesita, la misma receta que separa un riff de western swing de uno de rock liso.",
+    notas: [
+      { cuerda: 1, traste: 5 }, { cuerda: 1, traste: 6, tecnica: "h" }, { cuerda: 0, traste: 0 },
+      { cuerda: 0, traste: 2 }, { cuerda: 1, traste: 4 }, { cuerda: 1, traste: 2 },
+    ],
+  },
+  {
+    id: "cp-e-05",
+    nombre: "Cierre fingerstyle en Mi",
+    tonalidad: "E", raiz: "E", escala: "jonico",
+    tecnica: "fingerstyle (arpegio final)", dificultad: "intermedio",
+    nota: "Un arpegio de Emaj9 tocado con los dedos, de grave a agudo sin apuro: el tipo de remate que cierra un tema entero, no sólo una frase — dejalo sonar y no apagues las cuerdas hasta que se apague solo.",
+    notas: [
+      { cuerda: 0, traste: 0 }, { cuerda: 3, traste: 1 }, { cuerda: 4, traste: 0 },
+      { cuerda: 5, traste: 2 }, { cuerda: 5, traste: 0 },
+    ],
+  },
 ];
