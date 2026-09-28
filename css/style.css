@@ -1662,6 +1662,21 @@ body.loader-activo { overflow: hidden; height: 100vh; }
   cursor: pointer; display: flex; align-items: center; justify-content: center;
 }
 .esc-transportar:hover { border-color: var(--acento); color: var(--acento); }
+.esc-vista-switch { display: flex; gap: 6px; margin: 16px 0 10px; }
+.esc-vista-mastil, .esc-vista-partitura, .esc-vista-tablatura { margin-top: 4px; }
+
+/* ---------------- partitura y tablatura ---------------- */
+.not-svg { width: 100%; height: auto; display: block; }
+.not-partitura { max-width: 640px; }
+.part-linea { stroke: var(--tenue); stroke-width: 1; opacity: 0.7; }
+.part-linea-adicional { stroke: var(--tenue); stroke-width: 1; opacity: 0.7; }
+.part-clave { font-size: 44px; fill: var(--acento); }
+.part-nota { fill: var(--acento); }
+.part-alteracion { font-size: 13px; fill: var(--acento); text-anchor: middle; }
+.not-tablatura { max-width: 640px; }
+.tab-linea { stroke: var(--tenue); stroke-width: 1; opacity: 0.6; }
+.tab-tapa { fill: var(--negro); }
+.tab-numero { font-size: 12px; font-weight: 700; fill: var(--blanco); text-anchor: middle; font-family: "Space Grotesk", sans-serif; }
 
 /* ---------------- emociones: qué acordes tocar para transmitir algo ---------------- */
 .emo-grilla { margin-bottom: 22px; }

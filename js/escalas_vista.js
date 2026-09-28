@@ -115,7 +115,21 @@ function acordesCompatibles(escalaId, raizSemitono) {
   return [...porRaiz.values()];
 }
 
-let estadoEscalas = { raiz: "A", escala: "eolico", acordeElegido: null };
+let estadoEscalas = { raiz: "A", escala: "eolico", acordeElegido: null, vista: "mastil" };
+
+/* La secuencia de notas MIDI de la escala, para tocarla y para dibujar
+   la partitura: sube del grado 1 hasta la octava y-cuando se pide
+   idaVuelta-vuelve a bajar, así se escucha completa. Todo a partir de
+   una base fija (no depende de instrumento ni afinación — es la escala
+   en abstracto, no una digitación). */
+function secuenciaMidiEscala(escalaId, raizSemitono, idaVuelta) {
+  const esc = ESCALAS[escalaId];
+  if (!esc) return [];
+  const raizMidi = 48 + raizSemitono; // C3 como referencia de octava
+  const subida = esc.grados.map((g) => raizMidi + g).concat([raizMidi + 12]);
+  if (!idaVuelta) return subida;
+  return subida.concat(subida.slice(0, -1).reverse());
+}
 
 const RAICES_ESCALA = ["C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab", "A", "Bb", "B"];
 
@@ -219,14 +233,26 @@ function pintarDetalleEscala() {
   const info = clasesDelAcorde(elegido.acorde);
   const papeles = info ? papelesDeEscala(escalaId, elegido.acorde) : null;
   const cuerdas = cuerdasDe("guitarra");
-  const diagrama = papeles
-    ? svgMastil(null, cuerdas, elegido.acorde, {
-        nombresCuerdas: nombresCuerdasDe("guitarra", false),
-        mostrar: "notas",
-        papeles: papeles.papeles,
-        alt: `${tesc(escalaId, "nombre", esc.nombre)} sobre ${elegido.cifrado}`,
-      })
-    : "";
+  const nombreEscala = tesc(escalaId, "nombre", esc.nombre);
+
+  const vista = estadoEscalas.vista;
+  let diagrama = "";
+  if (vista === "tablatura") {
+    const caja = cajaEscalaGuitarra(esc.grados, raizSemitono, cuerdas);
+    diagrama = svgTablatura(caja, { alt: `${nombreEscala} en tablatura` });
+  } else if (vista === "partitura") {
+    const secuencia = secuenciaMidiEscala(escalaId, raizSemitono, false);
+    diagrama = svgPartitura(secuencia, { alt: `${nombreEscala} en partitura` });
+  } else {
+    diagrama = papeles
+      ? svgMastil(null, cuerdas, elegido.acorde, {
+          nombresCuerdas: nombresCuerdasDe("guitarra", false),
+          mostrar: "notas",
+          papeles: papeles.papeles,
+          alt: `${nombreEscala} sobre ${elegido.cifrado}`,
+        })
+      : "";
+  }
 
   const explicacion = papeles ? explicacionDeEscala(escalaId, elegido.acorde, false) : "";
 
@@ -238,10 +264,21 @@ function pintarDetalleEscala() {
       <span class="esc-leyenda-item"><i class="esc-leyenda-punto p-resolucion"></i>${t("modalInstrumento.resuelve")}</span>
     </div>`;
 
+  const switchVista = `
+    <div class="esc-vista-switch">
+      <button class="etq-tab${vista === "mastil" ? " activo" : ""}" data-vista-escala="mastil">${t("escalas.vistaMastil")}</button>
+      <button class="etq-tab${vista === "partitura" ? " activo" : ""}" data-vista-escala="partitura">${t("escalas.vistaPartitura")}</button>
+      <button class="etq-tab${vista === "tablatura" ? " activo" : ""}" data-vista-escala="tablatura">${t("escalas.vistaTablatura")}</button>
+    </div>`;
+
   detalle.innerHTML = `
     <div class="dic-detalle-cabeza">
-      <h3>${estadoEscalas.raiz} <span class="dic-detalle-nombre">${tesc(escalaId, "nombre", esc.nombre)}</span></h3>
+      <h3>${estadoEscalas.raiz} <span class="dic-detalle-nombre">${nombreEscala}</span></h3>
       <p class="dic-detalle-descripcion">${tesc(escalaId, "sabor", esc.sabor)}</p>
+      <button class="btn-escuchar" id="btn-escuchar-escala" type="button">
+        <span class="btn-escuchar-icono">▶</span>
+        <span>${t("escalas.escucharEscala")}</span>
+      </button>
     </div>
     <div class="esc-acordes-bloque">
       <div class="bloque-titulo">${t("escalas.acordesQueArmonizan")}</div>
@@ -249,9 +286,30 @@ function pintarDetalleEscala() {
       <div class="dic-tarjetas">${chipsAcordes}</div>
     </div>
     <p class="dic-pista">${t("escalas.pistaMastil")} <b>${elegido.cifrado}</b>.</p>
-    ${papeles ? leyenda : ""}
-    <div class="dic-posicion-svg esc-mastil-completo">${diagrama}</div>
-    <div class="escala-explica">${explicacion || ""}</div>`;
+    ${switchVista}
+    ${vista === "mastil" && papeles ? leyenda : ""}
+    <div class="dic-posicion-svg esc-mastil-completo esc-vista-${vista}">${diagrama}</div>
+    ${vista === "mastil" ? `<div class="escala-explica">${explicacion || ""}</div>` : ""}`;
+
+  const btnEscuchar = $("#btn-escuchar-escala", detalle);
+  if (btnEscuchar) {
+    btnEscuchar.addEventListener("click", async () => {
+      btnEscuchar.disabled = true;
+      btnEscuchar.classList.add("sonando");
+      try {
+        await reproducirSecuencia(secuenciaMidiEscala(escalaId, raizSemitono, true), "guitarra", 0.28);
+      } finally {
+        setTimeout(() => { btnEscuchar.disabled = false; btnEscuchar.classList.remove("sonando"); }, 400);
+      }
+    });
+  }
+
+  $$("[data-vista-escala]", detalle).forEach((b) => {
+    b.addEventListener("click", () => {
+      estadoEscalas.vista = b.dataset.vistaEscala;
+      pintarDetalleEscala();
+    });
+  });
 
   $$(".tarjeta-acorde-chica", detalle).forEach((b) => {
     b.addEventListener("click", () => {

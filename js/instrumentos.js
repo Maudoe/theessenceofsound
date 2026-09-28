@@ -83,6 +83,36 @@ function clasesEsenciales(info) {
   });
 }
 
+/* ---------------- un patrón para tocar una escala completa ---------------- */
+/* A diferencia de un acorde (que se toca todo junto, en una zona chica
+   del mástil), una escala se recorre: por eso acá no buscamos "la mejor"
+   digitación sino UNA caja de un puñado de trastes que contenga la
+   escala entera, cuerda por cuerda de la más grave a la más aguda — el
+   mismo criterio que cualquier patrón de escala de guitarra ("cajas" de
+   pentatónica, etc). Sirve tanto para dibujar la tablatura como para
+   tocarla: los eventos ya vienen en el orden en que se tocarían. */
+function cajaEscalaGuitarra(gradosSemitonos, raizSemitono, cuerdas, span) {
+  span = span || 4;
+  const claseSet = new Set(gradosSemitonos.map((g) => (raizSemitono + g) % 12));
+
+  // la caja arranca donde la fundamental cae en la cuerda más grave,
+  // buscando el traste más bajo posible (preferimos posición abierta)
+  let trasteBase = 0;
+  for (let f = 0; f <= 11; f++) {
+    if ((cuerdas[0] + f) % 12 === raizSemitono) { trasteBase = Math.max(0, f - 1); break; }
+  }
+
+  const notas = [];
+  cuerdas.forEach((cuerdaMidi, i) => {
+    for (let f = trasteBase; f <= trasteBase + span; f++) {
+      if (f === 0 && trasteBase > 0) continue; // la caja no incluye la cuerda al aire si no arranca ahí
+      const clase = (cuerdaMidi + f) % 12;
+      if (claseSet.has(clase)) notas.push({ cuerda: i, traste: f, clase, midi: cuerdaMidi + f });
+    }
+  });
+  return notas;
+}
+
 /* ---------------- digitaciones de guitarra / bajo ---------------- */
 /* Todas las digitaciones razonables, una por zona del mástil: la abierta,
    la de la quinta, la de la octava… Así se puede tocar el mismo acorde

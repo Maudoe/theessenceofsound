@@ -227,6 +227,10 @@ const IDIOMAS = {
         "sinSugerencias": "No encontré acordes de esta lista que armonicen con esta escala en particular.",
         "transportarAbajo": "Bajar medio tono",
         "transportarArriba": "Subir medio tono",
+        "escucharEscala": "Escuchar la escala",
+        "vistaMastil": "Mástil",
+        "vistaPartitura": "Partitura",
+        "vistaTablatura": "Tablatura",
         "categorias": {
           "mayores": "Modos mayores",
           "menores": "Modos menores",
@@ -6026,7 +6030,11 @@ const IDIOMAS = {
           "exotico": "Other exotic scales"
         },
         "transportarAbajo": "Transpose down a half step",
-        "transportarArriba": "Transpose up a half step"
+        "transportarArriba": "Transpose up a half step",
+        "escucharEscala": "Listen to the scale",
+        "vistaMastil": "Fretboard",
+        "vistaPartitura": "Sheet music",
+        "vistaTablatura": "Tab"
       },
       "identificar": {
         "intro": "Play the notes you're using on the fretboard — mark each fret you're pressing — and I'll tell you what chord it is. Then I'll show you which chords you can move to next, not just back to the tonic.",

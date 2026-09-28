@@ -2939,6 +2939,10 @@
       "sinSugerencias": "ไม่พบคอร์ดในรายการนี้ที่เข้ากับสเกลนี้โดยเฉพาะ",
       "transportarAbajo": "ลดครึ่งเสียง",
       "transportarArriba": "เพิ่มครึ่งเสียง",
+      "escucharEscala": "ฟังสเกลนี้",
+      "vistaMastil": "คอกีตาร์",
+      "vistaPartitura": "โน้ตสากล",
+      "vistaTablatura": "แท็บ",
       "categorias": {
         "mayores": "โมด major",
         "menores": "โมด minor",

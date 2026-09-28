@@ -119,6 +119,21 @@ async function reproducirAcorde(notasMidi, familia) {
   notasMidi.forEach((n) => player.play(n, ahora, { duration: 1.8, gain: 2 }));
 }
 
+/* Toca notas UNA POR VEZ, en orden — para una escala, no un acorde
+   (nada de simultáneo, esto es una línea melódica). */
+async function reproducirSecuencia(notasMidi, familia, duracionNota) {
+  if (!notasMidi || !notasMidi.length || estadoSonido.sonando) return;
+  estadoSonido.sonando = true;
+  const paso = duracionNota || 0.3;
+  const gmId = estadoSonido.elegido[familia] || estadoSonido.elegido.guitarra;
+  const player = await instrumentoCargado(gmId);
+  const ctx = contextoAudioSonido();
+  const ahora = ctx.currentTime;
+  notasMidi.forEach((n, i) => player.play(n, ahora + i * paso, { duration: paso * 0.9, gain: 2 }));
+  const totalMs = notasMidi.length * paso * 1000;
+  setTimeout(() => { estadoSonido.sonando = false; }, totalMs);
+}
+
 /* Toca varios acordes uno atrás del otro — la "progresión" completa,
    no un acorde suelto. Cada paso es un array de notas MIDI. */
 async function reproducirProgresion(pasos, familia) {
