@@ -999,8 +999,19 @@ body::before {
   box-shadow: 0 0 0 1px rgba(6, 5, 5, 0.9), 0 24px 70px rgba(0, 0, 0, 0.7);
   transform: translateY(18px) scale(0.98);
   transition: transform 260ms cubic-bezier(0.16, 1, 0.3, 1);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(var(--acento-rgb), 0.45) transparent;
 }
 .modal-fondo.abierto .modal-caja { transform: none; }
+.modal-caja::-webkit-scrollbar { width: 9px; }
+.modal-caja::-webkit-scrollbar-track { background: transparent; }
+.modal-caja::-webkit-scrollbar-thumb {
+  background: rgba(var(--acento-rgb), 0.4);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+.modal-caja::-webkit-scrollbar-thumb:hover { background: rgba(var(--acento-rgb), 0.65); }
 .modal-cerrar {
   position: absolute; top: 14px; right: 14px;
   width: 34px; height: 34px;

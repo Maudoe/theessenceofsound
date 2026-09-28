@@ -142,6 +142,7 @@ function resaltarSecuenciaEnMastil(contenedor, secuenciaMidi, pasoSeg) {
     const clase = ((midi % 12) + 12) % 12;
     setTimeout(() => {
       $$(`[data-clase="${clase}"]`, contenedor).forEach((el) => {
+        if (el.classList.contains("fuera-posicion")) return;
         el.classList.remove("en-sonido");
         void el.getBBox(); // reinicia la animación si la misma nota se repite seguida
         el.classList.add("en-sonido");
