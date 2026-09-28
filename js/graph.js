@@ -228,6 +228,11 @@ function relacionEntre(a, b) {
 /* ============ estado de la exploración ============ */
 let mapaEnPantalla = null;   // { nodos, posiciones, radio, salientes }
 let nodoFijadoMapa = null;
+// qué nodo está bajo el mouse ahora mismo: "mouseover" burbujea desde los
+// hijos (círculo, texto) del mismo grupo, así que sin trackear esto
+// explorarNodoMapa() se relanzaba en cada mínimo movimiento dentro de un
+// mismo nodo — se veía como si las flechas parpadearan.
+let nodoHoverActualMapa = null;
 
 function limpiarExploracionMapa(svgEl) {
   const capa = svgEl.querySelector(".sh-capa-explorar");
@@ -362,6 +367,7 @@ function explorarNodoMapa(svgEl, i) {
 
 function soltarFijadoMapa(svgEl) {
   nodoFijadoMapa = null;
+  nodoHoverActualMapa = null;
   limpiarExploracionMapa(svgEl);
   if (alExplorarNodo) alExplorarNodo(null);
   if (alFijarNodo) alFijarNodo(null);
@@ -430,7 +436,10 @@ function engancharInteraccionMapa(svgEl) {
     if (nodoFijadoMapa !== null) return;
     const g = nodoDe(ev);
     if (!g || g.classList.contains("sh-nodo-origen")) return;
-    explorarNodoMapa(svgEl, idxDe(g));
+    const i = idxDe(g);
+    if (i === nodoHoverActualMapa) return; // mismo nodo: no reiniciar, evita el parpadeo
+    nodoHoverActualMapa = i;
+    explorarNodoMapa(svgEl, i);
   });
 
   svgEl.addEventListener("mouseout", (ev) => {
@@ -440,6 +449,7 @@ function engancharInteraccionMapa(svgEl) {
     if (!g) return;
     const haciaOtro = ev.relatedTarget && ev.relatedTarget.closest && ev.relatedTarget.closest("[data-nodo-idx]");
     if (haciaOtro) return;
+    nodoHoverActualMapa = null;
     limpiarExploracionMapa(svgEl);
     if (alExplorarNodo) alExplorarNodo(null);
   });
@@ -483,6 +493,7 @@ function engancharInteraccionMapa(svgEl) {
 /* ============ el dibujo ============ */
 function renderMapaPropio(mapa, svgEl) {
   nodoFijadoMapa = null;
+  nodoHoverActualMapa = null;
   svgEl.innerHTML = "";
   svgEl.setAttribute("viewBox", `0 0 ${LIENZO.w} ${LIENZO.h}`);
   asegurarDefs(svgEl);

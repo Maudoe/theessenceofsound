@@ -206,6 +206,7 @@ let estadoRueda = { mapa: null, conexionesPorNodo: new Map(), idsDeSatelites: []
 
 function renderRuedaCompleta(mapa, svgEl) {
   nodoFijado = null;
+  nodoHoverActualRueda = null;
   seleccionPersonalizada = [];
   // los satélites del mapa anterior no tienen que sobrevivir al cambio
   (estadoRueda.idsDeSatelites || []).forEach((id) => RUEDA_POR_ID.delete(id));
@@ -453,6 +454,11 @@ function avisarFijado(id) {
    cuando movés el mouse, y en pantallas táctiles (donde no hay hover)
    sigue funcionando igual. */
 let nodoFijado = null;
+// qué nodo está bajo el mouse ahora mismo: "mouseover" burbujea desde los
+// hijos (círculo, texto) del mismo grupo, así que sin trackear esto
+// explorarNodo() se relanzaba en cada mínimo movimiento dentro de un
+// mismo nodo — se veía como si las flechas parpadearan.
+let nodoHoverActualRueda = null;
 
 /* Además de fijar (que muestra a dónde se puede ir desde ahí), cada
    click arma un "grupo" propio: la nota que clickeaste MÁS las notas de
@@ -605,6 +611,7 @@ function explorarNodo(svgEl, id) {
 
 function soltarNodoFijado(svgEl) {
   nodoFijado = null;
+  nodoHoverActualRueda = null;
   limpiarExploracion(svgEl);
   if (alExplorarNodo) alExplorarNodo(null);
   avisarFijado(null);
@@ -675,6 +682,8 @@ function engancharInteraccion(svgEl) {
     if (!g) return;
     const id = g.getAttribute("data-rueda-id");
     if (g.classList.contains("sh-nodo-origen")) return;
+    if (id === nodoHoverActualRueda) return; // mismo nodo: no reiniciar, evita el parpadeo
+    nodoHoverActualRueda = id;
     explorarNodo(svgEl, id);
   });
 
@@ -687,6 +696,7 @@ function engancharInteraccion(svgEl) {
     const haciaOtroNodo = ev.relatedTarget && ev.relatedTarget.closest
       && ev.relatedTarget.closest("[data-rueda-id]");
     if (haciaOtroNodo) return;
+    nodoHoverActualRueda = null;
     limpiarExploracion(svgEl);
     if (alExplorarNodo) alExplorarNodo(null);
   });
