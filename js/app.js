@@ -909,8 +909,24 @@ function iniciar() {
       $$(".inst-tab").forEach((t) => t.classList.remove("activo"));
       tab.classList.add("activo");
       armarSelectorAfinacion();
+      if (typeof armarSelectorSonido === "function") armarSelectorSonido($("#sel-sonido"), instrumento.activo);
       pintarInstrumento();
     });
+  });
+
+  if (typeof armarSelectorSonido === "function") {
+    armarSelectorSonido($("#sel-sonido"), instrumento.activo);
+  }
+  $("#btn-escuchar-acorde").addEventListener("click", async () => {
+    if (!instrumento.diagramas || !instrumento.diagramas.acorde) return;
+    const btn = $("#btn-escuchar-acorde");
+    btn.disabled = true;
+    btn.classList.add("sonando");
+    try {
+      await reproducirAcorde(instrumento.diagramas.acorde.notas, instrumento.activo);
+    } finally {
+      setTimeout(() => { btn.disabled = false; btn.classList.remove("sonando"); }, 900);
+    }
   });
 
   $("#sel-emocion").addEventListener("change", (e) => {

@@ -91,6 +91,13 @@ function tem(id, campo, original) {
   return original !== undefined ? original : "";
 }
 
+function tSon(gmId, original) {
+  const propio = _idiomaActivo() && _idiomaActivo().sonido && _idiomaActivo().sonido[gmId];
+  if (propio !== undefined && propio !== '') return propio;
+  const base = _idiomaBase() && _idiomaBase().sonido && _idiomaBase().sonido[gmId];
+  if (base !== undefined && base !== '') return base;
+  return original !== undefined ? original : '';
+}
 function tesc(id, campo, original) {
   const propio = _idiomaActivo() && _idiomaActivo().escalas && _idiomaActivo().escalas[id];
   if (propio && propio[campo] !== undefined && propio[campo] !== "") return propio[campo];

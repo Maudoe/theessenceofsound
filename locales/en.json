@@ -2718,7 +2718,10 @@
       "de": "of",
       "notasLabel": "Notes",
       "vacio": "Couldn't find a comfortable position for this chord on that instrument.",
-      "tecladoAlt": "Chord keys"
+      "tecladoAlt": "Chord keys",
+      "sonido": "Sound",
+      "escuchar": "Listen",
+      "cargandoSonido": "Loading…"
     },
     "emocion": {
       "queSuene": "Make it sound",
@@ -2960,7 +2963,8 @@
         "dominante": "Over a dominant"
       },
       "progresionTitulo": "Four chords for a whole verse or chorus",
-      "progresionPista": "Not a single chord — a real chord progression, colored with this emotion. Click any of them to see how to play it."
+      "progresionPista": "Not a single chord — a real chord progression, colored with this emotion. Click any of them to see how to play it.",
+      "escucharProgresion": "Listen to the progression"
     }
   },
   "categoriasAcordes": {
@@ -3063,5 +3067,17 @@
       "nombre": "Major with added 9th (no 7th)",
       "descripcion": "A major triad with the 9th added straight in, WITHOUT going through the seventh. Different from a true 9th chord: there's no hidden dominant here, just extra color on a resting major."
     }
+  },
+  "sonido": {
+    "acoustic_guitar_nylon": "Acoustic (nylon)",
+    "acoustic_guitar_steel": "Acoustic (steel)",
+    "electric_guitar_clean": "Clean electric",
+    "distortion_guitar": "Distorted electric",
+    "acoustic_grand_piano": "Grand piano",
+    "electric_piano_1": "Electric piano",
+    "electric_bass_finger": "Electric bass (fingers)",
+    "electric_bass_pick": "Electric bass (pick)",
+    "acoustic_bass": "Acoustic bass",
+    "fretless_bass": "Fretless bass"
   }
 }

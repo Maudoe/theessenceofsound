@@ -101,22 +101,26 @@ function bloqueFamiliaEmocion(familia, emocionId, raiz) {
    grados en semitonos + a qué familia pertenece cada uno; acá se
    transporta a la tónica elegida y se le aplica el color de la emoción
    (la primera versión de versionesConColor, la más representativa). */
-function chipsDeProgresionEmocion(emocionId, raiz) {
+function pasosDeProgresionEmocion(emocionId, raiz) {
   const emo = EMOCIONES[emocionId];
-  if (!emo || !emo.progresion) return "";
+  if (!emo || !emo.progresion) return [];
 
-  const pasos = emo.progresion.map((paso) => {
+  return emo.progresion.map((paso) => {
     const raizAcorde = transportarNota(raiz, paso.semitonos, false);
     const sufijoBase = paso.familia === "menor" ? "m" : paso.familia === "dominante" ? "7" : "";
     const acordeBase = spellChord(raizAcorde + sufijoBase);
     if (!acordeBase) return null;
     const versiones = versionesConColor(acordeBase, emocionId);
     const elegido = versiones[0] || { cifrado: raizAcorde + sufijoBase, notas: acordeBase.notas.join(" ") };
-    return { grado: paso.grado, cifrado: elegido.cifrado, notas: elegido.notas };
+    const notasArray = elegido.cifrado === acordeBase.raiz + sufijoBase
+      ? acordeBase.notas
+      : (spellChord(elegido.cifrado) || acordeBase).notas;
+    return { grado: paso.grado, cifrado: elegido.cifrado, notas: elegido.notas, notasArray };
   }).filter(Boolean);
+}
 
+function chipsDeProgresionEmocion(pasos) {
   if (!pasos.length) return "";
-
   return pasos.map((p, i) => `
     ${i > 0 ? '<span class="emo-progresion-flecha">→</span>' : ""}
     <button class="tarjeta-acorde tarjeta-acorde-chica emo-paso" data-cifrado="${p.cifrado}">
@@ -135,12 +139,16 @@ function pintarDetalleEmocion() {
   const emo = EMOCIONES[emocionId];
   if (!emo) { detalle.innerHTML = ""; return; }
 
-  const chipsProgresion = chipsDeProgresionEmocion(emocionId, raiz);
-  const bloqueProgresion = chipsProgresion ? `
+  const pasosProgresion = pasosDeProgresionEmocion(emocionId, raiz);
+  const bloqueProgresion = pasosProgresion.length ? `
     <div class="emo-progresion-bloque">
       <div class="bloque-titulo">${t("emocionesVista.progresionTitulo")}</div>
       <p class="bloque-pista">${t("emocionesVista.progresionPista")}</p>
-      <div class="emo-progresion">${chipsProgresion}</div>
+      <div class="emo-progresion">${chipsDeProgresionEmocion(pasosProgresion)}</div>
+      <button class="btn-escuchar emo-progresion-escuchar" id="btn-escuchar-progresion" type="button">
+        <span class="btn-escuchar-icono">▶</span>
+        <span>${t("emocionesVista.escucharProgresion")}</span>
+      </button>
     </div>` : "";
 
   const familias = FAMILIAS_EMOCION.map((f) => bloqueFamiliaEmocion(f, emocionId, raiz)).filter(Boolean).join("");
@@ -157,6 +165,19 @@ function pintarDetalleEmocion() {
   $$(".tarjeta-acorde-chica", detalle).forEach((b) => {
     b.addEventListener("click", () => mostrarComoTocarConEmocion(b.dataset.cifrado, emocionId));
   });
+
+  const btnEscucharProgresion = $("#btn-escuchar-progresion");
+  if (btnEscucharProgresion) {
+    btnEscucharProgresion.addEventListener("click", async (ev) => {
+      ev.stopPropagation();
+      btnEscucharProgresion.classList.add("sonando");
+      try {
+        await reproducirProgresion(pasosProgresion.map((p) => p.notasArray), "guitarra");
+      } finally {
+        setTimeout(() => btnEscucharProgresion.classList.remove("sonando"), 400);
+      }
+    });
+  }
 
   $$(".emo-chip-escala", detalle).forEach((b) => {
     b.addEventListener("click", () => {

@@ -690,6 +690,20 @@ body::before {
   letter-spacing: 0.8px;
   margin-bottom: 12px;
 }
+.btn-escuchar {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 7px 16px; border-radius: 40px;
+  background: rgba(var(--acento-rgb), 0.12);
+  border: 1px solid rgba(var(--acento-rgb), 0.5);
+  color: var(--acento); font-weight: 700; font-size: 0.82rem;
+  cursor: pointer;
+}
+.btn-escuchar:hover { background: rgba(var(--acento-rgb), 0.22); }
+.btn-escuchar:disabled { opacity: 0.6; cursor: default; }
+.btn-escuchar-icono { font-size: 0.7rem; }
+.btn-escuchar.sonando .btn-escuchar-icono { animation: sh-pulso-sonido 0.5s ease-in-out infinite alternate; }
+@keyframes sh-pulso-sonido { from { opacity: 0.5; transform: scale(0.85); } to { opacity: 1; transform: scale(1.15); } }
+.emo-progresion-escuchar { margin-top: 12px; }
 .instrumento-tabs { display: flex; gap: 6px; margin-bottom: 12px; }
 .inst-tab {
   flex: 1;

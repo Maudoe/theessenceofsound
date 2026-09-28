@@ -86,6 +86,9 @@
       "afinacion": "Afinación",
       "escalaEncima": "Escala encima",
       "queSuene": "Que suene…",
+      "sonido": "Sonido",
+      "escuchar": "Escuchar",
+      "cargandoSonido": "Cargando…",
       "notas": "Notas",
       "grados": "Grados",
       "posicionAnterior": "Posición anterior",
@@ -249,6 +252,7 @@
       "intro": "Elegí qué emoción querés transmitir y una tónica, y te muestro qué versión de ese acorde (mayor, menor y dominante) le da ese color, con las escalas que van arriba de cada una. Es la sección de acordes al revés: en vez de partir de un cifrado, partís de la sensación.",
       "progresionTitulo": "Cuatro acordes para una estrofa o estribillo entero",
       "progresionPista": "No es un acorde suelto: es una vuelta armónica real, coloreada con esta emoción. Elegí cualquiera para ver cómo se toca.",
+      "escucharProgresion": "Escuchar la progresión",
       "sinVersiones": "No hay versiones cargadas para esta combinación todavía.",
       "sinEscalas": "Sin escala sugerida para esta versión en particular.",
       "escalasQueAcompanan": "Escalas que acompañan esta versión — clickeá una para verla completa en el mástil:",
@@ -2969,6 +2973,18 @@
     "sextas": "Sextas y color",
     "extendidas": "Extendidas (9ª, 11ª, 13ª)",
     "agregadas": "Con nota agregada"
+  },
+  "sonido": {
+    "acoustic_guitar_nylon": "Acústica (nylon)",
+    "acoustic_guitar_steel": "Acústica (steel)",
+    "electric_guitar_clean": "Eléctrica limpia",
+    "distortion_guitar": "Eléctrica distorsionada",
+    "acoustic_grand_piano": "Piano de cola",
+    "electric_piano_1": "Piano eléctrico",
+    "electric_bass_finger": "Bajo eléctrico (dedos)",
+    "electric_bass_pick": "Bajo eléctrico (púa)",
+    "acoustic_bass": "Bajo acústico",
+    "fretless_bass": "Bajo fretless"
   },
   "diccionarioAcordes": {
     "triadas:": {

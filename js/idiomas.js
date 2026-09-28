@@ -90,6 +90,9 @@ const IDIOMAS = {
         "afinacion": "Afinación",
         "escalaEncima": "Escala encima",
         "queSuene": "Que suene…",
+        "sonido": "Sonido",
+        "escuchar": "Escuchar",
+        "cargandoSonido": "Cargando…",
         "notas": "Notas",
         "grados": "Grados",
         "posicionAnterior": "Posición anterior",
@@ -253,6 +256,7 @@ const IDIOMAS = {
         "intro": "Elegí qué emoción querés transmitir y una tónica, y te muestro qué versión de ese acorde (mayor, menor y dominante) le da ese color, con las escalas que van arriba de cada una. Es la sección de acordes al revés: en vez de partir de un cifrado, partís de la sensación.",
         "progresionTitulo": "Cuatro acordes para una estrofa o estribillo entero",
         "progresionPista": "No es un acorde suelto: es una vuelta armónica real, coloreada con esta emoción. Elegí cualquiera para ver cómo se toca.",
+        "escucharProgresion": "Escuchar la progresión",
         "sinVersiones": "No hay versiones cargadas para esta combinación todavía.",
         "sinEscalas": "Sin escala sugerida para esta versión en particular.",
         "escalasQueAcompanan": "Escalas que acompañan esta versión — clickeá una para verla completa en el mástil:",
@@ -2973,6 +2977,18 @@ const IDIOMAS = {
       "sextas": "Sextas y color",
       "extendidas": "Extendidas (9ª, 11ª, 13ª)",
       "agregadas": "Con nota agregada"
+    },
+    "sonido": {
+      "acoustic_guitar_nylon": "Acústica (nylon)",
+      "acoustic_guitar_steel": "Acústica (steel)",
+      "electric_guitar_clean": "Eléctrica limpia",
+      "distortion_guitar": "Eléctrica distorsionada",
+      "acoustic_grand_piano": "Piano de cola",
+      "electric_piano_1": "Piano eléctrico",
+      "electric_bass_finger": "Bajo eléctrico (dedos)",
+      "electric_bass_pick": "Bajo eléctrico (púa)",
+      "acoustic_bass": "Bajo acústico",
+      "fretless_bass": "Bajo fretless"
     },
     "diccionarioAcordes": {
       "triadas:": {
@@ -5789,7 +5805,10 @@ const IDIOMAS = {
         "de": "of",
         "notasLabel": "Notes",
         "vacio": "Couldn't find a comfortable position for this chord on that instrument.",
-        "tecladoAlt": "Chord keys"
+        "tecladoAlt": "Chord keys",
+        "sonido": "Sound",
+        "escuchar": "Listen",
+        "cargandoSonido": "Loading…"
       },
       "emocion": {
         "queSuene": "Make it sound",
@@ -6031,7 +6050,8 @@ const IDIOMAS = {
           "dominante": "Over a dominant"
         },
         "progresionTitulo": "Four chords for a whole verse or chorus",
-        "progresionPista": "Not a single chord — a real chord progression, colored with this emotion. Click any of them to see how to play it."
+        "progresionPista": "Not a single chord — a real chord progression, colored with this emotion. Click any of them to see how to play it.",
+        "escucharProgresion": "Listen to the progression"
       }
     },
     "categoriasAcordes": {
@@ -6134,6 +6154,18 @@ const IDIOMAS = {
         "nombre": "Major with added 9th (no 7th)",
         "descripcion": "A major triad with the 9th added straight in, WITHOUT going through the seventh. Different from a true 9th chord: there's no hidden dominant here, just extra color on a resting major."
       }
+    },
+    "sonido": {
+      "acoustic_guitar_nylon": "Acoustic (nylon)",
+      "acoustic_guitar_steel": "Acoustic (steel)",
+      "electric_guitar_clean": "Clean electric",
+      "distortion_guitar": "Distorted electric",
+      "acoustic_grand_piano": "Grand piano",
+      "electric_piano_1": "Electric piano",
+      "electric_bass_finger": "Electric bass (fingers)",
+      "electric_bass_pick": "Electric bass (pick)",
+      "acoustic_bass": "Acoustic bass",
+      "fretless_bass": "Fretless bass"
     }
   },
   "th": {
@@ -8754,6 +8786,18 @@ const IDIOMAS = {
         "bGrave": "5 สาย (B)"
       }
     },
+    "sonido": {
+      "acoustic_guitar_nylon": "อะคูสติก (สายไนลอน)",
+      "acoustic_guitar_steel": "อะคูสติก (สายเหล็ก)",
+      "electric_guitar_clean": "ไฟฟ้าเสียงใส",
+      "distortion_guitar": "ไฟฟ้าเสียงแตก",
+      "acoustic_grand_piano": "แกรนด์เปียโน",
+      "electric_piano_1": "เปียโนไฟฟ้า",
+      "electric_bass_finger": "เบสไฟฟ้า (นิ้ว)",
+      "electric_bass_pick": "เบสไฟฟ้า (ปิ๊ก)",
+      "acoustic_bass": "เบสอะคูสติก",
+      "fretless_bass": "เบสไม่มีเฟรต"
+    },
     "ui": {
       "meta": {
         "nombre": "ไทย",
@@ -8841,6 +8885,9 @@ const IDIOMAS = {
         "afinacion": "การตั้งสาย",
         "escalaEncima": "สเกลที่เล่นทับ",
         "queSuene": "ให้ฟังดู…",
+        "sonido": "เสียง",
+        "escuchar": "ฟัง",
+        "cargandoSonido": "กำลังโหลด…",
         "notas": "โน้ต",
         "grados": "ดีกรี",
         "posicionAnterior": "ตำแหน่งก่อนหน้า",
@@ -9078,6 +9125,7 @@ const IDIOMAS = {
         "intro": "เลือกอารมณ์ที่คุณอยากถ่ายทอดและโน้ตหลัก แล้วฉันจะแสดงให้ดูว่าคอร์ดแบบไหน (major, minor หรือ dominant) ที่ให้สีเสียงนั้น พร้อมสเกลที่เล่นทับได้กับแต่ละแบบ นี่คือหมวดคอร์ดแบบย้อนกลับ: แทนที่จะเริ่มจากสัญลักษณ์คอร์ด คุณเริ่มจากความรู้สึก",
         "progresionTitulo": "สี่คอร์ดสำหรับหนึ่งท่อนหรือหนึ่งประโยคฮุกเต็ม ๆ",
         "progresionPista": "นี่ไม่ใช่คอร์ดเดี่ยว ๆ แต่เป็นวงจรฮาร์โมนีจริงที่ระบายด้วยอารมณ์นี้ เลือกคอร์ดไหนก็ได้เพื่อดูวิธีเล่น",
+        "escucharProgresion": "ฟังการเรียงคอร์ดนี้",
         "sinVersiones": "ยังไม่มีเวอร์ชันที่โหลดไว้สำหรับชุดนี้",
         "sinEscalas": "ไม่มีสเกลที่แนะนำสำหรับเวอร์ชันนี้โดยเฉพาะ",
         "escalasQueAcompanan": "สเกลที่เข้ากับเวอร์ชันนี้ — คลิกเพื่อดูเต็มคอฟีตาร์:",

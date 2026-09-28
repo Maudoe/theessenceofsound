@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&family=Cinzel:wght@500;600;700&display=swap">
-<link rel="stylesheet" href="css/style.css?v=66">
+<link rel="stylesheet" href="css/style.css?v=67">
 </head>
 <body>
 
@@ -241,6 +241,10 @@
       <div>
         <h3 class="modal-titulo-acorde"><span data-i18n="modalInstrumento.comoTocar">Cómo tocar</span> <span id="d-instrumento-acorde"></span></h3>
         <p class="instrumento-notas" id="d-instrumento-notas"></p>
+        <button class="btn-escuchar" id="btn-escuchar-acorde" type="button">
+          <span class="btn-escuchar-icono">▶</span>
+          <span data-i18n="modalInstrumento.escuchar">Escuchar</span>
+        </button>
       </div>
       <div class="instrumento-tabs" id="instrumento-tabs">
         <button class="inst-tab activo" data-inst="guitarra" data-i18n="modalInstrumento.guitarra">Guitarra</button>
@@ -261,6 +265,10 @@
       <label class="ctrl">
         <span data-i18n="modalInstrumento.queSuene">Que suene…</span>
         <select id="sel-emocion"></select>
+      </label>
+      <label class="ctrl">
+        <span data-i18n="modalInstrumento.sonido">Sonido</span>
+        <select id="sel-sonido"></select>
       </label>
       <div class="etiqueta-tabs" id="etiqueta-tabs">
         <button class="etq-tab activo" data-mostrar="notas" data-i18n="modalInstrumento.notas">Notas</button>
@@ -289,26 +297,28 @@
   </div>
 </div>
 
-<script src="js/idiomas.js?v=66"></script>
-<script src="js/i18n.js?v=66"></script>
-<script src="js/data.js?v=66"></script>
-<script src="js/chords.js?v=66"></script>
-<script src="js/colors.js?v=66"></script>
-<script src="js/transporte.js?v=66"></script>
-<script src="js/layouts.js?v=66"></script>
-<script src="js/graph.js?v=66"></script>
-<script src="js/escalas.js?v=66"></script>
-<script src="js/emociones.js?v=66"></script>
-<script src="js/estilos.js?v=66"></script>
-<script src="js/instrumentos.js?v=66"></script>
-<script src="js/diccionario.js?v=66"></script>
-<script src="js/escalas_vista.js?v=66"></script>
-<script src="js/identificar.js?v=66"></script>
-<script src="js/emociones_vista.js?v=66"></script>
-<script src="js/rueda.js?v=66"></script>
-<script src="js/app.js?v=66"></script>
+<script src="js/idiomas.js?v=67"></script>
+<script src="js/i18n.js?v=67"></script>
+<script src="js/data.js?v=67"></script>
+<script src="js/chords.js?v=67"></script>
+<script src="js/colors.js?v=67"></script>
+<script src="js/transporte.js?v=67"></script>
+<script src="js/layouts.js?v=67"></script>
+<script src="js/graph.js?v=67"></script>
+<script src="js/escalas.js?v=67"></script>
+<script src="js/emociones.js?v=67"></script>
+<script src="js/estilos.js?v=67"></script>
+<script src="js/instrumentos.js?v=67"></script>
+<script src="js/diccionario.js?v=67"></script>
+<script src="js/escalas_vista.js?v=67"></script>
+<script src="js/identificar.js?v=67"></script>
+<script src="js/emociones_vista.js?v=67"></script>
+<script src="js/rueda.js?v=67"></script>
+<script src="https://cdn.jsdelivr.net/npm/soundfont-player@0.12.0/dist/soundfont-player.min.js"></script>
+<script src="js/sonido.js?v=67"></script>
+<script src="js/app.js?v=67"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js"></script>
-<script src="js/three-bg.js?v=66"></script>
-<script src="js/fx.js?v=66"></script>
+<script src="js/three-bg.js?v=67"></script>
+<script src="js/fx.js?v=67"></script>
 </body>
 </html>
