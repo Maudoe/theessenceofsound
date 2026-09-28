@@ -132,7 +132,13 @@ h1, h2, h3, .serif {
 .oculto { display: none !important; }
 [hidden] { display: none !important; }
 
-.envoltorio { max-width: 1560px; margin: 0 auto; padding: 0 22px 110px; position: relative; z-index: 1; }
+/* 1560px alcanza en cualquier notebook o monitor estándar — pero en un
+   monitor ancho/curvo (2200px, 3440px...) eso deja franjas enormes vacías
+   a los costados. clamp() lo deja IGUAL hasta ~1860px de viewport (el
+   mínimo de 1560px gana ahí) y recién después empieza a crecer con el
+   ancho de pantalla, con un techo en 2200px para que el texto no
+   termine estirado de punta a punta en un ultrawide. */
+.envoltorio { max-width: clamp(1560px, 84vw, 2200px); margin: 0 auto; padding: 0 22px 110px; position: relative; z-index: 1; }
 
 /* ---------------- fondo ---------------- */
 #fondo-3d {
@@ -1457,13 +1463,17 @@ body::before {
 }
 
 /* ---- cartas de los mapas armónicos ---- */
+/* auto-fit deja que sea el propio ancho disponible el que decida cuántas
+   columnas entran — antes se fijaba en exactamente 5 desde 1100px, así
+   que en un monitor ancho esas 5 tarjetas se estiraban gigantes en vez de
+   sumar una sexta o séptima columna. El tope de 1900px (en vez de 1500)
+   acompaña el nuevo ancho de .envoltorio. */
 .grilla-mapas {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 20px;
-  max-width: 1500px;
+  max-width: 1900px;
 }
-@media (min-width: 1100px) { .grilla-mapas { grid-template-columns: repeat(5, 1fr); } }
 .carta-mapa { aspect-ratio: 5 / 7.4; padding: 20px 15px 16px; }
 .carta-mapa .carta-simbolo svg { width: min(120px, 70%); }
 .carta-nombre-mapa {
@@ -1731,7 +1741,12 @@ body.con-antorcha .cursor-antorcha { opacity: 1; }
 body.loader-activo { overflow: hidden; height: 100vh; }
 
 /* ---------------- diccionario de acordes ---------------- */
-.diccionario-cuerpo { max-width: 980px; margin: 0 auto; }
+/* usa Diccionario/Escalas/Licks/Identificar/Emociones — mismo criterio
+   que .envoltorio: se queda en 980px hasta pantallas grandes y recién ahí
+   crece, así la grilla de tarjetas aprovecha el ancho extra sin que el
+   texto de los párrafos (que ya tiene su propio max-width más angosto,
+   ver .dic-detalle-descripcion) se estire de forma rara. */
+.diccionario-cuerpo { max-width: clamp(980px, 64vw, 1500px); margin: 0 auto; }
 .dic-raiz {
   display: flex; align-items: center; gap: 10px;
   margin-bottom: 22px;
