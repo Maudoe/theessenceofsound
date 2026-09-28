@@ -49,11 +49,11 @@ body {
 }
 
 h1, h2, h3, .serif {
-  font-family: "Cinzel", "Space Grotesk", "Segoe UI", serif;
+  font-family: "Michroma", "Space Grotesk", "Segoe UI", sans-serif;
   font-weight: 700;
   letter-spacing: 0.2px;
 }
-.carta-nombre { font-family: "Cinzel", "Space Grotesk", serif; }
+.carta-nombre { font-family: "Michroma", "Space Grotesk", sans-serif; }
 
 .oculto { display: none !important; }
 [hidden] { display: none !important; }
@@ -1443,7 +1443,7 @@ body::before {
   height: 100%;
   display: block;
 }
-.loader-mapa-svg .sh-nodo-texto { font-family: "Cinzel", "Space Grotesk", sans-serif; }
+.loader-mapa-svg .sh-nodo-texto { font-family: "Michroma", "Space Grotesk", sans-serif; }
 .loader-mapa-svg { opacity: 0.6; transition: opacity 1.8s ease; }
 .loader-marco-giro {
   transform-box: fill-box;
@@ -1463,7 +1463,7 @@ body::before {
   position: relative;
   z-index: 2;
   text-align: center;
-  font-family: "Cinzel", serif;
+  font-family: "Michroma", sans-serif;
   opacity: 0;
   transform: translateY(8px);
   transition: opacity 1.4s ease 0.5s, transform 1.4s ease 0.5s;
@@ -1494,7 +1494,7 @@ body::before {
 .loader-titulo-firma {
   margin: 5px 0 0;
   font-size: 0.62rem;
-  font-family: "Cinzel", serif;
+  font-family: "Michroma", sans-serif;
   letter-spacing: 2px;
   color: rgba(233, 220, 184, 0.7);
 }
@@ -1614,7 +1614,7 @@ body.loader-activo { overflow: hidden; height: 100vh; }
   box-shadow: 0 0 0 1px rgba(var(--acento-rgb), 0.4);
 }
 .tarjeta-acorde-cifrado {
-  font-family: "Cinzel", "Space Grotesk", sans-serif;
+  font-family: "Michroma", "Space Grotesk", sans-serif;
   font-weight: 700; font-size: 1.05rem; color: var(--blanco);
 }
 .tarjeta-acorde-nombre { font-size: 0.72rem; color: var(--tenue); line-height: 1.3; }
