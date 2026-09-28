@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&family=Michroma&family=Black+Ops+One&family=Cinzel:wght@500;600;700&family=Playfair+Display:wght@600;700&family=Libre+Baskerville:wght@400;700&family=Poppins:wght@500;600;700&display=swap">
-<link rel="stylesheet" href="css/style.css?v=78">
+<link rel="stylesheet" href="css/style.css?v=79">
 </head>
 <body>
 
@@ -36,25 +36,28 @@
     <p class="lema" data-i18n="intro.lema">The Essence of Sound — by Mau</p>
     <h1 class="logo-texto" data-i18n="intro.titulo">Mapas armónicos<span class="punto">.</span></h1>
     <p class="intro" data-i18n="intro.texto">Progresiones, sustituciones y licks — con las notas escritas, flechas de a dónde va cada acorde, y todo separado por color.</p>
-    <div class="ajustes-anclaje">
-      <button class="btn-ajustes" id="btn-ajustes" type="button" aria-haspopup="true" aria-expanded="false" data-i18n-title="ajustes.abrir" title="Ajustes">
-        <svg viewBox="0 0 24 24" class="icono-tuerca" aria-hidden="true">
-          <path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4Z" fill="none" stroke="currentColor" stroke-width="1.6"/>
-          <path d="M19.4 12.9c.03-.3.05-.6.05-.9s-.02-.6-.05-.9l2-1.56a.48.48 0 0 0 .11-.61l-1.9-3.3a.48.48 0 0 0-.58-.21l-2.36.95a7.1 7.1 0 0 0-1.56-.9l-.36-2.5a.47.47 0 0 0-.47-.4h-3.8a.47.47 0 0 0-.47.4l-.36 2.5c-.57.22-1.09.53-1.56.9l-2.36-.95a.48.48 0 0 0-.58.21l-1.9 3.3a.48.48 0 0 0 .11.61l2 1.56c-.03.3-.05.6-.05.9s.02.6.05.9l-2 1.56a.48.48 0 0 0-.11.61l1.9 3.3c.12.21.36.29.58.21l2.36-.95c.47.37.99.68 1.56.9l.36 2.5c.04.24.24.4.47.4h3.8c.23 0 .43-.16.47-.4l.36-2.5a7.1 7.1 0 0 0 1.56-.9l2.36.95c.22.08.46 0 .58-.21l1.9-3.3a.48.48 0 0 0-.11-.61l-2-1.56Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
-        </svg>
-      </button>
-      <div class="panel-ajustes oculto" id="panel-ajustes" role="dialog" aria-label="Ajustes">
-        <div class="ajustes-bloque">
-          <label for="sel-idioma-drop" class="ajustes-etiqueta">Language</label>
-          <select id="sel-idioma-drop" class="ajustes-select"></select>
-        </div>
-        <div class="ajustes-bloque">
-          <div class="ajustes-etiqueta" data-i18n="temas.tituloAjustes">Tema</div>
-          <div id="temas-ajustes-cuerpo"></div>
-        </div>
+    <button class="btn-ajustes" id="btn-ajustes" type="button" aria-haspopup="dialog" aria-expanded="false" data-i18n-title="ajustes.abrir" title="Ajustes">
+      <svg viewBox="0 0 24 24" class="icono-tuerca" aria-hidden="true">
+        <path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4Z" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M19.4 12.9c.03-.3.05-.6.05-.9s-.02-.6-.05-.9l2-1.56a.48.48 0 0 0 .11-.61l-1.9-3.3a.48.48 0 0 0-.58-.21l-2.36.95a7.1 7.1 0 0 0-1.56-.9l-.36-2.5a.47.47 0 0 0-.47-.4h-3.8a.47.47 0 0 0-.47.4l-.36 2.5c-.57.22-1.09.53-1.56.9l-2.36-.95a.48.48 0 0 0-.58.21l-1.9 3.3a.48.48 0 0 0 .11.61l2 1.56c-.03.3-.05.6-.05.9s.02.6.05.9l-2 1.56a.48.48 0 0 0-.11.61l1.9 3.3c.12.21.36.29.58.21l2.36-.95c.47.37.99.68 1.56.9l.36 2.5c.04.24.24.4.47.4h3.8c.23 0 .43-.16.47-.4l.36-2.5a7.1 7.1 0 0 0 1.56-.9l2.36.95c.22.08.46 0 .58-.21l1.9-3.3a.48.48 0 0 0-.11-.61l-2-1.56Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </header>
+
+  <!-- ---------------- modal: ajustes (idioma + tema) ---------------- -->
+  <div class="modal-fondo" id="modal-ajustes" hidden>
+    <div class="modal-caja modal-ajustes-caja" role="dialog" aria-modal="true" aria-label="Ajustes">
+      <button class="modal-cerrar" id="btn-cerrar-ajustes" data-i18n-title="modalInstrumento.cerrar" title="Cerrar (Esc)">×</button>
+      <div class="ajustes-bloque">
+        <label for="sel-idioma-drop" class="ajustes-etiqueta">Language</label>
+        <select id="sel-idioma-drop" class="ajustes-select"></select>
+      </div>
+      <div class="ajustes-bloque">
+        <div class="ajustes-etiqueta" data-i18n="temas.tituloAjustes">Tema</div>
+        <div id="temas-ajustes-cuerpo"></div>
       </div>
     </div>
-  </header>
+  </div>
 
   <nav class="nav" id="nav">
     <button class="nav-btn activo" data-vista="estilos" data-i18n="nav.estilos">Estilos</button>
@@ -113,6 +116,10 @@
         <button class="vista-btn activo" data-modo="mapa" data-i18n="detalle.esteMapa">Este mapa</button>
         <button class="vista-btn" data-modo="rueda" data-i18n="detalle.circuloQuintas">Círculo de quintas</button>
       </div>
+      <button class="btn-escuchar" id="btn-escuchar-mapa" type="button">
+        <span class="btn-escuchar-icono">▶</span>
+        <span data-i18n="detalle.escucharProgresion">Escuchar la progresión</span>
+      </button>
     </div>
 
     <div class="detalle-cuerpo">
@@ -322,30 +329,30 @@
   </div>
 </div>
 
-<script src="js/temas.js?v=78"></script>
-<script src="js/idiomas.js?v=78"></script>
-<script src="js/i18n.js?v=78"></script>
-<script src="js/data.js?v=78"></script>
-<script src="js/chords.js?v=78"></script>
-<script src="js/colors.js?v=78"></script>
-<script src="js/transporte.js?v=78"></script>
-<script src="js/layouts.js?v=78"></script>
-<script src="js/graph.js?v=78"></script>
-<script src="js/escalas.js?v=78"></script>
-<script src="js/emociones.js?v=78"></script>
-<script src="js/estilos.js?v=78"></script>
-<script src="js/instrumentos.js?v=78"></script>
-<script src="js/notacion.js?v=78"></script>
-<script src="js/diccionario.js?v=78"></script>
-<script src="js/escalas_vista.js?v=78"></script>
-<script src="js/identificar.js?v=78"></script>
-<script src="js/emociones_vista.js?v=78"></script>
-<script src="js/rueda.js?v=78"></script>
+<script src="js/temas.js?v=79"></script>
+<script src="js/idiomas.js?v=79"></script>
+<script src="js/i18n.js?v=79"></script>
+<script src="js/data.js?v=79"></script>
+<script src="js/chords.js?v=79"></script>
+<script src="js/colors.js?v=79"></script>
+<script src="js/transporte.js?v=79"></script>
+<script src="js/layouts.js?v=79"></script>
+<script src="js/graph.js?v=79"></script>
+<script src="js/escalas.js?v=79"></script>
+<script src="js/emociones.js?v=79"></script>
+<script src="js/estilos.js?v=79"></script>
+<script src="js/instrumentos.js?v=79"></script>
+<script src="js/notacion.js?v=79"></script>
+<script src="js/diccionario.js?v=79"></script>
+<script src="js/escalas_vista.js?v=79"></script>
+<script src="js/identificar.js?v=79"></script>
+<script src="js/emociones_vista.js?v=79"></script>
+<script src="js/rueda.js?v=79"></script>
 <script src="https://cdn.jsdelivr.net/npm/soundfont-player@0.12.0/dist/soundfont-player.min.js"></script>
-<script src="js/sonido.js?v=78"></script>
-<script src="js/app.js?v=78"></script>
+<script src="js/sonido.js?v=79"></script>
+<script src="js/app.js?v=79"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js"></script>
-<script src="js/three-bg.js?v=78"></script>
-<script src="js/fx.js?v=78"></script>
+<script src="js/three-bg.js?v=79"></script>
+<script src="js/fx.js?v=79"></script>
 </body>
 </html>

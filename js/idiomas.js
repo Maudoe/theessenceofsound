@@ -49,6 +49,7 @@ const IDIOMAS = {
         "escritoEn": "escrito en",
         "esteMapa": "Este mapa",
         "circuloQuintas": "Círculo de quintas",
+        "escucharProgresion": "Escuchar la progresión",
         "desde": "Desde",
         "podesIrA": "podés ir a",
         "proposito": "Propósito",
@@ -5794,7 +5795,8 @@ const IDIOMAS = {
         "coloresDelMapa": "Map colors",
         "recorridoAcordes": "Chord path",
         "enEsteMapa": "In this map",
-        "otrosCaminos": "Other paths in the system"
+        "otrosCaminos": "Other paths in the system",
+        "escucharProgresion": "Listen to the progression"
       },
       "estilosVista": {
         "intro": "Every style has its own thing: what chords it's built from, what scales go on top, its typical transitions and a few licks in tab.",

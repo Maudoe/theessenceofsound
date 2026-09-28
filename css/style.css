@@ -1440,14 +1440,15 @@ body::before {
 .pag-punto.activo { background: var(--acento); border-color: var(--acento); transform: scale(1.25); }
 .pag-info { font-size: 0.76rem; color: var(--tenue); min-width: 96px; text-align: center; }
 
-/* ---------------- ajustes: idioma + tema, detrás de la tuerca ---------------- */
-.ajustes-anclaje {
+/* ---------------- ajustes: idioma + tema, detrás de la tuerca ----------------
+   La tuerca abre un modal centrado (mismas .modal-fondo/.modal-caja que
+   usa "Cómo tocar" — fondo con blur, tarjeta al medio), no un popover
+   colgando de la tuerca. */
+.btn-ajustes {
   position: absolute;
   top: 14px;
   right: 18px;
   z-index: 70;
-}
-.btn-ajustes {
   width: 38px; height: 38px;
   display: flex; align-items: center; justify-content: center;
   background: rgba(255, 255, 255, 0.05);
@@ -1459,18 +1460,8 @@ body::before {
 }
 .btn-ajustes:hover, .btn-ajustes[aria-expanded="true"] { color: var(--acento); border-color: var(--acento); transform: rotate(35deg); }
 .icono-tuerca { width: 19px; height: 19px; }
-.panel-ajustes {
-  position: absolute;
-  top: 48px;
-  right: 0;
-  width: 300px;
-  max-height: 78vh;
-  overflow-y: auto;
-  background: linear-gradient(170deg, var(--carta-alta), var(--carta));
-  border: 1px solid rgba(var(--violeta-rgb), 0.4);
-  border-radius: 16px;
-  box-shadow: var(--sombra);
-  padding: 18px;
+.modal-ajustes-caja {
+  width: min(360px, 100%);
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -1504,10 +1495,6 @@ body::before {
 .temas-grilla-ajustes .tema-nombre { font-size: 0.84rem; }
 .temas-grilla-ajustes .tema-fuente { display: none; }
 .temas-grilla-ajustes .tema-activo-marca { position: static; margin-left: auto; }
-@media (max-width: 560px) {
-  .ajustes-anclaje { position: relative; top: auto; right: auto; display: flex; justify-content: center; margin-top: 10px; }
-  .panel-ajustes { right: auto; left: 50%; transform: translateX(-50%); width: min(320px, 88vw); }
-}
 
 /* ---------------- loader de entrada ---------------- */
 .loader {

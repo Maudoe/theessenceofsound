@@ -907,26 +907,27 @@ function iniciar() {
   if (selIdioma) armarSelectorIdioma(selIdioma);
 
   const btnAjustes = $("#btn-ajustes");
-  const panelAjustes = $("#panel-ajustes");
-  if (btnAjustes && panelAjustes) {
+  const modalAjustes = $("#modal-ajustes");
+  if (btnAjustes && modalAjustes) {
+    const abrirAjustes = () => {
+      modalAjustes.hidden = false;
+      requestAnimationFrame(() => modalAjustes.classList.add("abierto"));
+      btnAjustes.setAttribute("aria-expanded", "true");
+    };
     const cerrarAjustes = () => {
-      panelAjustes.classList.add("oculto");
+      modalAjustes.classList.remove("abierto");
+      setTimeout(() => { modalAjustes.hidden = true; }, 200);
       btnAjustes.setAttribute("aria-expanded", "false");
     };
-    btnAjustes.addEventListener("click", (ev) => {
-      ev.stopPropagation();
-      const yaAbierto = !panelAjustes.classList.contains("oculto");
-      if (yaAbierto) { cerrarAjustes(); return; }
-      panelAjustes.classList.remove("oculto");
-      btnAjustes.setAttribute("aria-expanded", "true");
+    btnAjustes.addEventListener("click", () => {
+      if (modalAjustes.hidden) abrirAjustes(); else cerrarAjustes();
     });
-    document.addEventListener("click", (ev) => {
-      if (panelAjustes.classList.contains("oculto")) return;
-      if (panelAjustes.contains(ev.target) || btnAjustes.contains(ev.target)) return;
-      cerrarAjustes();
+    $("#btn-cerrar-ajustes").addEventListener("click", cerrarAjustes);
+    modalAjustes.addEventListener("click", (ev) => {
+      if (ev.target === modalAjustes) cerrarAjustes();
     });
     document.addEventListener("keydown", (ev) => {
-      if (ev.key === "Escape" && !panelAjustes.classList.contains("oculto")) cerrarAjustes();
+      if (ev.key === "Escape" && !modalAjustes.hidden) cerrarAjustes();
     });
   }
   cacheEstilosDeMapas();
@@ -1028,6 +1029,30 @@ function iniciar() {
       dibujarGrafoYRecorrido();
     });
   });
+
+  const btnEscucharMapa = $("#btn-escuchar-mapa");
+  if (btnEscucharMapa) {
+    btnEscucharMapa.addEventListener("click", async () => {
+      // se lee mapaEnUso() recién acá, al clickear — no antes — así que
+      // si cambiaste la tónica la progresión suena transportada, sea
+      // cual sea el modo (grafo o rueda) en el que estés parado
+      const mapa = typeof mapaEnUso === "function" ? mapaEnUso() : null;
+      const cifrados = mapa && mapa.nodos_principales;
+      if (!cifrados || !cifrados.length) return;
+      const pasos = cifrados
+        .map((c) => spellChord(c))
+        .filter(Boolean)
+        .map((acorde) => notasMidiDesdeNombres(acorde.notas, 48));
+      if (!pasos.length) return;
+      btnEscucharMapa.disabled = true;
+      btnEscucharMapa.classList.add("sonando");
+      try {
+        await reproducirProgresion(pasos, "piano");
+      } finally {
+        setTimeout(() => { btnEscucharMapa.disabled = false; btnEscucharMapa.classList.remove("sonando"); }, 400);
+      }
+    });
+  }
 
   $("#buscador").addEventListener("input", (e) => {
     estado.busqueda = e.target.value;
