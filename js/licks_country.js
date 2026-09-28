@@ -127,4 +127,117 @@ const LICKS_COUNTRY = [
       { cuerda: 5, traste: 5 }, { cuerda: 5, traste: 9, tecnica: "/" }, { cuerda: 5, traste: 12 },
     ],
   },
+
+  /* ---- tanda 2 ---- */
+  {
+    id: "cp-g-04",
+    nombre: "Doble parada simulada en Sol",
+    tonalidad: "G", raiz: "G", escala: "pentaMayor",
+    tecnica: "hybrid picking (dobles)", dificultad: "intermedio",
+    nota: "Alterna rápido entre dos cuerdas vecinas para simular una doble parada sin tocarlas juntas: la púa pica la cuerda grave y el dedo medio 'pellizca' la aguda al toque. Es el recurso que usa Brent Mason para que una sola línea suene más ancha de lo que es.",
+    notas: [
+      { cuerda: 3, traste: 0 }, { cuerda: 4, traste: 0 }, { cuerda: 4, traste: 3 },
+      { cuerda: 3, traste: 0 }, { cuerda: 3, traste: 2 }, { cuerda: 4, traste: 0 },
+    ],
+  },
+  {
+    id: "cp-g-05",
+    nombre: "Cierre con hammer mixolidio en Sol",
+    tonalidad: "G", raiz: "G", escala: "mixolidio",
+    tecnica: "hammer-on descendente", dificultad: "intermedio",
+    nota: "Un hammer-on corto en la primera cuerda (la séptima menor F subiendo a la tónica aguda) y de ahí una bajada diatónica: el mismo truco de 'subo un toque y después bajo toda la frase' que Brad Paisley usa para rematar una vuelta de acordes.",
+    notas: [
+      { cuerda: 5, traste: 1 }, { cuerda: 5, traste: 3, tecnica: "h" }, { cuerda: 4, traste: 3 },
+      { cuerda: 4, traste: 1 }, { cuerda: 4, traste: 0 }, { cuerda: 3, traste: 0 },
+    ],
+  },
+  {
+    id: "cp-c-03",
+    nombre: "Turnaround chicken pickin' en Do",
+    tonalidad: "C", raiz: "C", escala: "jonico",
+    tecnica: "chicken pickin'", dificultad: "intermedio-avanzado",
+    nota: "Un arpegio de C mayor picado seco (uña de dedo medio contra la cuerda, soltando rápido para el 'cluck') que baja pasando por la cuarta como nota de paso antes de resolver: el gesto de cierre de frase más típico de Brent Mason.",
+    notas: [
+      { cuerda: 4, traste: 1 }, { cuerda: 5, traste: 0 }, { cuerda: 5, traste: 3, tecnica: "h" },
+      { cuerda: 5, traste: 1 }, { cuerda: 5, traste: 0 }, { cuerda: 4, traste: 1 },
+    ],
+  },
+  {
+    id: "cp-c-04",
+    nombre: "Corrida ascendente pentatónica en Do",
+    tonalidad: "C", raiz: "C", escala: "pentaMayor",
+    tecnica: "flatpicking ascendente", dificultad: "intermedio",
+    nota: "Sube por la pentatónica mayor cruzando tres cuerdas en tercera posición: todo alternado, sin ligados, para practicar la sincronía de púa a tempo rápido antes de meterle hammer-pulls encima.",
+    notas: [
+      { cuerda: 1, traste: 3 }, { cuerda: 1, traste: 5 }, { cuerda: 2, traste: 2 },
+      { cuerda: 3, traste: 0 }, { cuerda: 3, traste: 2 },
+    ],
+  },
+  {
+    id: "cp-d-03",
+    nombre: "Roll de banjo trasladado en Re",
+    tonalidad: "D", raiz: "D", escala: "pentaMayor",
+    tecnica: "roll de banjo (fingerstyle)", dificultad: "intermedio-avanzado",
+    nota: "El mismo 'forward roll' de tres dedos que cp-c-01 pero en Re, repitiendo un patrón fijo de tres cuerdas tres veces seguidas: pulgar-índice-medio sin parar, dejando que las notas se solapen como una cascada de banjo.",
+    notas: [
+      { cuerda: 1, traste: 0 }, { cuerda: 2, traste: 0 }, { cuerda: 3, traste: 4 },
+      { cuerda: 1, traste: 0 }, { cuerda: 2, traste: 0 }, { cuerda: 3, traste: 4 },
+      { cuerda: 1, traste: 0 }, { cuerda: 2, traste: 0 }, { cuerda: 3, traste: 4 },
+    ],
+  },
+  {
+    id: "cp-d-04",
+    nombre: "Turnaround con novena en Re",
+    tonalidad: "D", raiz: "D", escala: "mixolidio",
+    tecnica: "turnaround con extensión", dificultad: "avanzado",
+    nota: "Camina desde la séptima menor (C) hasta la tónica pasando por todos los grados intermedios: es una frase larga, pensada para llenar un compás entero de introducción antes de que entre la voz, con la novena (E) de paso como color extra.",
+    notas: [
+      { cuerda: 1, traste: 3 }, { cuerda: 1, traste: 5, tecnica: "h" }, { cuerda: 2, traste: 2 },
+      { cuerda: 2, traste: 4 }, { cuerda: 3, traste: 2 }, { cuerda: 2, traste: 0 },
+    ],
+  },
+  {
+    id: "cp-a-03",
+    nombre: "Bend de pedal steel a la 3ª en La",
+    tonalidad: "A", raiz: "A", escala: "jonico",
+    tecnica: "bend de pedal steel", dificultad: "intermedio-avanzado",
+    nota: "El bend de tono entero más usado en country: la segunda cuerda sube desde la 2da hasta la 3ra mayor (C#) y después la frase resuelve bajando por grados. Con vibrato ancho sobre el bend para que 'cante' como una steel de verdad.",
+    notas: [
+      { cuerda: 4, traste: 2, tecnica: "b" }, { cuerda: 4, traste: 2 }, { cuerda: 3, traste: 2 },
+      { cuerda: 4, traste: 0 }, { cuerda: 3, traste: 4 }, { cuerda: 3, traste: 2 },
+    ],
+  },
+  {
+    id: "cp-e-02",
+    nombre: "Descendente chicken pickin' en Mi",
+    tonalidad: "E", raiz: "E", escala: "mixolidio",
+    tecnica: "chicken pickin'", dificultad: "avanzado",
+    nota: "Baja cruzando cinco cuerdas distintas, con un hammer-on corto en el medio (la tercera menor de paso hacia la mayor) picado con uña para el 'cluck' característico: cuanto más staccato quede cada nota, más se parece al fraseo de un banjo eléctrico.",
+    notas: [
+      { cuerda: 2, traste: 0 }, { cuerda: 4, traste: 0 }, { cuerda: 3, traste: 2 },
+      { cuerda: 3, traste: 1, tecnica: "h" }, { cuerda: 5, traste: 2 }, { cuerda: 0, traste: 0 },
+    ],
+  },
+  {
+    id: "cp-e-03",
+    nombre: "Arpegio Travis picking en Mi",
+    tonalidad: "E", raiz: "E", escala: "jonico",
+    tecnica: "Travis picking", dificultad: "intermedio",
+    nota: "Un arpegio de Emaj7 (tónica, séptima mayor, tercera mayor) pensado para el patrón de Chet Atkins: el pulgar marca la fundamental grave mientras índice y medio van y vuelven por las cuerdas agudas sin parar.",
+    notas: [
+      { cuerda: 0, traste: 0 }, { cuerda: 1, traste: 2 }, { cuerda: 2, traste: 1 },
+      { cuerda: 3, traste: 1 }, { cuerda: 2, traste: 1 }, { cuerda: 1, traste: 2 },
+    ],
+  },
+  {
+    id: "cp-bb-01",
+    nombre: "Corrida bluesera country en Sib",
+    tonalidad: "Bb", raiz: "Bb", escala: "bluesMayor",
+    tecnica: "blues mayor descendente", dificultad: "intermedio-avanzado",
+    nota: "Una tonalidad menos común en country acústico pero clásica del western swing con metales: baja por la pentatónica mayor con la tercera menor metida de pasada (la nota 'sucia' que le da swing) antes de resolver en la tónica.",
+    notas: [
+      { cuerda: 0, traste: 3 }, { cuerda: 0, traste: 1 }, { cuerda: 1, traste: 5 },
+      { cuerda: 1, traste: 4, tecnica: "h" }, { cuerda: 1, traste: 3 }, { cuerda: 1, traste: 1 },
+    ],
+  },
 ];
