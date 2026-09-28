@@ -26,13 +26,63 @@ const TEMAS = [
     colores: ["#f1f7f5", "#1f8a6f", "#4a5fb0", "#d1637a"] },
 ];
 
+/* Las fuentes son independientes del tema: cada tema trae una elegida
+   por default, pero acá se puede pisar esa elección a mano — son las
+   mismas 6 que ya se cargan para los temas, ninguna nueva. "Automática"
+   (sin selección) vuelve a dejar que decida el tema. */
+const FUENTE_GUARDADA = "sh_fuente";
+const estadoFuente = { actual: "" };
+const FUENTES = [
+  { id: "michroma", nombre: "Michroma", pila: '"Michroma", "Space Grotesk", "Segoe UI", sans-serif' },
+  { id: "black-ops-one", nombre: "Black Ops One", pila: '"Black Ops One", "Space Grotesk", sans-serif' },
+  { id: "cinzel", nombre: "Cinzel", pila: '"Cinzel", "Space Grotesk", serif' },
+  { id: "playfair-display", nombre: "Playfair Display", pila: '"Playfair Display", "Space Grotesk", serif' },
+  { id: "libre-baskerville", nombre: "Libre Baskerville", pila: '"Libre Baskerville", "Space Grotesk", serif' },
+  { id: "poppins", nombre: "Poppins", pila: '"Poppins", "Space Grotesk", sans-serif' },
+];
+
 (function inicializarTema() {
   try {
     const guardado = localStorage.getItem(TEMA_GUARDADO);
     if (guardado && TEMAS.some((t) => t.id === guardado)) estadoTema.actual = guardado;
+    const fuenteGuardada = localStorage.getItem(FUENTE_GUARDADA);
+    if (fuenteGuardada && FUENTES.some((f) => f.id === fuenteGuardada)) estadoFuente.actual = fuenteGuardada;
   } catch (e) { /* localStorage bloqueado, o corriendo fuera del navegador (script de extracción de traducciones): seguimos en oscuro */ }
-  if (typeof document !== "undefined") document.documentElement.dataset.tema = estadoTema.actual;
+  if (typeof document !== "undefined") {
+    document.documentElement.dataset.tema = estadoTema.actual;
+    if (estadoFuente.actual) document.documentElement.dataset.fuente = estadoFuente.actual;
+  }
 })();
+
+function aplicarFuente(id) {
+  estadoFuente.actual = id && FUENTES.some((f) => f.id === id) ? id : "";
+  if (estadoFuente.actual) document.documentElement.dataset.fuente = estadoFuente.actual;
+  else delete document.documentElement.dataset.fuente;
+  try {
+    if (estadoFuente.actual) localStorage.setItem(FUENTE_GUARDADA, estadoFuente.actual);
+    else localStorage.removeItem(FUENTE_GUARDADA);
+  } catch (e) { /* nada que hacer */ }
+  if (typeof pintarSelectorFuentes === "function") pintarSelectorFuentes();
+}
+
+function pintarSelectorFuentes() {
+  const cont = document.getElementById("fuentes-ajustes-cuerpo");
+  if (!cont) return;
+
+  const automatica = `
+    <button class="chip chip-fuente${!estadoFuente.actual ? " activo" : ""}" data-fuente-id="" style="font-family:var(--font-titulo)">
+      ${t("temas.fuenteAutomatica")}
+    </button>`;
+  const opciones = FUENTES.map((f) => `
+    <button class="chip chip-fuente${estadoFuente.actual === f.id ? " activo" : ""}" data-fuente-id="${f.id}" style="font-family:${f.pila}">
+      ${f.nombre}
+    </button>`).join("");
+
+  cont.innerHTML = `<div class="fuentes-grilla">${automatica}${opciones}</div>`;
+  cont.querySelectorAll("[data-fuente-id]").forEach((b) => {
+    b.addEventListener("click", () => aplicarFuente(b.dataset.fuenteId));
+  });
+}
 
 function aplicarTema(id) {
   if (!TEMAS.some((t) => t.id === id)) return;
@@ -40,6 +90,7 @@ function aplicarTema(id) {
   document.documentElement.dataset.tema = id;
   try { localStorage.setItem(TEMA_GUARDADO, id); } catch (e) { /* nada que hacer */ }
   if (typeof pintarVistaTemas === "function") pintarVistaTemas();
+  if (typeof pintarSelectorFuentes === "function") pintarSelectorFuentes();
 }
 
 function tarjetaDeTema(tema) {

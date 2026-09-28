@@ -99,6 +99,17 @@
 
 [data-tema^="claro"] #fondo-3d { opacity: 0.22; }
 
+/* ---- fuente elegida a mano — independiente del tema, pisa el
+   --font-titulo que haya traído el tema activo. Van en un selector con
+   :root (mayor especificidad que [data-tema=…] solo) para no depender
+   del orden en la hoja de estilos. ---- */
+:root[data-fuente="michroma"] { --font-titulo: "Michroma", "Space Grotesk", "Segoe UI", sans-serif; }
+:root[data-fuente="black-ops-one"] { --font-titulo: "Black Ops One", "Space Grotesk", sans-serif; }
+:root[data-fuente="cinzel"] { --font-titulo: "Cinzel", "Space Grotesk", serif; }
+:root[data-fuente="playfair-display"] { --font-titulo: "Playfair Display", "Space Grotesk", serif; }
+:root[data-fuente="libre-baskerville"] { --font-titulo: "Libre Baskerville", "Space Grotesk", serif; }
+:root[data-fuente="poppins"] { --font-titulo: "Poppins", "Space Grotesk", sans-serif; }
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { overflow-x: clip; }
 
@@ -1495,6 +1506,9 @@ body::before {
 .temas-grilla-ajustes .tema-nombre { font-size: 0.84rem; }
 .temas-grilla-ajustes .tema-fuente { display: none; }
 .temas-grilla-ajustes .tema-activo-marca { position: static; margin-left: auto; }
+.fuentes-grilla { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip-fuente { font-size: 0.86rem; }
+.chip-fuente.activo { background: var(--acento); color: #0a0a0f; border-color: var(--acento); font-weight: 700; }
 
 /* ---------------- loader de entrada ---------------- */
 .loader {

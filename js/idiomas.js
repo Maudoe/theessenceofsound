@@ -277,6 +277,8 @@ const IDIOMAS = {
       "temas": {
         "intro": "El sitio siempre arranca en Oscuro. Acá podés cambiar de paleta y de tipografía — cada tema trae las dos juntas, pensadas para ir a tono. Se guarda en este navegador, así que vas a volver a encontrarlo la próxima vez.",
         "tituloAjustes": "Tema",
+        "tituloFuente": "Fuente",
+        "fuenteAutomatica": "Automática (la del tema)",
         "grupoOscuro": "Oscuros",
         "grupoClaro": "Claros",
         "activo": "Activo"
@@ -6104,7 +6106,9 @@ const IDIOMAS = {
         "grupoOscuro": "Dark",
         "grupoClaro": "Light",
         "activo": "Active",
-        "tituloAjustes": "Theme"
+        "tituloAjustes": "Theme",
+        "tituloFuente": "Font",
+        "fuenteAutomatica": "Automatic (the theme's)"
       },
       "ajustes": {
         "abrir": "Settings"
@@ -8940,6 +8944,7 @@ const IDIOMAS = {
         "escritoEn": "เขียนไว้ใน",
         "esteMapa": "แผนที่นี้",
         "circuloQuintas": "วงกลมคู่ห้า",
+        "escucharProgresion": "ฟังการเรียงคอร์ดนี้",
         "desde": "จาก",
         "podesIrA": "คุณสามารถไปที่",
         "proposito": "จุดประสงค์",
@@ -9227,6 +9232,8 @@ const IDIOMAS = {
       "temas": {
         "intro": "เว็บไซต์เริ่มต้นด้วยธีมมืดเสมอ ที่นี่คุณสามารถเปลี่ยนชุดสีและแบบตัวอักษรได้ — แต่ละธีมรวมทั้งสองอย่างไว้ด้วยกัน ออกแบบมาให้เข้ากัน ระบบจะจดจำไว้ในเบราว์เซอร์นี้ ดังนั้นครั้งหน้าคุณจะเจอมันเหมือนเดิม",
         "tituloAjustes": "ธีม",
+        "tituloFuente": "ฟอนต์",
+        "fuenteAutomatica": "อัตโนมัติ (ตามธีม)",
         "grupoOscuro": "ธีมมืด",
         "grupoClaro": "ธีมสว่าง",
         "activo": "ใช้งานอยู่"

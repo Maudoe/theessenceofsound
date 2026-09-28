@@ -2979,7 +2979,9 @@
       "grupoOscuro": "Dark",
       "grupoClaro": "Light",
       "activo": "Active",
-      "tituloAjustes": "Theme"
+      "tituloAjustes": "Theme",
+      "tituloFuente": "Font",
+      "fuenteAutomatica": "Automatic (the theme's)"
     },
     "ajustes": {
       "abrir": "Settings"

@@ -273,6 +273,8 @@
     "temas": {
       "intro": "El sitio siempre arranca en Oscuro. Acá podés cambiar de paleta y de tipografía — cada tema trae las dos juntas, pensadas para ir a tono. Se guarda en este navegador, así que vas a volver a encontrarlo la próxima vez.",
       "tituloAjustes": "Tema",
+      "tituloFuente": "Fuente",
+      "fuenteAutomatica": "Automática (la del tema)",
       "grupoOscuro": "Oscuros",
       "grupoClaro": "Claros",
       "activo": "Activo"
