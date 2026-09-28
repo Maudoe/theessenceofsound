@@ -2977,7 +2977,11 @@
       "intro": "The site always starts in Dark. Here you can switch palette and typeface — each theme bundles both, chosen to go together. It's saved in this browser, so it'll be there next time.",
       "grupoOscuro": "Dark",
       "grupoClaro": "Light",
-      "activo": "Active"
+      "activo": "Active",
+      "tituloAjustes": "Theme"
+    },
+    "ajustes": {
+      "abrir": "Settings"
     }
   },
   "categoriasAcordes": {

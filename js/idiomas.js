@@ -275,9 +275,13 @@ const IDIOMAS = {
       },
       "temas": {
         "intro": "El sitio siempre arranca en Oscuro. Acá podés cambiar de paleta y de tipografía — cada tema trae las dos juntas, pensadas para ir a tono. Se guarda en este navegador, así que vas a volver a encontrarlo la próxima vez.",
+        "tituloAjustes": "Tema",
         "grupoOscuro": "Oscuros",
         "grupoClaro": "Claros",
         "activo": "Activo"
+      },
+      "ajustes": {
+        "abrir": "Ajustes"
       },
       "idioma": {
         "es": "Español",
@@ -6097,7 +6101,11 @@ const IDIOMAS = {
         "intro": "The site always starts in Dark. Here you can switch palette and typeface — each theme bundles both, chosen to go together. It's saved in this browser, so it'll be there next time.",
         "grupoOscuro": "Dark",
         "grupoClaro": "Light",
-        "activo": "Active"
+        "activo": "Active",
+        "tituloAjustes": "Theme"
+      },
+      "ajustes": {
+        "abrir": "Settings"
       }
     },
     "categoriasAcordes": {
@@ -9216,9 +9224,13 @@ const IDIOMAS = {
       },
       "temas": {
         "intro": "เว็บไซต์เริ่มต้นด้วยธีมมืดเสมอ ที่นี่คุณสามารถเปลี่ยนชุดสีและแบบตัวอักษรได้ — แต่ละธีมรวมทั้งสองอย่างไว้ด้วยกัน ออกแบบมาให้เข้ากัน ระบบจะจดจำไว้ในเบราว์เซอร์นี้ ดังนั้นครั้งหน้าคุณจะเจอมันเหมือนเดิม",
+        "tituloAjustes": "ธีม",
         "grupoOscuro": "ธีมมืด",
         "grupoClaro": "ธีมสว่าง",
         "activo": "ใช้งานอยู่"
+      },
+      "ajustes": {
+        "abrir": "ตั้งค่า"
       },
       "emocionesVista": {
         "intro": "เลือกอารมณ์ที่คุณอยากถ่ายทอดและโน้ตหลัก แล้วฉันจะแสดงให้ดูว่าคอร์ดแบบไหน (major, minor หรือ dominant) ที่ให้สีเสียงนั้น พร้อมสเกลที่เล่นทับได้กับแต่ละแบบ นี่คือหมวดคอร์ดแบบย้อนกลับ: แทนที่จะเริ่มจากสัญลักษณ์คอร์ด คุณเริ่มจากความรู้สึก",

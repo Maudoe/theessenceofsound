@@ -169,18 +169,18 @@ function cambiarIdioma(codigo) {
   try { localStorage.setItem(IDIOMA_GUARDADO, codigo); } catch (e) { /* nada que hacer */ }
   document.documentElement.lang = codigo;
   aplicarTextosEstaticos();
-  document.querySelectorAll(".sel-idioma [data-idioma]").forEach((b) => {
-    b.classList.toggle("activo", b.dataset.idioma === codigo);
-  });
+  const sel = document.getElementById("sel-idioma-drop");
+  if (sel) sel.value = codigo;
   if (typeof alCambiarIdioma === "function") alCambiarIdioma();
 }
 
-function armarSelectorIdioma(contenedor) {
+/* Dropdown de idioma — antes eran chips (uno por idioma), ahora es un
+   <select> con la etiqueta fija "Language" (a propósito no se traduce:
+   así se reconoce sea cual sea el idioma actual del sitio). */
+function armarSelectorIdioma(sel) {
   const disponibles = idiomasDisponibles();
-  contenedor.innerHTML = disponibles.map((cod) =>
-    `<button class="chip-idioma${cod === estadoIdioma.actual ? " activo" : ""}" data-idioma="${cod}">${t("idioma." + cod)}</button>`
+  sel.innerHTML = disponibles.map((cod) =>
+    `<option value="${cod}"${cod === estadoIdioma.actual ? " selected" : ""}>${t("idioma." + cod)}</option>`
   ).join("");
-  contenedor.querySelectorAll("[data-idioma]").forEach((b) => {
-    b.addEventListener("click", () => cambiarIdioma(b.dataset.idioma));
-  });
+  sel.onchange = () => cambiarIdioma(sel.value);
 }

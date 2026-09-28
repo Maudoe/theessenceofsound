@@ -65,22 +65,17 @@ function tem2(id, campo, original) {
 }
 
 function pintarVistaTemas() {
-  const cont = document.getElementById("temas-cuerpo");
+  const cont = document.getElementById("temas-ajustes-cuerpo");
   if (!cont) return;
 
   const oscuros = TEMAS.filter((t) => t.grupo === "oscuro").map(tarjetaDeTema).join("");
   const claros = TEMAS.filter((t) => t.grupo === "claro").map(tarjetaDeTema).join("");
 
   cont.innerHTML = `
-    <p class="seccion-intro">${t("temas.intro")}</p>
-    <section class="dic-categoria">
-      <div class="bloque-titulo">${t("temas.grupoOscuro")}</div>
-      <div class="temas-grilla">${oscuros}</div>
-    </section>
-    <section class="dic-categoria">
-      <div class="bloque-titulo">${t("temas.grupoClaro")}</div>
-      <div class="temas-grilla">${claros}</div>
-    </section>`;
+    <div class="temas-subgrupo-titulo">${t("temas.grupoOscuro")}</div>
+    <div class="temas-grilla temas-grilla-ajustes">${oscuros}</div>
+    <div class="temas-subgrupo-titulo">${t("temas.grupoClaro")}</div>
+    <div class="temas-grilla temas-grilla-ajustes">${claros}</div>`;
 
   cont.querySelectorAll("[data-tema-id]").forEach((b) => {
     b.addEventListener("click", () => aplicarTema(b.dataset.temaId));

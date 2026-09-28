@@ -276,7 +276,7 @@ function pintarDetalleEscala() {
 
   let diagrama = "";
   if (vista === "tablatura") {
-    diagrama = svgTablatura(posicionElegida ? posicionElegida.notas : [], { alt: `${nombreEscala} en tablatura` });
+    diagrama = svgTablaturaEscala(posicionElegida ? posicionElegida.notas : [], { alt: `${nombreEscala} en tablatura` });
   } else if (vista === "partitura") {
     const secuencia = secuenciaMidiEscala(escalaId, raizSemitono, false);
     diagrama = svgPartitura(secuencia, { alt: `${nombreEscala} en partitura` });

@@ -903,8 +903,32 @@ function alCambiarIdioma() {
 function iniciar() {
   document.documentElement.lang = estadoIdioma.actual;
   aplicarTextosEstaticos();
-  const selIdioma = $("#sel-idioma");
+  const selIdioma = $("#sel-idioma-drop");
   if (selIdioma) armarSelectorIdioma(selIdioma);
+
+  const btnAjustes = $("#btn-ajustes");
+  const panelAjustes = $("#panel-ajustes");
+  if (btnAjustes && panelAjustes) {
+    const cerrarAjustes = () => {
+      panelAjustes.classList.add("oculto");
+      btnAjustes.setAttribute("aria-expanded", "false");
+    };
+    btnAjustes.addEventListener("click", (ev) => {
+      ev.stopPropagation();
+      const yaAbierto = !panelAjustes.classList.contains("oculto");
+      if (yaAbierto) { cerrarAjustes(); return; }
+      panelAjustes.classList.remove("oculto");
+      btnAjustes.setAttribute("aria-expanded", "true");
+    });
+    document.addEventListener("click", (ev) => {
+      if (panelAjustes.classList.contains("oculto")) return;
+      if (panelAjustes.contains(ev.target) || btnAjustes.contains(ev.target)) return;
+      cerrarAjustes();
+    });
+    document.addEventListener("keydown", (ev) => {
+      if (ev.key === "Escape" && !panelAjustes.classList.contains("oculto")) cerrarAjustes();
+    });
+  }
   cacheEstilosDeMapas();
   armarChipsEstilo();
   pintarGrilla();

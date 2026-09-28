@@ -76,8 +76,11 @@ function svgPartitura(notasMidi, opciones) {
 
 /* Dibuja una tablatura de guitarra: una línea por cuerda (la más aguda
    arriba, mismo criterio que el resto del sitio), un número de traste
-   por nota, en el orden en que cajaEscalaGuitarra() las va tocando. */
-function svgTablatura(notasCaja, opciones) {
+   por nota, en el orden en que cajaEscalaGuitarra() las va tocando.
+   Se llama "...Escala" y no simplemente svgTablatura porque estilos.js
+   ya tenía una función con ese nombre para los licks — mismo scope
+   global, dos definiciones con el mismo nombre se pisan entre sí. */
+function svgTablaturaEscala(notasCaja, opciones) {
   const opts = opciones || {};
   const nCuerdas = 6;
   const porNota = 40;
