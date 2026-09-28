@@ -1364,6 +1364,21 @@ body::before {
 .sim-relleno { fill: color-mix(in srgb, var(--acento-estilo) 16%, transparent); }
 .carta-tarot:hover .sim-fig { filter: drop-shadow(0 0 6px color-mix(in srgb, var(--acento-estilo) 60%, transparent)); }
 
+/* Estilos: el símbolo de cada carta gira despacio todo el tiempo, como
+   un sigilo — se acelera un poco al pasar el mouse, y el centro relleno
+   respira aparte para que no se sienta todo como un solo giro plano. */
+#grilla-estilos .carta-simbolo svg {
+  animation: sh-simbolo-gira 34s linear infinite;
+  transition: animation-duration var(--transicion);
+}
+#grilla-estilos .carta-tarot:hover .carta-simbolo svg { animation-duration: 9s; }
+#grilla-estilos .sim-relleno { animation: sh-simbolo-respira 3.2s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+@keyframes sh-simbolo-gira { to { transform: rotate(360deg); } }
+@keyframes sh-simbolo-respira { 0%, 100% { opacity: 0.7; transform: scale(1); } 50% { opacity: 1; transform: scale(1.18); } }
+@media (prefers-reduced-motion: reduce) {
+  #grilla-estilos .carta-simbolo svg, #grilla-estilos .sim-relleno { animation: none; }
+}
+
 .carta-nombre {
   font-family: "Space Grotesk", sans-serif;
   font-size: 1.16rem; font-weight: 700; letter-spacing: 1px;
