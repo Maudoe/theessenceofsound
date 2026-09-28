@@ -657,24 +657,14 @@ function mostrarComoTocarConEmocion(cifrado, emocionId) {
    con piano — así se escucha cómo queda antes de mirar la digitación.
    Sólo acá: el resto de las secciones (Diccionario, Identificar,
    Escalas, Emociones) siguen abriendo el modal en silencio. */
-/* Sólo el sonido, sin abrir el modal — para cuando fijar un nodo no
-   tiene que interrumpir lo que estás haciendo (armar una secuencia a
-   mano en la rueda clickeando varias notas seguidas). */
-function previaPianoDeAcorde(cifrado) {
-  if (!cifrado || typeof spellChord !== "function" || typeof reproducirAcorde !== "function") return;
-  const acorde = spellChord(cifrado);
-  if (!acorde || !acorde.notas) return;
-  reproducirAcorde(notasMidiDesdeNombres(acorde.notas, 60), "piano");
-}
-
+/* Fijar un nodo (grafo o rueda) abre "Cómo tocar" y lo hace sonar una
+   vez con piano — en los dos modos por igual. En la rueda, ARMAR la
+   secuencia propia (el anillo dorado punteado) sigue pasando en el
+   mismo click, sin depender de esto: alternarSeleccion() ya se llama
+   aparte en rueda.js antes de avisarFijado(). Si querés agregar otra
+   nota a la secuencia, cerrás este modal (X, Escape o click afuera) y
+   clickeás la siguiente — el modal manda, como en el resto del sitio. */
 function alFijarNodoConPreviewPiano(cifrado) {
-  if (estado.modo === "rueda") {
-    // en la rueda cada click suma una nota a tu propia secuencia — si
-    // además abriera el modal de digitación, no podrías clickear la
-    // nota siguiente sin cerrarlo primero. Acá sólo se escucha.
-    previaPianoDeAcorde(cifrado);
-    return;
-  }
   mostrarComoTocar(cifrado);
   if (!cifrado || !instrumento.diagramas || typeof reproducirAcorde !== "function") return;
   const clases = instrumento.diagramas.info ? instrumento.diagramas.info.clases : [];
