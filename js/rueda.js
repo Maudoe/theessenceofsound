@@ -455,42 +455,57 @@ function avisarFijado(id) {
 let nodoFijado = null;
 
 /* Además de fijar (que muestra a dónde se puede ir desde ahí), cada
-   click va sumando esa nota a una secuencia propia — no la borra el
-   próximo click en OTRA nota, como sí pasa con la exploración. Así se
-   arma una progresión a mano, nota por nota, con las que vayas
-   clickeando en el orden en que las clickeaste — adentro o afuera de
-   lo que este mapa en particular propone. "Escuchar la progresión" la
-   usa en vez de la del mapa cuando tiene algo adentro. */
-let seleccionPersonalizada = [];
+   click arma un "grupo" propio: la nota que clickeaste MÁS las notas de
+   su círculo de quintas (quinta arriba, quinta abajo, relativo,
+   dominante… lo mismo que ya calcula movimientosTeoricos() para las
+   flechas de exploración) — no una nota sola. Esos grupos se van
+   acumulando, uno por click, sin borrar el anterior; clickear la MISMA
+   nota de nuevo saca sólo su propio grupo. "Escuchar la progresión" los
+   toca todos en el orden en que los armaste, cada uno con su propio
+   círculo de quintas. */
+let seleccionPersonalizada = []; // [{ origen, ids: [origen, relacionado1, …] }, …]
 
 function marcarSeleccionEnDom(svgEl, id, marcado) {
+  // otro grupo puede seguir usando este mismo id (p. ej. dos notas
+  // distintas comparten un relativo) — no lo desmarques si todavía
+  // aparece en algún grupo que sigue en pie
+  const usadoEnOtroGrupo = seleccionPersonalizada.some((g) => g.ids.includes(id));
   const g = svgEl.querySelector(`[data-rueda-id="${id}"]`);
-  if (g) g.classList.toggle("sh-nodo-elegido", marcado);
+  if (g) g.classList.toggle("sh-nodo-elegido", marcado || usadoEnOtroGrupo);
 }
 
 function alternarSeleccion(svgEl, id) {
-  const i = seleccionPersonalizada.indexOf(id);
+  const i = seleccionPersonalizada.findIndex((g) => g.origen === id);
   if (i >= 0) {
-    seleccionPersonalizada.splice(i, 1);
-    marcarSeleccionEnDom(svgEl, id, false);
-  } else {
-    seleccionPersonalizada.push(id);
-    marcarSeleccionEnDom(svgEl, id, true);
+    const [quitado] = seleccionPersonalizada.splice(i, 1);
+    quitado.ids.forEach((idQuitado) => marcarSeleccionEnDom(svgEl, idQuitado, false));
+    return;
   }
+  const relacionados = movimientosTeoricos(id).map((m) => m.destino);
+  const ids = [id, ...relacionados.filter((d) => d !== id)];
+  seleccionPersonalizada.push({ origen: id, ids });
+  ids.forEach((idNuevo) => marcarSeleccionEnDom(svgEl, idNuevo, true));
 }
 
 function limpiarSeleccionPersonalizada(svgEl) {
-  seleccionPersonalizada.forEach((id) => marcarSeleccionEnDom(svgEl, id, false));
+  const todos = new Set();
+  seleccionPersonalizada.forEach((g) => g.ids.forEach((id) => todos.add(id)));
   seleccionPersonalizada = [];
+  todos.forEach((id) => marcarSeleccionEnDom(svgEl, id, false));
 }
 
 /* Los cifrados de la secuencia armada a mano, en el orden en que se
-   clickearon — lo que usa "Escuchar la progresión" cuando hay algo acá. */
+   clickearon (cada nota seguida de las de su propio círculo de
+   quintas) — lo que usa "Escuchar la progresión" cuando hay algo acá. */
 function cifradosSeleccionPersonalizada() {
-  return seleccionPersonalizada
-    .map((id) => RUEDA_POR_ID.get(id))
-    .filter(Boolean)
-    .map((n) => n.etiquetaFijada || n.etiqueta);
+  const out = [];
+  seleccionPersonalizada.forEach((g) => {
+    g.ids.forEach((id) => {
+      const n = RUEDA_POR_ID.get(id);
+      if (n) out.push(n.etiquetaFijada || n.etiqueta);
+    });
+  });
+  return out;
 }
 
 function limpiarExploracion(svgEl) {
