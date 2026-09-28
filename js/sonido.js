@@ -63,51 +63,75 @@ function instrumentoCargado(gmId) {
   return estadoSonido.cache[gmId];
 }
 
-/* Reparte las notas de un acorde en octavas ascendentes a partir de una
-   base, para que no queden todas amontonadas en la misma octava (eso
-   sonaría a clúster, no a acorde). Cada vez que la siguiente nota "da la
-   vuelta" (su clase de altura es menor o igual a la anterior), sube una
-   octava. */
-function notasConOctava(notas, octavaBase) {
+/* Reparte notas (nombres, sin octava) en alturas MIDI ascendentes a
+   partir de una nota base, para que no queden amontonadas en la misma
+   octava (eso sonaría a clúster, no a acorde). Se usa donde no hay una
+   digitación real de mástil de la cual sacar la altura exacta (piano,
+   o la progresión de la sección Emociones, que es abstracta). */
+function notasMidiDesdeNombres(notas, midiBase) {
   let anterior = -1;
   return notas.map((n) => {
     const clase = INDICE_NOTA[n];
     if (clase === undefined) return null;
-    if (clase <= anterior) octavaBase++;
-    anterior = clase;
-    return n.replace("♯", "#") + octavaBase;
-  }).filter(Boolean);
+    let m = midiBase + clase;
+    while (m <= anterior) m += 12;
+    anterior = m;
+    return m;
+  }).filter((m) => m !== null);
 }
 
-/* Toca un acorde entero (todas las notas juntas). familia es
-   "guitarra"/"piano"/"bajo", para saber qué patch y qué octava de base
-   usar (el bajo una octava más abajo, así suena a bajo de verdad). */
-async function reproducirAcorde(notas, familia) {
-  if (!notas || !notas.length) return;
+/* La altura MIDI real de cada cuerda sonando en la posición del mástil
+   que está mostrando el modal ahora mismo — ésta es la única forma de
+   que "Escuchar" respete de verdad la posición (traste base) Y la
+   afinación elegida: ambas ya están adentro de `dig.trastes` y
+   `cuerdas` respectivamente, sólo hay que sumarlas. */
+function notasMidiDePosicion(dig, cuerdas) {
+  if (!dig || !cuerdas) return [];
+  return cuerdas
+    .map((cuerda, i) => (dig.trastes[i] == null ? null : cuerda + dig.trastes[i]))
+    .filter((m) => m !== null);
+}
+
+/* Qué está mostrando el modal instrumento ahora mismo, traducido a
+   notas MIDI reales: para guitarra/bajo, la posición y afinación
+   puestas en el mástil; para piano (no tiene mástil ni afinación) las
+   clases del acorde repartidas en octavas a partir de C4. */
+function notasMidiDelInstrumentoActivo() {
+  if (!instrumento.diagramas) return [];
+  const inst = instrumento.activo;
+  if (inst === "piano") {
+    const clases = instrumento.diagramas.info ? instrumento.diagramas.info.clases : [];
+    return notasMidiDesdeNombres(clases.map((c) => NOTAS_SOSTENIDOS[c]), 60);
+  }
+  const lista = instrumento.diagramas[inst];
+  const dig = lista && lista[instrumento.posicion[inst] || 0];
+  return notasMidiDePosicion(dig, cuerdasDe(inst));
+}
+
+/* Toca un acorde entero (todas las notas MIDI juntas). familia es
+   "guitarra"/"piano"/"bajo", para saber qué patch usar. */
+async function reproducirAcorde(notasMidi, familia) {
+  if (!notasMidi || !notasMidi.length) return;
   const gmId = estadoSonido.elegido[familia] || estadoSonido.elegido.guitarra;
-  const octavaBase = familia === "bajo" ? 2 : 3;
-  const conOctava = notasConOctava(notas, octavaBase);
   const player = await instrumentoCargado(gmId);
   const ctx = contextoAudioSonido();
   const ahora = ctx.currentTime;
-  conOctava.forEach((n) => player.play(n, ahora, { duration: 1.8, gain: 2 }));
+  notasMidi.forEach((n) => player.play(n, ahora, { duration: 1.8, gain: 2 }));
 }
 
 /* Toca varios acordes uno atrás del otro — la "progresión" completa,
-   no un acorde suelto. */
+   no un acorde suelto. Cada paso es un array de notas MIDI. */
 async function reproducirProgresion(pasos, familia) {
   if (!pasos || !pasos.length || estadoSonido.sonando) return;
   estadoSonido.sonando = true;
   const gmId = estadoSonido.elegido[familia] || estadoSonido.elegido.guitarra;
-  const octavaBase = familia === "bajo" ? 2 : 3;
   const player = await instrumentoCargado(gmId);
   const ctx = contextoAudioSonido();
   const duracionPaso = 0.85;
   const ahora = ctx.currentTime;
-  pasos.forEach((notas, i) => {
-    const conOctava = notasConOctava(notas, octavaBase);
+  pasos.forEach((notasMidi, i) => {
     const cuando = ahora + i * duracionPaso;
-    conOctava.forEach((n) => player.play(n, cuando, { duration: duracionPaso * 0.92, gain: 2 }));
+    notasMidi.forEach((n) => player.play(n, cuando, { duration: duracionPaso * 0.92, gain: 2 }));
   });
   const totalMs = pasos.length * duracionPaso * 1000;
   setTimeout(() => { estadoSonido.sonando = false; }, totalMs);

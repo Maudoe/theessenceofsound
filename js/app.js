@@ -923,7 +923,7 @@ function iniciar() {
     btn.disabled = true;
     btn.classList.add("sonando");
     try {
-      await reproducirAcorde(instrumento.diagramas.acorde.notas, instrumento.activo);
+      await reproducirAcorde(notasMidiDelInstrumentoActivo(), instrumento.activo);
     } finally {
       setTimeout(() => { btn.disabled = false; btn.classList.remove("sonando"); }, 900);
     }

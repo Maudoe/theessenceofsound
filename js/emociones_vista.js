@@ -172,7 +172,7 @@ function pintarDetalleEmocion() {
       ev.stopPropagation();
       btnEscucharProgresion.classList.add("sonando");
       try {
-        await reproducirProgresion(pasosProgresion.map((p) => p.notasArray), "guitarra");
+        await reproducirProgresion(pasosProgresion.map((p) => notasMidiDesdeNombres(p.notasArray, 48)), "guitarra");
       } finally {
         setTimeout(() => btnEscucharProgresion.classList.remove("sonando"), 400);
       }
