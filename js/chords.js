@@ -68,6 +68,32 @@ function aplicarAlteracion(intervalos, alt) {
   return out;
 }
 
+/* Algunos mapas escriben el nodo como "D (Dórico)" en vez de "Dm": el
+   nombre del modo entre paréntesis, no un cifrado real. Si lo tiráramos
+   sin más, "D (Dórico)" quedaría en Re MAYOR — que no es lo que dice el
+   propio texto. Esta tabla traduce el nombre del modo a la calidad que
+   realmente le corresponde a su acorde característico, así el "(Dórico)"
+   no se pierde: se convierte en la "m" que hace que suene a Dórico. */
+const CALIDAD_POR_MODO = {
+  jonico: "", lidio: "", mixolidio: "7",
+  dorico: "m", frigio: "m", eolico: "m", menor: "m",
+  locrio: "m7b5",
+};
+
+function calidadDesdeNombreDeModo(texto) {
+  const normalizado = String(texto)
+    .normalize("NFD").replace(/[̀-ͯ]/g, "") // saca acentos: "Jónico" -> "Jonico"
+    .toLowerCase().trim()
+    .replace(/^modo\s+/, ""); // "Modo Dórico" -> "dórico"
+  // coincidencia exacta con la primera palabra nomás — "Mixolidio" no
+  // tiene que matchear "Lidio" por contener esas letras adentro.
+  const primeraPalabra = normalizado.split(/\s+/)[0];
+  if (Object.prototype.hasOwnProperty.call(CALIDAD_POR_MODO, primeraPalabra)) {
+    return CALIDAD_POR_MODO[primeraPalabra];
+  }
+  return null;
+}
+
 /* Extrae el primer cifrado "parseable" de un string que puede traer
    anotaciones en español entre paréntesis, ej: "C (Jónico)" o
    "Fm6 (Subdominante menor)". */
@@ -80,6 +106,13 @@ function extraerCifrado(bruto) {
   if (parenExterno) {
     s = parenExterno[1].trim();
     notaAlt = parenExterno[2];
+    // si el texto antes del paréntesis es sólo la raíz pelada (sin
+    // calidad propia) y el paréntesis nombra un modo conocido, esa
+    // calidad es la que faltaba — no una alteración a ignorar.
+    if (/^[A-Ga-g][#b]?$/.test(s)) {
+      const calidad = calidadDesdeNombreDeModo(notaAlt);
+      if (calidad !== null) s = s + calidad;
+    }
   }
   return { texto: s, notaAlt };
 }
