@@ -258,6 +258,8 @@ const IDIOMAS = {
         "tecnica": "Técnica",
         "dificultad": "Nivel",
         "escuchar": "Escuchar el lick",
+        "escucharConAcompanamiento": "Escuchar con acompañamiento",
+        "cerrar": "Cerrar",
         "notas": "Notas",
         "leyendaTecnicas": "h = hammer-on · p = pull-off · b = bend · / = slide ascendente · \\ = slide descendente",
         "sinResultados": "No hay licks con ese filtro — probá con otra combinación."
@@ -6211,7 +6213,9 @@ const IDIOMAS = {
         "escuchar": "Listen to the lick",
         "notas": "Notes",
         "leyendaTecnicas": "h = hammer-on · p = pull-off · b = bend · / = slide up · \\ = slide down",
-        "sinResultados": "No licks match that filter — try a different combination."
+        "sinResultados": "No licks match that filter — try a different combination.",
+        "escucharConAcompanamiento": "Listen with backing",
+        "cerrar": "Close"
       }
     },
     "categoriasAcordes": {
@@ -9449,7 +9453,9 @@ const IDIOMAS = {
         "escuchar": "ฟังลิคนี้",
         "notas": "โน้ต",
         "leyendaTecnicas": "h = hammer-on · p = pull-off · b = bend · / = slide up · \\ = slide down",
-        "sinResultados": "ไม่มีลิคที่ตรงกับตัวกรองนี้ ลองเปลี่ยนตัวกรองดูนะ"
+        "sinResultados": "ไม่มีลิคที่ตรงกับตัวกรองนี้ ลองเปลี่ยนตัวกรองดูนะ",
+        "escucharConAcompanamiento": "ฟังพร้อมดนตรีประกอบ",
+        "cerrar": "ปิด"
       }
     },
     "categoriasAcordes": {

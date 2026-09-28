@@ -799,6 +799,16 @@ body::before {
 .btn-escuchar:disabled { opacity: 0.6; cursor: default; }
 .btn-escuchar-icono { font-size: 0.7rem; }
 .btn-escuchar.sonando .btn-escuchar-icono { animation: sh-pulso-sonido 0.5s ease-in-out infinite alternate; }
+
+/* modal de un lick: dos botones de escucha lado a lado — uno solo, una
+   vuelta, y otro con la vuelta de acordes de fondo en loop */
+.lick-botones { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+.btn-escuchar-acomp {
+  background: rgba(var(--violeta-rgb), 0.14);
+  border-color: rgba(var(--violeta-rgb), 0.55);
+  color: var(--violeta);
+}
+.btn-escuchar-acomp:hover { background: rgba(var(--violeta-rgb), 0.24); }
 @keyframes sh-pulso-sonido { from { opacity: 0.5; transform: scale(0.85); } to { opacity: 1; transform: scale(1.15); } }
 .emo-progresion-escuchar { margin-top: 12px; }
 .instrumento-tabs { display: flex; gap: 6px; margin-bottom: 12px; }

@@ -1075,6 +1075,17 @@ function iniciar() {
     });
   }
 
+  const modalLick = $("#modal-lick");
+  if (modalLick && typeof cerrarModalLick === "function") {
+    $("#btn-cerrar-lick").addEventListener("click", cerrarModalLick);
+    modalLick.addEventListener("click", (ev) => {
+      if (ev.target === modalLick) cerrarModalLick();
+    });
+    document.addEventListener("keydown", (ev) => {
+      if (ev.key === "Escape" && !modalLick.hidden) cerrarModalLick();
+    });
+  }
+
   $("#sel-tonica").addEventListener("change", (e) => {
     estado.tonica = e.target.value;
     dibujarGrafoYRecorrido();

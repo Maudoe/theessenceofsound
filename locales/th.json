@@ -3033,7 +3033,9 @@
       "escuchar": "ฟังลิคนี้",
       "notas": "โน้ต",
       "leyendaTecnicas": "h = hammer-on · p = pull-off · b = bend · / = slide up · \\ = slide down",
-      "sinResultados": "ไม่มีลิคที่ตรงกับตัวกรองนี้ ลองเปลี่ยนตัวกรองดูนะ"
+      "sinResultados": "ไม่มีลิคที่ตรงกับตัวกรองนี้ ลองเปลี่ยนตัวกรองดูนะ",
+      "escucharConAcompanamiento": "ฟังพร้อมดนตรีประกอบ",
+      "cerrar": "ปิด"
     }
   },
   "categoriasAcordes": {

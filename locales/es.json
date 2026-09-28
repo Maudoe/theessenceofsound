@@ -254,6 +254,8 @@
       "tecnica": "Técnica",
       "dificultad": "Nivel",
       "escuchar": "Escuchar el lick",
+      "escucharConAcompanamiento": "Escuchar con acompañamiento",
+      "cerrar": "Cerrar",
       "notas": "Notas",
       "leyendaTecnicas": "h = hammer-on · p = pull-off · b = bend · / = slide ascendente · \\ = slide descendente",
       "sinResultados": "No hay licks con ese filtro — probá con otra combinación."

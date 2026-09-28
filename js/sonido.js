@@ -152,6 +152,67 @@ async function reproducirProgresion(pasos, familia, duracionPaso) {
   setTimeout(() => { estadoSonido.sonando = false; }, totalMs);
 }
 
+/* Un lick solo, sin nada debajo, no suena a nada — es una frase que
+   pertenece a una canción, no una canción en sí. Esto arma esa canción
+   chiquita: un fondo de acordes I-IV-I-V7 (la vuelta más country/western
+   que existe) en registro grave, y el lick de verdad tocado ARRIBA, dos
+   veces seguidas (en loop) para que se sienta como una frase que se
+   repite dentro de un tema, no un fragmento aislado. Todo se agenda
+   sobre el mismo reloj de audio (ctx.currentTime), así que ambas capas
+   quedan realmente sincronizadas, no son dos reproducciones separadas.
+   Devuelve el timing para que quien llama pueda sincronizar el resaltado
+   visual de la tablatura con las dos vueltas de la melodía. */
+async function reproducirLickConAcompanamiento(lick, pasoSeg) {
+  if (!lick || !lick.notas || !lick.notas.length || estadoSonido.sonando) return null;
+  pasoSeg = pasoSeg || 0.32;
+
+  const raiz = lick.raiz;
+  const usaBemoles = raiz.includes("b") || ["F", "Bb", "Eb", "Ab", "Db", "Gb"].includes(raiz);
+  const ivRaiz = transportarNota(raiz, 5, usaBemoles);
+  const vRaiz = transportarNota(raiz, 7, usaBemoles);
+
+  const acordeI = spellChord(raiz);
+  const acordeIV = spellChord(ivRaiz);
+  const acordeV7 = spellChord(vRaiz + "7");
+  if (!acordeI || !acordeIV || !acordeV7) return null;
+
+  estadoSonido.sonando = true;
+
+  // registro grave y abierto, como un rasgueo de fondo — nunca choca con
+  // la melodía porque ésta vive una o dos octavas más arriba (viene de
+  // la afinación real de la guitarra, AFINACION_GUITARRA).
+  const vozAcorde = (ac) => notasMidiDesdeNombres(ac.notas, 40);
+  const vuelta = [vozAcorde(acordeI), vozAcorde(acordeIV), vozAcorde(acordeI), vozAcorde(acordeV7)];
+
+  const notasMelodia = lick.notas.map((n) => AFINACION_GUITARRA[n.cuerda] + n.traste);
+  const vueltasMelodia = 2;
+  const duracionMelodiaTotal = notasMelodia.length * pasoSeg * vueltasMelodia;
+  const duracionAcorde = duracionMelodiaTotal / vuelta.length;
+
+  const gmMelodia = estadoSonido.elegido.guitarra || INSTRUMENTOS_SONIDO.guitarra[0].id;
+  const [playerMelodia, playerAcordes] = await Promise.all([
+    instrumentoCargado(gmMelodia),
+    instrumentoCargado("acoustic_guitar_nylon"),
+  ]);
+  const ctx = contextoAudioSonido();
+  const ahora = ctx.currentTime;
+
+  vuelta.forEach((notas, i) => {
+    const cuando = ahora + i * duracionAcorde;
+    notas.forEach((n) => playerAcordes.play(n, cuando, { duration: duracionAcorde * 0.96, gain: 1.1 }));
+  });
+
+  for (let v = 0; v < vueltasMelodia; v++) {
+    notasMelodia.forEach((n, i) => {
+      const cuando = ahora + (v * notasMelodia.length + i) * pasoSeg;
+      playerMelodia.play(n, cuando, { duration: pasoSeg * 0.9, gain: 2.3 });
+    });
+  }
+
+  setTimeout(() => { estadoSonido.sonando = false; }, duracionMelodiaTotal * 1000);
+  return { pasoSeg, vueltasMelodia, cantidadNotas: notasMelodia.length, duracionTotalSeg: duracionMelodiaTotal };
+}
+
 /* Arma el <select> de patches para una familia de instrumento y lo deja
    sincronizado con estadoSonido.elegido. */
 function armarSelectorSonido(sel, familia) {

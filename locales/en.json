@@ -3001,7 +3001,9 @@
       "escuchar": "Listen to the lick",
       "notas": "Notes",
       "leyendaTecnicas": "h = hammer-on · p = pull-off · b = bend · / = slide up · \\ = slide down",
-      "sinResultados": "No licks match that filter — try a different combination."
+      "sinResultados": "No licks match that filter — try a different combination.",
+      "escucharConAcompanamiento": "Listen with backing",
+      "cerrar": "Close"
     }
   },
   "categoriasAcordes": {
