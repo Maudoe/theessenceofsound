@@ -911,4 +911,116 @@ const LICKS_COUNTRY = [
       { cuerda: 4, traste: 2 }, { cuerda: 4, traste: 0 },
     ],
   },
+
+  /* ---- tanda 9 ---- */
+  {
+    id: "cp-g-16",
+    nombre: "Cambio de posición en Sol (caja 1 a caja 2)",
+    tonalidad: "G", raiz: "G", escala: "pentaMayor",
+    tecnica: "cambio de posición (shift)", dificultad: "avanzado",
+    nota: "A mitad de frase salta de la caja abierta a la siguiente caja de la pentatónica, una octava arriba: practicar este salto es lo que te libera de quedarte pegado a una sola posición en el mástil.",
+    notas: [
+      { cuerda: 3, traste: 0 }, { cuerda: 3, traste: 2 }, { cuerda: 4, traste: 0 },
+      { cuerda: 2, traste: 5 }, { cuerda: 2, traste: 7 }, { cuerda: 3, traste: 7 },
+    ],
+  },
+  {
+    id: "cp-g-17",
+    nombre: "Trino con hammer-pull en Sol",
+    tonalidad: "G", raiz: "G", escala: "pentaMayor",
+    tecnica: "trino (hammer-pull alternado)", dificultad: "avanzado",
+    nota: "Hammer-on y pull-off alternados rapidísimo entre las mismas dos notas, como un trino: el dedo índice se queda fijo en la tónica mientras el anular sube y baja sin parar antes de resolver arriba.",
+    notas: [
+      { cuerda: 3, traste: 0 }, { cuerda: 3, traste: 2, tecnica: "h" }, { cuerda: 3, traste: 0, tecnica: "p" },
+      { cuerda: 3, traste: 2, tecnica: "h" }, { cuerda: 3, traste: 0, tecnica: "p" }, { cuerda: 4, traste: 0 },
+    ],
+  },
+  {
+    id: "cp-c-15",
+    nombre: "Pull-off en cadena en Do",
+    tonalidad: "C", raiz: "C", escala: "jonico",
+    tecnica: "pull-off en cadena (4 notas)", dificultad: "avanzado",
+    nota: "Cuatro notas en la misma cuerda con un solo golpe de púa: todo lo demás sale de tres pull-offs seguidos. La dificultad no es tocar rápido, es que las cuatro suenen igual de fuerte.",
+    notas: [
+      { cuerda: 1, traste: 7 }, { cuerda: 1, traste: 5, tecnica: "p" },
+      { cuerda: 1, traste: 3, tecnica: "p" }, { cuerda: 1, traste: 0, tecnica: "p" },
+    ],
+  },
+  {
+    id: "cp-c-16",
+    nombre: "Slides emparejados en Do",
+    tonalidad: "C", raiz: "C", escala: "pentaMayor",
+    tecnica: "slides emparejados", dificultad: "intermedio",
+    nota: "Cada slide corto va seguido de la misma nota tocada limpia en otra cuerda, como confirmándola: es un recurso simple para que una frase con pocas notas no suene vacía.",
+    notas: [
+      { cuerda: 4, traste: 1, tecnica: "/" }, { cuerda: 1, traste: 3 },
+      { cuerda: 4, traste: 3, tecnica: "/" }, { cuerda: 1, traste: 5 },
+    ],
+  },
+  {
+    id: "cp-d-15",
+    nombre: "Relleno sobre acorde abierto en Re",
+    tonalidad: "D", raiz: "D", escala: "jonico",
+    tecnica: "relleno sobre acorde abierto", dificultad: "intermedio",
+    nota: "Pensado para tocar mientras el acorde de Re abierto sigue sonando de fondo (con otra guitarra o el bajo): un adorno corto, no una frase que compita con la melodía cantada.",
+    notas: [
+      { cuerda: 1, traste: 0 }, { cuerda: 2, traste: 0 }, { cuerda: 2, traste: 2, tecnica: "h" },
+      { cuerda: 2, traste: 4 }, { cuerda: 2, traste: 0 }, { cuerda: 1, traste: 0 },
+    ],
+  },
+  {
+    id: "cp-d-16",
+    nombre: "Frase de puente en Re menor (dórica)",
+    tonalidad: "D", raiz: "D", escala: "dorico",
+    tecnica: "puente (modo dórico)", dificultad: "intermedio-avanzado",
+    nota: "Un puente instrumental que se va a la dórica de Re, más luminosa que la eólica: la sexta mayor (B) es la que marca la diferencia y le da ese aire 'no tan triste' típico de Merle Haggard en sus temas más melancólicos.",
+    notas: [
+      { cuerda: 2, traste: 0 }, { cuerda: 2, traste: 2 }, { cuerda: 2, traste: 3 },
+      { cuerda: 3, traste: 0 }, { cuerda: 3, traste: 2 }, { cuerda: 2, traste: 0 },
+    ],
+  },
+  {
+    id: "cp-a-14",
+    nombre: "Alternado veloz por las seis cuerdas en La",
+    tonalidad: "A", raiz: "A", escala: "pentaMayor",
+    tecnica: "flatpicking (las 6 cuerdas)", dificultad: "avanzado",
+    nota: "Una nota por cuerda, las seis cuerdas de punta a punta: el ejercicio clásico para practicar que la púa cruce limpio sin golpear la cuerda de al lado por accidente, a cualquier tempo.",
+    notas: [
+      { cuerda: 0, traste: 0 }, { cuerda: 1, traste: 0 }, { cuerda: 2, traste: 2 },
+      { cuerda: 3, traste: 2 }, { cuerda: 4, traste: 2 }, { cuerda: 5, traste: 0 },
+    ],
+  },
+  {
+    id: "cp-a-15",
+    nombre: "High lonesome bend en La (bluegrass)",
+    tonalidad: "A", raiz: "A", escala: "pentaMayor",
+    tecnica: "high lonesome bend (bluegrass)", dificultad: "avanzado",
+    nota: "El bend característico del 'high lonesome sound' del bluegrass: sube tenso, sostenido, casi gritando, y después la frase baja tranquila como si nada hubiera pasado — ese contraste es el sello del estilo.",
+    notas: [
+      { cuerda: 1, traste: 4, tecnica: "b" }, { cuerda: 1, traste: 4 }, { cuerda: 2, traste: 2 },
+      { cuerda: 1, traste: 0 }, { cuerda: 2, traste: 4 }, { cuerda: 1, traste: 0 },
+    ],
+  },
+  {
+    id: "cp-e-16",
+    nombre: "Apoyatura con slide corto en Mi",
+    tonalidad: "E", raiz: "E", escala: "jonico",
+    tecnica: "apoyatura (grace note) con slide corto", dificultad: "intermedio",
+    nota: "Un slide brevísimo que llega a la nota real un instante antes del tiempo, como una apoyatura de piano clásico: apenas se nota como nota aparte, más bien como un 'empuje' hacia la nota de verdad.",
+    notas: [
+      { cuerda: 0, traste: 0 }, { cuerda: 0, traste: 2, tecnica: "/" }, { cuerda: 3, traste: 1 },
+      { cuerda: 4, traste: 0 }, { cuerda: 0, traste: 0 },
+    ],
+  },
+  {
+    id: "cp-e-17",
+    nombre: "Cierre de tema extendido en Mi (fingerstyle)",
+    tonalidad: "E", raiz: "E", escala: "jonico",
+    tecnica: "fingerstyle (cierre extendido)", dificultad: "intermedio-avanzado",
+    nota: "Ocho notas de arpegio, subiendo y bajando por todo el registro de la guitarra: el cierre largo, pensado para la última vez que se toca el estribillo entero antes de que se apague el tema.",
+    notas: [
+      { cuerda: 0, traste: 0 }, { cuerda: 3, traste: 1 }, { cuerda: 4, traste: 0 }, { cuerda: 5, traste: 0 },
+      { cuerda: 4, traste: 0 }, { cuerda: 3, traste: 1 }, { cuerda: 2, traste: 2 }, { cuerda: 0, traste: 0 },
+    ],
+  },
 ];
