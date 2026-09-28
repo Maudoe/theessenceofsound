@@ -299,6 +299,39 @@ function mapaEnUso() {
   return estado.tonica ? transportarMapa(base, estado.tonica) : base;
 }
 
+/* El nodo del SVG que corresponde a un cifrado, sea cual sea el modo en
+   el que esté parado (grafo propio del mapa, o rueda de quintas) — así
+   "Escuchar la progresión" puede marcar en dorado la nota que suena
+   ahora sin que le importe cuál de los dos dibujos está mirando. */
+function buscarNodoPorCifrado(svg, cifrado) {
+  if (estado.modo === "rueda") {
+    const acorde = typeof spellChord === "function" ? spellChord(cifrado) : null;
+    const id = acorde && typeof nodoRuedaParaAcorde === "function" ? nodoRuedaParaAcorde(acorde) : null;
+    return id ? svg.querySelector(`[data-rueda-id="${id}"]`) : null;
+  }
+  if (!mapaEnPantalla) return null;
+  const nucleo = typeof nucleoEtiqueta === "function" ? nucleoEtiqueta(cifrado) : null;
+  const idx = mapaEnPantalla.nodos.findIndex((n) => (nucleo && n.nucleo === nucleo) || n.cifrado === cifrado);
+  return idx >= 0 ? svg.querySelector(`[data-nodo-idx="${idx}"]`) : null;
+}
+
+/* Va marcando en dorado, en sincro con el audio, cuál de los nodos del
+   grafo o de la rueda es el que está sonando en cada instante — mismo
+   timing que reproducirProgresion() usa por lo bajo. */
+function resaltarSecuenciaEnGrafo(cifrados, pasoSeg) {
+  const svg = $("#svg-grafo");
+  if (!svg) return;
+  const limpiar = () => svg.querySelectorAll(".en-sonido-dorado").forEach((el) => el.classList.remove("en-sonido-dorado"));
+  cifrados.forEach((cifrado, i) => {
+    setTimeout(() => {
+      limpiar();
+      const nodo = buscarNodoPorCifrado(svg, cifrado);
+      if (nodo) nodo.classList.add("en-sonido-dorado");
+    }, i * pasoSeg * 1000);
+  });
+  setTimeout(limpiar, cifrados.length * pasoSeg * 1000);
+}
+
 function dibujarGrafoYRecorrido() {
   const mapa = mapaEnUso();
   if (!mapa) return;
@@ -624,7 +657,24 @@ function mostrarComoTocarConEmocion(cifrado, emocionId) {
    con piano — así se escucha cómo queda antes de mirar la digitación.
    Sólo acá: el resto de las secciones (Diccionario, Identificar,
    Escalas, Emociones) siguen abriendo el modal en silencio. */
+/* Sólo el sonido, sin abrir el modal — para cuando fijar un nodo no
+   tiene que interrumpir lo que estás haciendo (armar una secuencia a
+   mano en la rueda clickeando varias notas seguidas). */
+function previaPianoDeAcorde(cifrado) {
+  if (!cifrado || typeof spellChord !== "function" || typeof reproducirAcorde !== "function") return;
+  const acorde = spellChord(cifrado);
+  if (!acorde || !acorde.notas) return;
+  reproducirAcorde(notasMidiDesdeNombres(acorde.notas, 60), "piano");
+}
+
 function alFijarNodoConPreviewPiano(cifrado) {
+  if (estado.modo === "rueda") {
+    // en la rueda cada click suma una nota a tu propia secuencia — si
+    // además abriera el modal de digitación, no podrías clickear la
+    // nota siguiente sin cerrarlo primero. Acá sólo se escucha.
+    previaPianoDeAcorde(cifrado);
+    return;
+  }
   mostrarComoTocar(cifrado);
   if (!cifrado || !instrumento.diagramas || typeof reproducirAcorde !== "function") return;
   const clases = instrumento.diagramas.info ? instrumento.diagramas.info.clases : [];
@@ -1035,21 +1085,30 @@ function iniciar() {
   const btnEscucharMapa = $("#btn-escuchar-mapa");
   if (btnEscucharMapa) {
     btnEscucharMapa.addEventListener("click", async () => {
-      // se lee mapaEnUso() recién acá, al clickear — no antes — así que
-      // si cambiaste la tónica la progresión suena transportada, sea
-      // cual sea el modo (grafo o rueda) en el que estés parado
-      const mapa = typeof mapaEnUso === "function" ? mapaEnUso() : null;
-      const cifrados = mapa && mapa.nodos_principales;
+      // en la rueda, si armaste tu propia secuencia clickeando notas
+      // sueltas, esa tiene prioridad — si no, suena la progresión del
+      // mapa. Se lee todo recién acá, al clickear, así que si cambiaste
+      // la tónica antes suena ya transportada.
+      const seleccionPropia = estado.modo === "rueda" && typeof cifradosSeleccionPersonalizada === "function"
+        ? cifradosSeleccionPersonalizada()
+        : null;
+      let cifrados = seleccionPropia && seleccionPropia.length ? seleccionPropia : null;
+      if (!cifrados) {
+        const mapa = typeof mapaEnUso === "function" ? mapaEnUso() : null;
+        cifrados = mapa && mapa.nodos_principales;
+      }
       if (!cifrados || !cifrados.length) return;
       const pasos = cifrados
         .map((c) => spellChord(c))
         .filter(Boolean)
         .map((acorde) => notasMidiDesdeNombres(acorde.notas, 48));
       if (!pasos.length) return;
+      const pasoSeg = 0.85;
       btnEscucharMapa.disabled = true;
       btnEscucharMapa.classList.add("sonando");
+      resaltarSecuenciaEnGrafo(cifrados, pasoSeg);
       try {
-        await reproducirProgresion(pasos, "piano");
+        await reproducirProgresion(pasos, "piano", pasoSeg);
       } finally {
         setTimeout(() => { btnEscucharMapa.disabled = false; btnEscucharMapa.classList.remove("sonando"); }, 400);
       }

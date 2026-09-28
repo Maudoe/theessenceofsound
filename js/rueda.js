@@ -206,6 +206,7 @@ let estadoRueda = { mapa: null, conexionesPorNodo: new Map(), idsDeSatelites: []
 
 function renderRuedaCompleta(mapa, svgEl) {
   nodoFijado = null;
+  seleccionPersonalizada = [];
   // los satélites del mapa anterior no tienen que sobrevivir al cambio
   (estadoRueda.idsDeSatelites || []).forEach((id) => RUEDA_POR_ID.delete(id));
   svgEl.innerHTML = "";
@@ -453,6 +454,45 @@ function avisarFijado(id) {
    sigue funcionando igual. */
 let nodoFijado = null;
 
+/* Además de fijar (que muestra a dónde se puede ir desde ahí), cada
+   click va sumando esa nota a una secuencia propia — no la borra el
+   próximo click en OTRA nota, como sí pasa con la exploración. Así se
+   arma una progresión a mano, nota por nota, con las que vayas
+   clickeando en el orden en que las clickeaste — adentro o afuera de
+   lo que este mapa en particular propone. "Escuchar la progresión" la
+   usa en vez de la del mapa cuando tiene algo adentro. */
+let seleccionPersonalizada = [];
+
+function marcarSeleccionEnDom(svgEl, id, marcado) {
+  const g = svgEl.querySelector(`[data-rueda-id="${id}"]`);
+  if (g) g.classList.toggle("sh-nodo-elegido", marcado);
+}
+
+function alternarSeleccion(svgEl, id) {
+  const i = seleccionPersonalizada.indexOf(id);
+  if (i >= 0) {
+    seleccionPersonalizada.splice(i, 1);
+    marcarSeleccionEnDom(svgEl, id, false);
+  } else {
+    seleccionPersonalizada.push(id);
+    marcarSeleccionEnDom(svgEl, id, true);
+  }
+}
+
+function limpiarSeleccionPersonalizada(svgEl) {
+  seleccionPersonalizada.forEach((id) => marcarSeleccionEnDom(svgEl, id, false));
+  seleccionPersonalizada = [];
+}
+
+/* Los cifrados de la secuencia armada a mano, en el orden en que se
+   clickearon — lo que usa "Escuchar la progresión" cuando hay algo acá. */
+function cifradosSeleccionPersonalizada() {
+  return seleccionPersonalizada
+    .map((id) => RUEDA_POR_ID.get(id))
+    .filter(Boolean)
+    .map((n) => n.etiquetaFijada || n.etiqueta);
+}
+
 function limpiarExploracion(svgEl) {
   const previa = svgEl.querySelector(".sh-capa-explorar");
   if (previa) previa.remove();
@@ -642,8 +682,9 @@ function engancharInteraccion(svgEl) {
     if (!svgEl.querySelector("[data-rueda-id]")) return;
     if (ignorarProximoClick) { ignorarProximoClick = false; return; }
     const g = nodoDe(ev);
-    if (!g) { soltarNodoFijado(svgEl); return; }
+    if (!g) { soltarNodoFijado(svgEl); limpiarSeleccionPersonalizada(svgEl); return; }
     const id = g.getAttribute("data-rueda-id");
+    alternarSeleccion(svgEl, id);
     if (nodoFijado === id) { soltarNodoFijado(svgEl); return; }
     nodoFijado = id;
     explorarNodo(svgEl, id);
@@ -658,6 +699,7 @@ function engancharInteraccion(svgEl) {
     if (!g) return;
     ev.preventDefault();
     nodoFijado = g.getAttribute("data-rueda-id");
+    alternarSeleccion(svgEl, nodoFijado);
     explorarNodo(svgEl, nodoFijado);
     avisarFijado(nodoFijado);
   });

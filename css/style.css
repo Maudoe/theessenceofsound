@@ -615,6 +615,23 @@ body::before {
   font-family: "Inter", sans-serif;
   letter-spacing: 0.5px;
 }
+/* la nota que está sonando ESTE instante de "Escuchar la progresión" —
+   dorado a propósito, fijo (no depende del tema): es una marca temporal
+   de "acá estamos parados ahora", no parte de la paleta del sitio. */
+.sh-nodo.en-sonido-dorado .sh-nodo-circulo {
+  stroke: #ffd54a !important;
+  stroke-width: 4px !important;
+  filter: drop-shadow(0 0 12px rgba(255, 213, 74, 0.9));
+}
+.sh-nodo.en-sonido-dorado .sh-nodo-texto { fill: #ffd54a !important; }
+/* en la rueda: las notas que fuiste clickeando a mano para armar tu
+   propia progresión quedan marcadas con un anillo dorado punteado, sin
+   perder su color propio — no se borran hasta que las volvés a tocar. */
+.sh-nodo.sh-nodo-elegido .sh-nodo-circulo {
+  stroke: #ffd54a;
+  stroke-dasharray: 3 2;
+  stroke-width: 2.6px;
+}
 .sh-flecha {
   stroke-width: 2.1;
   opacity: 0.88;

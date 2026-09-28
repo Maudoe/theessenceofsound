@@ -136,13 +136,13 @@ async function reproducirSecuencia(notasMidi, familia, duracionNota) {
 
 /* Toca varios acordes uno atrás del otro — la "progresión" completa,
    no un acorde suelto. Cada paso es un array de notas MIDI. */
-async function reproducirProgresion(pasos, familia) {
+async function reproducirProgresion(pasos, familia, duracionPaso) {
   if (!pasos || !pasos.length || estadoSonido.sonando) return;
   estadoSonido.sonando = true;
+  duracionPaso = duracionPaso || 0.85;
   const gmId = estadoSonido.elegido[familia] || estadoSonido.elegido.guitarra;
   const player = await instrumentoCargado(gmId);
   const ctx = contextoAudioSonido();
-  const duracionPaso = 0.85;
   const ahora = ctx.currentTime;
   pasos.forEach((notasMidi, i) => {
     const cuando = ahora + i * duracionPaso;
