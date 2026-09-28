@@ -5,20 +5,25 @@
    (reproducirSecuencia, igual que las escalas) resaltando en la propia
    tablatura cuál nota está sonando en cada instante. */
 
-let estadoLicks = { tonalidad: "todas", tecnica: "todas", activo: null };
+let estadoLicks = { tonalidad: "todas", familia: "todas", activo: null };
 
 function tonalidadesDeLicks() {
   return [...new Set(LICKS_COUNTRY.map((l) => l.tonalidad))];
 }
 
-function tecnicasDeLicks() {
-  return [...new Set(LICKS_COUNTRY.map((l) => l.tecnica))];
+/* El filtro agrupa por "familia" (11 categorías amplias: chicken
+   pickin', bend/pedal steel, slide, etc.) en vez de por el campo
+   "tecnica" de cada lick, que es un texto descriptivo único por lick
+   (más de 80 valores distintos entre 100 licks) — útil para leer en el
+   detalle, inútil como filtro porque casi nada matchea con nada más. */
+function familiasDeLicks() {
+  return [...new Set(LICKS_COUNTRY.map((l) => l.familia))];
 }
 
 function licksFiltrados() {
   return LICKS_COUNTRY.filter((l) =>
     (estadoLicks.tonalidad === "todas" || l.tonalidad === estadoLicks.tonalidad) &&
-    (estadoLicks.tecnica === "todas" || l.tecnica === estadoLicks.tecnica));
+    (estadoLicks.familia === "todas" || l.familia === estadoLicks.familia));
 }
 
 function tarjetasDeLicks() {
@@ -39,7 +44,7 @@ function pintarLicks() {
   if (!cont) return;
 
   const opcionesTonalidad = ["todas", ...tonalidadesDeLicks()];
-  const opcionesTecnica = ["todas", ...tecnicasDeLicks()];
+  const opcionesFamilia = ["todas", ...familiasDeLicks()];
 
   const selTonalidad = `
     <div class="dic-raiz">
@@ -48,17 +53,17 @@ function pintarLicks() {
         ${opcionesTonalidad.map((v) => `<option value="${v}"${v === estadoLicks.tonalidad ? " selected" : ""}>${v === "todas" ? t("licksVista.todas") : v}</option>`).join("")}
       </select>
     </div>`;
-  const selTecnica = `
+  const selFamilia = `
     <div class="dic-raiz">
       <label for="sel-licks-tecnica">${t("licksVista.filtrarTecnica")}</label>
       <select id="sel-licks-tecnica">
-        ${opcionesTecnica.map((v) => `<option value="${v}"${v === estadoLicks.tecnica ? " selected" : ""}>${v === "todas" ? t("licksVista.todas") : v}</option>`).join("")}
+        ${opcionesFamilia.map((v) => `<option value="${v}"${v === estadoLicks.familia ? " selected" : ""}>${v === "todas" ? t("licksVista.todas") : v}</option>`).join("")}
       </select>
     </div>`;
 
   cont.innerHTML = `
     <p class="seccion-intro">${t("licksVista.intro")}</p>
-    <div class="dic-raiz-fila">${selTonalidad}${selTecnica}</div>
+    <div class="dic-raiz-fila">${selTonalidad}${selFamilia}</div>
     <p class="dic-pista">${t("licksVista.contador").replace("{n}", licksFiltrados().length).replace("{total}", LICKS_COUNTRY.length)}</p>
     <div id="licks-tarjetas">${tarjetasDeLicks()}</div>
     <div class="dic-detalle" id="licks-detalle"></div>`;
@@ -68,7 +73,7 @@ function pintarLicks() {
     pintarLicks();
   });
   $("#sel-licks-tecnica").addEventListener("change", (e) => {
-    estadoLicks.tecnica = e.target.value;
+    estadoLicks.familia = e.target.value;
     pintarLicks();
   });
 
