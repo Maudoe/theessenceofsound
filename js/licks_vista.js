@@ -1,16 +1,35 @@
 /* ============ The Essence of Sound — sección de licks de guitarra ============
-   Navega la biblioteca de LICKS_COUNTRY (js/licks_country.js): filtro por
-   tonalidad y por técnica, grilla de tarjetas, y al hacer click en una
-   se abre en un modal (mismo patrón que "Cómo tocar") con la tablatura
-   y dos formas de escucharlo: solo, una vuelta, o con un fondo de
-   acordes I-IV-I-V7 en loop (reproducirLickConAcompanamiento en
-   sonido.js) para que se escuche como una frase real dentro de un tema
-   y no como un fragmento aislado. */
+   Antes era una sola grilla plana con las 100 tarjetas juntas — con el
+   filtro de tonalidad/técnica servía para acotar, pero la pantalla de
+   entrada seguía siendo una botonera enorme sin ningún orden a simple
+   vista. Ahora la navegación es de dos pasos, como Diccionario de
+   acordes: primero elegís la tonalidad (una tarjeta grande por acorde,
+   con cuántos licks tiene), y ESO te abre la lista acotada de esa
+   tonalidad — nunca ves los cien juntos.
 
-let estadoLicks = { tonalidad: "todas", familia: "todas", activo: null };
+   Al hacer click en un lick (ya dentro de una tonalidad) se abre un
+   modal (mismo patrón que "Cómo tocar") con la tablatura y dos formas
+   de escucharlo: solo, una vuelta, o con un fondo de acordes I-IV-I-V7
+   en loop (reproducirLickConAcompanamiento en sonido.js) para que se
+   escuche como una frase real dentro de un tema y no como un fragmento
+   aislado. */
+
+let estadoLicks = { tonalidadActiva: null, familia: "todas", activo: null };
+
+/* Orden musical en vez de "como aparecen en el array": las tonalidades
+   más usadas en country primero (G-C-D-A-E, el círculo de quintas de
+   guitarra abierta), después las menos comunes, y las menores al final. */
+const ORDEN_TONALIDADES_LICKS = ["G", "C", "D", "A", "E", "F", "Bb", "B", "Em", "Am"];
 
 function tonalidadesDeLicks() {
-  return [...new Set(LICKS_COUNTRY.map((l) => l.tonalidad))];
+  const presentes = new Set(LICKS_COUNTRY.map((l) => l.tonalidad));
+  const ordenadas = ORDEN_TONALIDADES_LICKS.filter((t) => presentes.has(t));
+  const resto = [...presentes].filter((t) => !ORDEN_TONALIDADES_LICKS.includes(t));
+  return [...ordenadas, ...resto];
+}
+
+function licksDeTonalidad(tonalidad) {
+  return LICKS_COUNTRY.filter((l) => l.tonalidad === tonalidad);
 }
 
 /* El filtro agrupa por "familia" (11 categorías amplias: chicken
@@ -18,14 +37,13 @@ function tonalidadesDeLicks() {
    "tecnica" de cada lick, que es un texto descriptivo único por lick
    (más de 80 valores distintos entre 100 licks) — útil para leer en el
    detalle, inútil como filtro porque casi nada matchea con nada más. */
-function familiasDeLicks() {
-  return [...new Set(LICKS_COUNTRY.map((l) => l.familia))];
+function familiasDeLicks(lista) {
+  return [...new Set((lista || LICKS_COUNTRY).map((l) => l.familia))];
 }
 
 function licksFiltrados() {
-  return LICKS_COUNTRY.filter((l) =>
-    (estadoLicks.tonalidad === "todas" || l.tonalidad === estadoLicks.tonalidad) &&
-    (estadoLicks.familia === "todas" || l.familia === estadoLicks.familia));
+  const base = licksDeTonalidad(estadoLicks.tonalidadActiva);
+  return base.filter((l) => estadoLicks.familia === "todas" || l.familia === estadoLicks.familia);
 }
 
 function tarjetasDeLicks() {
@@ -41,20 +59,40 @@ function tarjetasDeLicks() {
   }).join("")}</div>`;
 }
 
-function pintarLicks() {
-  const cont = $("#licks-cuerpo");
-  if (!cont) return;
-
-  const opcionesTonalidad = ["todas", ...tonalidadesDeLicks()];
-  const opcionesFamilia = ["todas", ...familiasDeLicks()];
-
-  const selTonalidad = `
-    <div class="dic-raiz">
-      <label for="sel-licks-tonalidad">${t("licksVista.filtrarTonalidad")}</label>
-      <select id="sel-licks-tonalidad">
-        ${opcionesTonalidad.map((v) => `<option value="${v}"${v === estadoLicks.tonalidad ? " selected" : ""}>${v === "todas" ? t("licksVista.todas") : v}</option>`).join("")}
-      </select>
+/* Paso 1: elegir tonalidad — una tarjeta grande por acorde, no un botón
+   más entre cien. */
+function pintarSelectorTonalidades(cont) {
+  const tonalidades = tonalidadesDeLicks();
+  cont.innerHTML = `
+    <p class="seccion-intro">${t("licksVista.intro")}</p>
+    <div class="licks-tonalidades">
+      ${tonalidades.map((tn) => {
+        const n = licksDeTonalidad(tn).length;
+        return `
+          <button class="tarjeta-tonalidad" data-tonalidad="${tn}">
+            <span class="tarjeta-tonalidad-nombre">${tn}</span>
+            <span class="tarjeta-tonalidad-cuenta">${n} ${t(n === 1 ? "licksVista.lick" : "licksVista.licks")}</span>
+          </button>`;
+      }).join("")}
     </div>`;
+
+  $$(".tarjeta-tonalidad", cont).forEach((b) => {
+    b.addEventListener("click", () => {
+      estadoLicks.tonalidadActiva = b.dataset.tonalidad;
+      estadoLicks.familia = "todas";
+      pintarLicks();
+    });
+  });
+}
+
+/* Paso 2: los licks de la tonalidad elegida, con un filtro de familia
+   acotado a lo que esa tonalidad realmente tiene (no las 11 familias
+   enteras si acá sólo aparecen tres). */
+function pintarLicksDeTonalidad(cont) {
+  const tonalidad = estadoLicks.tonalidadActiva;
+  const lista = licksDeTonalidad(tonalidad);
+  const opcionesFamilia = ["todas", ...familiasDeLicks(lista)];
+
   const selFamilia = `
     <div class="dic-raiz">
       <label for="sel-licks-tecnica">${t("licksVista.filtrarTecnica")}</label>
@@ -64,13 +102,14 @@ function pintarLicks() {
     </div>`;
 
   cont.innerHTML = `
-    <p class="seccion-intro">${t("licksVista.intro")}</p>
-    <div class="dic-raiz-fila">${selTonalidad}${selFamilia}</div>
-    <p class="dic-pista">${t("licksVista.contador").replace("{n}", licksFiltrados().length).replace("{total}", LICKS_COUNTRY.length)}</p>
+    <button class="licks-volver" id="btn-licks-volver" type="button">${t("licksVista.volver")}</button>
+    <div class="bloque-titulo">${t("licksVista.licksEnTonalidad").replace("{tonalidad}", tonalidad)}</div>
+    <div class="dic-raiz-fila">${selFamilia}</div>
+    <p class="dic-pista">${t("licksVista.contador").replace("{n}", licksFiltrados().length).replace("{total}", lista.length)}</p>
     <div id="licks-tarjetas">${tarjetasDeLicks()}</div>`;
 
-  $("#sel-licks-tonalidad").addEventListener("change", (e) => {
-    estadoLicks.tonalidad = e.target.value;
+  $("#btn-licks-volver").addEventListener("click", () => {
+    estadoLicks.tonalidadActiva = null;
     pintarLicks();
   });
   $("#sel-licks-tecnica").addEventListener("change", (e) => {
@@ -79,6 +118,17 @@ function pintarLicks() {
   });
 
   engancharTarjetasDeLicks(cont);
+}
+
+function pintarLicks() {
+  const cont = $("#licks-cuerpo");
+  if (!cont) return;
+
+  if (!estadoLicks.tonalidadActiva) {
+    pintarSelectorTonalidades(cont);
+  } else {
+    pintarLicksDeTonalidad(cont);
+  }
 }
 
 function engancharTarjetasDeLicks(cont) {

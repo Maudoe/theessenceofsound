@@ -3035,7 +3035,11 @@
       "leyendaTecnicas": "h = hammer-on · p = pull-off · b = bend · / = slide up · \\ = slide down",
       "sinResultados": "ไม่มีลิคที่ตรงกับตัวกรองนี้ ลองเปลี่ยนตัวกรองดูนะ",
       "escucharConAcompanamiento": "ฟังพร้อมดนตรีประกอบ",
-      "cerrar": "ปิด"
+      "cerrar": "ปิด",
+      "lick": "ลิค",
+      "licks": "ลิค",
+      "volver": "กลับไปที่คีย์",
+      "licksEnTonalidad": "ลิคในคีย์ {tonalidad}"
     }
   },
   "categoriasAcordes": {

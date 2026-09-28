@@ -262,7 +262,11 @@ const IDIOMAS = {
         "cerrar": "Cerrar",
         "notas": "Notas",
         "leyendaTecnicas": "h = hammer-on · p = pull-off · b = bend · / = slide ascendente · \\ = slide descendente",
-        "sinResultados": "No hay licks con ese filtro — probá con otra combinación."
+        "sinResultados": "No hay licks con ese filtro — probá con otra combinación.",
+        "lick": "lick",
+        "licks": "licks",
+        "volver": "Volver a tonalidades",
+        "licksEnTonalidad": "Licks en {tonalidad}"
       },
       "identificar": {
         "intro": "Tocá las notas que estás usando en el mástil — marcá cada traste que estás pisando — y te digo qué acorde es. Después te muestro con qué acordes podés seguir, no sólo volver a la tónica.",
@@ -6215,7 +6219,11 @@ const IDIOMAS = {
         "leyendaTecnicas": "h = hammer-on · p = pull-off · b = bend · / = slide up · \\ = slide down",
         "sinResultados": "No licks match that filter — try a different combination.",
         "escucharConAcompanamiento": "Listen with backing",
-        "cerrar": "Close"
+        "cerrar": "Close",
+        "lick": "lick",
+        "licks": "licks",
+        "volver": "Back to keys",
+        "licksEnTonalidad": "Licks in {tonalidad}"
       }
     },
     "categoriasAcordes": {
@@ -9455,7 +9463,11 @@ const IDIOMAS = {
         "leyendaTecnicas": "h = hammer-on · p = pull-off · b = bend · / = slide up · \\ = slide down",
         "sinResultados": "ไม่มีลิคที่ตรงกับตัวกรองนี้ ลองเปลี่ยนตัวกรองดูนะ",
         "escucharConAcompanamiento": "ฟังพร้อมดนตรีประกอบ",
-        "cerrar": "ปิด"
+        "cerrar": "ปิด",
+        "lick": "ลิค",
+        "licks": "ลิค",
+        "volver": "กลับไปที่คีย์",
+        "licksEnTonalidad": "ลิคในคีย์ {tonalidad}"
       }
     },
     "categoriasAcordes": {

@@ -258,7 +258,11 @@
       "cerrar": "Cerrar",
       "notas": "Notas",
       "leyendaTecnicas": "h = hammer-on · p = pull-off · b = bend · / = slide ascendente · \\ = slide descendente",
-      "sinResultados": "No hay licks con ese filtro — probá con otra combinación."
+      "sinResultados": "No hay licks con ese filtro — probá con otra combinación.",
+      "lick": "lick",
+      "licks": "licks",
+      "volver": "Volver a tonalidades",
+      "licksEnTonalidad": "Licks en {tonalidad}"
     },
     "identificar": {
       "intro": "Tocá las notas que estás usando en el mástil — marcá cada traste que estás pisando — y te digo qué acorde es. Después te muestro con qué acordes podés seguir, no sólo volver a la tónica.",
