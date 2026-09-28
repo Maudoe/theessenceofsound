@@ -353,4 +353,116 @@ const LICKS_COUNTRY = [
       { cuerda: 5, traste: 2 }, { cuerda: 5, traste: 0 },
     ],
   },
+
+  /* ---- tanda 4 ---- */
+  {
+    id: "cp-f-01",
+    nombre: "Corrida abierta en Fa (posición cejilla)",
+    tonalidad: "F", raiz: "F", escala: "jonico",
+    tecnica: "flatpicking en cejilla", dificultad: "intermedio",
+    nota: "Fa es una tonalidad que casi nadie toca abierta en country — se usa con cejilla. Esta corrida sube la escala completa en 1ra posición para practicar el estiramiento de dedos que pide la cejilla sin perder tiempo.",
+    notas: [
+      { cuerda: 0, traste: 1 }, { cuerda: 0, traste: 3 }, { cuerda: 1, traste: 0 },
+      { cuerda: 1, traste: 1 }, { cuerda: 1, traste: 3 }, { cuerda: 2, traste: 0 },
+    ],
+  },
+  {
+    id: "cp-f-02",
+    nombre: "Chicken pickin' en Fa",
+    tonalidad: "F", raiz: "F", escala: "mixolidio",
+    tecnica: "chicken pickin'", dificultad: "avanzado",
+    nota: "La séptima menor (Eb) picada seca justo antes de la tónica: ese contraste entre la nota 'sucia' del dominante y la limpieza de la raíz es la firma sonora del western swing con vientos, trasladada a la guitarra sola.",
+    notas: [
+      { cuerda: 1, traste: 3 }, { cuerda: 0, traste: 3 }, { cuerda: 1, traste: 1 },
+      { cuerda: 0, traste: 1 }, { cuerda: 1, traste: 0 }, { cuerda: 2, traste: 1, tecnica: "h" },
+    ],
+  },
+  {
+    id: "cp-bb-02",
+    nombre: "Turnaround western swing en Sib",
+    tonalidad: "Bb", raiz: "Bb", escala: "bebopMayor",
+    tecnica: "turnaround western swing", dificultad: "avanzado",
+    nota: "La nota bebop (el b6, acá Gb/F#) aparece de pasada entre la 5ta y la 4ta: es el mismo recurso de Chet Atkins para que un cierre en un tono 'de metales' como Sib suene igual de suelto que uno en Sol.",
+    notas: [
+      { cuerda: 1, traste: 1 }, { cuerda: 1, traste: 3 }, { cuerda: 2, traste: 1 },
+      { cuerda: 2, traste: 3, tecnica: "h" }, { cuerda: 2, traste: 0 }, { cuerda: 1, traste: 1 },
+    ],
+  },
+  {
+    id: "cp-b-01",
+    nombre: "Bend de pedal steel en Si",
+    tonalidad: "B", raiz: "B", escala: "jonico",
+    tecnica: "bend de pedal steel", dificultad: "avanzado",
+    nota: "Otra tonalidad poco común en acústica, típica cuando la guitarra acompaña un fiddle afinado en Si: el bend de tono entero a la tercera mayor (D#) suena idéntico al mismo gesto en Sol o en La, sólo que más agudo.",
+    notas: [
+      { cuerda: 4, traste: 2, tecnica: "b" }, { cuerda: 4, traste: 2 }, { cuerda: 3, traste: 4 },
+      { cuerda: 4, traste: 0 }, { cuerda: 3, traste: 6 }, { cuerda: 3, traste: 4 },
+    ],
+  },
+  {
+    id: "cp-g-08",
+    nombre: "Riff con bordón al aire en Sol",
+    tonalidad: "G", raiz: "G", escala: "mixolidio",
+    tecnica: "drone (bordón al aire)", dificultad: "intermedio",
+    nota: "La cuerda de Sol al aire suena como bordón fijo mientras la melodía se mueve en la cuerda de al lado — el mismo recurso que usa el banjo claw-hammer y que Doc Watson trasladó todo el tiempo a la guitarra.",
+    notas: [
+      { cuerda: 3, traste: 0 }, { cuerda: 2, traste: 0 }, { cuerda: 3, traste: 0 },
+      { cuerda: 2, traste: 2 }, { cuerda: 3, traste: 0 }, { cuerda: 2, traste: 3, tecnica: "h" },
+    ],
+  },
+  {
+    id: "cp-c-07",
+    nombre: "Shuffle de 12/8 en Do",
+    tonalidad: "C", raiz: "C", escala: "bluesMayor",
+    tecnica: "shuffle (12/8, blues country)", dificultad: "intermedio-avanzado",
+    nota: "Pensado para un compás de shuffle en 12/8: el hammer-on corto entre la tercera menor y la mayor cae justo en el 'swing' del tercer tiempo de cada grupo de tres corcheas.",
+    notas: [
+      { cuerda: 1, traste: 3 }, { cuerda: 1, traste: 5 }, { cuerda: 1, traste: 6, tecnica: "h" },
+      { cuerda: 2, traste: 2 }, { cuerda: 3, traste: 0 }, { cuerda: 1, traste: 3 },
+    ],
+  },
+  {
+    id: "cp-d-07",
+    nombre: "Pentatónica rápida en Re",
+    tonalidad: "D", raiz: "D", escala: "pentaMayor",
+    tecnica: "flatpicking rápido (semicorcheas)", dificultad: "avanzado",
+    nota: "Seis notas en semicorcheas pensadas para tocar rápido con púa alternada estricta: no hay ligados que 'ayuden', toda la velocidad sale de la mano derecha, como en un solo de bluegrass a tempo.",
+    notas: [
+      { cuerda: 2, traste: 0 }, { cuerda: 2, traste: 2 }, { cuerda: 2, traste: 4 },
+      { cuerda: 3, traste: 2 }, { cuerda: 4, traste: 0 }, { cuerda: 3, traste: 2 },
+    ],
+  },
+  {
+    id: "cp-a-06",
+    nombre: "Bend y hammer combinados en La (estilo Albert Lee)",
+    tonalidad: "A", raiz: "A", escala: "bluesMayor",
+    tecnica: "bend + hammer combinado", dificultad: "avanzado",
+    nota: "Un bend chico de la tónica a la segunda, seguido de un hammer-on que sube hasta la tercera mayor pasando por la menor: el 'country lick' más citado de todos, el que casi cualquier guitarrista de sesión sabe tocar de memoria.",
+    notas: [
+      { cuerda: 1, traste: 2, tecnica: "b" }, { cuerda: 1, traste: 0 }, { cuerda: 1, traste: 3, tecnica: "h" },
+      { cuerda: 1, traste: 4 }, { cuerda: 2, traste: 2 }, { cuerda: 1, traste: 0 },
+    ],
+  },
+  {
+    id: "cp-e-06",
+    nombre: "Arpegio hybrid picking en Mi (E7)",
+    tonalidad: "E", raiz: "E", escala: "mixolidio",
+    tecnica: "hybrid picking (arpegio de 7ma)", dificultad: "intermedio-avanzado",
+    nota: "La púa toca la fundamental grave y los dedos van pellizcando el resto del arpegio de E7 hacia arriba: el patrón de acompañamiento que usa Brad Paisley para que un solo suene como si hubiera dos guitarras tocando a la vez.",
+    notas: [
+      { cuerda: 0, traste: 0 }, { cuerda: 3, traste: 1 }, { cuerda: 4, traste: 0 },
+      { cuerda: 2, traste: 0 }, { cuerda: 3, traste: 1 }, { cuerda: 0, traste: 0 },
+    ],
+  },
+  {
+    id: "cp-e-07",
+    nombre: "Cierre agudo tipo campanita en Mi",
+    tonalidad: "E", raiz: "E", escala: "jonico",
+    tecnica: "arpegio agudo (efecto campana)", dificultad: "avanzado",
+    nota: "Arriba del traste 9, con las cuerdas dejadas sonar todo lo posible: el registro agudo y el solapado entre notas es lo que le da ese 'timbre de campanita' al remate final, muy usado para cerrar un tema entero.",
+    notas: [
+      { cuerda: 5, traste: 12 }, { cuerda: 4, traste: 12 }, { cuerda: 3, traste: 13 },
+      { cuerda: 5, traste: 12 }, { cuerda: 4, traste: 9 }, { cuerda: 5, traste: 9 },
+    ],
+  },
 ];
