@@ -465,4 +465,116 @@ const LICKS_COUNTRY = [
       { cuerda: 5, traste: 12 }, { cuerda: 4, traste: 9 }, { cuerda: 5, traste: 9 },
     ],
   },
+
+  /* ---- tanda 5 ---- */
+  {
+    id: "cp-g-09",
+    nombre: "Slide largo en Sol",
+    tonalidad: "G", raiz: "G", escala: "pentaMayor",
+    tecnica: "slide (ligado largo)", dificultad: "intermedio",
+    nota: "Dos deslizamientos largos (más de un tono cada uno) en vez de hammer-ons cortos: el dedo no se levanta en ningún momento, así que la frase suena continua, casi como un lamento de steel en vez de picada nota por nota.",
+    notas: [
+      { cuerda: 3, traste: 2 }, { cuerda: 3, traste: 4, tecnica: "/" }, { cuerda: 4, traste: 0 },
+      { cuerda: 2, traste: 0 }, { cuerda: 4, traste: 3, tecnica: "/" }, { cuerda: 3, traste: 0 },
+    ],
+  },
+  {
+    id: "cp-g-10",
+    nombre: "Tresillos con pull-off en Sol",
+    tonalidad: "G", raiz: "G", escala: "jonico",
+    tecnica: "tresillos con pull-off", dificultad: "avanzado",
+    nota: "Dos grupos de tresillo, cada uno con un pull-off doble: picás la primera nota de cada grupo y las otras dos salen solas del ligado. Es el patrón rítmico que hace que una corrida de bluegrass 'ruede' en vez de sonar a notas sueltas.",
+    notas: [
+      { cuerda: 5, traste: 3 }, { cuerda: 5, traste: 2, tecnica: "p" }, { cuerda: 5, traste: 0, tecnica: "p" },
+      { cuerda: 4, traste: 3 }, { cuerda: 4, traste: 1, tecnica: "p" }, { cuerda: 4, traste: 0, tecnica: "p" },
+    ],
+  },
+  {
+    id: "cp-c-08",
+    nombre: "Cascada de hammers en Do (cuatro cuerdas)",
+    tonalidad: "C", raiz: "C", escala: "pentaMayor",
+    tecnica: "hammer-on en cascada (4 cuerdas)", dificultad: "intermedio",
+    nota: "Una nota por cuerda, subiendo por cuatro cuerdas distintas, con un solo hammer-on en el medio para romper la monotonía de 'una nota, una cuerda' — buena para practicar cambios de cuerda limpios con la mano derecha.",
+    notas: [
+      { cuerda: 1, traste: 3 }, { cuerda: 2, traste: 0 }, { cuerda: 2, traste: 2, tecnica: "h" },
+      { cuerda: 3, traste: 0 }, { cuerda: 4, traste: 1 },
+    ],
+  },
+  {
+    id: "cp-d-08",
+    nombre: "Chicken scratch percusivo en Re",
+    tonalidad: "D", raiz: "D", escala: "mixolidio",
+    tecnica: "chicken scratch percusivo", dificultad: "intermedio-avanzado",
+    nota: "La quinta (A) se repite como si fuera un rasguido percusivo entre cada nota de la melodía: es el recurso de 'Nashville chicken scratch' que rellena el espacio sin ensuciar la armonía, porque la quinta entra en casi cualquier acorde de la tonalidad.",
+    notas: [
+      { cuerda: 1, traste: 0 }, { cuerda: 2, traste: 0 }, { cuerda: 1, traste: 0 },
+      { cuerda: 2, traste: 2 }, { cuerda: 1, traste: 0 }, { cuerda: 2, traste: 0, tecnica: "h" },
+    ],
+  },
+  {
+    id: "cp-a-07",
+    nombre: "Vuelta de balada country en La menor (eólica)",
+    tonalidad: "A", raiz: "A", escala: "eolico",
+    tecnica: "balada country (menor)", dificultad: "intermedio",
+    nota: "El country también tiene su lado triste: acá la eólica (menor natural) en vez de la mixolidia de siempre, para el tipo de balada lenta donde la letra habla de perder algo. Frase abierta, espaciada, sin apuro.",
+    notas: [
+      { cuerda: 1, traste: 0 }, { cuerda: 2, traste: 2 }, { cuerda: 1, traste: 3 },
+      { cuerda: 2, traste: 0 }, { cuerda: 3, traste: 0 }, { cuerda: 2, traste: 3, tecnica: "h" },
+    ],
+  },
+  {
+    id: "cp-a-08",
+    nombre: "Corrida rápida de semicorcheas en La",
+    tonalidad: "A", raiz: "A", escala: "pentaMayor",
+    tecnica: "flatpicking (semicorcheas x8)", dificultad: "avanzado",
+    nota: "Ocho notas subiendo y bajando en espejo, para tocar como un solo grupo de semicorcheas a tempo rápido: la simetría (sube 4, baja las mismas 4) hace que sea mucho más fácil de memorizar que una corrida al azar.",
+    notas: [
+      { cuerda: 1, traste: 0 }, { cuerda: 1, traste: 2 }, { cuerda: 1, traste: 4 }, { cuerda: 2, traste: 2 },
+      { cuerda: 2, traste: 4 }, { cuerda: 2, traste: 2 }, { cuerda: 1, traste: 4 }, { cuerda: 1, traste: 2 },
+    ],
+  },
+  {
+    id: "cp-e-08",
+    nombre: "Doble parada simulada en Mi",
+    tonalidad: "E", raiz: "E", escala: "pentaMayor",
+    tecnica: "hybrid picking (dobles)", dificultad: "intermedio",
+    nota: "El mismo recurso de cp-g-04 pero en Mi, la tonalidad más cómoda de la guitarra para este tipo de salto: aprovechá las cuerdas al aire donde caigan para que la mano izquierda tenga que moverse lo menos posible.",
+    notas: [
+      { cuerda: 0, traste: 0 }, { cuerda: 1, traste: 2 }, { cuerda: 0, traste: 4 },
+      { cuerda: 1, traste: 4 }, { cuerda: 0, traste: 2 }, { cuerda: 1, traste: 2 },
+    ],
+  },
+  {
+    id: "cp-e-09",
+    nombre: "Turnaround de walk descendente en Mi",
+    tonalidad: "E", raiz: "E", escala: "jonico",
+    tecnica: "turnaround (walk descendente)", dificultad: "intermedio-avanzado",
+    nota: "Baja por grados desde la tónica hasta la quinta (E-D#-C#-B), sugiriendo por el camino un I-vi-ii-V sin necesidad de tocar los acordes: es la misma lógica armónica de un turnaround de jazz, sólo que en una sola línea.",
+    notas: [
+      { cuerda: 0, traste: 0 }, { cuerda: 1, traste: 6 }, { cuerda: 1, traste: 4 },
+      { cuerda: 1, traste: 2 }, { cuerda: 2, traste: 2 }, { cuerda: 1, traste: 2 },
+    ],
+  },
+  {
+    id: "cp-c-09",
+    nombre: "Lick de dominante en Do (chicken pickin')",
+    tonalidad: "C", raiz: "C", escala: "mixolidio",
+    tecnica: "chicken pickin' (dominante)", dificultad: "avanzado",
+    nota: "La tónica y la séptima menor (Bb) se turnan picadas secas antes de que entren la 3ra y la 5ta: remarca que el acorde es un C7, no un C mayor liso, algo clave cuando este lick suena justo antes de resolver a F.",
+    notas: [
+      { cuerda: 1, traste: 3 }, { cuerda: 1, traste: 1 }, { cuerda: 1, traste: 3, tecnica: "h" },
+      { cuerda: 2, traste: 2 }, { cuerda: 3, traste: 0 }, { cuerda: 1, traste: 1 },
+    ],
+  },
+  {
+    id: "cp-d-09",
+    nombre: "Cierre final de tema en Re (fingerstyle)",
+    tonalidad: "D", raiz: "D", escala: "jonico",
+    tecnica: "fingerstyle (cierre final)", dificultad: "intermedio",
+    nota: "Un arpegio corto de Dmaj (5ta, 3ra, tónica grave, tónica aguda) para cerrar el tema entero: dejalo resonar con las cuerdas al aire y no apures el último traste — el silencio después también es parte de la frase.",
+    notas: [
+      { cuerda: 2, traste: 0 }, { cuerda: 2, traste: 4 }, { cuerda: 1, traste: 0 },
+      { cuerda: 2, traste: 12 },
+    ],
+  },
 ];
