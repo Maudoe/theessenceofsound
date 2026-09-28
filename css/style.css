@@ -25,7 +25,7 @@
   --violeta: #b98bff;
   --violeta-rgb: 185, 139, 255;
 
-  --blanco: #f4f2fb;
+  --blanco: #f4f2fb; --blanco-rgb: 244, 242, 251;
   --tenue: #9591a8;
   --tenue-2: #6c688090;
 
@@ -53,7 +53,7 @@
   --acento: #e8a23d; --acento-claro: #ffc670; --acento-oscuro: #b8792a; --acento-rgb: 232, 162, 61;
   --rosa: #d1553a; --rosa-rgb: 209, 85, 58;
   --violeta: #8fae5a; --violeta-rgb: 143, 174, 90;
-  --blanco: #ece7d6; --tenue: #9a9c86; --tenue-2: #9a9c8690;
+  --blanco: #ece7d6; --blanco-rgb: 236, 231, 214; --tenue: #9a9c86; --tenue-2: #9a9c8690;
   --font-titulo: "Black Ops One", "Space Grotesk", sans-serif;
 }
 
@@ -63,7 +63,7 @@
   --acento: #d9b45c; --acento-claro: #eecf8c; --acento-oscuro: #a8853a; --acento-rgb: 217, 180, 92;
   --rosa: #b23a52; --rosa-rgb: 178, 58, 82;
   --violeta: #8a5a7a; --violeta-rgb: 138, 90, 122;
-  --blanco: #f2e6d8; --tenue: #b7a394; --tenue-2: #b7a39490;
+  --blanco: #f2e6d8; --blanco-rgb: 242, 230, 216; --tenue: #b7a394; --tenue-2: #b7a39490;
   --font-titulo: "Cinzel", "Space Grotesk", serif;
 }
 
@@ -73,7 +73,7 @@
   --acento: #b8860b; --acento-claro: #d4a72c; --acento-oscuro: #8a6508; --acento-rgb: 184, 134, 11;
   --rosa: #2f6fb0; --rosa-rgb: 47, 111, 176;
   --violeta: #3b4d7a; --violeta-rgb: 59, 77, 122;
-  --blanco: #1c1a13; --tenue: #6b6250; --tenue-2: #6b625090;
+  --blanco: #1c1a13; --blanco-rgb: 28, 26, 19; --tenue: #6b6250; --tenue-2: #6b625090;
   --font-titulo: "Playfair Display", "Space Grotesk", serif;
 }
 
@@ -83,7 +83,7 @@
   --acento: #7a5a33; --acento-claro: #9c7a4f; --acento-oscuro: #5a4022; --acento-rgb: 122, 90, 51;
   --rosa: #3f7d78; --rosa-rgb: 63, 125, 120;
   --violeta: #8a4a4a; --violeta-rgb: 138, 74, 74;
-  --blanco: #2c2417; --tenue: #7d7259; --tenue-2: #7d725990;
+  --blanco: #2c2417; --blanco-rgb: 44, 36, 23; --tenue: #7d7259; --tenue-2: #7d725990;
   --font-titulo: "Libre Baskerville", "Space Grotesk", serif;
 }
 
@@ -93,7 +93,7 @@
   --acento: #1f8a6f; --acento-claro: #3dab8c; --acento-oscuro: #166654; --acento-rgb: 31, 138, 111;
   --rosa: #d1637a; --rosa-rgb: 209, 99, 122;
   --violeta: #4a5fb0; --violeta-rgb: 74, 95, 176;
-  --blanco: #16231f; --tenue: #5c6d67; --tenue-2: #5c6d6790;
+  --blanco: #16231f; --blanco-rgb: 22, 35, 31; --tenue: #5c6d67; --tenue-2: #5c6d6790;
   --font-titulo: "Poppins", "Space Grotesk", sans-serif;
 }
 
@@ -571,13 +571,13 @@ body::before {
    por debajo de todo y no se llevan el mouse. */
 .sh-capa-tela { pointer-events: none; }
 .sh-tela {
-  stroke: rgba(255, 255, 255, 0.17);
+  stroke: rgba(var(--blanco-rgb), 0.17);
   stroke-width: 1;
 }
-.sh-tela-radio { stroke: rgba(255, 255, 255, 0.12); }
+.sh-tela-radio { stroke: rgba(var(--blanco-rgb), 0.12); }
 .sh-tela-contorno { stroke: rgba(var(--acento-rgb), 0.34); stroke-width: 1.3; }
 .sh-tela-eje { stroke: rgba(var(--acento-rgb), 0.28); }
-.sh-tela-malla { stroke: rgba(255, 255, 255, 0.14); }
+.sh-tela-malla { stroke: rgba(var(--blanco-rgb), 0.14); }
 .sh-tela-rama { stroke: rgba(var(--violeta-rgb), 0.34); }
 .sh-tela-recorrido {
   stroke: rgba(var(--acento-rgb), 0.3);
@@ -585,7 +585,7 @@ body::before {
   stroke-dasharray: 5 6;
 }
 .sh-tela-aro {
-  stroke: rgba(255, 255, 255, 0.09);
+  stroke: rgba(var(--blanco-rgb), 0.09);
   stroke-width: 1;
 }
 /* durante la exploración la telaraña también se apaga */
@@ -646,11 +646,11 @@ body::before {
    se enciende. Por eso el fondo tiene que leerse como fondo: presente,
    pero sin robarle atención a la progresión de arriba. */
 .sh-anillo-guia {
-  stroke: rgba(255, 255, 255, 0.055);
+  stroke: rgba(var(--blanco-rgb), 0.055);
   stroke-width: 1;
 }
 .sh-fondo-linea {
-  stroke: rgba(255, 255, 255, 0.16);
+  stroke: rgba(var(--blanco-rgb), 0.16);
   stroke-width: 1;
 }
 .sh-fondo-resolucion { stroke: rgba(var(--acento-rgb), 0.3); }
@@ -658,10 +658,10 @@ body::before {
   stroke: rgba(var(--violeta-rgb), 0.26);
   stroke-dasharray: 3 4;
 }
-.sh-fondo-quintas { stroke: rgba(255, 255, 255, 0.13); }
+.sh-fondo-quintas { stroke: rgba(var(--blanco-rgb), 0.13); }
 
 .sh-nodo-tenue .sh-nodo-circulo {
-  stroke: rgba(255, 255, 255, 0.26);
+  stroke: rgba(var(--blanco-rgb), 0.26);
   stroke-width: 1.2;
   filter: none;
 }
@@ -670,7 +670,7 @@ body::before {
   stroke: none;
   font-weight: 500;
 }
-.sh-nodo-tenue:hover .sh-nodo-circulo { stroke: rgba(255, 255, 255, 0.7); }
+.sh-nodo-tenue:hover .sh-nodo-circulo { stroke: rgba(var(--blanco-rgb), 0.7); }
 .sh-nodo-tenue:hover .sh-nodo-texto { fill: var(--blanco); }
 
 .sh-nodo-activo .sh-nodo-circulo {
@@ -825,7 +825,7 @@ body::before {
   flex-wrap: wrap;
   margin-top: 12px;
   padding-top: 12px;
-  border-top: 1px dashed rgba(255, 255, 255, 0.09);
+  border-top: 1px dashed rgba(var(--blanco-rgb), 0.09);
 }
 .posiciones { display: flex; align-items: center; gap: 8px; }
 .pos-flecha {
@@ -869,10 +869,10 @@ body::before {
 
 /* --- mástil horizontal, entero de la cejuela al traste 12 --- */
 .diag-svg.diag-mastil { max-width: 100%; }
-.mast-traste { stroke: rgba(255, 255, 255, 0.2); stroke-width: 1; }
-.mast-cejuela-linea { stroke: rgba(255, 255, 255, 0.75); stroke-width: 3; }
-.mast-cuerda { stroke: rgba(255, 255, 255, 0.3); stroke-width: 1; }
-.mast-marca-pos { fill: rgba(255, 255, 255, 0.09); }
+.mast-traste { stroke: rgba(var(--blanco-rgb), 0.2); stroke-width: 1; }
+.mast-cejuela-linea { stroke: rgba(var(--blanco-rgb), 0.75); stroke-width: 3; }
+.mast-cuerda { stroke: rgba(var(--blanco-rgb), 0.3); stroke-width: 1; }
+.mast-marca-pos { fill: rgba(var(--blanco-rgb), 0.09); }
 .mast-num {
   fill: var(--tenue); font-size: 8px; text-anchor: middle;
   font-family: "Space Grotesk", sans-serif;
@@ -914,7 +914,7 @@ body::before {
   align-items: baseline;
   gap: 9px;
   padding-bottom: 8px;
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+  border-bottom: 1px dashed rgba(var(--blanco-rgb), 0.08);
 }
 .lista-movimientos li:last-child { border-bottom: 0; padding-bottom: 0; }
 .lista-movimientos li.mov-titulo {
@@ -981,6 +981,11 @@ body::before {
   overflow-y: auto;
 }
 .modal-fondo.abierto { opacity: 1; }
+/* "Cómo tocar" se puede abrir desde adentro de otro modal (clickeando
+   un nodo del espectro, un acorde que armoniza con una escala, etc.) —
+   tiene que quedar siempre arriba de cualquier otro, sin importar el
+   orden en el que estén en el HTML (que si no, decide quién gana). */
+#modal-instrumento { z-index: 210; }
 .modal-caja {
   position: relative;
   width: min(880px, 100%);
@@ -1024,7 +1029,7 @@ body::before {
 .modal-controles {
   display: flex; align-items: flex-end; gap: 14px; flex-wrap: wrap;
   padding-bottom: 14px; margin-bottom: 14px;
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+  border-bottom: 1px dashed rgba(var(--blanco-rgb), 0.1);
 }
 .ctrl { display: flex; flex-direction: column; gap: 5px; }
 .ctrl > span {
@@ -1058,7 +1063,7 @@ body::before {
 .mast-grado.p-puente { fill: var(--p-puente); }
 .mast-grado.p-tension { fill: var(--p-tension); }
 .mast-grado.p-resolucion { fill: var(--p-resolucion); }
-.mast-grado.es-raiz { stroke: #fff; stroke-width: 1.2; }
+.mast-grado.es-raiz { stroke: var(--blanco); stroke-width: 1.2; }
 .mast-grado-texto {
   fill: #0b0a12; font-size: 6.5px; font-weight: 700;
   text-anchor: middle; font-family: "Space Grotesk", sans-serif;
@@ -1071,7 +1076,7 @@ body::before {
 .mast-grado.en-sonido {
   opacity: 1 !important;
   stroke: var(--blanco); stroke-width: 2px;
-  filter: drop-shadow(0 0 7px rgba(255, 255, 255, 0.85));
+  filter: drop-shadow(0 0 7px rgba(var(--blanco-rgb), 0.85));
   animation: sh-nota-sonando 320ms ease-out;
 }
 @keyframes sh-nota-sonando {
@@ -1093,8 +1098,8 @@ body::before {
 
 .escala-explica {
   margin-top: 16px; padding: 16px 18px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(var(--blanco-rgb), 0.04);
+  border: 1px solid rgba(var(--blanco-rgb), 0.09);
   border-radius: 12px;
 }
 .escala-explica-titulo {
@@ -1213,7 +1218,7 @@ body::before {
 .bloque-pista { font-size: 0.78rem; color: var(--tenue); opacity: 0.85; margin-bottom: 12px; }
 .bloque-ancho { margin-bottom: 18px; }
 
-.prog { padding: 12px 0; border-bottom: 1px dashed rgba(255, 255, 255, 0.08); }
+.prog { padding: 12px 0; border-bottom: 1px dashed rgba(var(--blanco-rgb), 0.08); }
 .prog:last-child { border-bottom: 0; padding-bottom: 0; }
 .prog-grados {
   font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 0.82rem;
@@ -1224,8 +1229,8 @@ body::before {
 .prog-acorde, .acorde-chip {
   font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 0.9rem;
   padding: 5px 11px; border-radius: 8px; cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.05); color: var(--blanco);
+  border: 1px solid rgba(var(--blanco-rgb), 0.14);
+  background: rgba(var(--blanco-rgb), 0.05); color: var(--blanco);
   transition: all var(--transicion);
 }
 .prog-acorde:hover, .acorde-chip:hover {
@@ -1235,12 +1240,12 @@ body::before {
 .prog-nota { font-size: 0.84rem; color: var(--tenue); line-height: 1.6; }
 .acorde-chips { display: flex; flex-wrap: wrap; gap: 7px; }
 
-.escala-item { padding: 9px 0; border-bottom: 1px dashed rgba(255, 255, 255, 0.07); }
+.escala-item { padding: 9px 0; border-bottom: 1px dashed rgba(var(--blanco-rgb), 0.07); }
 .escala-item:last-child { border-bottom: 0; }
 .escala-item-nombre { font-weight: 700; font-size: 0.9rem; color: var(--blanco); margin-bottom: 3px; }
 .escala-item-sabor { font-size: 0.8rem; color: var(--tenue); line-height: 1.5; }
 
-.trans { padding: 10px 0; border-bottom: 1px dashed rgba(255, 255, 255, 0.07); }
+.trans { padding: 10px 0; border-bottom: 1px dashed rgba(var(--blanco-rgb), 0.07); }
 .trans:last-child { border-bottom: 0; }
 .trans-mov { display: flex; flex-wrap: wrap; align-items: baseline; gap: 7px; margin-bottom: 4px; }
 .trans-mov b { font-family: "Space Grotesk", sans-serif; color: var(--acento-estilo, var(--acento)); }
@@ -1252,7 +1257,7 @@ body::before {
 .trans-porque { font-size: 0.83rem; color: var(--tenue); line-height: 1.55; }
 
 /* ---- licks en tablatura ---- */
-.lick { padding: 14px 0; border-bottom: 1px dashed rgba(255, 255, 255, 0.08); }
+.lick { padding: 14px 0; border-bottom: 1px dashed rgba(var(--blanco-rgb), 0.08); }
 .lick:last-child { border-bottom: 0; padding-bottom: 0; }
 .lick-cima { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
 .lick-nombre { font-weight: 700; font-size: 0.94rem; color: var(--blanco); }
@@ -1262,11 +1267,11 @@ body::before {
 }
 .lick-nota { font-size: 0.82rem; color: var(--tenue); line-height: 1.55; margin: 5px 0 10px; }
 .lick-tab {
-  background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.3); border: 1px solid rgba(var(--blanco-rgb), 0.08);
   border-radius: 10px; padding: 10px 8px; overflow-x: auto;
 }
 .tab-svg { width: 100%; max-width: 520px; height: auto; display: block; }
-.tab-linea { stroke: rgba(255, 255, 255, 0.22); stroke-width: 1; }
+.tab-linea { stroke: rgba(var(--blanco-rgb), 0.22); stroke-width: 1; }
 .tab-cuerda {
   fill: var(--tenue); font-size: 8px; text-anchor: middle;
   font-family: "Space Grotesk", sans-serif; font-weight: 600;
@@ -1281,7 +1286,7 @@ body::before {
 /* ============ aprender ============ */
 .aprender-cuerpo { max-width: 860px; }
 .pasos-ruta { display: flex; flex-direction: column; gap: 4px; }
-.paso { display: flex; gap: 16px; padding: 14px 0; border-bottom: 1px dashed rgba(255, 255, 255, 0.08); }
+.paso { display: flex; gap: 16px; padding: 14px 0; border-bottom: 1px dashed rgba(var(--blanco-rgb), 0.08); }
 .paso:last-child { border-bottom: 0; }
 .paso-num {
   flex: none; width: 34px; height: 34px; display: grid; place-items: center;
@@ -1295,7 +1300,7 @@ body::before {
 .paso-listo b { color: var(--acento); }
 
 .puentes { display: flex; flex-direction: column; gap: 4px; }
-.puente { padding: 12px 0; border-bottom: 1px dashed rgba(255, 255, 255, 0.08); }
+.puente { padding: 12px 0; border-bottom: 1px dashed rgba(var(--blanco-rgb), 0.08); }
 .puente:last-child { border-bottom: 0; }
 .puente-mov { margin-bottom: 5px; font-family: "Space Grotesk", sans-serif; }
 .puente-mov b { color: var(--acento-claro); }
@@ -1475,7 +1480,7 @@ body::before {
 .pag-puntos { display: flex; gap: 7px; align-items: center; }
 .pag-punto {
   width: 9px; height: 9px; border-radius: 50%; padding: 0;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(var(--blanco-rgb), 0.25);
   background: transparent; cursor: pointer;
   transition: all var(--transicion);
 }
@@ -1494,8 +1499,8 @@ body::before {
   z-index: 70;
   width: 38px; height: 38px;
   display: flex; align-items: center; justify-content: center;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(var(--blanco-rgb), 0.05);
+  border: 1px solid rgba(var(--blanco-rgb), 0.14);
   border-radius: 50%;
   color: var(--tenue);
   cursor: pointer;
@@ -1648,8 +1653,8 @@ body::before {
   bottom: 26px;
   right: 26px;
   z-index: 2;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(var(--blanco-rgb), 0.06);
+  border: 1px solid rgba(var(--blanco-rgb), 0.18);
   color: var(--tenue);
   font-size: 0.78rem;
   letter-spacing: 0.5px;
@@ -1734,8 +1739,8 @@ body.loader-activo { overflow: hidden; height: 100vh; }
   display: flex; flex-direction: column; gap: 2px;
   padding: 9px 14px;
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(var(--blanco-rgb), 0.14);
+  background: rgba(var(--blanco-rgb), 0.04);
   cursor: pointer;
   text-align: left;
   transition: all var(--transicion);
@@ -1929,8 +1934,8 @@ a, button, .nav-btn, .chip, .chip-idioma, .tarjeta-acorde, .carta-mapa, .carta-t
 .id-mastil-svg svg { width: 100%; height: auto; display: block; }
 .id-limpiar {
   margin-top: 12px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(var(--blanco-rgb), 0.05);
+  border: 1px solid rgba(var(--blanco-rgb), 0.16);
   color: var(--tenue);
   font-size: 0.8rem;
   padding: 7px 16px;
@@ -1941,8 +1946,8 @@ a, button, .nav-btn, .chip, .chip-idioma, .tarjeta-acorde, .carta-mapa, .carta-t
 .id-limpiar:hover { border-color: var(--acento); color: var(--blanco); }
 
 .id-punto-circulo {
-  fill: rgba(255, 255, 255, 0.05);
-  stroke: rgba(255, 255, 255, 0.16);
+  fill: rgba(var(--blanco-rgb), 0.05);
+  stroke: rgba(var(--blanco-rgb), 0.16);
   stroke-width: 1;
   transition: all var(--transicion);
 }
@@ -1985,7 +1990,7 @@ a, button, .nav-btn, .chip, .chip-idioma, .tarjeta-acorde, .carta-mapa, .carta-t
 .tema-swatches { display: flex; gap: 5px; }
 .tema-swatch {
   width: 20px; height: 20px; border-radius: 50%; flex: none;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(var(--blanco-rgb), 0.2);
 }
 .tema-nombre { font-size: 1rem; color: var(--blanco); font-weight: 700; }
 .tema-fuente { font-size: 0.68rem; color: var(--tenue); }
