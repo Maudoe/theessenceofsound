@@ -799,4 +799,116 @@ const LICKS_COUNTRY = [
       { cuerda: 0, traste: 2 }, { cuerda: 4, traste: 0 }, { cuerda: 0, traste: 0 },
     ],
   },
+
+  /* ---- tanda 8 ---- */
+  {
+    id: "cp-f-03",
+    nombre: "Cross-picking en Fa (bluegrass)",
+    tonalidad: "F", raiz: "F", escala: "jonico",
+    tecnica: "cross-picking (arpegio bluegrass)", dificultad: "avanzado",
+    nota: "El patrón de tres notas por cuerda que usa el cross-picking de bluegrass: la púa dibuja un triángulo entre tres cuerdas sin parar, arpegiando un Fa mayor una y otra vez hasta que suena casi como un banjo.",
+    notas: [
+      { cuerda: 0, traste: 1 }, { cuerda: 1, traste: 0 }, { cuerda: 1, traste: 3 },
+      { cuerda: 0, traste: 1 }, { cuerda: 1, traste: 0 }, { cuerda: 1, traste: 3 },
+    ],
+  },
+  {
+    id: "cp-f-04",
+    nombre: "Bend de medio tono en Fa",
+    tonalidad: "F", raiz: "F", escala: "mixolidio",
+    tecnica: "bend de medio tono", dificultad: "intermedio-avanzado",
+    nota: "Un bend corto (medio tono nomás) de la tercera mayor a la cuarta: mucho más sutil que el clásico bend de tono entero, pensado para 'ensuciar' apenas una nota sin que se note el truco.",
+    notas: [
+      { cuerda: 1, traste: 1, tecnica: "b" }, { cuerda: 1, traste: 1 }, { cuerda: 0, traste: 1 },
+      { cuerda: 1, traste: 3 }, { cuerda: 1, traste: 0 }, { cuerda: 0, traste: 1 },
+    ],
+  },
+  {
+    id: "cp-bb-03",
+    nombre: "Terceras en movimiento en Sib",
+    tonalidad: "Bb", raiz: "Bb", escala: "jonico",
+    tecnica: "terceras (movimiento paralelo, simulado)", dificultad: "avanzado",
+    nota: "Aunque acá suenan una por una, la idea es la de un dúo en terceras: cada nota está pensada como si tuviera otra sonando una tercera abajo, típico de los arreglos de guitarra doble del western swing.",
+    notas: [
+      { cuerda: 1, traste: 1 }, { cuerda: 2, traste: 0 }, { cuerda: 1, traste: 3 },
+      { cuerda: 2, traste: 1 }, { cuerda: 1, traste: 5 }, { cuerda: 2, traste: 3 },
+    ],
+  },
+  {
+    id: "cp-b-02",
+    nombre: "Corrida rápida alternada en Si",
+    tonalidad: "B", raiz: "B", escala: "mixolidio",
+    tecnica: "flatpicking (alternado rápido)", dificultad: "avanzado",
+    nota: "Todo en la cuarta posición, sin cuerdas al aire: buen ejercicio para tocar afinado en una tonalidad incómoda sin la ayuda de las cuerdas sueltas de siempre.",
+    notas: [
+      { cuerda: 4, traste: 0 }, { cuerda: 4, traste: 2 }, { cuerda: 3, traste: 8 },
+      { cuerda: 4, traste: 0 }, { cuerda: 4, traste: 2 }, { cuerda: 2, traste: 4 },
+    ],
+  },
+  {
+    id: "cp-g-15",
+    nombre: "Drone en posición abierta en Sol (variación)",
+    tonalidad: "G", raiz: "G", escala: "jonico",
+    tecnica: "drone (bordón al aire, variación)", dificultad: "intermedio",
+    nota: "Otra vez la cuerda de Sol como bordón fijo, esta vez contra la séptima y la cuarta en vez de la segunda: cambiá qué nota se mueve alrededor del bordón y tenés un lick nuevo con el mismo recurso de base.",
+    notas: [
+      { cuerda: 3, traste: 0 }, { cuerda: 4, traste: 0 }, { cuerda: 3, traste: 0 },
+      { cuerda: 4, traste: 3 }, { cuerda: 3, traste: 0 }, { cuerda: 4, traste: 1 },
+    ],
+  },
+  {
+    id: "cp-c-14",
+    nombre: "Resolución de ii-V-I en Do (frase corta)",
+    tonalidad: "C", raiz: "C", escala: "jonico",
+    tecnica: "resolución ii-V-I (frase)", dificultad: "intermedio-avanzado",
+    nota: "Cinco notas que dibujan Dm-G7-C sin necesidad de tocar los acordes: la raíz del ii, la tercera del ii, la raíz del V, la tercera del V, y la tónica final — el esqueleto armónico de cualquier ii-V-I, country o jazz.",
+    notas: [
+      { cuerda: 2, traste: 0 }, { cuerda: 2, traste: 3 }, { cuerda: 3, traste: 0 },
+      { cuerda: 4, traste: 0 }, { cuerda: 1, traste: 3 },
+    ],
+  },
+  {
+    id: "cp-d-14",
+    nombre: "Arpegio extendido en Re (sabor de 13ª)",
+    tonalidad: "D", raiz: "D", escala: "mixolidio",
+    tecnica: "arpegio extendido (sabor 13)", dificultad: "avanzado",
+    nota: "Tónica, tercera, séptima menor y trecena (B) en ese orden: el mismo arpegio ampliado que un pianista de western swing tocaría con la mano izquierda, acá desplegado en una sola línea de guitarra.",
+    notas: [
+      { cuerda: 2, traste: 0 }, { cuerda: 2, traste: 4 }, { cuerda: 1, traste: 3 },
+      { cuerda: 4, traste: 0 }, { cuerda: 3, traste: 2 },
+    ],
+  },
+  {
+    id: "cp-a-13",
+    nombre: "Lick en posición alta en La",
+    tonalidad: "A", raiz: "A", escala: "pentaMayor",
+    tecnica: "posición alta (cowboy lick agudo)", dificultad: "avanzado",
+    nota: "La misma pentatónica mayor de siempre, pero una octava arriba, cerca del traste 12: el registro agudo y brillante que se usa para el último estribillo de un tema, cuando la energía tiene que subir un cambio.",
+    notas: [
+      { cuerda: 1, traste: 12 }, { cuerda: 2, traste: 9 }, { cuerda: 2, traste: 11 },
+      { cuerda: 1, traste: 12 }, { cuerda: 2, traste: 9 }, { cuerda: 1, traste: 9 },
+    ],
+  },
+  {
+    id: "cp-e-14",
+    nombre: "Descendente sólo con slides en Mi",
+    tonalidad: "E", raiz: "E", escala: "pentaMayor",
+    tecnica: "sólo slides (sin púa nueva)", dificultad: "avanzado",
+    nota: "Una sola púa al principio, y de ahí todo el descenso se hace deslizando por la misma cuerda sin picar de nuevo: control puro de mano izquierda, sin ayuda de la derecha para disimular los cambios de volumen.",
+    notas: [
+      { cuerda: 5, traste: 12 }, { cuerda: 5, traste: 9, tecnica: "\\" }, { cuerda: 5, traste: 7, tecnica: "\\" },
+      { cuerda: 5, traste: 4, tecnica: "\\" }, { cuerda: 5, traste: 0, tecnica: "\\" },
+    ],
+  },
+  {
+    id: "cp-e-15",
+    nombre: "Bend largo con release final en Mi",
+    tonalidad: "E", raiz: "E", escala: "jonico",
+    tecnica: "bend + release (final largo)", dificultad: "avanzado",
+    nota: "El bend sube hasta la sexta y se queda ahí colgado antes de soltar (release) hasta la séptima: ese momento de tensión sostenida es el que más se acerca al lamento de una pedal steel de verdad.",
+    notas: [
+      { cuerda: 0, traste: 0 }, { cuerda: 3, traste: 1 }, { cuerda: 4, traste: 2, tecnica: "b" },
+      { cuerda: 4, traste: 2 }, { cuerda: 4, traste: 0 },
+    ],
+  },
 ];
