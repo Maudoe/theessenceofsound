@@ -1621,6 +1621,7 @@ body.loader-activo { overflow: hidden; height: 100vh; }
   margin-top: 12px; font-size: 0.92rem; line-height: 1.6; color: var(--claro);
   max-width: 680px;
 }
+.dic-ver-modal { margin-top: 16px; }
 .dic-instrumento-tabs { display: flex; gap: 8px; margin: 18px 0 8px; }
 .dic-pista { font-size: 0.78rem; color: var(--tenue); opacity: 0.85; margin-bottom: 14px; }
 .dic-posiciones {

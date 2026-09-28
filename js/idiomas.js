@@ -210,10 +210,11 @@ const IDIOMAS = {
         "otros": "Otros"
       },
       "diccionario": {
-        "intro": "Elegí una tónica y una calidad — mayor, m7, maj9, lo que sea — y te muestra las notas, la fórmula de grados, y todas las digitaciones que encuentra a lo largo de todo el mástil, no una sola posición.",
+        "intro": "Elegí una tónica y una calidad — mayor, m7, maj9, lo que sea — y te muestra las notas y la fórmula de grados. Clickeá cualquier acorde para abrir cómo se toca, con todas las digitaciones a lo largo de todo el mástil.",
         "tonica": "Tónica",
         "formula": "Fórmula",
         "notas": "Notas",
+        "verComoTocarlo": "Ver cómo tocarlo",
         "pistaMastil": "Cada diagrama es una posición distinta del mismo acorde — de los trastes abiertos hasta arriba del mástil.",
         "sinPosiciones": "No encontré una digitación cómoda para este acorde en este instrumento."
       },
@@ -5997,12 +5998,13 @@ const IDIOMAS = {
         }
       ],
       "diccionario": {
-        "intro": "Pick a root and a quality — major, m7, maj9, whatever — and it shows you the notes, the scale-degree formula, and every fingering it finds up and down the whole neck, not just one position.",
+        "intro": "Pick a root and a quality — major, m7, maj9, whatever — and it shows you the notes and the degree formula. Click any chord to open how to play it, with every fingering across the whole fretboard.",
         "tonica": "Root",
         "formula": "Formula",
         "notas": "Notes",
         "pistaMastil": "Each diagram is a different position of the same chord — from open frets all the way up the neck.",
-        "sinPosiciones": "Couldn't find a comfortable fingering for this chord on this instrument."
+        "sinPosiciones": "Couldn't find a comfortable fingering for this chord on this instrument.",
+        "verComoTocarlo": "See how to play it"
       },
       "escalas": {
         "intro": "Pick a tonic and a scale, and see where all its notes land across the whole fretboard — not one box, the full map. Below you'll find several chords to jam over, not just the tonic one — each with its real relationship to the tonic, so you can break out of always improvising over the same thing.",

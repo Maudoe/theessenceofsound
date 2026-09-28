@@ -206,10 +206,11 @@
       "otros": "Otros"
     },
     "diccionario": {
-      "intro": "Elegí una tónica y una calidad — mayor, m7, maj9, lo que sea — y te muestra las notas, la fórmula de grados, y todas las digitaciones que encuentra a lo largo de todo el mástil, no una sola posición.",
+      "intro": "Elegí una tónica y una calidad — mayor, m7, maj9, lo que sea — y te muestra las notas y la fórmula de grados. Clickeá cualquier acorde para abrir cómo se toca, con todas las digitaciones a lo largo de todo el mástil.",
       "tonica": "Tónica",
       "formula": "Fórmula",
       "notas": "Notas",
+      "verComoTocarlo": "Ver cómo tocarlo",
       "pistaMastil": "Cada diagrama es una posición distinta del mismo acorde — de los trastes abiertos hasta arriba del mástil.",
       "sinPosiciones": "No encontré una digitación cómoda para este acorde en este instrumento."
     },

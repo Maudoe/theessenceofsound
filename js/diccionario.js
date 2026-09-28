@@ -128,7 +128,12 @@ function pintarDiccionario() {
   $$(".tarjeta-acorde", cont).forEach((b) => {
     b.addEventListener("click", () => {
       const d = DICCIONARIO_ACORDES.find((x) => estadoDiccionario.raiz + x.sufijo === b.dataset.cifrado);
-      if (d) abrirEntradaDiccionario(d);
+      if (!d) return;
+      abrirEntradaDiccionario(d);
+      // las digitaciones (posiciones, instrumento, escala encima, sonido)
+      // se ven en el modal "Cómo tocar" — el mismo que usa el resto del
+      // sitio — no expandidas abajo de las tarjetas.
+      mostrarComoTocar(b.dataset.cifrado);
     });
   });
 
@@ -146,17 +151,15 @@ function abrirEntradaDiccionario(d) {
   if (detalle) detalle.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
+/* Sólo la referencia de teoría (fórmula, notas, descripción) — las
+   digitaciones y posiciones se ven en el modal "Cómo tocar" (mismo que
+   usa el resto del sitio), no expandidas acá abajo. */
 function pintarDetalleDiccionario(d) {
   const detalle = $("#dic-detalle");
   if (!detalle) return;
   const cifrado = estadoDiccionario.raiz + d.sufijo;
   const diagramas = diagramasDeAcorde(cifrado);
   if (!diagramas) { detalle.innerHTML = ""; return; }
-
-  const posiciones = (inst) => (diagramas[inst] || []).map((_, i) => `
-    <div class="dic-posicion">
-      <div class="dic-posicion-svg">${dibujarPosicion(diagramas, inst, i, "notas")}</div>
-    </div>`).join("") || `<p class="dic-vacio">${t("diccionario.sinPosiciones")}</p>`;
 
   const nombreTraducido = tEntradaAcorde(d.categoria, d.sufijo, "nombre", d.nombre);
   const descripcionTraducida = tEntradaAcorde(d.categoria, d.sufijo, "descripcion", d.descripcion);
@@ -166,29 +169,12 @@ function pintarDetalleDiccionario(d) {
       <p class="dic-detalle-formula"><b>${t("diccionario.formula")}:</b> ${d.formula}</p>
       <p class="dic-detalle-notas"><b>${t("diccionario.notas")}:</b> ${diagramas.notas}</p>
       <p class="dic-detalle-descripcion">${descripcionTraducida}</p>
-    </div>
-    <div class="dic-instrumento-tabs" id="dic-inst-tabs">
-      <button class="inst-tab activo" data-inst="guitarra">${t("modalInstrumento.guitarra")}</button>
-      <button class="inst-tab" data-inst="bajo">${t("modalInstrumento.bajo")}</button>
-      <button class="inst-tab" data-inst="piano">${t("modalInstrumento.piano")}</button>
-    </div>
-    <p class="dic-pista">${t("diccionario.pistaMastil")}</p>
-    <div class="dic-posiciones" id="dic-posiciones">${posiciones("guitarra")}</div>`;
+      <button class="btn-escuchar dic-ver-modal" type="button" data-cifrado="${cifrado}">
+        <span class="btn-escuchar-icono">▶</span>
+        <span>${t("diccionario.verComoTocarlo")}</span>
+      </button>
+    </div>`;
 
-  $$(".inst-tab", detalle).forEach((tab) => {
-    tab.addEventListener("click", () => {
-      $$(".inst-tab", detalle).forEach((b) => b.classList.remove("activo"));
-      tab.classList.add("activo");
-      const inst = tab.dataset.inst;
-      const cont = $("#dic-posiciones");
-      const pista = $(".dic-pista", detalle);
-      if (inst === "piano") {
-        pista.hidden = true;
-        cont.innerHTML = `<div class="dic-posicion dic-posicion-piano"><div class="dic-posicion-svg">${diagramas.piano}</div></div>`;
-      } else {
-        pista.hidden = false;
-        cont.innerHTML = posiciones(inst);
-      }
-    });
-  });
+  const btnModal = $(".dic-ver-modal", detalle);
+  if (btnModal) btnModal.addEventListener("click", () => mostrarComoTocar(btnModal.dataset.cifrado));
 }

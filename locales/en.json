@@ -2910,12 +2910,13 @@
       }
     ],
     "diccionario": {
-      "intro": "Pick a root and a quality — major, m7, maj9, whatever — and it shows you the notes, the scale-degree formula, and every fingering it finds up and down the whole neck, not just one position.",
+      "intro": "Pick a root and a quality — major, m7, maj9, whatever — and it shows you the notes and the degree formula. Click any chord to open how to play it, with every fingering across the whole fretboard.",
       "tonica": "Root",
       "formula": "Formula",
       "notas": "Notes",
       "pistaMastil": "Each diagram is a different position of the same chord — from open frets all the way up the neck.",
-      "sinPosiciones": "Couldn't find a comfortable fingering for this chord on this instrument."
+      "sinPosiciones": "Couldn't find a comfortable fingering for this chord on this instrument.",
+      "verComoTocarlo": "See how to play it"
     },
     "escalas": {
       "intro": "Pick a tonic and a scale, and see where all its notes land across the whole fretboard — not one box, the full map. Below you'll find several chords to jam over, not just the tonic one — each with its real relationship to the tonic, so you can break out of always improvising over the same thing.",
