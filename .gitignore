@@ -1,3 +1,6 @@
 # archivos temporales de sistema
 .DS_Store
 Thumbs.db
+
+# intermedio de compilación de idiomas (se regenera con scratchpad/extraer_es.js)
+locales/_extraido.json

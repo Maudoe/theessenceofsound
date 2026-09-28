@@ -14,6 +14,8 @@ const CATEGORIAS_ACORDES = [
   { id: "sextas", nombre: "Sextas y color" },
   { id: "extendidas", nombre: "Extendidas (9ª, 11ª, 13ª)" },
   { id: "agregadas", nombre: "Con nota agregada" },
+  { id: "alterados", nombre: "Dominantes alterados y suspendidos" },
+  { id: "inversiones", nombre: "Inversiones (bajo distinto)" },
 ];
 
 /* sufijo: el mismo que entiende spellChord (chords.js). formula: los
@@ -69,7 +71,54 @@ const DICCIONARIO_ACORDES = [
 
   { categoria: "agregadas", sufijo: "add9", nombre: "Mayor con 9ª agregada (sin 7ª)", formula: "1 – 3 – 5 – 9",
     descripcion: "Una tríada mayor con la 9na sumada directo, SIN pasar por la séptima. Distinto del acorde de 9na de verdad: acá no hay ningún dominante escondido, sólo color agregado a un mayor en reposo." },
+  { categoria: "agregadas", sufijo: "madd9", nombre: "Menor con 9ª agregada", formula: "1 – b3 – 5 – 9",
+    descripcion: "El mismo truco que el add9 pero sobre una tríada menor: la 9na sumada directo, sin séptima de por medio. El color melancólico del menor, un poco más abierto." },
+  { categoria: "agregadas", sufijo: "add2", nombre: "Mayor con 2ª agregada", formula: "1 – 2 – 3 – 5",
+    descripcion: "La 2da sumada en la misma octava del acorde, no una octava arriba como en el add9: queda un roce más apretado y percusivo, muy típico del pop y el rock de guitarras." },
+  { categoria: "agregadas", sufijo: "add4", nombre: "Mayor con 4ª agregada", formula: "1 – 3 – 4 – 5",
+    descripcion: "La 4ta agregada sin sacar la 3ra: un roce breve entre las dos que le da textura sin perder el carácter mayor del acorde." },
+
+  { categoria: "extendidas", sufijo: "maj11", nombre: "Mayor con 7ª mayor y 11ª", formula: "1 – 3 – 5 – 7 – 9 – 11",
+    descripcion: "El maj9 con la 11na arriba. En la práctica se toca casi siempre como #11 porque la 11na natural choca con la 3ra mayor — acá se deja tal cual, sin alterar." },
+  { categoria: "extendidas", sufijo: "maj13", nombre: "Mayor con 7ª mayor y 13ª", formula: "1 – 3 – 5 – 7 – 9 – 13",
+    descripcion: "El acorde mayor más vestido de todos: séptima mayor, novena y trecena juntas. Sonido de acorde final de balada o de big band." },
+  { categoria: "extendidas", sufijo: "m13", nombre: "Menor con 13ª", formula: "1 – b3 – 5 – b7 – 9 – 13",
+    descripcion: "El m11 con la 13na sumada arriba: un menor bien extendido, típico del jazz-funk y la fusión." },
+
+  { categoria: "alterados", sufijo: "7b9", nombre: "Dominante con 9ª menor", formula: "1 – 3 – 5 – b7 – b9",
+    descripcion: "Un dominante con la 9na bajada un semitono: la tensión más oscura y filosa que existe sobre un V7, típica del jazz y del flamenco." },
+  { categoria: "alterados", sufijo: "7#9", nombre: "Dominante con 9ª aumentada", formula: "1 – 3 – 5 – b7 – #9",
+    descripcion: "El llamado 'acorde de Hendrix': una 9na subida que choca a propósito contra la 3ra mayor de abajo — mayor y menor en el mismo acorde, muy usado en funk y blues-rock." },
+  { categoria: "alterados", sufijo: "7b5", nombre: "Dominante con 5ª disminuida", formula: "1 – 3 – b5 – b7",
+    descripcion: "La quinta baja un semitono: un dominante más inestable y simétrico, que en jazz suele aparecer en sustituciones tritonales." },
+  { categoria: "alterados", sufijo: "7#5", nombre: "Dominante con 5ª aumentada", formula: "1 – 3 – #5 – b7",
+    descripcion: "La quinta sube en vez de bajar: le da al dominante un color flotante, casi de acorde aumentado con la séptima menor arriba." },
+  { categoria: "alterados", sufijo: "7alt", nombre: "Dominante alterado", formula: "1 – 3 – b7 – b9 – #9 – #11",
+    descripcion: "El dominante con casi todas las tensiones alteradas a la vez — b9, #9 y #11, sin la quinta natural. El sonido característico del jazz moderno resolviendo con máxima tensión." },
+  { categoria: "alterados", sufijo: "7sus4", nombre: "Dominante suspendido en 4ª", formula: "1 – 4 – 5 – b7",
+    descripcion: "Un dominante sin tercera, con la 4ta en su lugar: acorde de paso muy usado antes de resolver al V7 de verdad, o como acorde de reposo abierto en el pop." },
+  { categoria: "alterados", sufijo: "7sus2", nombre: "Dominante suspendido en 2ª", formula: "1 – 2 – 5 – b7",
+    descripcion: "La misma idea del sus4 pero con la 2da en vez de la 4ta: un dominante más abierto y menos 'urgente', frecuente en el pop y el rock alternativo." },
+
+  { categoria: "inversiones", sufijo: "/3", intervaloBajo: 4, nombre: "Con bajo en la 3ª", formula: "1 – 3 – 5, con la 3ª en el bajo",
+    descripcion: "El mismo acorde mayor de siempre, pero con la 3ra sonando abajo de todo en vez de la fundamental: primera inversión — más suave, menos 'plantado' que el acorde en estado fundamental." },
+  { categoria: "inversiones", sufijo: "/5", intervaloBajo: 7, nombre: "Con bajo en la 5ª", formula: "1 – 3 – 5, con la 5ª en el bajo",
+    descripcion: "Segunda inversión: la 5ta abajo de todo. Un color de paso, muy usado en líneas de bajo que suben o bajan por grados." },
+  { categoria: "inversiones", sufijo: "/b7", intervaloBajo: 10, nombre: "Con bajo en la 7ª menor", formula: "1 – 3 – 5 – b7, con la b7 en el bajo",
+    descripcion: "Un acorde dominante con la séptima menor en el bajo en vez de la fundamental: típico de líneas de walking bass cromáticas en jazz." },
 ];
+
+/* Las tarjetas de "inversiones" no pegan el sufijo tal cual (sería
+   "C/3", que no es un cifrado real) — calculan la nota de bajo real
+   transportando la raíz elegida el intervalo que le corresponde, así
+   "C" + intervaloBajo:4 da "C/E", pero con cualquier tónica sigue
+   siendo la misma relación (ej. "D" + intervaloBajo:4 da "D/F#"). */
+function cifradoDeEntrada(d, raiz) {
+  if (d.intervaloBajo == null) return raiz + d.sufijo;
+  const usaBemoles = raiz.includes("b") || ["F", "C", "Bb", "Eb", "Ab", "Db", "Gb"].includes(raiz);
+  const bajo = transportarNota(raiz, d.intervaloBajo, usaBemoles);
+  return raiz + "/" + bajo;
+}
 
 let estadoDiccionario = { raiz: "C", activo: null };
 
@@ -77,7 +126,7 @@ function tarjetasDeCategoria(catId) {
   return DICCIONARIO_ACORDES
     .filter((d) => d.categoria === catId)
     .map((d) => {
-      const cifrado = estadoDiccionario.raiz + d.sufijo;
+      const cifrado = cifradoDeEntrada(d, estadoDiccionario.raiz);
       const activo = estadoDiccionario.activo === cifrado;
       const nombre = tEntradaAcorde(d.categoria, d.sufijo, "nombre", d.nombre);
       return `
@@ -117,8 +166,9 @@ function pintarDiccionario() {
     // si había un acorde abierto, lo volvemos a armar con la raíz nueva
     // en vez de perder la selección (el sufijo es lo que identifica la
     // calidad; la raíz vieja ya no importa una vez que la cambiamos)
+    const raizAnterior = estadoDiccionario.raiz;
     const activoPrevio = estadoDiccionario.activo
-      ? DICCIONARIO_ACORDES.find((d) => estadoDiccionario.raiz + d.sufijo === estadoDiccionario.activo)
+      ? DICCIONARIO_ACORDES.find((d) => cifradoDeEntrada(d, raizAnterior) === estadoDiccionario.activo)
       : null;
     estadoDiccionario.raiz = e.target.value;
     pintarDiccionario();
@@ -127,7 +177,7 @@ function pintarDiccionario() {
 
   $$(".tarjeta-acorde", cont).forEach((b) => {
     b.addEventListener("click", () => {
-      const d = DICCIONARIO_ACORDES.find((x) => estadoDiccionario.raiz + x.sufijo === b.dataset.cifrado);
+      const d = DICCIONARIO_ACORDES.find((x) => cifradoDeEntrada(x, estadoDiccionario.raiz) === b.dataset.cifrado);
       if (!d) return;
       abrirEntradaDiccionario(d);
       // las digitaciones (posiciones, instrumento, escala encima, sonido)
@@ -138,13 +188,13 @@ function pintarDiccionario() {
   });
 
   if (estadoDiccionario.activo) {
-    const d = DICCIONARIO_ACORDES.find((x) => estadoDiccionario.raiz + x.sufijo === estadoDiccionario.activo);
+    const d = DICCIONARIO_ACORDES.find((x) => cifradoDeEntrada(x, estadoDiccionario.raiz) === estadoDiccionario.activo);
     if (d) pintarDetalleDiccionario(d);
   }
 }
 
 function abrirEntradaDiccionario(d) {
-  estadoDiccionario.activo = estadoDiccionario.raiz + d.sufijo;
+  estadoDiccionario.activo = cifradoDeEntrada(d, estadoDiccionario.raiz);
   $$(".tarjeta-acorde").forEach((b) => b.classList.toggle("activo", b.dataset.cifrado === estadoDiccionario.activo));
   pintarDetalleDiccionario(d);
   const detalle = $("#dic-detalle");
@@ -157,7 +207,7 @@ function abrirEntradaDiccionario(d) {
 function pintarDetalleDiccionario(d) {
   const detalle = $("#dic-detalle");
   if (!detalle) return;
-  const cifrado = estadoDiccionario.raiz + d.sufijo;
+  const cifrado = cifradoDeEntrada(d, estadoDiccionario.raiz);
   const diagramas = diagramasDeAcorde(cifrado);
   if (!diagramas) { detalle.innerHTML = ""; return; }
 

@@ -2998,7 +2998,9 @@ const IDIOMAS = {
       "septimas": "Con séptima",
       "sextas": "Sextas y color",
       "extendidas": "Extendidas (9ª, 11ª, 13ª)",
-      "agregadas": "Con nota agregada"
+      "agregadas": "Con nota agregada",
+      "alterados": "Dominantes alterados y suspendidos",
+      "inversiones": "Inversiones (bajo distinto)"
     },
     "sonido": {
       "acoustic_guitar_nylon": "Acústica (nylon)",
@@ -3124,6 +3126,70 @@ const IDIOMAS = {
       "agregadas:add9": {
         "nombre": "Mayor con 9ª agregada (sin 7ª)",
         "descripcion": "Una tríada mayor con la 9na sumada directo, SIN pasar por la séptima. Distinto del acorde de 9na de verdad: acá no hay ningún dominante escondido, sólo color agregado a un mayor en reposo."
+      },
+      "agregadas:madd9": {
+        "nombre": "Menor con 9ª agregada",
+        "descripcion": "El mismo truco que el add9 pero sobre una tríada menor: la 9na sumada directo, sin séptima de por medio. El color melancólico del menor, un poco más abierto."
+      },
+      "agregadas:add2": {
+        "nombre": "Mayor con 2ª agregada",
+        "descripcion": "La 2da sumada en la misma octava del acorde, no una octava arriba como en el add9: queda un roce más apretado y percusivo, muy típico del pop y el rock de guitarras."
+      },
+      "agregadas:add4": {
+        "nombre": "Mayor con 4ª agregada",
+        "descripcion": "La 4ta agregada sin sacar la 3ra: un roce breve entre las dos que le da textura sin perder el carácter mayor del acorde."
+      },
+      "extendidas:maj11": {
+        "nombre": "Mayor con 7ª mayor y 11ª",
+        "descripcion": "El maj9 con la 11na arriba. En la práctica se toca casi siempre como #11 porque la 11na natural choca con la 3ra mayor — acá se deja tal cual, sin alterar."
+      },
+      "extendidas:maj13": {
+        "nombre": "Mayor con 7ª mayor y 13ª",
+        "descripcion": "El acorde mayor más vestido de todos: séptima mayor, novena y trecena juntas. Sonido de acorde final de balada o de big band."
+      },
+      "extendidas:m13": {
+        "nombre": "Menor con 13ª",
+        "descripcion": "El m11 con la 13na sumada arriba: un menor bien extendido, típico del jazz-funk y la fusión."
+      },
+      "alterados:7b9": {
+        "nombre": "Dominante con 9ª menor",
+        "descripcion": "Un dominante con la 9na bajada un semitono: la tensión más oscura y filosa que existe sobre un V7, típica del jazz y del flamenco."
+      },
+      "alterados:7#9": {
+        "nombre": "Dominante con 9ª aumentada",
+        "descripcion": "El llamado 'acorde de Hendrix': una 9na subida que choca a propósito contra la 3ra mayor de abajo — mayor y menor en el mismo acorde, muy usado en funk y blues-rock."
+      },
+      "alterados:7b5": {
+        "nombre": "Dominante con 5ª disminuida",
+        "descripcion": "La quinta baja un semitono: un dominante más inestable y simétrico, que en jazz suele aparecer en sustituciones tritonales."
+      },
+      "alterados:7#5": {
+        "nombre": "Dominante con 5ª aumentada",
+        "descripcion": "La quinta sube en vez de bajar: le da al dominante un color flotante, casi de acorde aumentado con la séptima menor arriba."
+      },
+      "alterados:7alt": {
+        "nombre": "Dominante alterado",
+        "descripcion": "El dominante con casi todas las tensiones alteradas a la vez — b9, #9 y #11, sin la quinta natural. El sonido característico del jazz moderno resolviendo con máxima tensión."
+      },
+      "alterados:7sus4": {
+        "nombre": "Dominante suspendido en 4ª",
+        "descripcion": "Un dominante sin tercera, con la 4ta en su lugar: acorde de paso muy usado antes de resolver al V7 de verdad, o como acorde de reposo abierto en el pop."
+      },
+      "alterados:7sus2": {
+        "nombre": "Dominante suspendido en 2ª",
+        "descripcion": "La misma idea del sus4 pero con la 2da en vez de la 4ta: un dominante más abierto y menos 'urgente', frecuente en el pop y el rock alternativo."
+      },
+      "inversiones:/3": {
+        "nombre": "Con bajo en la 3ª",
+        "descripcion": "El mismo acorde mayor de siempre, pero con la 3ra sonando abajo de todo en vez de la fundamental: primera inversión — más suave, menos 'plantado' que el acorde en estado fundamental."
+      },
+      "inversiones:/5": {
+        "nombre": "Con bajo en la 5ª",
+        "descripcion": "Segunda inversión: la 5ta abajo de todo. Un color de paso, muy usado en líneas de bajo que suben o bajan por grados."
+      },
+      "inversiones:/b7": {
+        "nombre": "Con bajo en la 7ª menor",
+        "descripcion": "Un acorde dominante con la séptima menor en el bajo en vez de la fundamental: típico de líneas de walking bass cromáticas en jazz."
       }
     }
   },
@@ -6123,7 +6189,9 @@ const IDIOMAS = {
       "septimas": "Seventh chords",
       "sextas": "Sixths and color",
       "extendidas": "Extended (9th, 11th, 13th)",
-      "agregadas": "Added-note chords"
+      "agregadas": "Added-note chords",
+      "alterados": "Altered & suspended dominants",
+      "inversiones": "Inversions (different bass note)"
     },
     "diccionarioAcordes": {
       "triadas:": {
@@ -6217,6 +6285,70 @@ const IDIOMAS = {
       "agregadas:add9": {
         "nombre": "Major with added 9th (no 7th)",
         "descripcion": "A major triad with the 9th added straight in, WITHOUT going through the seventh. Different from a true 9th chord: there's no hidden dominant here, just extra color on a resting major."
+      },
+      "agregadas:madd9": {
+        "nombre": "Minor with added 9th",
+        "descripcion": "The same trick as add9 but on a minor triad: the 9th added directly, with no seventh in between. The minor's melancholic color, a bit more open."
+      },
+      "agregadas:add2": {
+        "nombre": "Major with added 2nd",
+        "descripcion": "The 2nd added in the same octave as the chord, not an octave up like in add9: a tighter, more percussive sound, very common in pop and rock guitar parts."
+      },
+      "agregadas:add4": {
+        "nombre": "Major with added 4th",
+        "descripcion": "The 4th added without removing the 3rd: a brief rub between the two that gives it texture without losing the chord's major character."
+      },
+      "extendidas:maj11": {
+        "nombre": "Major with major 7th and 11th",
+        "descripcion": "The maj9 with the 11th added on top. In practice it's almost always played as a #11, because the natural 11th clashes with the major 3rd — here it's left unaltered."
+      },
+      "extendidas:maj13": {
+        "nombre": "Major with major 7th and 13th",
+        "descripcion": "The most dressed-up major chord of all: major seventh, ninth and thirteenth together. The sound of a ballad's final chord, or a big band ending."
+      },
+      "extendidas:m13": {
+        "nombre": "Minor with 13th",
+        "descripcion": "The m11 with the 13th added on top: a fully extended minor chord, typical of jazz-funk and fusion."
+      },
+      "alterados:7b9": {
+        "nombre": "Dominant with minor 9th",
+        "descripcion": "A dominant with the 9th lowered a semitone: the darkest, sharpest tension that exists over a V7, typical of jazz and flamenco."
+      },
+      "alterados:7#9": {
+        "nombre": "Dominant with augmented 9th",
+        "descripcion": "The so-called \"Hendrix chord\": a raised 9th that deliberately clashes against the major 3rd below it — major and minor in the same chord, common in funk and blues-rock."
+      },
+      "alterados:7b5": {
+        "nombre": "Dominant with diminished 5th",
+        "descripcion": "The fifth drops a semitone: a more unstable, symmetrical dominant, which in jazz often shows up in tritone substitutions."
+      },
+      "alterados:7#5": {
+        "nombre": "Dominant with augmented 5th",
+        "descripcion": "The fifth rises instead of dropping: it gives the dominant a floating color, almost like an augmented chord with a minor seventh on top."
+      },
+      "alterados:7alt": {
+        "nombre": "Altered dominant",
+        "descripcion": "The dominant with nearly every tension altered at once — b9, #9 and #11, with no natural fifth. The signature sound of modern jazz resolving with maximum tension."
+      },
+      "alterados:7sus4": {
+        "nombre": "Suspended dominant (4th)",
+        "descripcion": "A dominant with no third, with the 4th in its place: a passing chord often used right before resolving to the real V7, or as an open resting chord in pop."
+      },
+      "alterados:7sus2": {
+        "nombre": "Suspended dominant (2nd)",
+        "descripcion": "The same idea as the sus4 but with the 2nd instead of the 4th: a more open, less \"urgent\" dominant, common in pop and alternative rock."
+      },
+      "inversiones:/3": {
+        "nombre": "With the 3rd in the bass",
+        "descripcion": "The same major chord as always, but with the 3rd sounding at the very bottom instead of the root: first inversion — smoother, less \"planted\" than the chord in root position."
+      },
+      "inversiones:/5": {
+        "nombre": "With the 5th in the bass",
+        "descripcion": "Second inversion: the 5th at the very bottom. A passing color, often used in bass lines that walk up or down stepwise."
+      },
+      "inversiones:/b7": {
+        "nombre": "With the minor 7th in the bass",
+        "descripcion": "A dominant chord with the minor seventh in the bass instead of the root: typical of chromatic walking bass lines in jazz."
       }
     },
     "sonido": {
@@ -9270,7 +9402,9 @@ const IDIOMAS = {
         "pistaSeguir": "ไม่ใช่แค่คอร์ดโทนิก: นี่คือคอร์ดอื่น ๆ ที่มีความสัมพันธ์จริงกับคอร์ดที่คุณเล่น",
         "sinSugerencias": "ฉันไม่พบความสัมพันธ์ที่รู้จักจากคอร์ดนี้",
         "espectro": "สเปกตรัม",
-        "pistaEspectro": "การเคลื่อนไหวแบบเดียวกัน แสดงบนวงกลมคู่ห้า"
+        "pistaEspectro": "การเคลื่อนไหวแบบเดียวกัน แสดงบนวงกลมคู่ห้า",
+        "verEspectro": "ดูสเปกตรัม",
+        "cerrarEspectro": "ปิดสเปกตรัม"
       }
     },
     "categoriasAcordes": {
@@ -9278,7 +9412,9 @@ const IDIOMAS = {
       "septimas": "คอร์ดเซเว่นธ์ (Seventh)",
       "sextas": "ซิกซ์ธ์และคอร์ดสีสัน",
       "extendidas": "คอร์ดขยาย (9th, 11th, 13th)",
-      "agregadas": "คอร์ดเพิ่มโน้ต (Added note)"
+      "agregadas": "คอร์ดเพิ่มโน้ต (Added note)",
+      "alterados": "โดมิแนนต์แบบอัลเทอร์และซัสเพนด์",
+      "inversiones": "อินเวอร์ชัน (เบสต่างจากรูท)"
     },
     "diccionarioAcordes": {
       "triadas:": {
@@ -9372,6 +9508,70 @@ const IDIOMAS = {
       "agregadas:add9": {
         "nombre": "เมเจอร์เพิ่ม 9th (ไม่มี 7th) (Add9)",
         "descripcion": "ไตรแอดเมเจอร์ที่เพิ่ม 9th เข้าไปตรงๆ โดยไม่ผ่านเซเว่นธ์ ต่างจากคอร์ด 9th ตัวจริง เพราะที่นี่ไม่มีดอมิแนนต์แอบซ่อนอยู่ มีแค่สีสันที่เพิ่มให้กับเมเจอร์ที่พักสงบ"
+      },
+      "agregadas:madd9": {
+        "nombre": "ไมเนอร์เพิ่ม 9th (Madd9)",
+        "descripcion": "ใช้ลูกเล่นแบบเดียวกับ add9 แต่ทำกับไตรแอดไมเนอร์: เพิ่ม 9th เข้าไปตรงๆ โดยไม่ผ่านเซเว่นธ์ ได้สีสันหม่นเศร้าแบบไมเนอร์ที่เปิดกว้างขึ้นอีกนิด"
+      },
+      "agregadas:add2": {
+        "nombre": "เมเจอร์เพิ่ม 2nd (Add2)",
+        "descripcion": "เพิ่ม 2nd เข้าไปในช่วงเสียงเดียวกับคอร์ด ไม่ใช่สูงขึ้นไปหนึ่งอ็อกเทฟแบบ add9 ทำให้เสียงแน่นและกระแทกกว่า พบได้บ่อยในกีตาร์แนวป๊อปและร็อก"
+      },
+      "agregadas:add4": {
+        "nombre": "เมเจอร์เพิ่ม 4th (Add4)",
+        "descripcion": "เพิ่ม 4th เข้าไปโดยไม่เอา 3rd ออก เกิดการเสียดสีสั้นๆระหว่างสองเสียงนี้ ทำให้มีเนื้อสัมผัสมากขึ้นโดยไม่เสียความเป็นเมเจอร์ของคอร์ด"
+      },
+      "extendidas:maj11": {
+        "nombre": "เมเจอร์เซเว่นธ์เพิ่ม 11th (Maj11)",
+        "descripcion": "คือ maj9 ที่เพิ่ม 11th ขึ้นไปอีกชั้น ในทางปฏิบัติมักเล่นเป็น #11 เสมอ เพราะ 11th ธรรมดาจะขัดกับเมเจอร์เทิร์ด แต่ในที่นี้ปล่อยไว้แบบไม่แปลงเสียง"
+      },
+      "extendidas:maj13": {
+        "nombre": "เมเจอร์เซเว่นธ์เพิ่ม 13th (Maj13)",
+        "descripcion": "คอร์ดเมเจอร์ที่แต่งตัวหรูที่สุด รวมเมเจอร์เซเว่นธ์ ไนน์ และเธอร์ทีนธ์ไว้ด้วยกัน คือเสียงของคอร์ดปิดท้ายเพลงบัลลาด หรือตอนจบของบิ๊กแบนด์"
+      },
+      "extendidas:m13": {
+        "nombre": "ไมเนอร์เพิ่ม 13th (m13)",
+        "descripcion": "คือ m11 ที่เพิ่ม 13th ขึ้นไปอีกชั้น เป็นคอร์ดไมเนอร์ที่ขยายเต็มรูปแบบ มักพบในแนวแจ๊สฟังก์และฟิวชัน"
+      },
+      "alterados:7b9": {
+        "nombre": "โดมิแนนต์ลด 9th (7b9)",
+        "descripcion": "โดมิแนนต์ที่ลด 9th ลงครึ่งเสียง ให้ความตึงเครียดที่มืดและคมที่สุดที่มีอยู่บน V7 พบบ่อยในแจ๊สและฟลาเมงโก"
+      },
+      "alterados:7#9": {
+        "nombre": "โดมิแนนต์เพิ่ม 9th (7#9)",
+        "descripcion": "หรือที่เรียกกันว่า \"คอร์ดเฮนดริกซ์\" คือ 9th ที่ถูกยกสูงขึ้นจนขัดกับเมเจอร์เทิร์ดที่อยู่ข้างใต้อย่างจงใจ รวมความเป็นเมเจอร์และไมเนอร์ไว้ในคอร์ดเดียวกัน พบบ่อยในฟังก์และบลูส์ร็อก"
+      },
+      "alterados:7b5": {
+        "nombre": "โดมิแนนต์ลด 5th (7b5)",
+        "descripcion": "5th ลดลงครึ่งเสียง ทำให้โดมิแนนต์มีความไม่มั่นคงและสมมาตรมากขึ้น ในแจ๊สมักใช้ในการแทนคอร์ดแบบไทรโทน"
+      },
+      "alterados:7#5": {
+        "nombre": "โดมิแนนต์เพิ่ม 5th (7#5)",
+        "descripcion": "5th ยกสูงขึ้นแทนที่จะลดลง ให้สีสันแบบล่องลอยกับโดมิแนนต์ เหมือนคอร์ดออกเมนเต็ดที่มีไมเนอร์เซเว่นธ์อยู่ข้างบน"
+      },
+      "alterados:7alt": {
+        "nombre": "โดมิแนนต์อัลเทอร์ (7alt)",
+        "descripcion": "โดมิแนนต์ที่แปลงเสียงเกือบทุกตัวพร้อมกัน คือ b9, #9 และ #11 โดยไม่มี 5th ธรรมดาอยู่เลย คือเสียงเฉพาะตัวของแจ๊สยุคใหม่ที่คลี่คลายด้วยความตึงเครียดสูงสุด"
+      },
+      "alterados:7sus4": {
+        "nombre": "โดมิแนนต์ซัสเพนด์ (4th) (7sus4)",
+        "descripcion": "โดมิแนนต์ที่ไม่มี 3rd โดยแทนที่ด้วย 4th มักใช้เป็นคอร์ดผ่านก่อนจะคลี่คลายไปสู่ V7 ตัวจริง หรือใช้เป็นคอร์ดพักที่เปิดกว้างในแนวป๊อป"
+      },
+      "alterados:7sus2": {
+        "nombre": "โดมิแนนต์ซัสเพนด์ (2nd) (7sus2)",
+        "descripcion": "แนวคิดเดียวกับ sus4 แต่ใช้ 2nd แทน 4th ให้โดมิแนนต์ที่เปิดกว้างและ \"เร่งเร้า\" น้อยกว่า พบบ่อยในป๊อปและร็อกแนวอัลเทอร์เนทิฟ"
+      },
+      "inversiones:/3": {
+        "nombre": "อินเวอร์ชันที่มี 3rd อยู่ในเบส",
+        "descripcion": "คือคอร์ดเมเจอร์แบบเดิม แต่มี 3rd อยู่ล่างสุดแทนที่จะเป็นรูท เรียกว่าอินเวอร์ชันที่หนึ่ง ให้เสียงที่ลื่นไหลกว่าและ \"หนักแน่น\" น้อยกว่าคอร์ดในตำแหน่งรูท"
+      },
+      "inversiones:/5": {
+        "nombre": "อินเวอร์ชันที่มี 5th อยู่ในเบส",
+        "descripcion": "อินเวอร์ชันที่สอง โดยมี 5th อยู่ล่างสุด เป็นสีสันแบบผ่านๆ มักใช้ในเบสไลน์ที่เดินขึ้นหรือลงแบบขั้นบันได"
+      },
+      "inversiones:/b7": {
+        "nombre": "อินเวอร์ชันที่มี minor 7th อยู่ในเบส",
+        "descripcion": "คอร์ดโดมิแนนต์ที่มี minor seventh อยู่ในเบสแทนที่จะเป็นรูท พบได้ทั่วไปในเบสไลน์แบบโครมาติกของแจ๊ส"
       }
     }
   }

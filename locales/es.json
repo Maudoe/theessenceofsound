@@ -2994,7 +2994,9 @@
     "septimas": "Con séptima",
     "sextas": "Sextas y color",
     "extendidas": "Extendidas (9ª, 11ª, 13ª)",
-    "agregadas": "Con nota agregada"
+    "agregadas": "Con nota agregada",
+    "alterados": "Dominantes alterados y suspendidos",
+    "inversiones": "Inversiones (bajo distinto)"
   },
   "sonido": {
     "acoustic_guitar_nylon": "Acústica (nylon)",
@@ -3120,6 +3122,70 @@
     "agregadas:add9": {
       "nombre": "Mayor con 9ª agregada (sin 7ª)",
       "descripcion": "Una tríada mayor con la 9na sumada directo, SIN pasar por la séptima. Distinto del acorde de 9na de verdad: acá no hay ningún dominante escondido, sólo color agregado a un mayor en reposo."
+    },
+    "agregadas:madd9": {
+      "nombre": "Menor con 9ª agregada",
+      "descripcion": "El mismo truco que el add9 pero sobre una tríada menor: la 9na sumada directo, sin séptima de por medio. El color melancólico del menor, un poco más abierto."
+    },
+    "agregadas:add2": {
+      "nombre": "Mayor con 2ª agregada",
+      "descripcion": "La 2da sumada en la misma octava del acorde, no una octava arriba como en el add9: queda un roce más apretado y percusivo, muy típico del pop y el rock de guitarras."
+    },
+    "agregadas:add4": {
+      "nombre": "Mayor con 4ª agregada",
+      "descripcion": "La 4ta agregada sin sacar la 3ra: un roce breve entre las dos que le da textura sin perder el carácter mayor del acorde."
+    },
+    "extendidas:maj11": {
+      "nombre": "Mayor con 7ª mayor y 11ª",
+      "descripcion": "El maj9 con la 11na arriba. En la práctica se toca casi siempre como #11 porque la 11na natural choca con la 3ra mayor — acá se deja tal cual, sin alterar."
+    },
+    "extendidas:maj13": {
+      "nombre": "Mayor con 7ª mayor y 13ª",
+      "descripcion": "El acorde mayor más vestido de todos: séptima mayor, novena y trecena juntas. Sonido de acorde final de balada o de big band."
+    },
+    "extendidas:m13": {
+      "nombre": "Menor con 13ª",
+      "descripcion": "El m11 con la 13na sumada arriba: un menor bien extendido, típico del jazz-funk y la fusión."
+    },
+    "alterados:7b9": {
+      "nombre": "Dominante con 9ª menor",
+      "descripcion": "Un dominante con la 9na bajada un semitono: la tensión más oscura y filosa que existe sobre un V7, típica del jazz y del flamenco."
+    },
+    "alterados:7#9": {
+      "nombre": "Dominante con 9ª aumentada",
+      "descripcion": "El llamado 'acorde de Hendrix': una 9na subida que choca a propósito contra la 3ra mayor de abajo — mayor y menor en el mismo acorde, muy usado en funk y blues-rock."
+    },
+    "alterados:7b5": {
+      "nombre": "Dominante con 5ª disminuida",
+      "descripcion": "La quinta baja un semitono: un dominante más inestable y simétrico, que en jazz suele aparecer en sustituciones tritonales."
+    },
+    "alterados:7#5": {
+      "nombre": "Dominante con 5ª aumentada",
+      "descripcion": "La quinta sube en vez de bajar: le da al dominante un color flotante, casi de acorde aumentado con la séptima menor arriba."
+    },
+    "alterados:7alt": {
+      "nombre": "Dominante alterado",
+      "descripcion": "El dominante con casi todas las tensiones alteradas a la vez — b9, #9 y #11, sin la quinta natural. El sonido característico del jazz moderno resolviendo con máxima tensión."
+    },
+    "alterados:7sus4": {
+      "nombre": "Dominante suspendido en 4ª",
+      "descripcion": "Un dominante sin tercera, con la 4ta en su lugar: acorde de paso muy usado antes de resolver al V7 de verdad, o como acorde de reposo abierto en el pop."
+    },
+    "alterados:7sus2": {
+      "nombre": "Dominante suspendido en 2ª",
+      "descripcion": "La misma idea del sus4 pero con la 2da en vez de la 4ta: un dominante más abierto y menos 'urgente', frecuente en el pop y el rock alternativo."
+    },
+    "inversiones:/3": {
+      "nombre": "Con bajo en la 3ª",
+      "descripcion": "El mismo acorde mayor de siempre, pero con la 3ra sonando abajo de todo en vez de la fundamental: primera inversión — más suave, menos 'plantado' que el acorde en estado fundamental."
+    },
+    "inversiones:/5": {
+      "nombre": "Con bajo en la 5ª",
+      "descripcion": "Segunda inversión: la 5ta abajo de todo. Un color de paso, muy usado en líneas de bajo que suben o bajan por grados."
+    },
+    "inversiones:/b7": {
+      "nombre": "Con bajo en la 7ª menor",
+      "descripcion": "Un acorde dominante con la séptima menor en el bajo en vez de la fundamental: típico de líneas de walking bass cromáticas en jazz."
     }
   }
 }

@@ -2994,7 +2994,9 @@
     "septimas": "Seventh chords",
     "sextas": "Sixths and color",
     "extendidas": "Extended (9th, 11th, 13th)",
-    "agregadas": "Added-note chords"
+    "agregadas": "Added-note chords",
+    "alterados": "Altered & suspended dominants",
+    "inversiones": "Inversions (different bass note)"
   },
   "diccionarioAcordes": {
     "triadas:": {
@@ -3088,6 +3090,70 @@
     "agregadas:add9": {
       "nombre": "Major with added 9th (no 7th)",
       "descripcion": "A major triad with the 9th added straight in, WITHOUT going through the seventh. Different from a true 9th chord: there's no hidden dominant here, just extra color on a resting major."
+    },
+    "agregadas:madd9": {
+      "nombre": "Minor with added 9th",
+      "descripcion": "The same trick as add9 but on a minor triad: the 9th added directly, with no seventh in between. The minor's melancholic color, a bit more open."
+    },
+    "agregadas:add2": {
+      "nombre": "Major with added 2nd",
+      "descripcion": "The 2nd added in the same octave as the chord, not an octave up like in add9: a tighter, more percussive sound, very common in pop and rock guitar parts."
+    },
+    "agregadas:add4": {
+      "nombre": "Major with added 4th",
+      "descripcion": "The 4th added without removing the 3rd: a brief rub between the two that gives it texture without losing the chord's major character."
+    },
+    "extendidas:maj11": {
+      "nombre": "Major with major 7th and 11th",
+      "descripcion": "The maj9 with the 11th added on top. In practice it's almost always played as a #11, because the natural 11th clashes with the major 3rd — here it's left unaltered."
+    },
+    "extendidas:maj13": {
+      "nombre": "Major with major 7th and 13th",
+      "descripcion": "The most dressed-up major chord of all: major seventh, ninth and thirteenth together. The sound of a ballad's final chord, or a big band ending."
+    },
+    "extendidas:m13": {
+      "nombre": "Minor with 13th",
+      "descripcion": "The m11 with the 13th added on top: a fully extended minor chord, typical of jazz-funk and fusion."
+    },
+    "alterados:7b9": {
+      "nombre": "Dominant with minor 9th",
+      "descripcion": "A dominant with the 9th lowered a semitone: the darkest, sharpest tension that exists over a V7, typical of jazz and flamenco."
+    },
+    "alterados:7#9": {
+      "nombre": "Dominant with augmented 9th",
+      "descripcion": "The so-called \"Hendrix chord\": a raised 9th that deliberately clashes against the major 3rd below it — major and minor in the same chord, common in funk and blues-rock."
+    },
+    "alterados:7b5": {
+      "nombre": "Dominant with diminished 5th",
+      "descripcion": "The fifth drops a semitone: a more unstable, symmetrical dominant, which in jazz often shows up in tritone substitutions."
+    },
+    "alterados:7#5": {
+      "nombre": "Dominant with augmented 5th",
+      "descripcion": "The fifth rises instead of dropping: it gives the dominant a floating color, almost like an augmented chord with a minor seventh on top."
+    },
+    "alterados:7alt": {
+      "nombre": "Altered dominant",
+      "descripcion": "The dominant with nearly every tension altered at once — b9, #9 and #11, with no natural fifth. The signature sound of modern jazz resolving with maximum tension."
+    },
+    "alterados:7sus4": {
+      "nombre": "Suspended dominant (4th)",
+      "descripcion": "A dominant with no third, with the 4th in its place: a passing chord often used right before resolving to the real V7, or as an open resting chord in pop."
+    },
+    "alterados:7sus2": {
+      "nombre": "Suspended dominant (2nd)",
+      "descripcion": "The same idea as the sus4 but with the 2nd instead of the 4th: a more open, less \"urgent\" dominant, common in pop and alternative rock."
+    },
+    "inversiones:/3": {
+      "nombre": "With the 3rd in the bass",
+      "descripcion": "The same major chord as always, but with the 3rd sounding at the very bottom instead of the root: first inversion — smoother, less \"planted\" than the chord in root position."
+    },
+    "inversiones:/5": {
+      "nombre": "With the 5th in the bass",
+      "descripcion": "Second inversion: the 5th at the very bottom. A passing color, often used in bass lines that walk up or down stepwise."
+    },
+    "inversiones:/b7": {
+      "nombre": "With the minor 7th in the bass",
+      "descripcion": "A dominant chord with the minor seventh in the bass instead of the root: typical of chromatic walking bass lines in jazz."
     }
   },
   "sonido": {
