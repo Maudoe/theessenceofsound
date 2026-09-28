@@ -16,6 +16,7 @@ const IDIOMAS = {
         "escalas": "Escalas en el mástil",
         "identificar": "Identificar acorde",
         "emociones": "Emociones",
+        "temas": "Temas",
         "acerca": "Cómo leer esto"
       },
       "intro": {
@@ -271,6 +272,12 @@ const IDIOMAS = {
           "menor": "Sobre un acorde menor",
           "dominante": "Sobre un dominante"
         }
+      },
+      "temas": {
+        "intro": "El sitio siempre arranca en Oscuro. Acá podés cambiar de paleta y de tipografía — cada tema trae las dos juntas, pensadas para ir a tono. Se guarda en este navegador, así que vas a volver a encontrarlo la próxima vez.",
+        "grupoOscuro": "Oscuros",
+        "grupoClaro": "Claros",
+        "activo": "Activo"
       },
       "idioma": {
         "es": "Español",
@@ -2995,6 +3002,26 @@ const IDIOMAS = {
       "electric_bass_pick": "Bajo eléctrico (púa)",
       "acoustic_bass": "Bajo acústico",
       "fretless_bass": "Bajo fretless"
+    },
+    "temas": {
+      "oscuro": {
+        "nombre": "Oscuro"
+      },
+      "tactico": {
+        "nombre": "Táctico"
+      },
+      "vino": {
+        "nombre": "Vino"
+      },
+      "claro-dorado": {
+        "nombre": "Dorado"
+      },
+      "claro-papel": {
+        "nombre": "Papel"
+      },
+      "claro-esmeralda": {
+        "nombre": "Esmeralda"
+      }
     },
     "diccionarioAcordes": {
       "triadas:": {
@@ -5722,7 +5749,8 @@ const IDIOMAS = {
         "diccionario": "Chord Dictionary",
         "escalas": "Scales on the fretboard",
         "identificar": "Identify chord",
-        "emociones": "Emotions"
+        "emociones": "Emotions",
+        "temas": "Themes"
       },
       "intro": {
         "lema": "The Essence of Sound — by Mau",
@@ -6064,6 +6092,12 @@ const IDIOMAS = {
         "progresionTitulo": "Four chords for a whole verse or chorus",
         "progresionPista": "Not a single chord — a real chord progression, colored with this emotion. Click any of them to see how to play it.",
         "escucharProgresion": "Listen to the progression"
+      },
+      "temas": {
+        "intro": "The site always starts in Dark. Here you can switch palette and typeface — each theme bundles both, chosen to go together. It's saved in this browser, so it'll be there next time.",
+        "grupoOscuro": "Dark",
+        "grupoClaro": "Light",
+        "activo": "Active"
       }
     },
     "categoriasAcordes": {
@@ -6178,6 +6212,26 @@ const IDIOMAS = {
       "electric_bass_pick": "Electric bass (pick)",
       "acoustic_bass": "Acoustic bass",
       "fretless_bass": "Fretless bass"
+    },
+    "temas": {
+      "oscuro": {
+        "nombre": "Dark"
+      },
+      "tactico": {
+        "nombre": "Tactical"
+      },
+      "vino": {
+        "nombre": "Wine"
+      },
+      "claro-dorado": {
+        "nombre": "Golden"
+      },
+      "claro-papel": {
+        "nombre": "Paper"
+      },
+      "claro-esmeralda": {
+        "nombre": "Emerald"
+      }
     }
   },
   "th": {
@@ -8810,6 +8864,26 @@ const IDIOMAS = {
       "acoustic_bass": "เบสอะคูสติก",
       "fretless_bass": "เบสไม่มีเฟรต"
     },
+    "temas": {
+      "oscuro": {
+        "nombre": "มืด"
+      },
+      "tactico": {
+        "nombre": "ยุทธวิธี"
+      },
+      "vino": {
+        "nombre": "ไวน์"
+      },
+      "claro-dorado": {
+        "nombre": "ทอง"
+      },
+      "claro-papel": {
+        "nombre": "กระดาษ"
+      },
+      "claro-esmeralda": {
+        "nombre": "มรกต"
+      }
+    },
     "ui": {
       "meta": {
         "nombre": "ไทย",
@@ -8823,7 +8897,8 @@ const IDIOMAS = {
         "diccionario": "พจนานุกรมคอร์ด",
         "escalas": "สเกลบนคอกีตาร์",
         "identificar": "ระบุคอร์ด",
-        "emociones": "อารมณ์"
+        "emociones": "อารมณ์",
+        "temas": "ธีม"
       },
       "intro": {
         "lema": "The Essence of Sound — by Mau",
@@ -9138,6 +9213,12 @@ const IDIOMAS = {
           "oriental": "เสียงแบบตะวันออกกลาง / ฟลาเมงโก",
           "exotico": "สเกลแปลกอื่น ๆ"
         }
+      },
+      "temas": {
+        "intro": "เว็บไซต์เริ่มต้นด้วยธีมมืดเสมอ ที่นี่คุณสามารถเปลี่ยนชุดสีและแบบตัวอักษรได้ — แต่ละธีมรวมทั้งสองอย่างไว้ด้วยกัน ออกแบบมาให้เข้ากัน ระบบจะจดจำไว้ในเบราว์เซอร์นี้ ดังนั้นครั้งหน้าคุณจะเจอมันเหมือนเดิม",
+        "grupoOscuro": "ธีมมืด",
+        "grupoClaro": "ธีมสว่าง",
+        "activo": "ใช้งานอยู่"
       },
       "emocionesVista": {
         "intro": "เลือกอารมณ์ที่คุณอยากถ่ายทอดและโน้ตหลัก แล้วฉันจะแสดงให้ดูว่าคอร์ดแบบไหน (major, minor หรือ dominant) ที่ให้สีเสียงนั้น พร้อมสเกลที่เล่นทับได้กับแต่ละแบบ นี่คือหมวดคอร์ดแบบย้อนกลับ: แทนที่จะเริ่มจากสัญลักษณ์คอร์ด คุณเริ่มจากความรู้สึก",

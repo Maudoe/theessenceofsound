@@ -12,6 +12,7 @@
       "escalas": "Escalas en el mástil",
       "identificar": "Identificar acorde",
       "emociones": "Emociones",
+      "temas": "Temas",
       "acerca": "Cómo leer esto"
     },
     "intro": {
@@ -267,6 +268,12 @@
         "menor": "Sobre un acorde menor",
         "dominante": "Sobre un dominante"
       }
+    },
+    "temas": {
+      "intro": "El sitio siempre arranca en Oscuro. Acá podés cambiar de paleta y de tipografía — cada tema trae las dos juntas, pensadas para ir a tono. Se guarda en este navegador, así que vas a volver a encontrarlo la próxima vez.",
+      "grupoOscuro": "Oscuros",
+      "grupoClaro": "Claros",
+      "activo": "Activo"
     },
     "idioma": {
       "es": "Español",
@@ -2991,6 +2998,26 @@
     "electric_bass_pick": "Bajo eléctrico (púa)",
     "acoustic_bass": "Bajo acústico",
     "fretless_bass": "Bajo fretless"
+  },
+  "temas": {
+    "oscuro": {
+      "nombre": "Oscuro"
+    },
+    "tactico": {
+      "nombre": "Táctico"
+    },
+    "vino": {
+      "nombre": "Vino"
+    },
+    "claro-dorado": {
+      "nombre": "Dorado"
+    },
+    "claro-papel": {
+      "nombre": "Papel"
+    },
+    "claro-esmeralda": {
+      "nombre": "Esmeralda"
+    }
   },
   "diccionarioAcordes": {
     "triadas:": {
