@@ -688,4 +688,115 @@ const LICKS_COUNTRY = [
       { cuerda: 1, traste: 0 }, { cuerda: 2, traste: 2 }, { cuerda: 2, traste: 0 },
     ],
   },
+
+  /* ---- tanda 7 ---- */
+  {
+    id: "cp-g-13",
+    nombre: "Lick sobre el IV (Do) dentro de Sol",
+    tonalidad: "C", raiz: "C", escala: "jonico",
+    tecnica: "lick sobre el IV", dificultad: "intermedio",
+    nota: "Cuando la vuelta de Sol pasa por el acorde de Do (el IV), este lick cambia de centro tonal sin que se note el corte: pensalo como una frase aparte que sólo aparece mientras suena ese acorde.",
+    notas: [
+      { cuerda: 1, traste: 3 }, { cuerda: 2, traste: 0 }, { cuerda: 2, traste: 2 },
+      { cuerda: 3, traste: 0 }, { cuerda: 2, traste: 0 }, { cuerda: 1, traste: 3 },
+    ],
+  },
+  {
+    id: "cp-g-14",
+    nombre: "Lick sobre el V (Re7) dentro de Sol",
+    tonalidad: "D", raiz: "D", escala: "mixolidio",
+    tecnica: "lick sobre el V", dificultad: "intermedio-avanzado",
+    nota: "El acorde de Re7 (el V de Sol) pide su propia mixolidia por un compás: la séptima menor (Do) aparece justo antes de resolver, marcando con claridad que ahí hay tensión que quiere volver a casa.",
+    notas: [
+      { cuerda: 2, traste: 0 }, { cuerda: 2, traste: 4 }, { cuerda: 3, traste: 0 },
+      { cuerda: 2, traste: 0 }, { cuerda: 1, traste: 3 }, { cuerda: 2, traste: 0 },
+    ],
+  },
+  {
+    id: "cp-c-12",
+    nombre: "Chicken pickin' sincopado en Do",
+    tonalidad: "C", raiz: "C", escala: "mixolidio",
+    tecnica: "chicken pickin' sincopado", dificultad: "avanzado",
+    nota: "Las notas caen fuera del tiempo fuerte a propósito, adelantadas medio pulso: esa sensación de 'tropezón controlado' es lo que hace que el chicken pickin' suene vivo y no a metrónomo.",
+    notas: [
+      { cuerda: 1, traste: 3 }, { cuerda: 2, traste: 0 }, { cuerda: 1, traste: 1 },
+      { cuerda: 5, traste: 0 }, { cuerda: 1, traste: 3 }, { cuerda: 0, traste: 3 },
+    ],
+  },
+  {
+    id: "cp-c-13",
+    nombre: "Arpegio de novena en Do (Cmaj9, fingerstyle)",
+    tonalidad: "C", raiz: "C", escala: "jonico",
+    tecnica: "fingerstyle (arpegio de 9na)", dificultad: "intermedio",
+    nota: "Tónica, séptima mayor, quinta, tercera y novena: el arpegio completo de un Cmaj9 tocado nota por nota con los dedos, de agudo a grave, para un intro fingerpicking tranquilo.",
+    notas: [
+      { cuerda: 1, traste: 3 }, { cuerda: 4, traste: 0 }, { cuerda: 3, traste: 0 },
+      { cuerda: 5, traste: 0 }, { cuerda: 2, traste: 0 }, { cuerda: 5, traste: 0 },
+    ],
+  },
+  {
+    id: "cp-d-12",
+    nombre: "Corrida veloz de ocho notas en Re",
+    tonalidad: "D", raiz: "D", escala: "mixolidio",
+    tecnica: "flatpicking veloz (ocho notas)", dificultad: "avanzado",
+    nota: "La mixolidia completa subiendo, ocho notas parejas de punta a punta: buen ejercicio para conectar tres cuerdas sin que se note el cambio, algo que todo solo de flatpicking rápido necesita tarde o temprano.",
+    notas: [
+      { cuerda: 2, traste: 0 }, { cuerda: 2, traste: 2 }, { cuerda: 2, traste: 4 }, { cuerda: 3, traste: 0 },
+      { cuerda: 3, traste: 2 }, { cuerda: 4, traste: 0 }, { cuerda: 1, traste: 3 }, { cuerda: 2, traste: 0 },
+    ],
+  },
+  {
+    id: "cp-d-13",
+    nombre: "Sextas por salto de cuerda en Re",
+    tonalidad: "D", raiz: "D", escala: "pentaMayor",
+    tecnica: "sextas (salto de cuerda)", dificultad: "intermedio-avanzado",
+    nota: "El mismo salto de cuerda de cp-g-06 y cp-e-13 pero en Re: el patrón es idéntico en cualquier tonalidad, sólo cambia dónde empieza — una vez que lo agarrás en una cuerda, lo tenés en todas.",
+    notas: [
+      { cuerda: 4, traste: 0 }, { cuerda: 2, traste: 4 }, { cuerda: 1, traste: 0 },
+      { cuerda: 2, traste: 2 }, { cuerda: 4, traste: 0 }, { cuerda: 2, traste: 4 },
+    ],
+  },
+  {
+    id: "cp-a-11",
+    nombre: "Cascada de tresillos en La",
+    tonalidad: "A", raiz: "A", escala: "pentaMayor",
+    tecnica: "tresillos en cascada", dificultad: "avanzado",
+    nota: "Dos grupos de tresillo con hammer-on doble cada uno: la mano izquierda hace casi todo el trabajo, la derecha sólo pica la primera nota de cada grupo de tres.",
+    notas: [
+      { cuerda: 1, traste: 0 }, { cuerda: 1, traste: 2, tecnica: "h" }, { cuerda: 1, traste: 4, tecnica: "h" },
+      { cuerda: 2, traste: 2 }, { cuerda: 2, traste: 4, tecnica: "h" }, { cuerda: 1, traste: 4 },
+    ],
+  },
+  {
+    id: "cp-a-12",
+    nombre: "Arpegio de dominante en La (A7, chicken pickin')",
+    tonalidad: "A", raiz: "A", escala: "mixolidio",
+    tecnica: "chicken pickin' (dominante)", dificultad: "avanzado",
+    nota: "Tónica, tercera mayor, quinta y otra vez la tercera: el arpegio de A7 recortado y picado seco, para remarcar que el acorde de base es un dominante y no un La mayor liso.",
+    notas: [
+      { cuerda: 1, traste: 0 }, { cuerda: 1, traste: 4 }, { cuerda: 2, traste: 2 },
+      { cuerda: 3, traste: 0 }, { cuerda: 2, traste: 2 }, { cuerda: 1, traste: 4 },
+    ],
+  },
+  {
+    id: "cp-e-12",
+    nombre: "Vibrato final sostenido en Mi",
+    tonalidad: "E", raiz: "E", escala: "jonico",
+    tecnica: "vibrato ancho (nota sostenida)", dificultad: "intermedio",
+    nota: "Una frase corta de tres notas que sube hasta la tónica aguda para quedarse ahí con vibrato ancho y sostenido: el tipo de final que se usa para rematar el último verso de una balada country.",
+    notas: [
+      { cuerda: 0, traste: 0 }, { cuerda: 3, traste: 1 }, { cuerda: 4, traste: 0 }, { cuerda: 5, traste: 0 },
+    ],
+  },
+  {
+    id: "cp-e-13",
+    nombre: "Cascada de sextas en Mi",
+    tonalidad: "E", raiz: "E", escala: "pentaMayor",
+    tecnica: "sextas (salto de cuerda)", dificultad: "intermedio-avanzado",
+    nota: "El mismo salto de cuerda de cp-g-06, ahora en Mi: útil para comparar cómo suena exactamente el mismo patrón en distintas tonalidades y notar que el 'color' del salto no cambia, sólo la altura.",
+    notas: [
+      { cuerda: 4, traste: 0 }, { cuerda: 2, traste: 6 }, { cuerda: 1, traste: 4 },
+      { cuerda: 0, traste: 2 }, { cuerda: 4, traste: 0 }, { cuerda: 0, traste: 0 },
+    ],
+  },
 ];
