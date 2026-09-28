@@ -577,4 +577,115 @@ const LICKS_COUNTRY = [
       { cuerda: 2, traste: 12 },
     ],
   },
+
+  /* ---- tanda 6 ---- */
+  {
+    id: "cp-g-11",
+    nombre: "Fill de bajo caminando en Sol",
+    tonalidad: "G", raiz: "G", escala: "jonico",
+    tecnica: "walking bass fill", dificultad: "intermedio",
+    nota: "Cuatro notas subiendo por grados, del I al IV: el mismo camino que haría el bajo entre dos acordes, tocado acá como relleno de guitarra en el espacio que deja la voz entre frases.",
+    notas: [
+      { cuerda: 0, traste: 3 }, { cuerda: 1, traste: 0 }, { cuerda: 1, traste: 2 }, { cuerda: 1, traste: 3 },
+    ],
+  },
+  {
+    id: "cp-g-12",
+    nombre: "Turnaround de blues de doce compases en Sol",
+    tonalidad: "G", raiz: "G", escala: "bluesMayor",
+    tecnica: "turnaround de blues (12 compases)", dificultad: "intermedio-avanzado",
+    nota: "El cierre típico del último compás de un blues de doce: sube con un hammer-on pasando por la tercera menor 'sucia' hasta la mayor, y después baja directo a la tónica para que el ciclo vuelva a arrancar.",
+    notas: [
+      { cuerda: 3, traste: 0 }, { cuerda: 3, traste: 3, tecnica: "h" }, { cuerda: 3, traste: 4 },
+      { cuerda: 2, traste: 0 }, { cuerda: 4, traste: 0 }, { cuerda: 3, traste: 0 },
+    ],
+  },
+  {
+    id: "cp-c-10",
+    nombre: "Tresillos ligados en Do",
+    tonalidad: "C", raiz: "C", escala: "pentaMayor",
+    tecnica: "tresillos ligados", dificultad: "avanzado",
+    nota: "Dos grupos de tresillo con un hammer-on cada uno, cruzando de la pentatónica baja a la alta: pensado para tocar con metrónomo lento primero y después llevarlo a tempo, porque el segundo grupo depende de que el primero termine parejo.",
+    notas: [
+      { cuerda: 1, traste: 3 }, { cuerda: 1, traste: 5, tecnica: "h" }, { cuerda: 2, traste: 2 },
+      { cuerda: 3, traste: 0 }, { cuerda: 3, traste: 2, tecnica: "h" }, { cuerda: 1, traste: 3 },
+    ],
+  },
+  {
+    id: "cp-d-10",
+    nombre: "Roll de banjo en Re (variación aguda)",
+    tonalidad: "D", raiz: "D", escala: "pentaMayor",
+    tecnica: "roll de banjo (fingerstyle)", dificultad: "intermedio-avanzado",
+    nota: "La misma idea de forward roll que cp-d-03, pero un registro más arriba (E-A-F# en vez de A-D-B): cambiar de registro sin cambiar el patrón es un truco típico de banjo para variar sin complicarse la mano.",
+    notas: [
+      { cuerda: 2, traste: 2 }, { cuerda: 1, traste: 0 }, { cuerda: 2, traste: 4 },
+      { cuerda: 2, traste: 2 }, { cuerda: 1, traste: 0 }, { cuerda: 2, traste: 4 },
+    ],
+  },
+  {
+    id: "cp-a-09",
+    nombre: "Nota pedal contra Mi agudo en La",
+    tonalidad: "A", raiz: "A", escala: "mixolidio",
+    tecnica: "nota pedal (cuerda al aire)", dificultad: "intermedio",
+    nota: "La primera cuerda al aire (Mi, la quinta de La) se repite fija entre cada nota que cambia en la cuerda de al lado: el mismo recurso de las gaitas y las cornamusas, trasladado a la guitarra de country.",
+    notas: [
+      { cuerda: 5, traste: 0 }, { cuerda: 1, traste: 0 }, { cuerda: 5, traste: 0 },
+      { cuerda: 1, traste: 2 }, { cuerda: 5, traste: 0 }, { cuerda: 1, traste: 4 },
+    ],
+  },
+  {
+    id: "cp-a-10",
+    nombre: "Corrida con doble hammer-on en La",
+    tonalidad: "A", raiz: "A", escala: "jonico",
+    tecnica: "doble hammer-on", dificultad: "intermedio-avanzado",
+    nota: "Dos hammer-ons seguidos en la misma cuerda (tónica-2da-3ra) antes de cruzar a la cuerda de al lado: hay que dejar que el dedo que pisa la tónica se quede quieto mientras los otros dos van cayendo encima.",
+    notas: [
+      { cuerda: 1, traste: 0 }, { cuerda: 1, traste: 2, tecnica: "h" }, { cuerda: 1, traste: 4, tecnica: "h" },
+      { cuerda: 2, traste: 0 }, { cuerda: 2, traste: 2 }, { cuerda: 1, traste: 0 },
+    ],
+  },
+  {
+    id: "cp-e-10",
+    nombre: "Remate de blues de doce compases en Mi",
+    tonalidad: "E", raiz: "E", escala: "bluesMayor",
+    tecnica: "remate de blues (12 compases)", dificultad: "intermedio-avanzado",
+    nota: "Sube toda la escala de blues mayor de un tirón, con un hammer-on justo en el medio (la tercera menor de paso): el remate de manual para terminar un solo de blues-country antes de que vuelva a entrar la voz.",
+    notas: [
+      { cuerda: 0, traste: 0 }, { cuerda: 0, traste: 2 }, { cuerda: 0, traste: 3, tecnica: "h" },
+      { cuerda: 0, traste: 4 }, { cuerda: 1, traste: 2 }, { cuerda: 0, traste: 0 },
+    ],
+  },
+  {
+    id: "cp-e-11",
+    nombre: "Llamada y respuesta en Mi",
+    tonalidad: "E", raiz: "E", escala: "mixolidio",
+    tecnica: "llamada y respuesta (call & response)", dificultad: "intermedio",
+    nota: "Dos notas cortas de 'pregunta' arriba, y cuatro de 'respuesta' que bajan y resuelven: pensado como diálogo entre dos frases de una melodía cantada, no como una corrida continua.",
+    notas: [
+      { cuerda: 0, traste: 0 }, { cuerda: 0, traste: 2 },
+      { cuerda: 3, traste: 1 }, { cuerda: 4, traste: 0 }, { cuerda: 2, traste: 0 }, { cuerda: 0, traste: 0 },
+    ],
+  },
+  {
+    id: "cp-c-11",
+    nombre: "Bend corto expresivo en Do",
+    tonalidad: "C", raiz: "C", escala: "bluesMayor",
+    tecnica: "bend corto (microtonal aprox.)", dificultad: "avanzado",
+    nota: "Un bend chiquito (menos de medio tono, sólo 'ensucia' la afinación un instante) justo antes de la tónica: el gesto expresivo que separa a un guitarrista que 'canta' con el instrumento de uno que sólo pisa trastes.",
+    notas: [
+      { cuerda: 4, traste: 1, tecnica: "b" }, { cuerda: 4, traste: 1 }, { cuerda: 5, traste: 0 },
+      { cuerda: 5, traste: 3 }, { cuerda: 4, traste: 1 }, { cuerda: 5, traste: 0 },
+    ],
+  },
+  {
+    id: "cp-d-11",
+    nombre: "Cascada final en Re (cierre de solo)",
+    tonalidad: "D", raiz: "D", escala: "pentaMayor",
+    tecnica: "cascada descendente (cierre de solo)", dificultad: "intermedio",
+    nota: "Baja desde la séptima hasta la tercera cruzando cuatro cuerdas distintas: el tipo de frase larga y descendente que cierra un solo entero, dejando la última nota (la tercera mayor) colgando sin resolver del todo.",
+    notas: [
+      { cuerda: 4, traste: 0 }, { cuerda: 2, traste: 4 }, { cuerda: 2, traste: 0 },
+      { cuerda: 1, traste: 0 }, { cuerda: 2, traste: 2 }, { cuerda: 2, traste: 0 },
+    ],
+  },
 ];
