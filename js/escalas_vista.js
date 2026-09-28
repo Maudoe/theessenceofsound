@@ -115,7 +115,7 @@ function acordesCompatibles(escalaId, raizSemitono) {
   return [...porRaiz.values()];
 }
 
-let estadoEscalas = { raiz: "A", escala: "eolico", acordeElegido: null, vista: "mastil" };
+let estadoEscalas = { raiz: "A", escala: "eolico", acordeElegido: null, vista: "mastil", posicion: 0 };
 
 /* La secuencia de notas MIDI de la escala, para tocarla y para dibujar
    la partitura: sube del grado 1 hasta la octava y-cuando se pide
@@ -129,6 +129,26 @@ function secuenciaMidiEscala(escalaId, raizSemitono, idaVuelta) {
   const subida = esc.grados.map((g) => raizMidi + g).concat([raizMidi + 12]);
   if (!idaVuelta) return subida;
   return subida.concat(subida.slice(0, -1).reverse());
+}
+
+/* Hace brillar en el mástil, en sincro con el audio, la nota que está
+   sonando en cada instante — el mismo timing que reproducirSecuencia()
+   usa por lo bajo, sólo que acá se dispara sobre el propio DOM en vez
+   de sobre el AudioContext. Resalta TODAS las apariciones de esa clase
+   de altura en el diagrama (no sólo una cuerda), así se ve clarito
+   dónde está esa nota se mire donde se mire. */
+function resaltarSecuenciaEnMastil(contenedor, secuenciaMidi, pasoSeg) {
+  secuenciaMidi.forEach((midi, i) => {
+    const clase = ((midi % 12) + 12) % 12;
+    setTimeout(() => {
+      $$(`[data-clase="${clase}"]`, contenedor).forEach((el) => {
+        el.classList.remove("en-sonido");
+        void el.getBBox(); // reinicia la animación si la misma nota se repite seguida
+        el.classList.add("en-sonido");
+        setTimeout(() => el.classList.remove("en-sonido"), pasoSeg * 950);
+      });
+    }, i * pasoSeg * 1000);
+  });
 }
 
 const RAICES_ESCALA = ["C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab", "A", "Bb", "B"];
@@ -193,6 +213,7 @@ function pintarVistaEscalas() {
       estadoEscalas.escala = b.dataset.escala;
       estadoEscalas.acordeElegido = null;
       estadoEscalas.vista = "mastil";
+      estadoEscalas.posicion = 0;
       pintarDetalleEscala();
       abrirModalEscala();
     });
@@ -245,23 +266,41 @@ function pintarDetalleEscala() {
   const nombreEscala = tesc(escalaId, "nombre", esc.nombre);
 
   const vista = estadoEscalas.vista;
+
+  // las posiciones (cajas) son las mismas para Mástil y Tablatura: el
+  // mástil resalta la caja activa sin perder el resto de la escala de
+  // vista, la tablatura dibuja esa caja puntual.
+  const posiciones = posicionesEscalaGuitarra(esc.grados, raizSemitono, cuerdas);
+  const indicePosicion = Math.min(estadoEscalas.posicion || 0, Math.max(0, posiciones.length - 1));
+  const posicionElegida = posiciones[indicePosicion];
+
   let diagrama = "";
   if (vista === "tablatura") {
-    const caja = cajaEscalaGuitarra(esc.grados, raizSemitono, cuerdas);
-    diagrama = svgTablatura(caja, { alt: `${nombreEscala} en tablatura` });
+    diagrama = svgTablatura(posicionElegida ? posicionElegida.notas : [], { alt: `${nombreEscala} en tablatura` });
   } else if (vista === "partitura") {
     const secuencia = secuenciaMidiEscala(escalaId, raizSemitono, false);
     diagrama = svgPartitura(secuencia, { alt: `${nombreEscala} en partitura` });
   } else {
+    const posicionActiva = posicionElegida
+      ? new Set(posicionElegida.notas.map((n) => `${n.cuerda}-${n.traste}`))
+      : null;
     diagrama = papeles
       ? svgMastil(null, cuerdas, elegido.acorde, {
           nombresCuerdas: nombresCuerdasDe("guitarra", false),
           mostrar: "notas",
           papeles: papeles.papeles,
+          posicionActiva,
           alt: `${nombreEscala} sobre ${elegido.cifrado}`,
         })
       : "";
   }
+
+  const navPosicion = posiciones.length > 1 && vista !== "partitura" ? `
+    <div class="posiciones esc-posiciones-nav">
+      <button class="pos-flecha" id="esc-posicion-anterior" ${indicePosicion === 0 ? "disabled" : ""} title="${t("modalInstrumento.posicionAnterior")}">&lsaquo;</button>
+      <span class="pos-info">${t("escalas.posicionEnMastil")} · ${indicePosicion + 1} ${t("modalInstrumento.de")} ${posiciones.length}</span>
+      <button class="pos-flecha" id="esc-posicion-siguiente" ${indicePosicion === posiciones.length - 1 ? "disabled" : ""} title="${t("modalInstrumento.posicionSiguiente")}">&rsaquo;</button>
+    </div>` : "";
 
   const explicacion = papeles ? explicacionDeEscala(escalaId, elegido.acorde, false) : "";
 
@@ -296,6 +335,7 @@ function pintarDetalleEscala() {
     </div>
     <p class="dic-pista">${t("escalas.pistaMastil")} <b>${elegido.cifrado}</b>.</p>
     ${switchVista}
+    ${navPosicion}
     ${vista === "mastil" && papeles ? leyenda : ""}
     <div class="dic-posicion-svg esc-mastil-completo esc-vista-${vista}">${diagrama}</div>
     ${vista === "mastil" ? `<div class="escala-explica">${explicacion || ""}</div>` : ""}`;
@@ -305,13 +345,25 @@ function pintarDetalleEscala() {
     btnEscuchar.addEventListener("click", async () => {
       btnEscuchar.disabled = true;
       btnEscuchar.classList.add("sonando");
+      const secuencia = secuenciaMidiEscala(escalaId, raizSemitono, true);
+      const pasoSeg = 0.28;
+      if (vista === "mastil") resaltarSecuenciaEnMastil(detalle, secuencia, pasoSeg);
       try {
-        await reproducirSecuencia(secuenciaMidiEscala(escalaId, raizSemitono, true), "guitarra", 0.28);
+        await reproducirSecuencia(secuencia, "guitarra", pasoSeg);
       } finally {
         setTimeout(() => { btnEscuchar.disabled = false; btnEscuchar.classList.remove("sonando"); }, 400);
       }
     });
   }
+
+  const irAPosicion = (delta) => {
+    estadoEscalas.posicion = Math.max(0, Math.min(posiciones.length - 1, indicePosicion + delta));
+    pintarDetalleEscala();
+  };
+  const btnPosAnterior = $("#esc-posicion-anterior", detalle);
+  const btnPosSiguiente = $("#esc-posicion-siguiente", detalle);
+  if (btnPosAnterior) btnPosAnterior.addEventListener("click", () => irAPosicion(-1));
+  if (btnPosSiguiente) btnPosSiguiente.addEventListener("click", () => irAPosicion(1));
 
   $$("[data-vista-escala]", detalle).forEach((b) => {
     b.addEventListener("click", () => {

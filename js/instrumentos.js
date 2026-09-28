@@ -91,15 +91,18 @@ function clasesEsenciales(info) {
    mismo criterio que cualquier patrón de escala de guitarra ("cajas" de
    pentatónica, etc). Sirve tanto para dibujar la tablatura como para
    tocarla: los eventos ya vienen en el orden en que se tocarían. */
-function cajaEscalaGuitarra(gradosSemitonos, raizSemitono, cuerdas, span) {
+function cajaEscalaGuitarra(gradosSemitonos, raizSemitono, cuerdas, span, trasteBaseFijo) {
   span = span || 4;
   const claseSet = new Set(gradosSemitonos.map((g) => (raizSemitono + g) % 12));
 
-  // la caja arranca donde la fundamental cae en la cuerda más grave,
-  // buscando el traste más bajo posible (preferimos posición abierta)
-  let trasteBase = 0;
-  for (let f = 0; f <= 11; f++) {
-    if ((cuerdas[0] + f) % 12 === raizSemitono) { trasteBase = Math.max(0, f - 1); break; }
+  // si no se pide una posición puntual, la caja arranca donde la
+  // fundamental cae en la cuerda más grave (preferimos posición abierta)
+  let trasteBase = trasteBaseFijo;
+  if (trasteBase === undefined) {
+    trasteBase = 0;
+    for (let f = 0; f <= 11; f++) {
+      if ((cuerdas[0] + f) % 12 === raizSemitono) { trasteBase = Math.max(0, f - 1); break; }
+    }
   }
 
   const notas = [];
@@ -111,6 +114,26 @@ function cajaEscalaGuitarra(gradosSemitonos, raizSemitono, cuerdas, span) {
     }
   });
   return notas;
+}
+
+/* Varias cajas a lo largo de todo el mástil — una por cada nota de la
+   escala que cae en la cuerda más grave, igual que los sistemas de
+   "posiciones" que ya conoce cualquier guitarrista (las 5 cajas de la
+   pentatónica, y lo mismo extendido a cualquier escala). */
+function posicionesEscalaGuitarra(gradosSemitonos, raizSemitono, cuerdas, span) {
+  span = span || 4;
+  const clasesEscala = new Set(gradosSemitonos.map((g) => (raizSemitono + g) % 12));
+  const vistas = new Set();
+  const posiciones = [];
+  for (let f = 0; f <= 11; f++) {
+    const clase = (cuerdas[0] + f) % 12;
+    if (!clasesEscala.has(clase)) continue;
+    const trasteBase = Math.max(0, f - 1);
+    if (vistas.has(trasteBase)) continue;
+    vistas.add(trasteBase);
+    posiciones.push({ trasteBase, notas: cajaEscalaGuitarra(gradosSemitonos, raizSemitono, cuerdas, span, trasteBase) });
+  }
+  return posiciones.sort((a, b) => a.trasteBase - b.trasteBase);
 }
 
 /* ---------------- digitaciones de guitarra / bajo ---------------- */
@@ -321,8 +344,12 @@ function svgMastil(digitacion, afinacion, info, opts) {
 
   /* Con una escala elegida el mástil deja de mostrar sólo el acorde y
      pinta la escala entera, cada nota con el color de su papel: base,
-     puente, tensión o resolución. */
+     puente, tensión o resolución. Si además viene una posición activa
+     (posicionActiva: un Set de "cuerda-traste"), las notas que no son de
+     esa caja se atenúan — así se ve en qué zona del mástil estás parado
+     sin perder la vista completa de la escala. */
   const papeles = opts.papeles || null;
+  const posicionActiva = opts.posicionActiva || null;
 
   for (let c = 0; c < cuerdas; c++) {
     for (let f = 0; f <= TRASTES_VISIBLES; f++) {
@@ -333,11 +360,12 @@ function svgMastil(digitacion, afinacion, info, opts) {
         const papel = papeles[clase];
         if (!papel) continue;
         const esRaiz = clase === info.raiz;
+        const enPosicion = !posicionActiva || posicionActiva.has(`${c}-${f}`);
         partes.push(
-          `<circle cx="${xDeTraste(f)}" cy="${yDeCuerda(c)}" r="${esRaiz ? 8 : 7}" class="mast-grado p-${papel}${esRaiz ? " es-raiz" : ""}"/>`
+          `<circle cx="${xDeTraste(f)}" cy="${yDeCuerda(c)}" r="${esRaiz ? 8 : 7}" data-clase="${clase}" class="mast-grado p-${papel}${esRaiz ? " es-raiz" : ""}${enPosicion ? "" : " fuera-posicion"}"/>`
         );
         partes.push(
-          `<text x="${xDeTraste(f)}" y="${yDeCuerda(c) + 2.6}" class="mast-grado-texto">${opts.mostrar === "grados" ? gradoDe(clase) : nombreDe(clase)}</text>`
+          `<text x="${xDeTraste(f)}" y="${yDeCuerda(c) + 2.6}" class="mast-grado-texto${enPosicion ? "" : " fuera-posicion"}">${opts.mostrar === "grados" ? gradoDe(clase) : nombreDe(clase)}</text>`
         );
       } else {
         if (!info.set.has(clase)) continue;

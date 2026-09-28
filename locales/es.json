@@ -227,6 +227,7 @@
       "vistaMastil": "Mástil",
       "vistaPartitura": "Partitura",
       "vistaTablatura": "Tablatura",
+      "posicionEnMastil": "Posición en el mástil",
       "categorias": {
         "mayores": "Modos mayores",
         "menores": "Modos menores",

@@ -2942,7 +2942,8 @@
       "escucharEscala": "Listen to the scale",
       "vistaMastil": "Fretboard",
       "vistaPartitura": "Sheet music",
-      "vistaTablatura": "Tab"
+      "vistaTablatura": "Tab",
+      "posicionEnMastil": "Position on the fretboard"
     },
     "identificar": {
       "intro": "Play the notes you're using on the fretboard — mark each fret you're pressing — and I'll tell you what chord it is. Then I'll show you which chords you can move to next, not just back to the tonic.",

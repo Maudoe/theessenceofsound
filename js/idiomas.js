@@ -231,6 +231,7 @@ const IDIOMAS = {
         "vistaMastil": "Mástil",
         "vistaPartitura": "Partitura",
         "vistaTablatura": "Tablatura",
+        "posicionEnMastil": "Posición en el mástil",
         "categorias": {
           "mayores": "Modos mayores",
           "menores": "Modos menores",
@@ -6034,7 +6035,8 @@ const IDIOMAS = {
         "escucharEscala": "Listen to the scale",
         "vistaMastil": "Fretboard",
         "vistaPartitura": "Sheet music",
-        "vistaTablatura": "Tab"
+        "vistaTablatura": "Tab",
+        "posicionEnMastil": "Position on the fretboard"
       },
       "identificar": {
         "intro": "Play the notes you're using on the fretboard — mark each fret you're pressing — and I'll tell you what chord it is. Then I'll show you which chords you can move to next, not just back to the tonic.",
@@ -9119,6 +9121,11 @@ const IDIOMAS = {
         "sinSugerencias": "ไม่พบคอร์ดในรายการนี้ที่เข้ากับสเกลนี้โดยเฉพาะ",
         "transportarAbajo": "ลดครึ่งเสียง",
         "transportarArriba": "เพิ่มครึ่งเสียง",
+        "escucharEscala": "ฟังสเกลนี้",
+        "vistaMastil": "คอกีตาร์",
+        "vistaPartitura": "โน้ตสากล",
+        "vistaTablatura": "แท็บ",
+        "posicionEnMastil": "ตำแหน่งบนคอกีตาร์",
         "categorias": {
           "mayores": "โมด major",
           "menores": "โมด minor",

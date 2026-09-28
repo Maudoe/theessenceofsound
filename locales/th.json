@@ -2943,6 +2943,7 @@
       "vistaMastil": "คอกีตาร์",
       "vistaPartitura": "โน้ตสากล",
       "vistaTablatura": "แท็บ",
+      "posicionEnMastil": "ตำแหน่งบนคอกีตาร์",
       "categorias": {
         "mayores": "โมด major",
         "menores": "โมด minor",

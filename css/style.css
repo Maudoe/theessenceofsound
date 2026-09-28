@@ -952,12 +952,15 @@ body::before {
 .ctrl select option { background: #14131c; color: var(--blanco); }
 .modal-controles .etiqueta-tabs { margin-left: auto; }
 
-/* ---- los cuatro papeles de una nota dentro de la escala ---- */
+/* ---- los cuatro papeles de una nota dentro de la escala ----
+   Misma paleta que el resto del sitio (cian/violeta/rosa), no colores
+   sueltos — antes eran verde/celeste/crimson/dorado y desentonaban con
+   el resto de la interfaz. */
 :root {
-  --p-base: #4ade80;       /* verde: notas del acorde */
-  --p-puente: #5bc8f5;     /* celeste: notas de paso */
-  --p-tension: #dc143c;    /* crimson: la que choca */
-  --p-resolucion: #ffc94a; /* dorado: a dónde resuelve */
+  --p-base: var(--acento);        /* cian: notas del acorde, el color de siempre */
+  --p-puente: var(--violeta);     /* violeta: notas de paso */
+  --p-tension: var(--rosa);       /* rosa: la que choca */
+  --p-resolucion: var(--acento-claro); /* cian claro: a dónde resuelve */
 }
 .mast-grado { stroke: rgba(0, 0, 0, 0.5); stroke-width: 0.6; }
 .mast-grado.p-base { fill: var(--p-base); }
@@ -968,6 +971,21 @@ body::before {
 .mast-grado-texto {
   fill: #0b0a12; font-size: 6.5px; font-weight: 700;
   text-anchor: middle; font-family: "Space Grotesk", sans-serif;
+}
+.mast-grado.fuera-posicion, .mast-grado-texto.fuera-posicion {
+  opacity: 0.16; transition: opacity 200ms ease;
+}
+.mast-grado, .mast-grado-texto { transition: opacity 200ms ease; }
+/* la nota que está sonando en este instante, mientras tocás "Escuchar" */
+.mast-grado.en-sonido {
+  opacity: 1 !important;
+  stroke: var(--blanco); stroke-width: 2px;
+  filter: drop-shadow(0 0 7px rgba(255, 255, 255, 0.85));
+  animation: sh-nota-sonando 320ms ease-out;
+}
+@keyframes sh-nota-sonando {
+  0% { r: 11; }
+  100% { r: 8; }
 }
 .tecla.activa.p-base { fill: var(--p-base); }
 .tecla.activa.p-puente { fill: var(--p-puente); }
@@ -1664,6 +1682,7 @@ body.loader-activo { overflow: hidden; height: 100vh; }
 .esc-transportar:hover { border-color: var(--acento); color: var(--acento); }
 .esc-modal-cuerpo { padding-right: 4px; }
 .esc-vista-switch { display: flex; gap: 6px; margin: 16px 0 10px; }
+.esc-posiciones-nav { margin: 4px 0 14px; }
 .esc-vista-mastil, .esc-vista-partitura, .esc-vista-tablatura { margin-top: 4px; }
 
 /* ---------------- partitura y tablatura ---------------- */

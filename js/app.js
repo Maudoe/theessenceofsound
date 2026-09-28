@@ -619,6 +619,19 @@ function mostrarComoTocarConEmocion(cifrado, emocionId) {
   pintarColorEmocional();
 }
 
+/* En Mapas armónicos, fijar un acorde (click o Enter sobre un nodo del
+   grafo o de la rueda) además de abrir el modal lo hace sonar una vez
+   con piano — así se escucha cómo queda antes de mirar la digitación.
+   Sólo acá: el resto de las secciones (Diccionario, Identificar,
+   Escalas, Emociones) siguen abriendo el modal en silencio. */
+function alFijarNodoConPreviewPiano(cifrado) {
+  mostrarComoTocar(cifrado);
+  if (!cifrado || !instrumento.diagramas || typeof reproducirAcorde !== "function") return;
+  const clases = instrumento.diagramas.info ? instrumento.diagramas.info.clases : [];
+  const notasMidi = notasMidiDesdeNombres(clases.map((c) => NOTAS_SOSTENIDOS[c]), 60);
+  reproducirAcorde(notasMidi, "piano");
+}
+
 
 
 /* ============ los símbolos de las cartas ============
@@ -901,7 +914,7 @@ function iniciar() {
   if (typeof pintarIdentificar === "function") pintarIdentificar();
   if (typeof pintarVistaEmociones === "function") pintarVistaEmociones();
   if (typeof setExploradorDeRueda === "function") setExploradorDeRueda(mostrarMovimientos);
-  if (typeof setFijadorDeRueda === "function") setFijadorDeRueda(mostrarComoTocar);
+  if (typeof setFijadorDeRueda === "function") setFijadorDeRueda(alFijarNodoConPreviewPiano);
 
   $$(".inst-tab", $("#instrumento-tabs")).forEach((tab) => {
     tab.addEventListener("click", () => {
