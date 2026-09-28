@@ -94,6 +94,20 @@ function calidadDesdeNombreDeModo(texto) {
   return null;
 }
 
+/* ¿"s" es de verdad un cifrado (raíz + una calidad conocida), y no un
+   texto que arranca casualmente con una letra A-G ("Eje Tónica" arranca
+   con "E", pero no es la nota Mi)? Mismo criterio que parsearAcorde
+   usa después, pero sin construir el acorde entero — sólo para decidir
+   si conviene mirar en el paréntesis en vez de creerle a esto. */
+function raizYCalidadValidas(s) {
+  const m = String(s).match(/^([A-Ga-g])([#b]?)(.*)$/);
+  if (!m) return false;
+  const raiz = m[1].toUpperCase() + m[2];
+  if (!(raiz in INDICE_NOTA)) return false;
+  const resto = m[3].trim().replace(/\([^)]*\)\s*$/, "").trim();
+  return CALIDADES.some(([suf]) => resto === suf || (suf !== "" && resto.startsWith(suf)));
+}
+
 /* Extrae el primer cifrado "parseable" de un string que puede traer
    anotaciones en español entre paréntesis, ej: "C (Jónico)" o
    "Fm6 (Subdominante menor)". */
@@ -112,13 +126,42 @@ function extraerCifrado(bruto) {
     if (/^[A-Ga-g][#b]?$/.test(s)) {
       const calidad = calidadDesdeNombreDeModo(notaAlt);
       if (calidad !== null) s = s + calidad;
+    } else if (!raizYCalidadValidas(s)) {
+      // el texto de afuera no es un cifrado de verdad — es análisis en
+      // números romanos ("I7", "ii", "bIIIo"), o una etiqueta que por
+      // casualidad arranca con una letra A-G ("Eje Tónica", "Escala…")
+      // — pero el cifrado real suele estar escrito adentro del
+      // paréntesis. Si el primer término ahí adentro (separado por
+      // coma, para listas tipo "C, Am, Dm") es un cifrado de verdad, es
+      // ÉSE el acorde que hay que tocar.
+      const primerTermino = notaAlt.split(",")[0].trim();
+      if (raizYCalidadValidas(primerTermino)) s = primerTermino;
     }
   }
   return { texto: s, notaAlt };
 }
 
+/* Algunos mapas de armonía cuartal o de clústers no escriben un cifrado
+   con raíz+calidad — escriben la voicing entera, nota por nota, unida
+   con guiones: "E-A-D-G" (cuartas apiladas), "C-C#-D" (clúster). No es
+   un acorde con nombre, así que no pasa por CALIDADES: se arma directo
+   con esas notas tal cual están escritas. */
+function parsearListaDeNotas(cifradoBruto) {
+  const partes = String(cifradoBruto).trim().split("-").map((p) => p.trim());
+  if (partes.length < 2) return null;
+  if (!partes.every((p) => /^[A-G][#b]?$/.test(p) && p in INDICE_NOTA)) return null;
+  const raiz = partes[0];
+  return {
+    raiz, calidad: "", notas: partes, bajo: null,
+    esMenor: false, esDominante: false, esDisminuido: false, esAumentado: false, esSus: false,
+  };
+}
+
 /* Parsea un cifrado tipo "Dm7", "Ab7#11", "G13(b9)", "C/E", "Cmaj7". */
 function parsearAcorde(cifradoBruto) {
+  const listaDeNotas = parsearListaDeNotas(cifradoBruto);
+  if (listaDeNotas) return listaDeNotas;
+
   const ext = extraerCifrado(cifradoBruto);
   if (!ext) return null;
   let { texto } = ext;
