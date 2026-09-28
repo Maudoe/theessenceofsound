@@ -1849,14 +1849,13 @@ body.loader-activo { overflow: hidden; height: 100vh; }
   .emo-progresion-flecha { transform: rotate(90deg); }
 }
 
-/* ---------------- identificar acorde: espectro (rueda de quintas) ---------------- */
-.id-espectro-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 22px; align-items: start; margin: 20px 0; }
-.id-rueda-bloque { margin: 0; }
-.id-rueda-svg { margin-top: 6px; max-width: 340px; }
-@media (max-width: 900px) {
-  .id-espectro-grid { grid-template-columns: 1fr; }
-  .id-rueda-svg { max-width: 300px; margin-inline: auto; }
-}
+/* ---------------- identificar acorde: espectro (rueda de quintas) ----------------
+   Antes iba chica, al costado de las sugerencias — quedaba apretada.
+   Ahora es un botón que abre el círculo de quintas en su propio modal,
+   grande y en primer plano, mismo mecanismo que "Cómo tocar". */
+.id-ver-espectro { margin: 18px 0 4px; }
+.modal-espectro-caja { width: min(720px, 100%); }
+.id-rueda-svg-modal { width: 100%; height: auto; display: block; margin-top: 10px; }
 
 /* ---------------- cursor propio ---------------- */
 body {

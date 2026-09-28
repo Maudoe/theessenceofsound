@@ -2958,7 +2958,9 @@
       "pistaSeguir": "Not just the tonic: these are other chords with a real relationship to the one you played.",
       "sinSugerencias": "I couldn't find a known relationship from this chord.",
       "espectro": "Spectrum",
-      "pistaEspectro": "The same movement, on the circle of fifths."
+      "pistaEspectro": "The same movement, on the circle of fifths.",
+      "verEspectro": "View spectrum",
+      "cerrarEspectro": "Close spectrum"
     },
     "emocionesVista": {
       "intro": "Pick the emotion you want to convey and a root, and I'll show you which version of that chord (major, minor and dominant) gives it that color, with the scales that go on top of each one. It's the chords section in reverse: instead of starting from a chord symbol, you start from the feeling.",

@@ -258,7 +258,9 @@ const IDIOMAS = {
         "pistaSeguir": "No sólo la tónica: estos son otros acordes que tienen una relación real con el que tocaste.",
         "sinSugerencias": "No encontré una relación conocida desde este acorde.",
         "espectro": "Espectro",
-        "pistaEspectro": "El mismo movimiento, en el círculo de quintas."
+        "pistaEspectro": "El mismo movimiento, en el círculo de quintas.",
+        "verEspectro": "Ver espectro",
+        "cerrarEspectro": "Cerrar espectro"
       },
       "emocionesVista": {
         "intro": "Elegí qué emoción querés transmitir y una tónica, y te muestro qué versión de ese acorde (mayor, menor y dominante) le da ese color, con las escalas que van arriba de cada una. Es la sección de acordes al revés: en vez de partir de un cifrado, partís de la sensación.",
@@ -6085,7 +6087,9 @@ const IDIOMAS = {
         "pistaSeguir": "Not just the tonic: these are other chords with a real relationship to the one you played.",
         "sinSugerencias": "I couldn't find a known relationship from this chord.",
         "espectro": "Spectrum",
-        "pistaEspectro": "The same movement, on the circle of fifths."
+        "pistaEspectro": "The same movement, on the circle of fifths.",
+        "verEspectro": "View spectrum",
+        "cerrarEspectro": "Close spectrum"
       },
       "emocionesVista": {
         "intro": "Pick the emotion you want to convey and a root, and I'll show you which version of that chord (major, minor and dominant) gives it that color, with the scales that go on top of each one. It's the chords section in reverse: instead of starting from a chord symbol, you start from the feeling.",

@@ -220,24 +220,35 @@ function pintarResultadoIdentificar() {
       <p class="dic-detalle-notas"><b>${t("diccionario.notas")}:</b> ${notas}</p>
       ${otros.length ? `<p class="id-tambien">${t("identificar.tambien")} ${otros.map((o) => o.cifrado).join(" · ")}</p>` : ""}
     </div>
-    <div class="id-espectro-grid">
-      <div class="esc-acordes-bloque">
-        <div class="bloque-titulo">${t("identificar.paraSeguir")}</div>
-        <p class="bloque-pista">${t("identificar.pistaSeguir")}</p>
-        <div class="dic-tarjetas">${chipsSugerencias}</div>
-      </div>
-      <div class="id-rueda-bloque">
-        <div class="bloque-titulo">${t("identificar.espectro")}</div>
-        <p class="bloque-pista">${t("identificar.pistaEspectro")}</p>
-        <svg id="id-rueda-svg" class="sh-svg id-rueda-svg"></svg>
-      </div>
-    </div>`;
+    <div class="esc-acordes-bloque">
+      <div class="bloque-titulo">${t("identificar.paraSeguir")}</div>
+      <p class="bloque-pista">${t("identificar.pistaSeguir")}</p>
+      <div class="dic-tarjetas">${chipsSugerencias}</div>
+    </div>
+    <button class="btn-escuchar id-ver-espectro" id="btn-ver-espectro" type="button">
+      <span class="btn-escuchar-icono">◎</span>
+      <span>${t("identificar.verEspectro")}</span>
+    </button>`;
 
   $$(".tarjeta-acorde-chica, .id-principal-cifrado", cont).forEach((el) => {
     el.addEventListener("click", () => mostrarComoTocar(el.dataset.cifrado));
   });
 
+  // se guarda para cuando se abra el modal (puede pasar bastante
+  // después de tipear el acorde, así que no conviene pintar la rueda
+  // hasta que de verdad se vaya a mostrar)
+  estadoIdentificar.ultimoEspectro = { principal, sugerencias };
+  const btnEspectro = $("#btn-ver-espectro", cont);
+  if (btnEspectro) btnEspectro.addEventListener("click", abrirModalEspectro);
+}
+
+function abrirModalEspectro() {
+  const modal = $("#modal-espectro");
+  if (!modal || !estadoIdentificar.ultimoEspectro) return;
+  const { principal, sugerencias } = estadoIdentificar.ultimoEspectro;
   pintarRuedaIdentificar(principal, sugerencias);
+  modal.hidden = false;
+  requestAnimationFrame(() => modal.classList.add("abierto"));
 }
 
 /* Colores por palabra clave: como las etiquetas de sugerirSiguientes()

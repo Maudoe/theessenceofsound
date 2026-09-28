@@ -1068,6 +1068,21 @@ function iniciar() {
     });
   }
 
+  const modalEspectro = $("#modal-espectro");
+  if (modalEspectro) {
+    const cerrarEspectro = () => {
+      modalEspectro.classList.remove("abierto");
+      setTimeout(() => { modalEspectro.hidden = true; }, 200);
+    };
+    $("#btn-cerrar-espectro").addEventListener("click", cerrarEspectro);
+    modalEspectro.addEventListener("click", (ev) => {
+      if (ev.target === modalEspectro) cerrarEspectro();
+    });
+    document.addEventListener("keydown", (ev) => {
+      if (ev.key === "Escape" && !modalEspectro.hidden) cerrarEspectro();
+    });
+  }
+
   $("#sel-tonica").addEventListener("change", (e) => {
     estado.tonica = e.target.value;
     dibujarGrafoYRecorrido();
