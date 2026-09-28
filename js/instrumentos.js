@@ -281,8 +281,24 @@ const TRASTES_VISIBLES = 12;
 const MARCAS_MASTIL = [3, 5, 7, 9];
 
 /* Si el mismo traste (que no sea al aire) aparece en tres cuerdas o más,
-   es cejilla — un dedo cruzado, no varios dedos sueltos. Devuelve el
-   traste y qué cuerdas cruza, o null si esta digitación no tiene. */
+   PUEDE ser cejilla — un dedo cruzado, no varios dedos sueltos — pero
+   sólo si es una cejilla de verdad y no una coincidencia de la búsqueda
+   de digitaciones (que no sabe nada de dedos, sólo de qué trastes suenan
+   bien). Dos condiciones tienen que cumplirse las dos:
+
+   1. Las cuerdas tienen que ser un tramo CONTIGUO. El dedo de la cejilla
+      es recto sobre el diapasón: no puede cruzar la 6ta y la 2da cuerda
+      y saltearse las del medio.
+   2. Ninguna otra nota pisada, en NINGUNA cuerda, puede estar en un
+      traste más cerca de la cejuela que la cejilla. El dedo de la
+      cejilla, apoyado, tapa físicamente el paso a cualquier traste más
+      bajo — no hay forma de que otro dedo llegue ahí.
+
+   Sin esto, la búsqueda de digitaciones armaba cosas como "cejilla en el
+   traste 8 en las cuerdas 1/5/6, con la cuerda 2 pisada en el traste 6" —
+   una posición que no se puede tocar. Si no se cumplen las dos, se
+   dibuja como dedos sueltos (que sí es honesto: son notas válidas del
+   acorde, aunque la forma de tocarlas no sea con una cejilla). */
 function detectarCejilla(trastes) {
   const porTraste = new Map();
   trastes.forEach((f, c) => {
@@ -292,9 +308,13 @@ function detectarCejilla(trastes) {
   });
   let mejor = null;
   porTraste.forEach((cuerdas, traste) => {
-    if (cuerdas.length >= 3 && (!mejor || cuerdas.length > mejor.cuerdas.length)) {
-      mejor = { traste, cuerdas };
-    }
+    if (cuerdas.length < 3) return;
+    const ordenadas = [...cuerdas].sort((a, b) => a - b);
+    const contiguas = ordenadas.every((c, i) => i === 0 || c === ordenadas[i - 1] + 1);
+    if (!contiguas) return;
+    const hayNotaMasCercaDeLaCejuela = trastes.some((f2) => f2 !== null && f2 > 0 && f2 < traste);
+    if (hayNotaMasCercaDeLaCejuela) return;
+    if (!mejor || ordenadas.length > mejor.cuerdas.length) mejor = { traste, cuerdas: ordenadas };
   });
   return mejor;
 }
