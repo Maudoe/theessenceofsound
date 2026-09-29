@@ -11,6 +11,45 @@
    canta. */
 
 const ESTILOS = {
+  jazz: {
+    nombre: "Jazz",
+    resumen: "El ii-V-I en todas sus formas, acordes de cuatro notas para arriba, y una escala distinta para cada función del acorde.",
+    acento: "#e0954f",
+    tonalidadEjemplo: "C",
+    progresiones: [
+      { grados: "ii7 – V7 – Imaj7", ejemplo: "Dm7 – G7 – Cmaj7", nota: "El motor de casi todo el repertorio: la raíz baja una cuarta (o sube una quinta) dos veces seguidas. Aprendé a reconocer este movimiento y vas a encontrarlo escondido en canciones que no parecen jazz." },
+      { grados: "iiø7 – V7alt – im(maj7)", ejemplo: "Dm7b5 – G7alt – Cm(maj7)", nota: "El mismo ii-V pero resolviendo a un tono menor: el ii se achica a semidisminuido, el V se llena de alteraciones (b9, #9, #5), y la tónica usa la séptima mayor de la menor armónica — el sonido de un tema triste de jazz clásico." },
+      { grados: "Imaj7 – vi7 – ii7 – V7", ejemplo: "Cmaj7 – Am7 – Dm7 – G7", nota: "El turnaround de toda la vida (el de 'I Got Rhythm'): dos ii-V encadenados que te devuelven al I. Sirve para rellenar un compás entero de tónica sin que se sienta estático." },
+    ],
+    acordes: ["Cmaj7", "Dm7", "G7", "Em7", "Am7", "Fmaj7", "Dm7b5", "G7alt"],
+    escalas: ["dorico", "bebopDominante", "alterada", "menorMelodica", "bebopMayor"],
+    transiciones: [
+      { de: "ii7", a: "V7", como: "Resolución por cuarta (el ii-V)", porque: "La raíz sube una cuarta justa — el movimiento de raíz más fuerte que existe en la tonalidad. Es el mismo gesto del V-I clásico, sólo que un escalón antes." },
+      { de: "V7", a: "Imaj7", como: "Cruce de voces guía (3ra y 7ma)", porque: "La 3ra del V7 (B en G7) sube un semitono a la fundamental del I, y la 7ma del V7 (F) baja un semitono a la 3ra del I (E): dos notas que casi no se mueven resuelven todo el acorde. Es el motivo por el que un ii-V-I 'engancha' al oído sin esfuerzo." },
+      { de: "V7", a: "bII7", como: "Sustitución tritonal", porque: "bII7 comparte las mismas 3ra y 7ma que V7 (invertidas) porque están a un tritono de distancia — así que resuelve exactamente igual de bien, pero baja por semitono en vez de subir por cuarta. Es el recurso de reharmonización más usado del jazz." },
+    ],
+    licks: [
+      {
+        nombre: "Corrida bebop descendente sobre G7 (el V del ii-V-I)",
+        escala: "bebopDominante", raiz: "G",
+        nota: "La escala bebop dominante completa bajando de la 7ma a la fundamental: tiene una nota cromática de más (el F#, entre la b7 y la 6ta) puesta ahí a propósito para que los tiempos fuertes caigan siempre en una nota del acorde al tocar en corcheas — el mismo truco que usaban los boppers de los 40 para que las escaleras sonaran 'derechas' encima del swing.",
+        notas: [
+          { cuerda: 4, traste: 0 }, { cuerda: 1, traste: 0 }, { cuerda: 3, traste: 0 }, { cuerda: 0, traste: 2 },
+          { cuerda: 0, traste: 1 }, { cuerda: 0, traste: 0 }, { cuerda: 2, traste: 0 }, { cuerda: 1, traste: 3 },
+        ],
+      },
+      {
+        nombre: "Arpegio dórico con color sobre Dm7 (el ii)",
+        escala: "dorico", raiz: "D",
+        nota: "Un arpegio de Dm7 (D-F-A-C) que en la vuelta agrega la 6ta mayor (B): esa nota es la que distingue al dórico del menor natural, y es justamente la que hace que un Dm7 en jazz suene 'abierto' en vez de simplemente triste.",
+        notas: [
+          { cuerda: 2, traste: 0 }, { cuerda: 2, traste: 3 }, { cuerda: 1, traste: 0 }, { cuerda: 1, traste: 3 },
+          { cuerda: 4, traste: 0 }, { cuerda: 1, traste: 0 }, { cuerda: 2, traste: 3 }, { cuerda: 2, traste: 0 },
+        ],
+      },
+    ],
+  },
+
   pop: {
     nombre: "Pop",
     resumen: "Cuatro acordes que ya te sabés, y todo el trabajo puesto en que la melodía entre a la primera.",

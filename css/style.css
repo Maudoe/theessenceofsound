@@ -1352,12 +1352,12 @@ body::before {
 .grilla-estilos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 26px;
-  max-width: 1180px;
+  gap: 24px;
+  max-width: 1300px;
 }
 @media (min-width: 900px) {
-  /* tres por fila: las seis quedan 3+3 y ninguna huérfana */
-  .grilla-estilos { grid-template-columns: repeat(3, 1fr); }
+  /* cuatro por fila: las siete quedan 4+3, ninguna huérfana */
+  .grilla-estilos { grid-template-columns: repeat(4, 1fr); }
 }
 .carta-tarot {
   position: relative;

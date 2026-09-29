@@ -1399,6 +1399,45 @@ const IDIOMAS = {
       }
     },
     "estilos": {
+      "jazz": {
+        "nombre": "Jazz",
+        "resumen": "El ii-V-I en todas sus formas, acordes de cuatro notas para arriba, y una escala distinta para cada función del acorde.",
+        "progresiones": [
+          {
+            "nota": "El motor de casi todo el repertorio: la raíz baja una cuarta (o sube una quinta) dos veces seguidas. Aprendé a reconocer este movimiento y vas a encontrarlo escondido en canciones que no parecen jazz."
+          },
+          {
+            "nota": "El mismo ii-V pero resolviendo a un tono menor: el ii se achica a semidisminuido, el V se llena de alteraciones (b9, #9, #5), y la tónica usa la séptima mayor de la menor armónica — el sonido de un tema triste de jazz clásico."
+          },
+          {
+            "nota": "El turnaround de toda la vida (el de 'I Got Rhythm'): dos ii-V encadenados que te devuelven al I. Sirve para rellenar un compás entero de tónica sin que se sienta estático."
+          }
+        ],
+        "transiciones": [
+          {
+            "como": "Resolución por cuarta (el ii-V)",
+            "porque": "La raíz sube una cuarta justa — el movimiento de raíz más fuerte que existe en la tonalidad. Es el mismo gesto del V-I clásico, sólo que un escalón antes."
+          },
+          {
+            "como": "Cruce de voces guía (3ra y 7ma)",
+            "porque": "La 3ra del V7 (B en G7) sube un semitono a la fundamental del I, y la 7ma del V7 (F) baja un semitono a la 3ra del I (E): dos notas que casi no se mueven resuelven todo el acorde. Es el motivo por el que un ii-V-I 'engancha' al oído sin esfuerzo."
+          },
+          {
+            "como": "Sustitución tritonal",
+            "porque": "bII7 comparte las mismas 3ra y 7ma que V7 (invertidas) porque están a un tritono de distancia — así que resuelve exactamente igual de bien, pero baja por semitono en vez de subir por cuarta. Es el recurso de reharmonización más usado del jazz."
+          }
+        ],
+        "licks": [
+          {
+            "nombre": "Corrida bebop descendente sobre G7 (el V del ii-V-I)",
+            "nota": "La escala bebop dominante completa bajando de la 7ma a la fundamental: tiene una nota cromática de más (el F#, entre la b7 y la 6ta) puesta ahí a propósito para que los tiempos fuertes caigan siempre en una nota del acorde al tocar en corcheas — el mismo truco que usaban los boppers de los 40 para que las escaleras sonaran 'derechas' encima del swing."
+          },
+          {
+            "nombre": "Arpegio dórico con color sobre Dm7 (el ii)",
+            "nota": "Un arpegio de Dm7 (D-F-A-C) que en la vuelta agrega la 6ta mayor (B): esa nota es la que distingue al dórico del menor natural, y es justamente la que hace que un Dm7 en jazz suene 'abierto' en vez de simplemente triste."
+          }
+        ]
+      },
       "pop": {
         "nombre": "Pop",
         "resumen": "Cuatro acordes que ya te sabés, y todo el trabajo puesto en que la melodía entre a la primera.",
@@ -5627,6 +5666,45 @@ const IDIOMAS = {
           {
             "nombre": "Phrygian dominant descent",
             "nota": "Descending the scale puts the minor second right before the tonic, and that descending half step is the mode's strongest resolution. The minor sixth and major third form an augmented second that appears when crossing strings."
+          }
+        ]
+      },
+      "jazz": {
+        "nombre": "Jazz",
+        "resumen": "The ii-V-I in every shape it comes in, four-note chords and up, and a different scale for each chord function.",
+        "progresiones": [
+          {
+            "nota": "The engine behind most of the repertoire: the root drops a fourth (or rises a fifth) twice in a row. Learn to spot this motion and you'll find it hiding inside songs that don't even sound like jazz."
+          },
+          {
+            "nota": "The same ii-V but resolving to a minor key: the ii shrinks to half-diminished, the V fills up with alterations (b9, #9, #5), and the tonic borrows the major 7th from harmonic minor — the sound of a classic sad jazz standard."
+          },
+          {
+            "nota": "The turnaround from \"I Got Rhythm\": two ii-Vs chained together that bring you back to the I. Good for filling a whole bar of tonic without it feeling static."
+          }
+        ],
+        "transiciones": [
+          {
+            "como": "Resolution by a fourth (the ii-V)",
+            "porque": "The root rises a perfect fourth — the strongest root motion that exists within a key. It's the same gesture as the classic V-I, just one step earlier."
+          },
+          {
+            "como": "Crossing guide tones (3rd and 7th)",
+            "porque": "The 3rd of the V7 (B in G7) rises a half step to the root of the I, and the 7th of the V7 (F) falls a half step to the 3rd of the I (E): two notes that barely move resolve the whole chord. That's why a ii-V-I hooks the ear so effortlessly."
+          },
+          {
+            "como": "Tritone substitution",
+            "porque": "bII7 shares the same 3rd and 7th as V7 (flipped around), because they're a tritone apart — so it resolves just as well, but falls by a half step instead of rising a fourth. The most-used reharmonization trick in jazz."
+          }
+        ],
+        "licks": [
+          {
+            "nombre": "Descending bebop run over G7 (the V of the ii-V-I)",
+            "nota": "The full bebop dominant scale coming down from the 7th to the root: it has one extra chromatic note (the F#, between the b7 and the 6th) placed there on purpose so the strong beats always land on a chord tone when played in eighth notes — the same trick the boppers of the '40s used to make their scale runs sit \"straight\" over the swing."
+          },
+          {
+            "nombre": "Colorful dorian arpeggio over Dm7 (the ii)",
+            "nota": "A Dm7 arpeggio (D-F-A-C) that adds the major 6th (B) on the way back: that note is what separates dorian from the natural minor, and it's exactly what makes a Dm7 sound \"open\" in jazz instead of just sad."
           }
         ]
       }

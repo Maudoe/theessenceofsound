@@ -2413,6 +2413,45 @@
           "nota": "Descending the scale puts the minor second right before the tonic, and that descending half step is the mode's strongest resolution. The minor sixth and major third form an augmented second that appears when crossing strings."
         }
       ]
+    },
+    "jazz": {
+      "nombre": "Jazz",
+      "resumen": "The ii-V-I in every shape it comes in, four-note chords and up, and a different scale for each chord function.",
+      "progresiones": [
+        {
+          "nota": "The engine behind most of the repertoire: the root drops a fourth (or rises a fifth) twice in a row. Learn to spot this motion and you'll find it hiding inside songs that don't even sound like jazz."
+        },
+        {
+          "nota": "The same ii-V but resolving to a minor key: the ii shrinks to half-diminished, the V fills up with alterations (b9, #9, #5), and the tonic borrows the major 7th from harmonic minor — the sound of a classic sad jazz standard."
+        },
+        {
+          "nota": "The turnaround from \"I Got Rhythm\": two ii-Vs chained together that bring you back to the I. Good for filling a whole bar of tonic without it feeling static."
+        }
+      ],
+      "transiciones": [
+        {
+          "como": "Resolution by a fourth (the ii-V)",
+          "porque": "The root rises a perfect fourth — the strongest root motion that exists within a key. It's the same gesture as the classic V-I, just one step earlier."
+        },
+        {
+          "como": "Crossing guide tones (3rd and 7th)",
+          "porque": "The 3rd of the V7 (B in G7) rises a half step to the root of the I, and the 7th of the V7 (F) falls a half step to the 3rd of the I (E): two notes that barely move resolve the whole chord. That's why a ii-V-I hooks the ear so effortlessly."
+        },
+        {
+          "como": "Tritone substitution",
+          "porque": "bII7 shares the same 3rd and 7th as V7 (flipped around), because they're a tritone apart — so it resolves just as well, but falls by a half step instead of rising a fourth. The most-used reharmonization trick in jazz."
+        }
+      ],
+      "licks": [
+        {
+          "nombre": "Descending bebop run over G7 (the V of the ii-V-I)",
+          "nota": "The full bebop dominant scale coming down from the 7th to the root: it has one extra chromatic note (the F#, between the b7 and the 6th) placed there on purpose so the strong beats always land on a chord tone when played in eighth notes — the same trick the boppers of the '40s used to make their scale runs sit \"straight\" over the swing."
+        },
+        {
+          "nombre": "Colorful dorian arpeggio over Dm7 (the ii)",
+          "nota": "A Dm7 arpeggio (D-F-A-C) that adds the major 6th (B) on the way back: that note is what separates dorian from the natural minor, and it's exactly what makes a Dm7 sound \"open\" in jazz instead of just sad."
+        }
+      ]
     }
   },
   "emociones": {
