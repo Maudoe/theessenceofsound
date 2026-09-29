@@ -486,6 +486,14 @@ body::before {
   border-radius: 20px;
   padding: 10px;
   box-shadow: var(--sombra);
+  /* el SVG (viewBox 720×720) escala al 100% de este contenedor — en una
+     pantalla ancha, la columna del gráfico (que en .detalle-cuerpo se
+     lleva todo el espacio sobrante) podía superar los 1500px y el mapa
+     quedaba gigante. Con un tope queda grande y legible sin comerse
+     toda la pantalla, y en mobile sigue encogiendo normal porque el
+     100% sigue funcionando por debajo del tope. */
+  max-width: 640px;
+  margin: 0 auto;
 }
 .sh-svg { width: 100%; height: auto; display: block; }
 
