@@ -680,6 +680,16 @@ function alFijarNodoConPreviewPiano(cifrado) {
    acordes del pop, los doce compases del blues, el tritono del metal —
    así que no son adornos intercambiables. */
 const SIMBOLOS = {
+  // tres nodos en ciclo — ii, V y I — unidos por una curva continua: el
+  // turnaround que se repite una y otra vez. El nodo relleno es la
+  // tónica, donde resuelve cada vuelta.
+  jazz: `
+    <circle cx="50" cy="50" r="36" class="sim-aro"/>
+    <path d="M50 22 Q 80 40 71 64 Q 50 80 29 64 Q 20 40 50 22 Z" class="sim-linea sim-grueso"/>
+    <circle cx="50" cy="22" r="7" class="sim-fig"/>
+    <circle cx="71" cy="64" r="7" class="sim-fig"/>
+    <circle cx="29" cy="64" r="7" class="sim-fig sim-relleno"/>`,
+
   // cuatro acordes girando alrededor de un centro: la rueda del pop
   pop: `
     <circle cx="50" cy="50" r="34" class="sim-aro"/>
